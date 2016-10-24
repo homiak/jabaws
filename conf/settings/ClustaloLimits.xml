@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="US-ASCII" standalone="yes"?>
+<limits>
+ <runnerClassName>compbio.runner.clustal.ClustalO</runnerClassName>
+	<limit isDefault="true">
+		<seqNumber>2000</seqNumber>
+		<seqLength>1000</seqLength>
+	</limit>
+	<limit isDefault="false">
+		<preset># LocalEngineExecutionLimit #</preset>
+		<seqNumber>30</seqNumber>
+		<seqLength>500</seqLength>
+	</limit>
+</limits>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "XHTML 1.0 Strict"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="Last-modified" content="Mon, 4 Apr 2011 12:00:00 GMT"/>
+<title>Java Bioinformatics Analyses Web Services (JABAWS) Server Virtual Appliance Manual</title>
+<link href="ws.css" rel="stylesheet" type="text/css" media=
+"screen, projection, handheld, tv" />
+<link rel="stylesheet" type="text/css" media="print" href=
+"print.css" />
+<script type="text/javascript" src="prototype-1.6.0.3.js"></script>
+<style type="text/css">
+<!--
+.style1 {font-family: Verdana, Arial, Helvetica, sans-serif}
+-->
+</style>
+</head>
+<body>
+<div id="page">
+<div id="banner">
+<table> 
+<tr><td style="width:158px;"><a href="http://www.dundee.ac.uk"><img src="images/uod_lt_long.gif"  alt="University of Dundee" width="158" height="90" class="logo"  title="University of Dundee" longdesc="http://www.dundee.ac.uk"/></a></td>
+<td class="bg"><img src="images/jabaws2.png" alt="JABAWS-2.0" title="Java Bioinformatics Analysis Web Services version 2.0"/></td>
+<td class="bg"><img src="images/banner_right.png" alt="Disorder" width="200" height="80"/></td>
+</tr>
+</table>
+</div><!-- banner end-->
+
+<div id="wrapper">
+<div id="panel"><a href="index.html">Home</a> 
+ <a href="quick_start.html">Getting Started</a> 
+ <a class="selected" href="man_about.html">Manual</a> 
+	<div id="submenu">
+		<a href="man_about.html">About</a>
+		<a href="man_servervm.html" title="JABAWS Server as Virtual Appliance">Server VA</a>
+		<a class="selected" href="man_awscloud.html" title="JABAWS Server in the Amazon EC2 Cloud">Server in the Cloud</a>
+		<a href="man_serverwar.html" title="JABAWS Server as Web Application aRchive">Server WAR</a>
+		<a href="man_configuration.html" >Server<br/>
+		Configuration</a>
+		<a href="man_client.html" title="JABAWS Command Line Client">CMD Client</a>
+		<a href="man_stats.html" title="JABAWS Usage Statistics">Usage Statistics</a>
+		<a href="man_dev.html" title="Accessing JABAWS from your program">Accessing<br/>
+		JABAWS</a>	
+		<a href="man_server_dev.html" >JABAWS Development</a>
+	</div>
+<a href="http://www.compbio.dundee.ac.uk/download">Download</a> 
+<a href="PublicAnnualStat" title="JABAWS usage statistics">Usage Statistics</a>
+ <a href="ServiceStatus" title="JABAWS webservices status. Click to test all web services. Please be patient while the services are being checked">Services Status</a>
+<a href="contacts.html">Contact Us</a>
+<a href="http://www.compbio.dundee.ac.uk" title="University of Dundee, The Barton Group" >Barton Group</a>
+</div>
+
+<!-- panel end-->
+<div id="content">
+<h2 id="headtitle">JABAWS MANUAL</h2>
+
+<h2>How to use JABAWS  on Amazon Elastic Beanstalk</h2>
+<div id="jabaws_on_cloud">
+  <ol>
+    <li><a href="https://www.amazon.com/ap/signin/175-8261537-7969810?_encoding=UTF8&openid.assoc_handle=aws&openid.return_to=https%3A//aws-portal.amazon.com/gp/aws/developer/registration/index.html/175-8261537-7969810&openid.mode=checkid_setup&openid.ns=http%3A//specs.openid.net/auth/2.0&openid.claimed_id=http%3A//specs.openid.net/auth/2.0/identifier_select&openid.pape.max_auth_age=600&siteState=awsMode%3A%3Aregistration%3A%3AheaderMessage%3A%3AAmazon Web Services Sign Up%3A%3A&pageId=aws.ssop&openid.pape.preferred_auth_policies=http%3A//schemas.openid.net/pape/policies/2007/06/multi-factor-physical&marketplaceId=ATVPDKIKX0DER&accountStatusPolicy=P1&openid.ns.pape=http%3A//specs.openid.net/extensions/pape/1.0&openid.identity=http%3A//specs.openid.net/auth/2.0/identifier_select&authCookies=1">Create  Amazon Web Services account</a>. </li>
+    <li><a href="https://console.aws.amazon.com/ec2/home?region=eu-west-1#selectInstance=&launchAmi=&s=Home">Log in into the Amazon Web Services (AWS) console</a> and switch to AWS Elastic Beanstalk view.</li>
+    <img src="images/aws_bs_launch.gif" alt="Elastic Beanstalk launch JABAWS war step 1" width="852" height="418">
+  <li>Create a new Beanstalk application by uploading JABAWS war file </li>
+  <img src="images/aws_bs_launch1.gif" alt="Elastic Beanstalk launch JABAWS war step 2" width="532" height="388"> 
+  <li>Give a name to your JABAWS instance. This name will be a part of the access URL for your JABAWS. </li>
+  <img src="images/aws_bs_launch2.gif" alt="Elastic Beanstalk launch JABAWS war step 3" width="530" height="492">
+
+<li>Choose the type of hardware you want to run JABAWS on.  </li>
+<img src="images/aws_bs_launch3.gif" alt="Elastic Beanstalk launch JABAWS war step 4"/> 
+<li>If everything goes well you should be able to access your JABAWS on http://jabaws.elasticbeanstalk.com</li>
+<img src="images/aws_bs_done.gif" alt="Elastic Beanstalk launch JABAWS war " width="682" height="422"> 
+</ol>
+<p>&nbsp;</p>
+</div>   <!-- end of jabaws_on_cloud div -->
+</div>
+<!-- content end-->
+<div id="copyright">Last update: 16 September 2011<br />
+ Peter Troshin, Jim Procter and Geoff Barton, The Barton Group, University of
+Dundee, UK</div>
+</div>
+
+<!-- wrapper end-->
+</div>
+<!-- page end-->
+
+<!-- Google analitics -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try{
+var pageTracker = _gat._getTracker("UA-5356328-1");
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+</body>
+</html>
+

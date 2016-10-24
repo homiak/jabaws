@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="US-ASCII" standalone="yes"?>
+<presets>
+	<runnerClassName>compbio.runner.mafft.Mafft</runnerClassName>
+	<preset>
+		<name>L-INS-i (Accuracy-oriented)</name>
+		<description>L-INS-i (probably most accurate; recommended for &lt;200
+			sequences; iterative refinement method incorporating local pairwise
+			alignment information)</description>
+		<optlist>
+			<option>--localpair</option>
+			<option>--maxiterate 1000</option>
+		</optlist>
+	</preset>
+	<preset>
+		<name>G-INS-i (Accuracy-oriented)</name>
+		<description>G-INS-i (suitable for sequences of similar lengths;
+			recommended for &lt;200 sequences; iterative refinement method
+			incorporating global pairwise alignment information)</description>
+		<optlist>
+			<option>--globalpair</option>
+			<option>--maxiterate 1000</option>
+		</optlist>
+	</preset>
+	<preset>
+		<name>E-INS-i (Accuracy-oriented)</name>
+		<description>E-INS-i (suitable for sequences containing large
+			unalignable regions; recommended for &lt;200 sequences)</description>
+		<optlist>
+			<option>--ep 0</option>
+			<option>--genafpair</option>
+			<option>--maxiterate 1000</option>
+		</optlist>
+	</preset>
+	<preset>
+		<name>FFT-NS-i (Speed oriented)</name>
+		<description>FFT-NS-i (iterative refinement method; two cycles only)</description>
+		<optlist>
+			<option>--retree 2</option>
+			<option>--maxiterate 2</option>
+		</optlist>
+	</preset>
+	<preset>
+		<name>FFT-NS-1 (Speed oriented)</name>
+		<description>FFT-NS-1 (very fast; recommended for &gt;2000 sequences;
+			progressive method with a rough guide tree)</description>
+		<optlist>
+			<option>--retree 1</option>
+			<option>--maxiterate 0</option>
+		</optlist>
+	</preset>
+	<preset>
+		<name>NW-NS-PartTree-1 (Speed oriented)</name>
+		<description>NW-NS-PartTree-1 (recommended for ~10,000 to ~50,000
+			sequences; progressive method with the PartTree algorithm)</description>
+		<optlist>
+			<option>--retree 1</option>
+			<option>--maxiterate 0</option>
+			<option>--nofft</option>
+			<option>--parttree</option>
+		</optlist>
+	</preset>
+</presets>

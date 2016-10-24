@@ -1,0 +1,311 @@
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+    version="2.4">
+
+    <display-name>JABAWS</display-name>
+    <description>JAva Bioinformatics Analysis Web Services (JABAWS) v.2</description>
+
+	<listener>
+		<listener-class>compbio.ws.server.ShutdownEngines</listener-class>
+	</listener>
+    <listener>
+        <listener-class>compbio.stat.servlet.StatisticCollector</listener-class>
+     </listener>
+     <listener>
+        <listener-class>compbio.ws.server.SetExecutableFlag</listener-class>
+     </listener>
+     <listener>
+        <listener-class>com.sun.xml.ws.transport.http.servlet.WSServletContextListener</listener-class>
+     </listener>
+    
+ 	<!-- Session timeout in minutes -->
+	<session-config>
+   		<session-timeout>20</session-timeout>
+    </session-config>
+ 
+     <servlet>
+        <display-name>This is a standard tomcat 'default' servlet for making listings</display-name>
+        <servlet-name>listings</servlet-name>
+        <servlet-class>org.apache.catalina.servlets.DefaultServlet</servlet-class>
+        <init-param>
+            <param-name>debug</param-name>
+            <param-value>0</param-value>
+        </init-param>
+        <init-param>
+            <param-name>readonly</param-name>
+            <param-value>true</param-value>
+        </init-param>
+        <init-param>
+            <param-name>listings</param-name>
+            <param-value>true</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet>
+    	<description>Display pre-calculated accounting info</description>
+    	<servlet-name>DisplayStat</servlet-name>
+    	<servlet-class>compbio.stat.servlet.DisplayStat</servlet-class>
+    </servlet>
+  
+   <servlet>
+    	<description>WebServices Status</description>
+    	<servlet-name>ServiceStatus</servlet-name>
+    	<servlet-class>compbio.stat.servlet.ServiceStatus</servlet-class>
+    </servlet>
+
+   <servlet>
+    	<servlet-name>DownloadRedirector</servlet-name>
+    	<servlet-class>compbio.stat.servlet.DownloadRedirector</servlet-class>
+    </servlet>
+   
+    <servlet>
+    	<description>WebService Status with no UI. Accepts web service name as a parameter</description>
+    	<servlet-name>HttpCodeResponseServiceStatus</servlet-name>
+    	<servlet-class>compbio.stat.servlet.HttpCodeResponseServiceStatus</servlet-class>
+    </servlet>
+    
+    <servlet>
+    	<description>Display job list</description>
+    	<servlet-name>Joblist</servlet-name>
+    	<servlet-class>compbio.stat.servlet.Joblist</servlet-class>
+    </servlet>
+    
+    <servlet>
+    	<description>Display monthly summary statistics</description>
+    	<servlet-name>AnnualStat</servlet-name>
+    	<servlet-class>compbio.stat.servlet.AnnualStat</servlet-class>
+    </servlet>
+    
+     <servlet>
+    	<description>Display monthly summary statistics with no links to details</description>
+    	<servlet-name>PublicAnnualStat</servlet-name>
+    	<servlet-class>compbio.stat.servlet.AnnualStat</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>RegistryWS</servlet-name>
+        <servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>ClustalWS</servlet-name>
+        <servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>ClustalOWS</servlet-name>
+        <servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>MuscleWS</servlet-name>
+        <servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>MafftWS</servlet-name>
+        <servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>TcoffeeWS</servlet-name>
+        <servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+     
+    <servlet>
+        <servlet-name>ProbconsWS</servlet-name>
+        <servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    
+     <servlet>
+        <servlet-name>AAConWS</servlet-name>
+        <servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+   
+     <servlet>
+        <servlet-name>JronnWS</servlet-name>
+        <servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+     <servlet>
+        <servlet-name>DisemblWS</servlet-name>
+        <servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>GlobPlotWS</servlet-name>
+        <servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    
+     <servlet>
+        <servlet-name>IUPredWS</servlet-name>
+        <servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+   
+    <servlet-mapping>
+    	<servlet-name>listings</servlet-name>
+    	<url-pattern>/</url-pattern>
+  	</servlet-mapping>
+  	
+  	     
+    <servlet-mapping>
+    	<servlet-name>DownloadRedirector</servlet-name>
+    	<url-pattern>/download</url-pattern>
+  	</servlet-mapping>
+  	
+    <servlet-mapping>
+    	<servlet-name>DisplayStat</servlet-name>
+    	<url-pattern>/DisplayStat</url-pattern>
+  	</servlet-mapping>
+  	
+  	<servlet-mapping>
+    	<servlet-name>ServiceStatus</servlet-name>
+    	<url-pattern>/ServiceStatus</url-pattern>
+  	</servlet-mapping>
+  	
+  	<servlet-mapping>
+    	<servlet-name>HttpCodeResponseServiceStatus</servlet-name>
+    	<url-pattern>/HttpCodeResponseServiceStatus/*</url-pattern>
+  	</servlet-mapping>
+  	
+  	 <servlet-mapping>
+    	<servlet-name>AnnualStat</servlet-name>
+    	<url-pattern>/AnnualStat</url-pattern>
+  	</servlet-mapping>  
+    
+     <servlet-mapping>
+    	<servlet-name>PublicAnnualStat</servlet-name>
+    	<url-pattern>/PublicAnnualStat</url-pattern>
+  	</servlet-mapping>  
+    
+    
+    <servlet-mapping>
+    	<servlet-name>Joblist</servlet-name>
+    	<url-pattern>/Joblist</url-pattern>
+  	</servlet-mapping> 
+  	
+    <servlet-mapping>
+    	<servlet-name>RegistryWS</servlet-name>
+    	<url-pattern>/RegistryWS</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+    	<servlet-name>ClustalWS</servlet-name>
+    	<url-pattern>/ClustalWS</url-pattern>
+    </servlet-mapping>
+    
+     <servlet-mapping>
+    	<servlet-name>ClustalOWS</servlet-name>
+    	<url-pattern>/ClustalOWS</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+    	<servlet-name>MuscleWS</servlet-name>
+    	<url-pattern>/MuscleWS</url-pattern>
+    </servlet-mapping>
+
+   <servlet-mapping>
+    	<servlet-name>MafftWS</servlet-name>
+    	<url-pattern>/MafftWS</url-pattern>
+    </servlet-mapping>
+    
+   <servlet-mapping>
+    	<servlet-name>TcoffeeWS</servlet-name>
+    	<url-pattern>/TcoffeeWS</url-pattern>
+   </servlet-mapping>
+
+   <servlet-mapping>
+    	<servlet-name>ProbconsWS</servlet-name>
+    	<url-pattern>/ProbconsWS</url-pattern>
+   </servlet-mapping>
+ 
+   <servlet-mapping>
+    	<servlet-name>AAConWS</servlet-name>
+    	<url-pattern>/AAConWS</url-pattern>
+   </servlet-mapping>
+   
+    <servlet-mapping>
+    	<servlet-name>JronnWS</servlet-name>
+    	<url-pattern>/JronnWS</url-pattern>
+   </servlet-mapping>
+   
+   <servlet-mapping>
+    	<servlet-name>DisemblWS</servlet-name>
+    	<url-pattern>/DisemblWS</url-pattern>
+   </servlet-mapping>
+   
+   <servlet-mapping>
+    	<servlet-name>GlobPlotWS</servlet-name>
+    	<url-pattern>/GlobPlotWS</url-pattern>
+   </servlet-mapping>
+   
+    <servlet-mapping>
+    	<servlet-name>IUPredWS</servlet-name>
+    	<url-pattern>/IUPredWS</url-pattern>
+   </servlet-mapping>
+   
+   <security-constraint>
+    <web-resource-collection>
+    	<web-resource-name>Administrator pages</web-resource-name>
+   		<!-- Prohibit access to any resources -->
+    	<url-pattern>/DisplayStat</url-pattern>
+    	<url-pattern>/Joblist</url-pattern>
+    	<url-pattern>/AnnualStat</url-pattern>
+    	<url-pattern>/conf/*</url-pattern>
+   		<url-pattern>/binaries/*</url-pattern>
+   		<url-pattern>/jobsout/*</url-pattern>
+   		<url-pattern>/testsrc/*</url-pattern>
+   		<url-pattern>/lib/*</url-pattern>
+   		<url-pattern>/test-output/*</url-pattern>
+   		<!-- Uncomment this to secure services status checker 
+   		<url-pattern>/HttpCodeResponseServiceStatus/*</url-pattern>
+   		<url-pattern>/ServiceStatus</url-pattern>
+   		 -->
+    	<!-- No http-method means all methods are constrained -->
+    </web-resource-collection>
+    <auth-constraint>
+      <role-name>admin</role-name>
+    </auth-constraint>
+   </security-constraint>
+
+  <!-- unsupported HTTP methods -->
+  <security-constraint>
+        <web-resource-collection>
+        <web-resource-name>unsupported HTTP methods</web-resource-name>
+        <url-pattern>/*</url-pattern>
+            <http-method>PUT</http-method>
+            <http-method>DELETE</http-method>
+            <http-method>TRACE</http-method>
+            <http-method>OPTIONS</http-method>
+        </web-resource-collection>
+        <auth-constraint/>
+  </security-constraint>
+      <!-- Define the Login Configuration for this Application -->
+  <login-config>
+   	 <auth-method>BASIC</auth-method>
+  	 <realm-name>JABAWS administrators</realm-name>
+  </login-config>
+  
+    <!-- Security roles referenced by this web application -->
+  <security-role>
+    <description>
+      The role that is required to log in and view JABAWS internals
+    </description>
+    <role-name>admin</role-name>
+  </security-role>
+  
+</web-app>

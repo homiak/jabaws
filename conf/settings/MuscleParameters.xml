@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="US-ASCII" standalone="yes"?>
+<runnerConfig>
+ <runnerClassName>compbio.runner.muscle.Muscle</runnerClassName>
+    <!--
+    This is the only option possible so no point in having it  
+    <options isRequired="false">
+        <name>Group sequences</name>
+        <description>Group sequences by similarity (this is the default) or preserve the input order</description>
+        <optionNames>-group</optionNames>
+        <furtherDetails>prog_docs/muscle.html</furtherDetails>
+        <defaultValue>-group</defaultValue>
+    </options>
+     -->
+    <!-- optionNames>-stable</optionNames  this is commented out as it contain bug see muscle web site-->
+    <options isRequired="false">
+        <name>Anchor optimisation</name>
+        <description>Enable/disable anchor optimization in tree dependent refinement iterations</description>
+        <optionNames>-anchors</optionNames>
+        <optionNames>-noanchors</optionNames>
+        <furtherDetails>prog_docs/muscle.html</furtherDetails>
+        <defaultValue>-anchors</defaultValue>
+    </options>
+    <!-- Programs failures often with this option 
+    <options isRequired="false">
+        <name>Window refine</name>
+        <description>Refine an alignment by dividing it into non-overlapping windows and re-aligning each window. Typically used for whole-genome nucleotide alignments</description>
+        <optionNames>-refinew</optionNames>
+        <furtherDetails>prog_docs/muscle.html</furtherDetails>
+        <defaultValue>-refinew</defaultValue>
+    </options>
+     -->
+    <options isRequired="false">
+        <name>Root alignment computation method</name>
+        <description>Use Steven Brenner's method for computing the root alignment.</description>
+        <optionNames>-brenner</optionNames>
+        <furtherDetails>prog_docs/muscle.html</furtherDetails>
+    </options>
+       <!-- This option make sense only in conjunction with -tree which we do not currently support
+   <options isRequired="false">
+        <name>Fast clustering of input sequences</name>
+        <description>Perform fast clustering of input sequences.</description>
+        <optionNames>-cluster</optionNames>
+        <furtherDetails>http://www.compbio.dundee.ac.uk/users/pvtroshin/ws/Index.html</furtherDetails>
+   </options>
+   -->
+   <options isRequired="false">
+        <name>dimer</name>
+        <description>Use dimer approximation for the SP score (faster, slightly less accurate)</description>
+        <optionNames>-dimer</optionNames>
+        <furtherDetails>prog_docs/muscle.html</furtherDetails>
+   </options>
+    <options isRequired="false">
+        <name>Diagonal</name>
+        <description>Use diagonal optimizations. Faster, especially for closely related sequences, but may be less accurate.</description>
+        <optionNames>-diags</optionNames>
+        <furtherDetails>prog_docs/muscle.html</furtherDetails>
+    </options>
+    <options isRequired="false">
+        <name>Diagonal 1</name>
+        <description>Use diagonal optimizations in first iteration (faster for similar sequences)</description>
+        <optionNames>-diags1</optionNames>
+        <furtherDetails>prog_docs/muscle.html</furtherDetails>
+    </options>
+   <options isRequired="false">
+        <name>Profile scoring method</name>
+        <description>le - use log-expectation profile score VTML240 (default for amino acid sequences.)
+        			 sp - use sum-of-pairs protein profile score (PAM200).
+        			 sv - use sum-of-pairs profile score (VTML240)</description>
+        <optionNames>-le</optionNames>
+        <optionNames>-sp</optionNames>
+        <optionNames>-sv</optionNames>
+        <furtherDetails>prog_docs/muscle.html</furtherDetails>
+ 		<defaultValue>-le</defaultValue>
+    </options>
+    <prmSeparator> </prmSeparator>
+	<parameters isRequired="false">
+        <name>Sequence type</name>
+        <description>Sequence type - Amino acid/Nucleotide </description>
+        <optionNames>-seqtype</optionNames>
+        <furtherDetails>prog_docs/muscle.html</furtherDetails>
+        <defaultValue>auto</defaultValue>
+        <possibleValues>auto</possibleValues>
+        <possibleValues>protein</possibleValues>
+        <possibleValues>dna</possibleValues>
+        <possibleValues>rna</possibleValues>
+    </parameters>
+	<parameters isRequired="false">
+        <name>Maxiters</name>
+        <description>Maximum number of iterations (integer, default 16)</description>
+        <optionNames>-maxiters</optionNames>
+        <furtherDetails>prog_docs/muscle.html</furtherDetails>
+        <defaultValue>16</defaultValue>
+        <validValue>
+        	<type>Integer</type>
+            <min>1</min>
+            <max>100</max>
+        </validValue>
+    </parameters>
+    <!-- disable as refinew is disabled 
+    <parameters isRequired="false">
+        <name>Maxiters</name>
+        <description>Length of window for Window Refine (-refinew)</description>
+        <optionNames>-refinewindow</optionNames>
+        <furtherDetails>prog_docs/muscle.html</furtherDetails>
+        <defaultValue>200</defaultValue>
+        <validValue>
+        	<type>Integer</type>
+            <min>1</min>
+            <max>1000</max>
+        </validValue>
+    </parameters>
+     -->
+    <parameters isRequired="false">
+        <name>Diagonal break</name>
+        <description>Maximum distance between two diagonals that allows them to merge into one diagonal</description>
+        <optionNames>-diagbreak</optionNames>
+        <furtherDetails>prog_docs/muscle.html</furtherDetails>
+        <defaultValue>1</defaultValue>
+        <validValue>
+        	<type>Integer</type>
+            <min>1</min>
+            <max>100</max>
+        </validValue>
+    </parameters>
+    <parameters isRequired="false">
+        <name>Diagonal length</name>
+        <description>Minimum length of diagonal</description>
+        <optionNames>-diaglength</optionNames>
+        <furtherDetails>prog_docs/muscle.html</furtherDetails>
+        <defaultValue>24</defaultValue>
+        <validValue>
+        	<type>Integer</type>
+            <min>2</min>
+            <max>100</max>
+        </validValue>
+    </parameters>
+    <parameters isRequired="false">
+        <name>Diagonal margin</name>
+        <description>Discard this many positions at ends of diagonal</description>
+        <optionNames>-diagmargin</optionNames>
+        <furtherDetails>prog_docs/muscle.html</furtherDetails>
+        <defaultValue>5</defaultValue>
+        <validValue>
+        	<type>Integer</type>
+            <min>1</min>
+            <max>100</max>
+        </validValue>
+    </parameters>
+    <parameters isRequired="false">
+        <name>Anchor spacing</name>
+        <description>Minimum spacing between anchor columns</description>
+        <optionNames>-anchorspacing</optionNames>
+        <furtherDetails>prog_docs/muscle.html</furtherDetails>
+        <defaultValue>32</defaultValue>
+        <validValue>
+        	<type>Integer</type>
+            <min>2</min>
+            <max>1000</max>
+        </validValue>
+    </parameters>
+  	<parameters isRequired="false">
+        <name>Matrix</name>
+        <description>Substitution Matrix to use</description>
+        <optionNames>-matrix</optionNames>
+        <furtherDetails>prog_docs/muscle.html</furtherDetails>
+        <defaultValue>BLOSUM62</defaultValue>
+		<possibleValues>BLOSUM100</possibleValues>
+		<possibleValues>BLOSUM30</possibleValues>
+		<possibleValues>BLOSUM35</possibleValues>
+		<possibleValues>BLOSUM40</possibleValues>
+		<possibleValues>BLOSUM45</possibleValues>
+		<possibleValues>BLOSUM50</possibleValues>
+		<possibleValues>BLOSUM55</possibleValues>
+		<possibleValues>BLOSUM60</possibleValues>
+		<possibleValues>BLOSUM62</possibleValues>
+		<possibleValues>BLOSUM65</possibleValues>
+		<possibleValues>BLOSUM70</possibleValues>
+		<possibleValues>BLOSUM75</possibleValues>
+		<possibleValues>BLOSUM80</possibleValues>
+		<possibleValues>BLOSUM85</possibleValues>
+		<possibleValues>BLOSUM90</possibleValues>
+		<possibleValues>BLOSUMN</possibleValues>
+		<possibleValues>DAYHOFF</possibleValues>
+		<possibleValues>GONNET</possibleValues>
+		<possibleValues>IDENTITY</possibleValues>
+		<possibleValues>MATCH</possibleValues>
+		<possibleValues>NUC.4.2</possibleValues>
+		<possibleValues>NUC.4.4</possibleValues>
+		<possibleValues>PAM10</possibleValues>
+		<possibleValues>PAM100</possibleValues>
+		<possibleValues>PAM110</possibleValues>
+		<possibleValues>PAM120</possibleValues>
+		<possibleValues>PAM130</possibleValues>
+		<possibleValues>PAM140</possibleValues>
+		<possibleValues>PAM150</possibleValues>
+		<possibleValues>PAM160</possibleValues>
+		<possibleValues>PAM170</possibleValues>
+		<possibleValues>PAM180</possibleValues>
+		<possibleValues>PAM190</possibleValues>
+		<possibleValues>PAM20</possibleValues>
+		<possibleValues>PAM200</possibleValues>
+		<possibleValues>PAM210</possibleValues>
+		<possibleValues>PAM220</possibleValues>
+		<possibleValues>PAM230</possibleValues>
+		<possibleValues>PAM240</possibleValues>
+		<possibleValues>PAM250</possibleValues>
+		<possibleValues>PAM260</possibleValues>
+		<possibleValues>PAM270</possibleValues>
+		<possibleValues>PAM280</possibleValues>
+		<possibleValues>PAM290</possibleValues>
+		<possibleValues>PAM30</possibleValues>
+		<possibleValues>PAM300</possibleValues>
+		<possibleValues>PAM310</possibleValues>
+		<possibleValues>PAM320</possibleValues>
+		<possibleValues>PAM330</possibleValues>
+		<possibleValues>PAM340</possibleValues>
+		<possibleValues>PAM350</possibleValues>
+		<possibleValues>PAM360</possibleValues>
+		<possibleValues>PAM370</possibleValues>
+		<possibleValues>PAM380</possibleValues>
+		<possibleValues>PAM390</possibleValues>
+		<possibleValues>PAM40</possibleValues>
+		<possibleValues>PAM400</possibleValues>
+		<possibleValues>PAM410</possibleValues>
+		<possibleValues>PAM420</possibleValues>
+		<possibleValues>PAM430</possibleValues>
+		<possibleValues>PAM440</possibleValues>
+		<possibleValues>PAM450</possibleValues>
+		<possibleValues>PAM460</possibleValues>
+		<possibleValues>PAM470</possibleValues>
+		<possibleValues>PAM480</possibleValues>
+		<possibleValues>PAM490</possibleValues>
+		<possibleValues>PAM50</possibleValues>
+		<possibleValues>PAM500</possibleValues>
+		<possibleValues>PAM60</possibleValues>
+		<possibleValues>PAM70</possibleValues>
+		<possibleValues>PAM80</possibleValues>
+		<possibleValues>PAM90</possibleValues>
+    </parameters>
+    <parameters>
+        <name>Gap open penalty</name>
+        <description>Gap opening penalty.  Must be negative</description>
+        <optionNames>-gapopen</optionNames>
+        <furtherDetails>prog_docs/muscle.html</furtherDetails>
+        <defaultValue>-12.0</defaultValue>
+        <validValue>
+        	<type>Float</type>
+            <min>-100</min>
+            <max>0</max>
+        </validValue>
+    </parameters>
+    <parameters>
+        <name>Gap extension penalty</name>
+        <description>Gap extension penalty.  Must be negative</description>
+        <optionNames>-gapextend</optionNames>
+        <furtherDetails>prog_docs/muscle.html</furtherDetails>
+        <defaultValue>-1.0</defaultValue>
+        <validValue>
+        	<type>Float</type>
+            <min>-100</min>
+            <max>0</max>
+        </validValue>
+    </parameters>
+    <parameters>
+        <name>Center</name>
+        <description>Center parameter. Should be negative.</description>
+        <optionNames>-center</optionNames>
+        <furtherDetails>prog_docs/muscle.html</furtherDetails>
+        <defaultValue>0.0</defaultValue>
+        <validValue>
+        	<type>Float</type>
+            <min>-100</min>
+            <max>0</max>
+        </validValue>
+    </parameters>
+    <parameters>
+        <name>Hydro</name>
+        <description>Window size for determining whether a region is hydrophobic.</description>
+        <optionNames>-hydro</optionNames>
+        <furtherDetails>prog_docs/muscle.html</furtherDetails>
+        <defaultValue>5</defaultValue>
+        <validValue>
+        	<type>Integer</type>
+            <min>0</min>
+            <max>100</max>
+        </validValue>
+    </parameters>
+    <parameters>
+        <name>Hydrofactor</name>
+        <description>Multiplier for gap open/close penalties in hydrophobic regions.</description>
+        <optionNames>-hydrofactor</optionNames>
+        <furtherDetails>prog_docs/muscle.html</furtherDetails>
+        <defaultValue>1.2</defaultValue>
+        <validValue>
+        	<type>Float</type>
+            <min>0</min>
+            <max>10</max>
+        </validValue>
+    </parameters>
+     <parameters>
+        <name>Minimum anchor score</name>
+        <description>Minimum score a column must have to be an anchor (default depends on the profile scoring function!)</description>
+        <optionNames>-minbestcolscore</optionNames>
+        <furtherDetails>prog_docs/muscle.html</furtherDetails>
+        <defaultValue>1.2</defaultValue>
+        <validValue>
+        	<type>Float</type>
+            <min>0</min>
+            <max>10</max>
+        </validValue>
+    </parameters>
+    <parameters>
+        <name>Minimum smoothed anchor score</name>
+        <description>Minimum smoothed score a column must have to be an anchor (default depends on the profile scoring function!)</description>
+        <optionNames>-minsmoothscore</optionNames>
+        <furtherDetails>prog_docs/muscle.html</furtherDetails>
+        <defaultValue>1.2</defaultValue>
+        <validValue>
+        	<type>Float</type>
+            <min>0</min>
+            <max>10</max>
+        </validValue>
+    </parameters>
+  	<parameters isRequired="false">
+        <name>cluster1</name>
+        <description>Clustering method to use on the iteration 1</description>
+        <optionNames>-cluster1</optionNames>
+        <furtherDetails>prog_docs/muscle.html</furtherDetails>
+        <defaultValue>upgma</defaultValue>
+        <possibleValues>upgma</possibleValues>
+    </parameters>
+  	<parameters isRequired="false">
+        <name>cluster2</name>
+        <description>Clustering method to use on the iteration 2 and all subsequent itarations</description>
+        <optionNames>-cluster2</optionNames>
+        <furtherDetails>prog_docs/muscle.html</furtherDetails>
+        <defaultValue>upgmb</defaultValue>
+        <possibleValues>upgmb</possibleValues>
+        <possibleValues>neighborjoining</possibleValues>
+    </parameters>
+    <parameters isRequired="false">
+        <name>Sequence weighting scheme 1</name>
+        <description>Sequence weighting scheme to use on the iteration 1 and 2 
+		none=all sequences have equal weight.
+		henikoff=Henikoff &amp; Henikoff weighting scheme.
+		henikoffpb=Modified Henikoff scheme as used in PSI-BLAST.
+		clustalw=CLUSTALW method.
+		threeway=Gotoh three-way method</description>
+        <optionNames>-weight1</optionNames>
+        <furtherDetails>prog_docs/muscle.html</furtherDetails>
+        <defaultValue>clustalw</defaultValue>
+        <possibleValues>none</possibleValues>
+        <possibleValues>henikoff</possibleValues>
+        <possibleValues>henikoffpb</possibleValues>
+        <possibleValues>gsc</possibleValues>
+        <possibleValues>clustalw</possibleValues>
+        <possibleValues>threeway</possibleValues>
+    </parameters>
+    <parameters isRequired="false">
+        <name>Sequence weighting scheme 2</name>
+        <description>Sequence weighting scheme to use on the iteration 3 and all subsequent 
+        iterations for tree-dependent refinement.
+		none=all sequences have equal weight.
+		henikoff=Henikoff &amp; Henikoff weighting scheme.
+		henikoffpb=Modified Henikoff scheme as used in PSI-BLAST.
+		clustalw=CLUSTALW method.
+		threeway=Gotoh three-way method</description>
+        <optionNames>-weight2</optionNames>
+        <furtherDetails>prog_docs/muscle.html</furtherDetails>
+        <defaultValue>clustalw</defaultValue>
+        <possibleValues>none</possibleValues>
+        <possibleValues>henikoff</possibleValues>
+        <possibleValues>henikoffpb</possibleValues>
+        <possibleValues>gsc</possibleValues>
+        <possibleValues>clustalw</possibleValues>
+        <possibleValues>threeway</possibleValues>
+    </parameters>
+  	<parameters isRequired="false">
+        <name>Distance1</name>
+        <description>Distance measure for iteration 1. Defaults Kmer6_6 (for amino ) or Kmer4_6 (for nucleo)</description>
+        <optionNames>-distance1</optionNames>
+        <furtherDetails>prog_docs/muscle.html</furtherDetails>
+        <defaultValue>kmer6_6</defaultValue>
+        <possibleValues>kmer6_6</possibleValues>
+        <possibleValues>kmer20_3</possibleValues>
+        <possibleValues>kbit20_3</possibleValues>
+        <possibleValues>kmer20_4</possibleValues>
+        <possibleValues>kmer4_6</possibleValues>
+    </parameters>
+</runnerConfig>

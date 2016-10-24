@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="US-ASCII" standalone="yes"?>
+<runnerConfig>
+<!-- 
+    Extreme variation of this parameter does not have any impact on the output
+    so irrelevant. 
+
+	<runnerClassName>compbio.runner.disorder.Disembl</runnerClassName>
+	<prmSeparator>=</prmSeparator>
+	<parameters>
+		<name>Savitzky-Golay smoothing frame</name>
+		<description>Algorithm Parameter: Savitzky-Golay smoothing frame</description>
+		<optionNames>sg</optionNames>
+		<furtherDetails>prog_docs/disembl.html</furtherDetails>
+		<defaultValue>8</defaultValue>
+		<validValue>
+			<type>Integer</type>
+			<min>1</min>
+			<max>30</max>
+		</validValue>
+	</parameters>
+ 
+ These can be supported but not recommended to change so what's the point?
+ 
+ Manual: Normally the default parameters should not be changed.
+
+	<parameters>
+		<name>Minimum peak width</name>
+		<description>Algorithm Parameter: Minimum peak width.</description>
+		<optionNames>pw</optionNames>
+		<furtherDetails>prog_docs/disembl.html</furtherDetails>
+		<defaultValue>8</defaultValue>
+		<validValue>
+			<type>Integer</type>
+			<min>1</min>
+			<max>30</max>
+		</validValue>
+	</parameters>
+	<parameters>
+		<name>Maximum join distance</name>
+		<description>Algorithm Parameter: Maximum join distance</description>
+		<optionNames>jd</optionNames>
+		<furtherDetails>prog_docs/disembl.html</furtherDetails>
+		<defaultValue>4</defaultValue>
+		<validValue>
+			<type>Integer</type>
+			<min>1</min>
+			<max>30</max>
+		</validValue>
+	</parameters>
+	<parameters>
+		<name>Coils threshold</name>
+		<description>Stringency values for different predictor: Coils threshold</description>
+		<optionNames>ct</optionNames>
+		<furtherDetails>prog_docs/disembl.html</furtherDetails>
+		<defaultValue>1.2</defaultValue>
+		<validValue>
+			<type>Float</type>
+			<min>0.1</min>
+			<max>10</max>
+		</validValue>
+	</parameters>
+	<parameters>
+		<name>Remark465 threshold</name>
+		<description>Stringency values for different predictor: Remark465 threshold</description>
+		<optionNames>rt</optionNames>
+		<furtherDetails>prog_docs/disembl.html</furtherDetails>
+		<defaultValue>1.4</defaultValue>
+		<validValue>
+			<type>Float</type>
+			<min>0.1</min>
+			<max>10</max>
+		</validValue>
+	</parameters>
+	<parameters>
+		<name>Hot loops threshold</name>
+		<description>Stringency values for different predictor: Hot loops threshold.</description>
+		<optionNames>lt</optionNames>
+		<furtherDetails>prog_docs/disembl.html</furtherDetails>
+		<defaultValue>1.2</defaultValue>
+		<validValue>
+			<type>Float</type>
+			<min>0.1</min>
+			<max>10</max>
+		</validValue>
+	</parameters>
+	-->
+
+</runnerConfig>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="compbio.runner.msa.MuscleTester" failures="0" tests="1" time="22.537" errors="0">
+  <properties/>
+  <testcase name="testRunOnCluster" time="22.055" classname="compbio.runner.disorder.JronnTester"/>
+</testsuite>

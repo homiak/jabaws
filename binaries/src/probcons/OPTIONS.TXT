@@ -1,0 +1,42 @@
+Usage:
+       probcons [OPTION]... [MFAFILE]...
+
+Description:
+       Align sequences in MFAFILE(s) and print result to standard output
+
+       -clustalw
+              use CLUSTALW output format instead of MFA
+
+       -c, --consistency REPS
+              use 0 <= REPS <= 5 (default: 2) passes of consistency transformation
+
+       -ir, --iterative-refinement REPS
+              use 0 <= REPS <= 1000 (default: 100) passes of iterative-refinement
+
+       -pre, --pre-training REPS
+              use 0 <= REPS <= 20 (default: 0) rounds of pretraining
+
+       -pairs
+              generate all-pairs pairwise alignments
+
+       -viterbi
+              use Viterbi algorithm to generate all pairs (automatically enables -pairs)
+
+       -v, --verbose
+              report progress while aligning (default: off)
+
+       -annot FILENAME
+              write annotation for multiple alignment to FILENAME
+
+       -t, --train FILENAME
+              compute EM transition probabilities, store in FILENAME (default: no training)
+
+       -e, --emissions
+              also reestimate emission probabilities (default: off)
+
+       -p, --paramfile FILENAME
+              read parameters from FILENAME (default: )
+
+       -a, --alignment-order
+              print sequences in alignment order rather than input order (default: off)
+

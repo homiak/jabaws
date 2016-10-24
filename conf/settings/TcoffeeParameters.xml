@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="US-ASCII" standalone="yes"?>
+<runnerConfig>
+ <runnerClassName>compbio.runner.tcoffee.Tcoffee</runnerClassName>
+  <options isRequired="false">
+        <name>Search sequences in PDB</name>
+        <description>
+		Forces t_coffee to run extract_from_pdb to check the pdb status of each sequence. 
+		This can considerably slow down the program.	
+  		</description>
+        <optionNames>-check_pdb_status</optionNames>
+        <furtherDetails>prog_docs/tcoffee.html</furtherDetails>
+   </options>
+   <prmSeparator>=</prmSeparator>
+   <!-- ERROR: When using -evaluate, Provide a multiple sequence alignment via the -infile flag [FATAL:T-COFFEE] 
+      mcoffee: compares alignmens obtained by different programmes
+   -->
+    <parameters isRequired="false">
+        <name>Preset Mode</name>
+        <description>It indicates that t_coffee will use some hard coded parameters. These include:
+   quickaln: Very fast, sequence type - all, accuracy - medium low 
+   </description>
+        <furtherDetails>prog_docs/tcoffee.html</furtherDetails>
+        <optionNames>-mode</optionNames>
+        <defaultValue>quickaln</defaultValue>
+        <possibleValues>quickaln</possibleValues>
+    </parameters>
+    <!--
+    All the options below need proper installation!
+    rcoffee does not work as it fails to find the "templates" 
+    <description>
+	    	This require blast to be setup properly see also Presets
+	   dali: a mode used to combine dali pairwise alignments
+   	   3dcoffee: runs t_coffee with the 3dcoffee parameterization
+	   accurate: slow, sequence type - protein, accuracy - high
+       expresso: slow, sequence type - all, accuracy - high
+	   rcoffee: slow, sequence type - RNA, accuracy - high
+	</description>
+   	<possibleValues>expresso</possibleValues>
+    <possibleValues>dali</possibleValues>
+    <possibleValues>3dcoffee</possibleValues>
+    <possibleValues>accurate</possibleValues>
+    <possibleValues>rcoffee</possibleValues>
+     -->
+<!-- Parameter with textual value 
+    <parameters isRequired="false">
+        <name>Structures</name>
+        <description>Reads or fetch a pdb file. Please enter up to 200 pdb identifiers </description>
+        <optionNames>-pdb</optionNames>
+        <furtherDetails>http://www.compbio.dundee.ac.uk/users/pvtroshin/ws/Index.html</furtherDetails>
+    </parameters>
+    -->
+    <parameters isRequired="false">
+        <name>Distance matrix computation method</name>
+        <description>
+	This flag indicates the method used for computing the distance matrix (distance between every pair of sequences) required for the computation of the dendrogram. 
+	Slow   The chosen dp_mode using the extended library, 
+	fast:   The fasta dp_mode using the extended library.
+	very_fast          The fasta dp_mode using blosum62mt.
+	ktup    Ktup matching (Muscle kind) 
+	aln     Read the distances on a precomputed MSA</description>
+        <optionNames>-distance_matrix_mode</optionNames>
+        <furtherDetails>prog_docs/tcoffee.html</furtherDetails>
+		<defaultValue>very_fast</defaultValue>
+		<possibleValues>slow</possibleValues>
+        <possibleValues>fast</possibleValues>
+        <possibleValues>very_fast</possibleValues>
+        <possibleValues>ktup</possibleValues>
+        <possibleValues>aln</possibleValues>
+    </parameters>
+    <parameters isRequired="false">
+        <name>Tree Computation method</name>
+        <description>
+	gotoh_pair_wise: implementation of the gotoh algorithm (quadratic in memory and time)
+	myers_miller_pair_wise: implementation of the Myers and Miller dynamic programming algorithm ( quadratic in time and linear in space). This algorithm is recommended for very long sequences. It is about 2 times slower than gotoh and only accepts tg_mode=1or 2 (i.e. gaps penalized for opening).
+	fasta_pair_wise: implementation of the fasta algorithm. The sequence is hashed, looking for ktuples words. Dynamic programming is only carried out on the ndiag best scoring diagonals. This is much faster but less accurate than the two previous. This mode is controlled by the parameters -ktuple, -diag_mode and -ndiag
+	cfasta_pair_wise: c stands for checked. It is the same algorithm. The dynamic programming is made on the ndiag best diagonals, and then on the 2*ndiags, and so on until the scores converge. Complexity will depend on the level of divergence of the sequences, but will usually be L*log(L), with an accuracy comparable to the two first mode ( this was checked on BaliBase). This mode is controlled by the parameters -ktuple, -diag_mode and -ndiag
+		</description>
+        <optionNames>-dp_mode</optionNames>
+        <furtherDetails>prog_docs/tcoffee.html</furtherDetails>
+		<defaultValue>cfasta_pair_wise</defaultValue>
+		<possibleValues>gotoh_pair_wise</possibleValues>
+        <possibleValues>myers_miller_pair_wise</possibleValues>
+        <possibleValues>fasta_pair_wise</possibleValues>
+        <possibleValues>cfasta_pair_wise</possibleValues>
+    </parameters>
+<!-- This should be groupped with -dp_mode -->
+    <parameters isRequired="false">
+        <name>Number of diagonals used by the fasta_pair_wise algorithm</name>
+        <description>
+	Indicates the number of diagonals used by the fasta_pair_wise algorithm (cf -dp_mode). When  -ndiag=0, n_diag=Log (length of the smallest sequence)+1. 
+	When -ndiag and -diag_threshold are set, diagonals are selected if and only if they fulfill both conditions.
+		</description>
+        <optionNames>-ndiag</optionNames>
+        <furtherDetails>prog_docs/tcoffee.html</furtherDetails>
+		<defaultValue>0</defaultValue>
+        <validValue>
+        	<type>Integer</type>
+            <min>0</min>
+            <max>1000</max>
+        </validValue>
+    </parameters>
+    <parameters isRequired="false">
+        <name>Number of diagonals used by the fasta_pair_wise algorithm</name>
+        <description>
+	Indicates the manner in which diagonals are scored during the fasta hashing. 
+0: indicates that the score of a diagonal is equal to the sum of the scores of the exact matches it contains. 
+1 indicates that this score is set equal to the score of the best uninterrupted segment (useful when dealing with fragments of sequences).
+		</description>
+        <optionNames>-diag_mode</optionNames>
+        <furtherDetails>prog_docs/tcoffee.html</furtherDetails>
+		<defaultValue>0</defaultValue>
+		<possibleValues>0</possibleValues>
+		<possibleValues>1</possibleValues>
+    </parameters>
+ <parameters isRequired="false">
+        <name>Diagonal threshold</name>
+        <description>
+	Sets the value of the threshold when selecting diagonals. 
+	0: indicates that -ndiag should be used to select the diagonals (cf -ndiag section).
+		</description>
+        <optionNames>-diag_threshold</optionNames>
+        <furtherDetails>prog_docs/tcoffee.html</furtherDetails>
+		<defaultValue>0</defaultValue>
+        <validValue>
+        	<type>Integer</type>
+            <min>0</min>
+            <max>1000</max>
+        </validValue>
+    </parameters>
+ <parameters isRequired="false">
+        <name>Alphabet degeneration method</name>
+        <description>
+	Indicates the manner in which the amino acid alphabet is degenerated when hashing in the 
+	fasta_pairwise dynamic programming. Standard ClustalW matrices are all valid. 
+	They are used to define groups of amino acids having positive substitution values. 
+	In T-Coffee, the default is a 13 letter grouping named Vasiliky, with residues grouped as follows:
+	rk, de, qh, vilm, fy (other residues kept alone).
+	This alphabet is set with the flag -sim_matrix=vasiliky. 
+	In order to keep the alphabet non degenerated, -sim_matrix=idmat can be used to retain 
+	the standard alphabet.
+		</description>
+        <optionNames>-sim_matrix</optionNames>
+        <furtherDetails>prog_docs/tcoffee.html</furtherDetails>
+		<defaultValue>vasiliky</defaultValue>
+		<possibleValues>vasiliky</possibleValues>
+		<possibleValues>idmat</possibleValues>
+  </parameters>
+ <parameters isRequired="false">
+        <name>Substitution Matrix</name>
+        <description>
+This flag sets the matrix that will be used by alignment methods within t_coffee (slow_pair, lalign_id_pair). It does not affect external methods (like clustal_pair, clustal_aln). 
+Users can also provide their own matrices, using the matrix format described in the appendix.
+		</description>
+        <optionNames>-matrix</optionNames>
+        <furtherDetails>prog_docs/tcoffee.html</furtherDetails>
+		<possibleValues>blosum62mt</possibleValues>
+ 	<!-- This option causes tcoffee to fail  
+ 	<parameters isRequired="false">
+        <name>Matrix</name>
+        <description>Substitution Matrix to use</description>
+        <optionNames>-matrix</optionNames>
+        <furtherDetails>http://www.compbio.dundee.ac.uk/users/pvtroshin/ws/Index.html</furtherDetails>
+        <defaultValue>BLOSUM62</defaultValue>
+		<possibleValues>BLOSUM100</possibleValues>
+		<possibleValues>BLOSUM30</possibleValues>
+		<possibleValues>BLOSUM35</possibleValues>
+		<possibleValues>BLOSUM40</possibleValues>
+		<possibleValues>BLOSUM45</possibleValues>
+		<possibleValues>BLOSUM50</possibleValues>
+		<possibleValues>BLOSUM55</possibleValues>
+		<possibleValues>BLOSUM60</possibleValues>
+		<possibleValues>BLOSUM62</possibleValues>
+		<possibleValues>BLOSUM65</possibleValues>
+		<possibleValues>BLOSUM70</possibleValues>
+		<possibleValues>BLOSUM75</possibleValues>
+		<possibleValues>BLOSUM80</possibleValues>
+		<possibleValues>BLOSUM85</possibleValues>
+		<possibleValues>BLOSUM90</possibleValues>
+		<possibleValues>BLOSUMN</possibleValues>
+		<possibleValues>DAYHOFF</possibleValues>
+		<possibleValues>GONNET</possibleValues>
+		<possibleValues>IDENTITY</possibleValues>
+		<possibleValues>MATCH</possibleValues>
+		<possibleValues>NUC.4.2</possibleValues>
+		<possibleValues>NUC.4.4</possibleValues>
+		<possibleValues>PAM10</possibleValues>
+		<possibleValues>PAM100</possibleValues>
+		<possibleValues>PAM110</possibleValues>
+		<possibleValues>PAM120</possibleValues>
+		<possibleValues>PAM130</possibleValues>
+		<possibleValues>PAM140</possibleValues>
+		<possibleValues>PAM150</possibleValues>
+		<possibleValues>PAM160</possibleValues>
+		<possibleValues>PAM170</possibleValues>
+		<possibleValues>PAM180</possibleValues>
+		<possibleValues>PAM190</possibleValues>
+		<possibleValues>PAM20</possibleValues>
+		<possibleValues>PAM200</possibleValues>
+		<possibleValues>PAM210</possibleValues>
+		<possibleValues>PAM220</possibleValues>
+		<possibleValues>PAM230</possibleValues>
+		<possibleValues>PAM240</possibleValues>
+		<possibleValues>PAM250</possibleValues>
+		<possibleValues>PAM260</possibleValues>
+		<possibleValues>PAM270</possibleValues>
+		<possibleValues>PAM280</possibleValues>
+		<possibleValues>PAM290</possibleValues>
+		<possibleValues>PAM30</possibleValues>
+		<possibleValues>PAM300</possibleValues>
+		<possibleValues>PAM310</possibleValues>
+		<possibleValues>PAM320</possibleValues>
+		<possibleValues>PAM330</possibleValues>
+		<possibleValues>PAM340</possibleValues>
+		<possibleValues>PAM350</possibleValues>
+		<possibleValues>PAM360</possibleValues>
+		<possibleValues>PAM370</possibleValues>
+		<possibleValues>PAM380</possibleValues>
+		<possibleValues>PAM390</possibleValues>
+		<possibleValues>PAM40</possibleValues>
+		<possibleValues>PAM400</possibleValues>
+		<possibleValues>PAM410</possibleValues>
+		<possibleValues>PAM420</possibleValues>
+		<possibleValues>PAM430</possibleValues>
+		<possibleValues>PAM440</possibleValues>
+		<possibleValues>PAM450</possibleValues>
+		<possibleValues>PAM460</possibleValues>
+		<possibleValues>PAM470</possibleValues>
+		<possibleValues>PAM480</possibleValues>
+		<possibleValues>PAM490</possibleValues>
+		<possibleValues>PAM50</possibleValues>
+		<possibleValues>PAM500</possibleValues>
+		<possibleValues>PAM60</possibleValues>
+		<possibleValues>PAM70</possibleValues>
+		<possibleValues>PAM80</possibleValues>
+		<possibleValues>PAM90</possibleValues>
+   </parameters>
+    -->
+    
+   </parameters>
+ <parameters isRequired="false">
+        <name>Match penalty</name>
+        <description>
+			Indicates the penalty to associate with a match. When using a library, 
+			all matches are positive or equal to 0. Matches equal to 0 are unsupported by the 
+			library but non-penalized. Setting nomatch to a non-negative value makes it possible 
+			to penalize these null matches and prevent unrelated sequences from being aligned 
+			(this can be useful when the alignments are meant to be used for structural modeling)</description>
+        <optionNames>-nomatch</optionNames>
+        <furtherDetails>prog_docs/tcoffee.html</furtherDetails>
+		<defaultValue>0</defaultValue>
+        <validValue>
+        	<type>Integer</type>
+            <min>0</min>
+            <max>1000</max>
+        </validValue>
+   </parameters>
+ <parameters isRequired="false">
+        <name>Gap opening penalty</name>
+        <description>
+		Indicates the penalty applied for opening a gap. The penalty must be negative. 
+		If no value is provided when using a substitution matrix, a value will be automatically computed.
+		Here are some guidelines regarding the tuning of gapopen and gapext. 
+		In T-Coffee matches get a score between 0 (match) and 1000 (match perfectly consistent with the library).
+ 		The default cosmetic penalty is set to -50 (5% of a perfect match). 
+ 		If you want to tune -gapoen and see a strong effect, you should therefore consider values between 0 
+ 		and -1000. 
+ 		</description>
+        <optionNames>-gapopen</optionNames>
+        <furtherDetails>prog_docs/tcoffee.html</furtherDetails>
+		<defaultValue>0</defaultValue>
+        <validValue>
+        	<type>Integer</type>
+            <min>-1000</min>
+            <max>0</max>
+        </validValue>
+   </parameters>
+  <parameters isRequired="false">
+        <name>Gap extension penalty</name>
+        <description>
+		Indicates the penalty applied for extending a gap. The penalty must be negative. 
+ 		</description>
+        <optionNames>-gapext</optionNames>
+        <furtherDetails>prog_docs/tcoffee.html</furtherDetails>
+		<defaultValue>0</defaultValue>
+        <validValue>
+        	<type>Integer</type>
+            <min>-1000</min>
+            <max>0</max>
+        </validValue>
+   </parameters>
+  <parameters isRequired="false">
+        <name>Cosmetic penalty</name>
+        <description>
+	Indicates the penalty applied for opening a gap. The penalty must be negative and is set to a very low value by default.
+	It will only have an influence on the portions of the alignment that are unalignable. 
+	It will not make them more correct, but only more pleasing to the eye ( i.e. Avoid stretches 
+	of lonely residues). The cosmetic penalty is automatically turned off if a substitution matrix is 
+	used rather than a library.
+  		</description>
+        <optionNames>-cosmetic_penalty</optionNames>
+        <furtherDetails>prog_docs/tcoffee.html</furtherDetails>
+		<defaultValue>-50</defaultValue>
+        <validValue>
+        	<type>Integer</type>
+            <min>-1000</min>
+            <max>0</max>
+        </validValue>
+   </parameters>
+  <parameters isRequired="false">
+        <name>Terminal gaps penalty</name>
+        <description>
+		0: terminal gaps penalized with -gapopen + -gapext*len
+		1: terminal gaps penalized with a -gapext*len
+		2: terminal gaps unpenalized.
+  		</description>
+        <optionNames>-tg_mode</optionNames>
+        <furtherDetails>prog_docs/tcoffee.html</furtherDetails>
+		<defaultValue>1</defaultValue>
+		<possibleValues>0</possibleValues>
+		<possibleValues>1</possibleValues>
+		<possibleValues>2</possibleValues>
+   </parameters>
+  <parameters isRequired="false">
+        <name>Number of iterations</name>
+        <description>
+			Sequences are extracted in turn and realigned to the MSA. 
+			If iterate is set to -1, each sequence is realigned, otherwise the number of iterations is 
+			set by -iterate.
+  		</description>
+        <optionNames>-iterate</optionNames>
+        <furtherDetails>prog_docs/tcoffee.html</furtherDetails>
+		<defaultValue>0</defaultValue>
+        <validValue>
+        	<type>Integer</type>
+            <min>-1</min>
+            <max>100</max>
+        </validValue>
+   </parameters>
+  <parameters isRequired="false">
+        <name>Output order</name>
+        <description>
+		Sets the order of the sequences in the output alignment: -outorder=input means the sequences 
+		are kept in the original order. -outorder=aligned means the sequences come in the order 
+		indicated by the tree. This order can be seen as a one-dimensional projection of the tree distances. 
+  		</description>
+        <optionNames>-outorder</optionNames>
+        <furtherDetails>prog_docs/tcoffee.html</furtherDetails>
+		<defaultValue>input</defaultValue>
+		<possibleValues>input</possibleValues>
+		<possibleValues>aligned</possibleValues>
+   </parameters>
+  <parameters isRequired="false">
+        <name>Input order</name>
+        <description>
+		Multiple alignments based on dynamic programming depend slightly on the order in which 
+		the incoming sequences are provided. To prevent this effect sequences are arbitrarily 
+		sorted at the beginning of the program (-inorder=aligned). 
+		However, this affects the sequence order within the library. 
+		You can switch this off by setting -inorder=input
+		</description>
+        <optionNames>-inorder</optionNames>
+        <furtherDetails>prog_docs/tcoffee.html</furtherDetails>
+		<defaultValue>aligned</defaultValue>
+		<possibleValues>input</possibleValues>
+		<possibleValues>aligned</possibleValues>
+   </parameters>
+</runnerConfig>

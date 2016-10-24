@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="compbio.engine.client.CommandBuilderTester" failures="0" tests="3" time="0.546" errors="0">
+  <properties/>
+  <testcase name="testCommandBuilding" time="0.219" classname="compbio.engine.client.CommandBuilderTester"/>
+  <testcase name="testOptionsToCommand" time="0.297" classname="compbio.engine.client.CommandBuilderTester"/>
+  <testcase name="testSpaceDelimiterExecutable" time="0.0" classname="compbio.engine.client.CommandBuilderTester"/>
+</testsuite>

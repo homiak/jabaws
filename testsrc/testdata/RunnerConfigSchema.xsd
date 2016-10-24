@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="runnerConfig" type="runnerConfig"/>
+
+  <xs:complexType name="parameter">
+    <xs:complexContent>
+      <xs:extension base="option">
+        <xs:sequence>
+          <xs:element name="possibleValues" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="validValue" type="valueConstrain" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="option">
+    <xs:sequence>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element name="description" type="xs:string"/>
+      <xs:element name="optionNames" type="xs:string" maxOccurs="unbounded"/>
+      <xs:element name="furtherDetails" type="xs:anyURI" minOccurs="0"/>
+      <xs:element name="defaultValue" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="isRequired" type="xs:boolean" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="valueConstrain">
+    <xs:sequence>
+      <xs:element name="type" type="type"/>
+      <xs:element name="min" type="xs:string" minOccurs="0"/>
+      <xs:element name="max" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="runnerConfig">
+    <xs:sequence>
+      <xs:element name="runnerClassName" type="xs:string"/>
+      <xs:element name="options" type="option" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="prmSeparator" type="xs:string" minOccurs="0"/>
+      <xs:element name="parameters" type="parameter" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="type">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Integer"/>
+      <xs:enumeration value="Float"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>
+

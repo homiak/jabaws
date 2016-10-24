@@ -1,0 +1,232 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Java Bioinformatics Analyses Web Services (JABAWS) developers documentation</title>
+<link href="ws.css" rel="stylesheet" type="text/css" media="screen,  projection, handheld, tv" />
+<link rel="stylesheet" type="text/css" media="print" href="print.css"/>
+
+<script type="text/javascript" src="prototype-1.6.0.3.js"></script>
+
+</head>
+<body>
+<div id="page">
+<div id="banner">
+<table> 
+<tr><td style="width:158px;"><a href="http://www.dundee.ac.uk"><img src="images/uod_lt_long.gif"  alt="University of Dundee" width="158" height="90" class="logo"  title="University of Dundee" longdesc="http://www.dundee.ac.uk"/></a></td>
+<td class="bg"><img src="images/jabaws2.png" alt="JABAWS-2.0" title="Java Bioinformatics Analysis Web Services version 2.0"/></td>
+<td class="bg"><img src="images/banner_right.png" alt="Disorder" width="200" height="80"/></td>
+</tr>
+</table>
+</div><!-- banner end-->
+
+<div id="wrapper">
+<div id="panel">
+<a href="index.html">Home</a> 
+  <a href="quick_start.html">Getting Started</a> 
+  <a class="selected" href="man_about.html">Manual</a> 
+	<div id="submenu">
+		<a href="man_about.html">About</a>
+		<a href="man_servervm.html" title="JABAWS Server as Virtual Appliance">Server VA</a>
+		<a href="man_awscloud.html" title="JABAWS Server in the Amazon EC2 Cloud">Server in the Cloud</a>
+		<a href="man_serverwar.html" title="JABAWS Server as Web Application aRchive">Server WAR</a>
+		<a href="man_configuration.html" >Server<br/>
+		Configuration</a>
+		<a href="man_client.html" title="JABAWS Command Line Client">CMD Client</a>
+		<a href="man_stats.html" title="JABAWS Usage Statistics">Usage Statistics</a>
+		<a href="man_dev.html" title="Accessing JABAWS from your program">Accessing<br/>
+		JABAWS</a>	
+		<a class="selected" href="man_server_dev.html" >JABAWS Development</a>
+	</div>
+<a href="http://www.compbio.dundee.ac.uk/download">Download</a> 
+<a href="PublicAnnualStat" title="JABAWS usage statistics">Usage Statistics</a>
+ <a href="ServiceStatus" title="JABAWS webservices status. Click to test all web services. Please be patient while the services are being checked">Services Status</a>
+<a href="contacts.html">Contact Us</a>
+<a href="http://www.compbio.dundee.ac.uk" title="University of Dundee, The Barton Group" >Barton Group</a>
+</div>
+<!-- panel end-->
+<div id="content">
+
+  <h2 id="headtitle">For JABAWS Developers</h2>
+  <h2>The JABAWS project </h2>
+  <p>This page is for anyone who wants to add a new webservice into the JABAWS framework. </p>
+  <ul>
+  <li><a href="#api">The API</a></li>
+  <li><a href="#thesrc">The source code</a></li>
+  <li><a href="#projstruct">Structure of the project</a></li>
+  <li><a href="#thecode">The code structure</a></li>
+  <li><a href="#runtests">Running tests</a></li>
+  <li><a href="#prepexec">Preparing distributive's</a></li>
+  <li><a href="#buildstubs">Building web services artifacts</a></li>
+  <li><a href="#addnewws">Rough guide - adding a new web service</a></li>
+  </ul>
+
+  <h4><a name="api" id="api"></a>The API </h4>
+  <p><a href="dm_javadoc/index.html">Data model</a> javadoc- read this if your are coding against JABA Web Services</p>
+  <p><a href="full_javadoc/index.html">Complete</a> javadoc - for developers who want to use JABAWS framework and use Engines and Executables directly</p>
+  <h4><a name="thesrc" id="thesrc"></a>The source code</h4>
+<p><a name="svn">Private (most up-to-date) SVN source repository:</a><a href="link to svn.lifesci.dundee.ac.uk/svn/barton/ptroshin/JABA_r1">https://svn.lifesci.dundee.ac.uk/svn/barton/ptroshin/JABA2_r1</a></p>
+<p>The JABAWS public code repository containing the code for each JABAWS public release is located at https://jabaws.googlecode.com/ </p>
+<p>  The repository contains a complete JABAWS <a href="http://www.eclipse.org">Eclipse</a> project. </p>
+<p>Of cause If you want to make a modification to the source code you would need to generate distributives yourself. To do that first generate JAX-WS artifacts using <span class="hightlight">build-server</span> task from <span class="hightlight">wsbuild.xml</span> ant script, than you could use build.xml tasks to generate any of the distributives you need. </p>
+<h4><a name="projstruct" id="projstruct"></a>Structure of the project</h4>
+<ul>
+	<li>
+	<span class="directory">binaries</span>	contains native executables e.g. clustalw</li>
+		<ul>
+		<li><span class="directory">src</span>	contains sources of native executables</li>
+		<li><span class="directory">windows</span>	contains pre-compiled Windows binaries</li>
+		<li>compilebin.sh - the script to complile binaries</li>
+		<li>setexecflag.sh - the script to set executable flag for the binaries</li>
+		</ul>
+	<li><span class="directory">conf</span>	contains JABAWS configuration files	</li>
+	<li><span class="directory">ExecutionStatistics</span>	the database for storing collected execution statistics </li>
+	<li><span class="directory">jobsout</span> a default folder for temporary job directories </li>
+	<li><span class="directory">statpages</span> the web pages for execution statistics display</li>
+	<li><span class="directory">WEB-INF</span> default </li>
+	<li><span class="directory">website</span> contains the JABAWS web pages </li>
+	<ul>
+		<li><span class="directory">archive</span> contains JABAWS packages, the WAR and JAR files</li>
+	</ul>
+    </ul>
+<h4><a name="thecode" id="thecode"></a>The code structure</h4>
+<ul>
+	<li><span class="directory">datamodel</span> contains the JABAWS datamodel </li>
+	<li><span class="directory">engine</span> contains the JABAWS engine - the code that abstract the execution environment and executes native binaries</li>
+	<li><span class="directory">runner</span> contains the JABAWS runners - thin wrappers for native binaries </li>
+	<li><span class="directory">webservices</span> contains the JABAWS SOAP web services </li>
+	<li><span class="directory">testsrc</span> contains the JABAWS unit tests</li>
+  </ul>
+<p>Each source folder depends on the upper folders for compilation. For example, the datamodel is the top level folder so it has no other dependencies on other JABAWS code. The Engine level depends on the datamodel to compile etc. The web services folder is the bottom layer and depends on all the other source code. </p>
+<p>So the JABAWS project is split into 4 layers. From bottom-up the first layer consists from the value classes used by all other layers of the hierarchy, in particular web services. So, to be able to use JABAWS one needs to have these classes. At the same time classes on this layer does not have any dependencies on the layers above.</p>
+<p>The second layer contains code for execution of the wrappers, which are the abstraction describing native executables. JABAWS can execute tasks locally that is on the same machine as JVM and on the cluster. Thus currently code on this layer contain two engines. This layer depends on the layer underneath, the data model layer, but is completely independent from the code above.</p>
+<p>The third layer consists of the wrappers for the native executables and classes to handle their configuration. It depends on the engines and the data model, but know nothing about the web services.</p>
+<p>Finally, the upper layer contains the web services, that depend on all the layers below.</p>
+<p>The layer isolation is archived though specially designed compilation task which is executed sequentially in several stages so that the first layer compiles before any other layers, second layer compiles after that and process continies before all the code is compiled.  Any violation of the layer boundaries results in the compilation failure. Use Ant &quot;Compile&quot; or &quot;Complile_with_debug&quot; tasks to perform the staged compilation.</p>
+<p>A client package contains only classes from data model layer and a simple web services client. Framework package is for anyone who want to use JABAWS framework for controlling native executables in local or cluster environments. Framework exclude the web services layer. Server package contains all the code.</p>
+
+<h4><a name="runtests" id="runtests"></a>Running tests</h4>
+<p>JABAWS uses TestNG framework for testing. The test results for the JABAWS package offered for download can be found here: <a href="http://www.compbio.dundee.ac.uk/user/www-jws2/tests/index.html">Test Results</a><br/>
+JABAWS uses <a href="http://testng.org/doc/index.html">TestNG</a> for testing. There is a TestNG plugin available for Eclipse which has functionality similar to JUnit. However, no plugins are necessary to run the test cases, as testng jar is supplied with JABAWS together with an ant tasks to run the test cases. </p>
+<p>The best way to ensure that JABAWS framework is completely functional on your system is to run all test cases. 
+Test cases tests all aspects of JABAWS functionality. Consequently, one need to have non windows operation system and support of the cluster to be able to run all tests. If your system does not support cluster, then you could run all test excluding those that depends on the cluster.
+Several testing groups are supported: 
+<p>All tests (Test)</p>
+<p>Cluster tests (Run_cluster_dependent_test)</p>
+<p>Cluster independent tests () </p>
+<p>Windows only tests (All_cluster_independent_windows_only_tests) </p>
+<p>Performance and stability tests (Long_tests) </p>
+<p>Re-run failed tests (Rerun_failed_tests) </p>
+<p>Run custom test (CustomTest) </p>
+<p>To run the tests you need to download all sources from <a href="#svn">repository</a>. Once you have done that, enter into the command line mode, change directory to the project directory and type: 
+  <span class="code">ant -f build.xml &lt;test group name&gt;</span>    </p>
+  <p>. Make sure you have <a href="http://ant.apache.org/">Apache Ant</a> 
+    installed and path to ant executable is defined in your path environmental variable. 
+    Replace test group name with the one of the names given in the list above to run required group of tests e.g for running cluster only tests 
+    use the following 
+    command: <span class="code">ant -f build.xml Run_cluster_dependent_test</span>
+    If you work under Linux you could use a simple script from the root folder of repository called <span class="hightlight">runtests.sh</span> This script simply contains a collection of the test commands described above and paths to java home directory and an ant executable, which you can define once for your system and then reuse.    </p>
+  </p>
+  <p>A handy feature of TestNG is its ability to re-run failed tests. Failed test ant file is stored in <span class="hightlight">test-output/testng-failed.xml</span>. and is used in the ant task called <span class="hightlight">Rerun_failed_tests</span>. So re-running failed tests requires no more work than running any other test group and could be accomplished with the command: <span class="code">ant -f build.xml Rerun_failed_tests</span> CustomTest runs the test defined in the project root directory file called <span class="hightlight">temp-testng-customsuite.xml</span>. This file is generated by TestNG plugin every time you run the test from Eclipse. Thus an easy way to run a test in a different environment is to run it from Eclipse first and then from ant using a custom test procedure. </p>
+  <p class="hightlight">For cluster execution make sure that the property LD_LIBRARY_PATH defined in build.xml points to cluster engine LD libraries directory in your local system.</p>
+
+ <h4><a name="prepexec" id="prepexec"></a>Preparing distributive's</h4>
+  <p>There are a number of ant tasks aimed for preparing distributives for download.
+  Currently a few types of JABAWS packages are offered 
+  <p>Client only (contains classes required to access JABA Web Services)</p>
+  <p>Platform specific JABAWS (windows and other)</p>
+  <p>JABAWS without binaries</p>
+  <p>JABAWS framework </p>
+  </p>
+  Corresponding build task names are: 
+  <p>min-jaba-client</p>
+  <p>jaba-windows, jaba-complete</p>
+  <p>jaba-no-binaries</p>
+  <p>full-jaba-client</p>
+  <p>The easiest way to build all distributives is to call <span class="hightlight">build-all </span>ant task. There are more tasks defined in build.xml than described here. They are mostly self explanatory.  </p>
+  <p class="hightlight">If you made any changes to the data model and would like to generate a complete JABAWS distro make sure you have rebuilt jaxws artifact as described below.  </p>
+  <h4><a name="buildstubs" id="buildstubs"></a>Building web services artifacts</h4>
+<p>Server side artifacts should be rebuild whenever the data model, meta model or MSA interface were changed. To do that run build-server task from wsbuild.xml ant build file. WSDL files will be generated in <span class="hightlight">webservices/compbio/ws/server/resource</span> directory. It is not necessary to edit them if any of the JABAWS clients are used. JABAWS are the standard JAX-WS web services, which are WS-I basic profile compatible. </p>
+<h4><a name="addnewws" id="addnewws"></a>Rough guide - adding a new web service</h4>
+<ol>
+<li> Add a new executable which you'd like to wrap as a JABAWS web service to the binaries folder. If it has the source code and can be 
+  recompiled for different platforms include it under binaries/src.
+  Edit binaries/src setexecutableflag.sh and compilebin.sh scripts accordingly. </li>
+<li> Make sure that all the dependencies of the software being installed are satisfied. 
+  If there are other binaries they should be included as well. Keep the dependent 
+  binaries in subfolder for the main executable. Update compilebin and setexecflag </li>
+  scripts accordingly.<li> Make sure that the new executable </li>
+   does not have any hard links to its dependencies, e.g. is able to run from 
+  any installation folder and does not contain any hard coded paths. 
+   <li> Describe executable in conf/Exectuable.properties file. The lowercase name of the 
+  wrapper should be included in the name of the property for example Clustal 
+  properties all include clustal as a part of the name e.g. local.clustalw.bin.
+  The same property for Mafft will be called local.mafft.bin. For more help please refer to the Executable.properties file. </li>
+  <li> Describe the executable supported parameters in the &lt;ExecutableName&gt;Parameters.xml, presets in the &lt;ExecutableName&gt;Presets.xml and the execution limits in the &lt;ExecutableName&gt;Limit.xml.  By convention these files are stored in conf/settings. All of these are optional. If the 
+  executable does not support parameters you do not have to mention the 
+  XXXParameter.xml file in the Executable.properties file at all. The same is true for 
+  Presets and Limits. </li>
+<li> Create a Java wrapper class for your executable. Create it within runner 
+  source directory. Examples of other wrappers can be found in compbio.runner.msa 
+  or compbio.runner.disorder packages. Wrapper should extend SkeletalExecutable&lt;T&gt; 
+  implements PipedExecutable&lt;T&gt; if you need to pass the input or collect the 
+  results from the standard in/out. Please see Mafft code as example. Wrapper 
+  should expend SkeletalExecutable&lt;T&gt; if input/output can be set as a parameter 
+  for an executable. Please see ClustalW code as example. </li>
+<li> Create a testcase suit for your wrapper and run the test cases. </li>
+<li> Create parser for the output files of your executable. Suggested location 
+  compbio.data.sequence.SequenceUtil </li>
+<li> Test the parser</li>
+<li> Decide which web services interfaces your executable is going to match. 
+  For example if the executable output can be represented as <br />
+  SequenceAnnotation then SequenceAnnotation interface might be appropriate. 
+  For multiple sequence alignment an Msa interface should be used. </li>
+<li> If you find a web interface that matches your returning data type, then 
+  implement a web service which confirms to it within a webservices source folder. </li>
+<li> Register web service in WEB-INF/ web.xml and sun-jaxws.xml</li>
+<li> Add generated wsdl to wsbuild.xml ant script to generate the stubs.</li>
+<li> Run build-server task in wsbuild file. Watch for errors. If the task fails <br />
+  that means that JAXB cannot serialize some of your new data structures. Add <br />
+  appropriate annotations to your data types.
+  Also check that <br />
+  - you do not have interfaces to serialize. JAXB cannot serialize them.<br />
+  - you have a default no args constructor (can be private if you do not need it)<br />
+  - JAXB cannot serialize a Map, use custom data structure instead!<br />
+  - Enum cannot be serialized as its abstract class (do not confuse with enum <br />
+  which is fine)<br />
+  - Fields serialization leave a little more space for manoeuvre, so use it. If <br />
+  you do then you can accept and return interfaces, e.g. List, Map; abstract <br />
+  classes etc, from your methods. <br />
+  <br />
+  If you have the data on the server side, but nothing is coming through to the <br />
+  client, this is a JAXB serialization problem. They tend to be very silent and <br />
+  thus hard to debug. Check your data structure can be serialized! </li>
+<li>Modify the client to work with your new web service. Update Services 
+  enumeration to include new service and ensure that all the methods of this 
+  enumeration take into account the new service. Update the client help text 
+  (client_help.txt) and insert it into the Constraints class. </li>
+<li> Test the web service with the client </li>
+<li> Test on the cluster.</li>
+</ol>
+<p>&nbsp;</p>
+</div>
+<!-- content end--> 
+<div id="copyright">Last update: 16 September 2011<br/>
+  Peter Troshin, The Barton Group, University of Dundee, UK</div>
+</div><!-- wrapper end-->
+</div> <!-- page end-->
+<!-- Google analitics -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try{
+var pageTracker = _gat._getTracker("UA-5356328-1");
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+</body>
+</html>
+
+

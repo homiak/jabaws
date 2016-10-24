@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="US-ASCII" standalone="yes"?>
+<presets>
+	<runnerClassName>compbio.runner.tcoffee.Tcoffee</runnerClassName>
+	<preset>
+		<name>Quick align. Very fast approximate (Speed-oriented)</name>
+		<description>quickaln: Very fast, sequence type - all, accuracy - medium low</description>
+		<optlist>
+			<option>-mode quickaln</option>
+		</optlist>
+	</preset>
+	<!-- does not work
+	<preset>
+		<name>Dali (Speed-oriented)</name>
+		<description>dali: a mode used to combine dali pairwise alignments</description>
+		<optlist>
+			<option>-mode dali</option>
+		</optlist>
+	</preset>
+	-->
+	<!-- This requires Blast to operate, however i do not know how to plug it to t-coffee. 
+	The build in one does not work.  
+	<preset>
+		<name>3dcoffee (Accuracy-oriented)</name>
+		<description>3dcoffee: runs t_coffee with the 3dcoffee	parameterization</description>
+		<optlist>
+			<option>-mode 3dcoffee</option>
+		</optlist>
+	</preset>
+	<preset>
+		<name>Accurate (Accuracy-oriented)</name>
+		<description>accurate: slow, sequence type - protein, accuracy - high</description>
+		<optlist>
+			<option>-mode accurate</option>
+		</optlist>
+	</preset>
+	could not find templates(?)
+	<preset>
+		<name>Rcoffee for RNA only (accuracy-oriented)</name>
+		<description> rcoffee: slow, sequence type - RNA, accuracy - high</description>
+		<optlist>
+			<option>-mode rcoffee</option>
+		</optlist>
+	</preset>
+	 -->
+	 <!-- This needs blast
+	<preset>
+		<name>Expresso (accuracy-oriented)</name>
+		<description> expresso: slow, sequence type - all, accuracy - high</description>
+		<optlist>
+			<option>-mode expresso</option>
+		</optlist>
+	</preset>
+	 --> 
+</presets>

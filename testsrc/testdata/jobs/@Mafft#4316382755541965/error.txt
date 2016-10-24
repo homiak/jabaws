@@ -1,0 +1,50 @@
+done.
+scoremtx = 1
+Gap Penalty = -1.53, +0.00, +0.00
+
+
+
+Making a distance matrix ..
+    1 / 35   11 / 35   21 / 35   31 / 35
+done.
+
+Constructing a UPGMA tree ... 
+    0 / 35   10 / 35   20 / 35   30 / 35
+done.
+
+Progressive alignment ... 
+STEP     1 / 34 fSTEP     2 / 34 fSTEP     3 / 34 fSTEP     4 / 34 fSTEP     5 / 34 fSTEP     6 / 34 fSTEP     7 / 34 fSTEP     8 / 34 dSTEP     9 / 34 dSTEP    10 / 34 fSTEP    11 / 34 dSTEP    12 / 34 fSTEP    13 / 34 dSTEP    14 / 34 dSTEP    15 / 34 dSTEP    16 / 34 dSTEP    17 / 34 dSTEP    18 / 34 dSTEP    19 / 34 fSTEP    20 / 34 dSTEP    21 / 34 dSTEP    22 / 34 dSTEP    23 / 34 dSTEP    24 / 34 dSTEP    25 / 34 fSTEP    26 / 34 dSTEP    27 / 34 dSTEP    28 / 34 d
+Reallocating..done. *alloclen = 2455
+STEP    29 / 34 dSTEP    30 / 34 dSTEP    31 / 34 dSTEP    32 / 34 dSTEP    33 / 34 dSTEP    34 / 34 d
+done.
+
+disttbfast (aa) Version 6.713b alg=A, model=BLOSUM62,  1.530, -0.000, -0.000
+blosum 62 / kimura 200
+done.
+scoremtx = 1
+Gap Penalty = -1.53, +0.00, +0.00
+Making a distance matrix .. 
+    0 / 34   10 / 34   20 / 34   30 / 34
+done.
+
+Constructing a UPGMA tree ... 
+    0 / 35   10 / 35   20 / 35   30 / 35
+done.
+
+Progressive alignment ... 
+STEP     1 /34 fSTEP     2 /34 fSTEP     3 /34 fSTEP     4 /34 fSTEP     5 /34 fSTEP     6 /34 fSTEP     7 /34 dSTEP     8 /34 fSTEP     9 /34 dSTEP    10 /34 fSTEP    11 /34 dSTEP    12 /34 dSTEP    13 /34 dSTEP    14 /34 fSTEP    15 /34 dSTEP    16 /34 fSTEP    17 /34 dSTEP    18 /34 dSTEP    19 /34 dSTEP    20 /34 dSTEP    21 /34 fSTEP    22 /34 dSTEP    23 /34 dSTEP    24 /34 dSTEP    25 /34 dSTEP    26 /34 dSTEP    27 /34 dSTEP    28 /34 dSTEP    29 /34 dSTEP    30 /34 dSTEP    31 /34 dSTEP    32 /34 dSTEP    33 /34 dSTEP    34 /34 d
+done.
+tbfast (aa) Version 6.713b alg=A, model=BLOSUM62,  1.530, -0.000, -0.000
+comment = FFT-NS-2
+done.
+scoremtx = 1
+
+
+Strategy:
+ FFT-NS-2 (Fast but rough)
+ Progressive method (guide trees were built 2 times.)
+
+If unsure which option to use, try 'mafft --auto input > output'.
+If the possibility of long gaps can be excluded, add '--ep 0.123'.
+For more information, see 'mafft --help', 'mafft --man' and the mafft page.
+

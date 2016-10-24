@@ -1,0 +1,24 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="jaba2" parallel="false">
+
+  <test verbose="3" name="compbio.runner.disorder.GlobPlotTester" annotations="JDK">
+    <classes>
+      <class name="compbio.runner.disorder.GlobPlotTester"/>
+    </classes>
+  </test>
+
+
+<!--
+  <test verbose="2" name="compbio.stat.collector.StatDBTester" annotations="JDK">
+    <classes>
+      <class name="compbio.stat.collector.StatDBTester">
+
+        <methods>
+          <include name="testClusterExecute"/>
+        </methods>
+
+      </class>
+    </classes>
+  </test>
+-->
+</suite>

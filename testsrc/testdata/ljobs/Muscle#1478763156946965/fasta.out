@@ -1,0 +1,181 @@
+CLUSTAL W (1.81) multiple sequence alignment
+
+Sequence12      ----------------------------------------------VDSMVCFTQTKPGA
+Sequence0       ---------------------------------------------TWDG-GCWRDANPDN
+Sequence1       ---------------------------------------------TWDG-SCWTTQSPGA
+Sequence13      ---------------------------------------------YYDE-VCWVASPPGV
+Sequence16      SCRLLAAMATGSSDLHLELLVLVFLVTNVPAVTFLSLLLRSGCTGMWDKIACWPSADLGA
+Sequence17      MCDI-------ERELNKEKEACEAQMENKTA----------GCTGMWDKIACWPSADLGA
+Sequence7       ---------------------------------------------EWDG-ICWPRGTVGS
+Sequence5       ---------------------------------------------EWDG-ICWPRGSPGT
+Sequence6       ---------------------------------------------EWDG-ICWPQGFPGT
+Sequence9       ---------------------------------------------EWDG-FCWPYGTPGV
+Sequence8       ---------------------------------------------EWDK-TCWPNSAPGV
+Sequence10      ----------------------------------------------WDTVSCWPTTPAGA
+Sequence11      ----------------------------------------------QDEFSCWPATPEGA
+Sequence14      ------------------YLLTI----------------EIYCNWTWDSVLCWPPTKEDT
+Sequence15      -------------MSSGEYLNKTVEICVEKFKNFLPPNGEIYCNWTWDSVLCWPPTKEDT
+Sequence4       ---------------------------------------------TFDG-SCWNATPAGS
+Sequence2       ---------------------------------------------IFDE-LCWPETLGGV
+Sequence3       ---------------------------------------------NFDG-LCWPRTPAGL
+                                                               *   *:     . 
+
+Sequence12      --YSGCPT---------------LNSSKECYMNGTW------------------------
+Sequence0       --YLSCPN---------------LNALKYCHSNGTW------------------------
+Sequence1       --IQGCPA---------------LNSAKSCTANGTW------------------------
+Sequence13      --ERQCPE---------------FTVTRLCMFNGSW------------------------
+Sequence16      EVTIPCPKYLFFFSGDALPPRSPGNLSKTCTADG-WTPVSIDYTGDCGYDPNDTVN----
+Sequence17      EVTIPCPKYLFFFSGDA----QPRNLSKTCTADG-WTPVSIDYTGDCGYDPNDTVN----
+Sequence7       --AVPCPP---------------IVAFRHCNPNGTW------------------------
+Sequence5       --RVPCPS---------------IHAYRTCDINGSW------------------------
+Sequence6       --KTPCPG---------------IHAYRRCDSNGSS------------------------
+Sequence9       --GAECPP---------------FHAYRHCGLSGNW------------------------
+Sequence8       --RLPCPE---------------ITVDRYCMSDGTW------------------------
+Sequence10      --VLTCPP---------------FNATRMCYPNGTW------------------------
+Sequence11      --TIPCPK---------------LNATRFCGEDGVW------------------------
+Sequence14      VAVQNCPKDYNYFKTLT------ELVYKKCLPGGRWEGRIKGHDDSPQGWTNYTTCFTPE
+Sequence15      VAVQNCPKDRGIDPS--------KLVYKKCLPGGRWEGRIKGHDDSPQGWTNYTTCFTPE
+Sequence4       --VAPCPY---------------FMAHKICTEEGTW------------------------
+Sequence2       --NQSCPK---------------KFAYKDCLENGSW------------------------
+Sequence3       --SQYCPD---------------FLAHKTCLENGSW------------------------
+                     **                    . *   *                          
+
+Sequence12      ------------------------------VLGRSISLFALCIAFASFCIL----RNLKM
+Sequence0       ------------------------------YLCNIASILLLLPAIAIFLVY----KQHRI
+Sequence1       ------------------------------NLLNVISIVFIIPAIVIFLAF----QQNRV
+Sequence13      ------------------------------ILGYSLSFTTLLGAFVILVYF----RCVRN
+Sequence16      --------HEVSRDEVHVQESFYNAVKVGYTVGHSVSLVSLTVGVIILCVF-RKIHCTRN
+Sequence17      --------HE-------VQESFYNAVKVGYTVGHSVSLVSLTVGVIILCVF-RKLHCTRN
+Sequence7       ------------------------------VMGYSISFGSLAVAILIIGYF----HCTRN
+Sequence5       ------------------------------VIGYAVSFSSLMVAILIMGFF----HCTRN
+Sequence6       ------------------------------IMGYAVSFSSLLVAIFIIGYF----HCTRN
+Sequence9       ------------------------------KIGYSISLVSLFIAFIILARF----HCTRN
+Sequence8       ------------------------------SLGYSFSLVALVFAMIILAYF----HCTRN
+Sequence10      ------------------------------VIGFTTSIVALIVALCIFLYF----RCLRN
+Sequence11      ------------------------------IIGFIITTIALVAALIIFLYF----RCLRN
+Sequence14      TWQLFKMLYADSEDTAKIKLDIAEKTRTLEIVGFSVSLIALLFSLAIFFRFRRGLRNSRT
+Sequence15      TWQLFKMLYADSEDTAKIKLDIAEKTRTLEIVGFSVSLIALLFSLAIFFRF-RGLRNSRT
+Sequence4       ------------------------------YIGYSVSLIALVMSLAILIAF----KCTRI
+Sequence2       ------------------------------FVGYSISLAALVISLAIFFTF----KCTRI
+Sequence3       ------------------------------YVGYALSLLALLISIIIFLGF----RCTRI
+                                               :    :   :  ..  :       .  . 
+
+Sequence12      IIHWNFVMSLIIRNVTWF--------------LL-------F------------------
+Sequence0       RLHISFFLSFILSDVTAI--------------LW-------D------------------
+Sequence1       KVHIHLLIALGLCSFVTM--------------LW-------Y------------------
+Sequence13      YIHLNLVTSFLLLYLIFF--------------LM-------I------------------
+Sequence16      YIHIHLFVAFILKAVTVF--------------IK-------DVVLFGVGETMKCRFRSER
+Sequence17      YIHIHLFVAFILKAVTVF--------------IK-------DVVLFGVGETMKCQ-----
+Sequence7       YIHMHLFVSFMLRATSIF--------------VK-------D------------------
+Sequence5       YIHMHLFLSFMLRAVSIF--------------VK-------D------------------
+Sequence6       YIHMHLFVSFMLRAASIF--------------VK-------D------------------
+Sequence9       YVHMHLFVSYMLRAFFIL--------------LR-------D------------------
+Sequence8       YIHMHLFASFILRAVVIF--------------VK-------D------------------
+Sequence10      TIHCHLIVTFIFKYILWL--------------IM-------N------------------
+Sequence11      VIHCHLIVTFILRHILWV--------------IM-------H------------------
+Sequence14      RIHKNLFIAMEIQVVVRLSLYIDQVIVKE--FFFQ-----PF------------------
+Sequence15      RIHKNLFIAMEIQVVVRLSLYIDQVIVKEKINFWQGIHDTPF------------------
+Sequence4       YIHRNLFASFIINNAMWL--------------LW-------Y------------------
+Sequence2       RIHIQLFISFALNNLMWI--------------IW-------Y------------------
+Sequence3       RIHVHLFASLACTCVAWI--------------LW-------Y------------------
+                 :*  :. :        .              .                           
+
+Sequence12      ----------------------GCRVFAILFNYALIVTFSWMMVEGIMIHRKLES--FMS
+Sequence0       ----------------------VCKALSFFRIYCKSTNYVWMFCEGFYLHRLISN--FKP
+Sequence1       ----------------------ACQVLAVLKLYLSSSTYWWMLCEGIYLHRLLVN--FHP
+Sequence13      ----------------------ICRLQATALFYINLTSFFWMFVEGLYLHTMVVR--LAV
+Sequence16      QRFYGLTVVFMLNASIRLVFQVGCKAVMVFFHYGIMASFFWLLVEGLYLHTLLAVS-FFS
+Sequence17      -------------------ATVGCKAVMVFFHYGIMASFFWLLVEGLYLHTLLAVS-FFS
+Sequence7       ----------------------RCKIAVVMFIYFLATNYYWILVEGLYLHNLIFV--FFS
+Sequence5       ----------------------RCKVTVVLFIYFLATNYFWILVEGLYLHSLIFM--FRT
+Sequence6       ----------------------HCKVTVLLFIYFLATNYYWILVEGLYLHSLIFM--FLS
+Sequence9       ----------------------ACKLLYTCFMYFMATNYFWILVEGLYLHNLIFV--VFS
+Sequence8       ----------------------RCKLVMTLFHYFVATNYYWILVEALYLHSLIFV--FFS
+Sequence10      ----------------------NCKIIVALYNYIQVANFFWMLVEGLYLHTMIVW--FSI
+Sequence11      ----------------------NCKLIVTVYNYLHGTNFFWMFVEGLYLFTIIVW--YSA
+Sequence14      ----------------------LCEISYILLEYARTAMFMWMFVEGLYLHNMISVTVFHK
+Sequence15      ----------------------LCEISYILLEYARTAMFMWMFVEGLYLHNMITVTVFHK
+Sequence4       ----------------------KCKILHVLLHYFLVSNYFWMFCEGLYLHTVLVV--FLS
+Sequence2       ----------------------KCQALHLVVHYLMLANYMWMFCEGLHLHLALVV--FVR
+Sequence3       ----------------------RCIGLHLVVHYFMLVNYFWMFCEGLHLHLVLVV--FVK
+                                       *        *     : *:: *.: :.  :       
+
+Sequence12      MASRCV---LLGW---IPIMMFWAILKE----NKDNH--------DYIYLVPIGIVLLIN
+Sequence0       PKLPLY---LTGW---MIYSVIYAALRA----NESCW--------EWIIYAPNLLCLVVN
+Sequence1       PKLMFC---VLGW---AVCIVIYAAIRS----NTHCW--------EWIVYAPNLLCLIVN
+Sequence13      RRKVYC---LIGW---VIFSVAYAITVA----TGTCL--------EYIIRVPIIAVILVN
+Sequence16      ERKYFWGYILIGWGAPPVFIAAWVITKA-CLNDDRCWDIIDDTL-WWIIKTPILVTILVN
+Sequence17      ERKYFWGYILIGWGAPPVFIAAWVITKA-CLNDPGCWDIIDDTL-WWIIKTPILVTILVN
+Sequence7       DTYGFI---LIGW---AAFVAAWAVARA----DARCW--------KWIYQAPILAAIGLN
+Sequence5       ANYGFI---LMGW---AVFVAVWAIVRA----DARCW--------KWIYQVPILMAIALN
+Sequence6       DSYGFT---LIGW---AVFVAAWAVVRA----DARCW--------KWIYQVPILTAIGLN
+Sequence9       ERFGFI---AIGW---LTFVVPWVVVRE----DTGCW--------KWIYKAPIVVSIVVN
+Sequence8       DKYRFS---VTGW---ILFVVPWAIVRD----DTACW--------KWIYNGPIVVANVIN
+Sequence10      ERRYYA---VLGW---ALVVLAWAIVKE----NRRPM--------DYIYITPILGVLLVN
+Sequence11      DKRYYV---IIGWG--LLFLLVDVMLSF----SPV----------DYILHAPIFFVLVSN
+Sequence14      EQSYYTMYSIIGWGSPIIITSAWILVMITYYKTSKCWWGYNLTIYFWILEGPRLTVVVVN
+Sequence15      EQSYYTMYSIIGWGSPIIITSAWILVMITYYKTSKCWWGYNLTIYFWILEGPRLTVVVLN
+Sequence4       ENSWFH---LIGW---AVVTSIYAGVRI----PEECW--------TWILSGPVCLSMLTN
+Sequence2       DAEWFF---ALGW---FIIVLIYSVVRI----LKDCW--------SWILTAPVCISLLVS
+Sequence3       DTIWFI---VISW---IPIAIVYGLARS----SPDCW--------LWIFSVPITLSLLAS
+                           .*                                 :*   *       .
+
+Sequence12      GFIFCNFVCIL----------------AKCVSKAFVFYFSLLGLTYLI------------
+Sequence0       LFFLCNILRVL----------------VTQALKATFVLIPLFGIQLFV------------
+Sequence1       MATLVNILRIL----------------LFKGVKAAFMLIPLFGLQMLL------------
+Sequence13      VCFMVHIMIIL----------------VTKGVRGIVVLLPLLGASYFM------------
+Sequence16      FFLFIRIIRILRQKMNCPDIGRKESH-LRRLAKSTLLLIPLFGINYII------------
+Sequence17      FFLFIRIIRILRQKMNCPDIGRKESHQCSRLAKSTLLLIPLFGINYII------------
+Sequence7       FILFLNTVRVL----------------ATKLAKSTLVLVLVFGVHYIV------------
+Sequence5       FILFVNIVRVL----------------ATKLAKSTLVLVLVFGIHYII------------
+Sequence6       FILFVNIVRVL----------------ATKLAKSTQVLVFVFGVHYIV------------
+Sequence9       FLLFLNILRVL----------------VKKLAKSTMVLIPLFGVHYIV------------
+Sequence8       FLLFLNIIRVL----------------WYKLAKSTLVLIPMFGVHAIV------------
+Sequence10      VIFLGSIVWVL----------------ITKAVRATLILFPLLGVTYVV------------
+Sequence11      IFFLSAIIWVL----------------ITKAVKATIILFPLLGVTYVL------------
+Sequence14      FLFLLNIIRVLVVKLRQSKQTEIKRSSFRKAVRATAVLLPLLGITNIISMSKSPLEKSVW
+Sequence15      FLFLLNIIRVLVVKLRQSRKSEIEQ--VRKAVRATAVLLPLLGITNIISMSKSPLEKSVW
+Sequence4       AFFLVNIVRVL----------------VTKNCKATLILLPLLGLHYVV------------
+Sequence2       LIFLINVLRVI----------------LTIAARAALILIPLFGLQHIL------------
+Sequence3       FIFLINVLRVI----------------VRKAVRATIILVPLFGLQHFL------------
+                   :   : ::                     ..  . . ::*   .:            
+
+Sequence12      --FMF----------IYTNVILESFQGFFICLFHCFCNTHMR------------------
+Sequence0       --TLY----------EKFTTFVINSQGFFVALIFCFCNGEVR------------------
+Sequence1       --TIY----------EYFTFIVTNSQGIFVAVIFCYLNGEVI------------------
+Sequence13      --LLY----------RYLNAFLQSTQGFFVAIIYVYMNQEVQ------------------
+Sequence16      --FAFLPDHIQTKGRLVFDLILGSFQSFVVVVLYCFLNGEVQAEIKRKWRRWTLQRFLGA
+Sequence17      --FAFLPDHIQTKGRLVFDLILGSFQGFVVVVLYCFLNGEVQAEIKRKWRRWTLQRFLGA
+Sequence7       --FVR----------MHCELFFNSFQGFFVSIIYCYCNGEVQ------------------
+Sequence5       --FVR----------MYCELFFNSFQGFFVSIIYCYCNGEVQ------------------
+Sequence6       --FVR----------MYCELFFNSFQGFFVSIIYCYCNGEVQ------------------
+Sequence9       --FVR----------LYFELFFNSFQGFFVSILYCFLNGEVR------------------
+Sequence8       --FIR----------MSFDLFFNSFQGFFVAIIYCFCNGEVQ------------------
+Sequence10      --FIF----------VYFNAILQSLQGLAIAVFYCFLNGEVR------------------
+Sequence11      --FLF----------KYANALLQSFQGLFVAVFYCFLNGEVR------------------
+Sequence14      EFALW----------SYGTHFLTSFQGFFIAFLYCFLNGEVRQVLRKRKRKRRRRK----
+Sequence15      EFALW----------SYGTHFLTSFQGFFIAFLYCFLNGEVRAVVMKSVSTYFSLRNNQQ
+Sequence4       --MPY----------QIVSAIFTSFQGLCVAFLFCFCNGEVL------------------
+Sequence2       --IPY----------QYVTVVVVTLQGLCVSCLFCFANQDVH------------------
+Sequence3       --LPY----------QMLSVVLVSLQGFVVSFLFCFANHDVT------------------
+                                    .. . *.: :  :. : *  :                   
+
+Sequence12      -------------------------------------------
+Sequence0       -------------------------------------------
+Sequence1       -------------------------------------------
+Sequence13      -------------------------------------------
+Sequence16      -------------------------------------------
+Sequence17      DTRYQQPSIGSNGNNFSTQITVTIRSSPATRRASECREHLPAI
+Sequence7       -------------------------------------------
+Sequence5       -------------------------------------------
+Sequence6       -------------------------------------------
+Sequence9       -------------------------------------------
+Sequence8       -------------------------------------------
+Sequence10      -------------------------------------------
+Sequence11      -------------------------------------------
+Sequence14      -------------------------------------------
+Sequence15      HKQFQHHKQSTSKTTTNDKTNGKQIENQNDDVNDAQWKRTRV-
+Sequence4       -------------------------------------------
+Sequence2       -------------------------------------------
+Sequence3       -------------------------------------------
+                                                           

@@ -1,0 +1,212 @@
+reset execution statistic in VM!
+
++ regerate javadoc
++ server war - obtaining command line binaries 
+
+Write help on 
+ + execution stats
+ + new menu bar background 
+ - new page background(?)
+ - merge developers help pages
+ - new VM 
+ - new properties e.g. jar
+ - registry
+ - change log 
+ - main page should point to JABA 1   
+ - Document the Limits for presets
+ - JAVA DOCS
+ - defaults changed - e.g. limits are disabled - explain how to enable
+ - cluster settings are commented out 
+ - Describe requirements 
+Python > 2.2
+Perl > 5.0
+Java > 6
+For compilation 
+C++
+C
+Gnu make
+   
+- Check progress tracking on large sequence.
+
+- Add more detailed tests for webservices? 
+
++ TODO write some help on the executable.properties within this file! 
+
+- check that after binaries relocation build tasks point to correct locations!
+
+
+add to help text: To disable a web service remove it from WEB-INF/sun-jaxws.xml descriptor
+
+rename jaba.war to jabaws.war and make sure jabaws context path is used throughout. 
+
+
+? Replace conservation.Method with server.ws.Method and try building WS. If this does not work - get rid of Method
+
+integrate the above to tweak the size of the local job
+
+
+(later) Add documentation on Presets, Parameters and Limits
+(later) Explain how to define a limit
+
+Add test for repeated result collection from cluster engine
+
+
+
+DONE
+
+version 2
+
+DONE: Current stat collector has to rely on file dates! 
+DONE: Help information? - relative - client to add host and context info
+DONE: statistics - result files 
+DONE: Good toString method for Limits (test with command line client -limits)
+DONE: install JABA 1 stat server 
+DONE: Get path to Java executable from JAVA_HOME ? (for Jronn AACon) 
+
+DONE:  GET rid of binaries/help directory!
+DONE:  update binaries
+ DONE:  muscle binary version 3.8.31 for win/lin32/lin64 and sources, docs in website/prog_docs
+ DONE:  test Muscle on the cluster
+ DONE:  test Muscle compilation
+ DONE:  probcons up-to-date
+ DONE:  clustal up-to-date 
+ DONE:  update tcoffee (8.99 latest) source code updated  docs updated 
+ DONE:  tcoffee compilation for IA32 
+ DONE:  update Mafft (6.857 latest) for win/lin32/lin64 and sources, no docs updates
+DONE:  make sure conf files are optional!
+
+Cluster stats: 
+ DONE: cancelled should not be reported as incomplete!
+ DONE: ant task to clean up clean stat db task before packing web app
+ DONE: pack web apps with stat db (NOT TESTED!)
+ DONE: change input size bites
+ DONE: add help info for each column in the detailed job list table
+ DONE: replace default -1 with ? 
+ DONE: delete and re-import the database to fix clustal input staff    
+
+DONE:  Test all WS as names from Executables were removed
+DONE:  Add default names for input and output in every executable and use them consistently
+  throughts (e.g. in all WS). Best of all use the same name from SceletalExectuable 
+  For statistics. 
+
+DONE:  FIXED Conecting to JABAWS version 2 service
+  09-Feb-2011 15:27:53 compbio.ws.client.Jws2Client connect
+  INFO: Connected successfully!
+  Exception in thread "main" java.lang.NullPointerException
+	at compbio.ws.client.MetadataHelper.getParametersList(MetadataHelper.java:30)
+	at compbio.ws.client.Jws2Client.<init>(Jws2Client.java:179)
+	at compbio.ws.client.Jws2Client.main(Jws2Client.java:483)
+
+DONE:  ScoreManager should output scores properly 
+DONE:  Allow empty Parameters and Preset files! 
+DONE:  Check the WS input and reject it on submission rather then of access with error message
+
+DONE: Add registry service to query services status
+DONE: Refactor web services checker to enable a programmatic access to its methods.
+DONE: Finish the client
+DONE: Add AACon ws
+DONE: Add iupred ws http://iupred.enzim.hu/
+DONE: Add globprot ws - does not report raw scores, just regions
+DONE: Add ronn ws
+DONE: Define limits for presets - if required
+DONE: Add logging facility to WSTester so more details of the problem can be reported
+DONE: Statistics collector for engines (number of operations/timing)
+
+
+version 1
+
+DONE: LocalExecutor service must be shutdown on web application undeploy event not on JVM shutdown. 
+      This is because JVM is still running even after web application is shut down!
+DONE: Use absolute path for web site download links as archives are not included into distro!
+DONE: Rearrange web site docs - add links to the top of the page to the topics discussed below
+DONE: Put the documentation for various executables online
+DONE: Make left gradient image one-two characters larger + change "For developer ->For Developers"
+DONE: test local/cluster execution - test Load balancer
+DONE: Improve SimpleWS client so it can be scripted against: give user alignment and accept parameters
+DONE: Make a configuration tester class (check that configuration files point to the executables, and they can be executed)
+DONE: PUT CLIENT JAR INTO WEB-INF/LIB - most likely need to get rid of dist prefix in the build file
+DONE: Different packages for download and dundee. generic vs specific settings. 
+DONE: JAVADOC
+DONE: Refactor EngineResourcesLeak tester to hide a map implementation!
+DONE: Compile executables for linux in the most generic way
+DONE: Make different log4j configuration files / web services logs.
+DONE: System manual
+DONE: Developer doc
+DONE: How to
+DONE: Prepare different packages
+DONE: extract commonly used names into variable in the build script
+DONE: Test for high load conditions (TestNG?)
+DONE: (low) Fix: Started jobs with unknown completion status reported as FINISHED by  msaws.getJobStatus(taskId) (see SimpleWSClient)
+DONE: fix compile binaries script
+DONE: Make script to change executable flag for linux systems
+DONE: jobsout must be created within war
+DONE: enable relative paths for local engine conf temp dir
+COUND NOT REPRODUCE: fix cluster job status - RUNNING -> UNDEFINED
+DONE: throw JobSubmission exception with appropriate method instead - (low) code discoverer/tester for ws - e.g. after war deployment to find out what actually works
+DONE: fix build scripts after reorganising project
+DONE: package as war file for deployment
+DONE: package for jalview distro for local execution
+DONE: reorganise project into independent chunks
+DONE: test Parameter & Option toCommand method
+DONE: Replace WS methods with new CommandBuilder.toCommand()
+DONE: Setting default values is validated as external method 
+DONE: Refactoring to extract data model, and engines is performed
+DONE: Default value is adopted for passing new Option values to server side
+DONE: Converting Options to commands delegated to CommandBuilder  
+DONE: Make Arguments mutable to facilitate default value setting for WS
+DONE: Matrix files for alignment programme
+DONE: Clean up testcases
+DONE: Replace List<String> as command line parameters abstraction to dedicated CommandBuilder class 
+DONE: Parallel execution for tcoffee jobs
+DONE: Copyright added
+DONE: WRAP ProbCons
+DONE: think about time limits and cluster parameters for parallel execution - NativeSpecs for cluster is implemented
+DONE: (low) Use for WS: (@WebParam(name = "name") String name) {
+DONE: Implement rough policy for runtimes (e.g. do not run excessively long tasks on the local machine if cluster is available)
+DONE: Write tomcat conf to expose WS
+DONE: access control to web.xml
+DONE: Statistics collector for WS
+DONE: implements limits for web services
+DONE: WS clients must be able to connect to a web service given the service url. 
+e.i. ws URL should not be compiled in using wsimport, but determined from 
+the configuration file.  
+
+DONE: Could not find configuration files if run from within servlet container
+DONE: Add ways to get engine based on the key for everything but submission of the new tasks 
+DONE: Add cache to Cluster JOBID - so that at least jobs for which results have not been collected is cached.
+DONE: FINISHED overrides FINISHED with time stamp!
+DONE: Consider think about JobStatus and StatFileStatus
+DONE: a method to read 3 chars at the beginning of the file to indicate a progress is added
+DONE: ConfiguredExecutable<?> al = sexec.getResults(jobId); || Alignment ?
+DONE: ClustalW - OUTput must be set !
+DONE: Add accessor methods to get a DUMP of the process output 
+DONE: FilePuller should be cached to avoid excessive fs exercise
+DONE: Test List of the processes (ensure no memory leaks)
+PART DONE - On the client on shutdown remember the task list - server tasks could be loaded and executed from saved run configurations, client should decide for themselves what they want
+DONE: Persist the task list to enable later result collection on the server side
+DONE Wrap TCoffee
+DONE: improve parameters handling - new schema + update for all parameters
+DONE: Cluster jobs report submitting and result collecting/finishing time (for sync jobs only(!)) and cluster jobid in the corresponding files  
+DONE: Local jobs report starting and finising times in files with corresponding names in the task directory  
+DONE: Generalize getResult method for MSA runners
+DONE: Create test suits
+DONE: Convert junit tests to TestNG
+DONE: Redirect output & error streams to the named files as some processed need this  
+DONE: Extract generilyzed class with most of the method for individual executable to use
+DONE: Refit wrappers to use the generalised class to avoid duplication  
+DONE: Pass environment variable settings to the executable
+DONE: Complete AsyncExecutors implementation
+DONE: Look to unify methods for engines
+DONE: Provide way around of generated directory setup for test cases(?)
+DONE: Fix the test cases for local engine (need to set directory on executable explicitly)
+DONE: Make log files for processes err and out for local execution
+DONE: Trace where AsyncExcel called with null Executable and attempts to create a new directory repeatedly
+DONE: directory generator
+DONE: tests for cancel 
+DONE tests for getStatus
+DONE  ws async
+DONE: parametrized clustal operations
+DONE: test large datasets handling 
+DONE: write load balancer 
+DONE: (low) task persistance
+DONE: Look at CancellableTask if with Sync and AsyncExecutor 

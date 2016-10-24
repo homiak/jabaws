@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="US-ASCII" standalone="yes"?>
+<limits>
+ <runnerClassName>compbio.runner.clustal.ClustalW</runnerClassName>
+	<limit isDefault="false">
+		<preset>Disable gap weighting (Speed-oriented)</preset>
+		<seqNumber>400</seqNumber>
+		<seqLength>600</seqLength>
+	</limit>
+	<limit isDefault="true">
+		<seqNumber>1000</seqNumber>
+		<seqLength>400</seqLength>
+	</limit>
+	<limit isDefault="false">
+		<preset># LocalEngineExecutionLimit #</preset>
+		<seqNumber>2</seqNumber>
+		<seqLength>500</seqLength>
+	</limit>
+</limits>

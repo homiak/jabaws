@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "XHTML 1.0 Strict"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="Last-modified" content="Mon, 4 Apr 2011 12:00:00 GMT"/>
+<title>Java Bioinformatics Analyses Web Services (JABAWS) Command Line Client manual</title>
+<link href="ws.css" rel="stylesheet" type="text/css" media=
+"screen, projection, handheld, tv" />
+<link rel="stylesheet" type="text/css" media="print" href=
+"print.css" />
+<script type="text/javascript" src="prototype-1.6.0.3.js"></script>
+</head>
+<body>
+<div id="page">
+<div id="banner">
+<table> 
+<tr><td style="width:158px;"><a href="http://www.dundee.ac.uk"><img src="images/uod_lt_long.gif"  alt="University of Dundee" width="158" height="90" class="logo"  title="University of Dundee" longdesc="http://www.dundee.ac.uk"/></a></td>
+<td class="bg"><img src="images/jabaws2.png" alt="JABAWS-2.0" title="Java Bioinformatics Analysis Web Services version 2.0"/></td>
+<td class="bg"><img src="images/banner_right.png" alt="Disorder" width="200" height="80"/></td>
+</tr>
+</table>
+</div><!-- banner end-->
+
+<div id="wrapper">
+<div id="panel"><a href="index.html">Home</a> 
+  <a href="quick_start.html">Getting Started</a> 
+  <a class="selected" href="man_about.html">Manual</a> 
+	<div id="submenu">
+		<a href="man_about.html">About</a>
+		<a href="man_servervm.html" title="JABAWS Server as Virtual Appliance">Server VA</a>
+		<a href="man_awscloud.html" title="JABAWS Server in the Amazon EC2 Cloud">Server in the Cloud</a>
+		<a href="man_serverwar.html" title="JABAWS Server as Web Application aRchive">Server WAR</a>
+		<a href="man_configuration.html" >Server<br/>
+		Configuration</a>
+		<a href="man_client.html" title="JABAWS Command Line Client">CMD Client</a>
+		<a class="selected" href="man_stats.html" title="JABAWS Usage Statistics">Usage Statistics</a>
+		<a href="man_dev.html" title="Accessing JABAWS from your program">Accessing<br/>
+		JABAWS</a>	
+		<a href="man_server_dev.html" >JABAWS Development</a>
+	</div>
+<a href="http://www.compbio.dundee.ac.uk/download">Download</a> 
+<a href="PublicAnnualStat" title="JABAWS server usage statistics">Usage Statistics</a>
+ <a href="ServiceStatus" title="JABAWS webservices status. Click to test all web services. Please be patient while the services are being checked">Services Status</a>
+<a href="contacts.html">Contact Us</a>
+<a href="http://www.compbio.dundee.ac.uk" title="University of Dundee, The Barton Group" >Barton Group</a>
+</div>
+
+<!-- panel end-->
+<div id="content">
+<h2 id="headtitle">JABAWS MANUAL</h2>
+
+<h2><a name="usingcclient" id="usingcclient"></a>JABAWS Usage Statistics </h2>
+<ul>
+  <li><a href="#usage_sum">Summary of Usage</a></li>
+  <li><a href="#helpUsageStats">Authentication</a></li>
+  <li><a href="#detailed_usage">Detailed Usage Statistic </a></li>
+  <li><a href="#job_list">Job List</a></li>
+  <li><a href="#job_dir">Single Job Directory Content </a></li>
+  <li><a href="#conf_tomcat_user">Configuring a privileged   access for Tomcat web application server</a></li>
+  <li><a href="#exec_stat_conf">Configuring JABAWS execution statistics</a></li>
+</ul>
+<h3><a name="usage_sum"></a>Summary of Usage </h3>
+<p>JABAWS comes with a web application for visualizing usage statistics. The screenshot below shows the main page of this application. Each month is a link to the detailed usage statistics for this month described later. Please note however, that the links to the detailed monthly statistics are only available for authenticated users in the role <span class="hightlight">admin</span>. There is a link at the bottom of the page that would let you login, if you have not done so. </p>
+<p>If you are using JABAWS VA (Virtual Appliance) then the username is <span class="hightlight">jabaws</span> and password is not defined, e.g. empty. </p>
+<p>If you have deployed a JABAWS WAR file, then please see the <a href="#conf_tomcat_user">configuring privileged   access for Tomcat web application server</a> section for further details. </p>
+<p><img src="images/usage_statistics_main.gif" alt="JABAWS usage statistics" width="608" height="318"></p>
+<p>The table contains the number of jobs processed by JABAWS per month, for the whole   period when the statistics was collected</p>
+<p>For each month the table contains the following information.</p>
+<ul>
+  <li>Month - the period of time for which statistics is displayed. For example Jan 2011 means period of time from the first of   	January to the first of February.</li>
+  <li>Total - the total number of jobs accepted by JABAWS</li>
+  <li>Incomplete - the number of jobs for which the result file was not found or was empty excluding cancelled</li>
+  <li>Cancelled - the number of jobs cancelled by the user</li>
+  <li>Abandoned - the number of jobs which result(s) were not collected</li>
+</ul>
+<p>The summary for each column is displayed in the last row of the table.</p>
+<h3><a name="helpUsageStats"></a>Authentication</h3>
+<p>Authentication lets you see the detailed usage statistics. If you are using JABAWS VA (Virtual Appliance) then the username is <span class="hightlight">jabaws</span> and password is not defined, e.g. empty. In other cases you need to ask your system administrator for it. </p>
+<h3><a name="detailed_usage"></a>Detailed Usage Statistic  </h3>
+<p>Detailed execution statistics for each month is available for authenticated users only. </p>
+<p><img src="images/usage_statistics_month.gif" alt="JABAWS one month usage statistics" width="670" height="902"></p>
+<p>Each table contains the number of jobs processed by JABAWS during the period of   time specified in the title.</p>
+<ul>
+  <li>The &quot;All Jobs&quot; table contains the summary of all jobs.</li>
+  <li>&quot;Local Jobs&quot; table - contains the summary of the jobs calculated by the local engine.</li>
+  <li>&quot;Cluster Jobs&quot; table - contains the summary of the jobs calculated by the cluster.</li>
+</ul>
+Each table contains the following information for each web service
+<ul>
+  <li>Total - the total number of jobs accepted by a particular JABA service</li>
+  <li>Incomplete - the number of jobs for which the result file was not found or was empty excluding cancelled</li>
+  <li>Cancelled - the number of jobs cancelled by the user</li>
+  <li>Abandoned - the number of jobs which result(s) were not collected</li>
+</ul>
+<h3><a name="job_list"></a>Job List </h3>
+<p>Please note that if you deployed JABAWS WAR, in order to be able to navigate to the job directory from this view the application server may need to be configured. Please see  <a href="#exec_stat_conf">Configuring JABAWS execution statistics</a> section for further details. </p>
+<p><img src="images/usage_statistics_details.gif" alt="JABAWS - job list" width="917" height="198"> </p>
+<p>Columns </p>
+<ul>
+  <li>JobID - the JABAWS job id, unique for every job</li>
+  <li>Cluster JobID - cluster job id</li>
+  <li>InputSize - input size in bytes</li>
+  <li>ResultSize - result size in bytes</li>
+  <li>Runtime (s) - job's runtime in seconds</li>
+  <li>Start time (s)- job's start time and date</li>
+  <li>Finish time (s)- job's finish time and date</li>
+  <li>isCancelled - whether the job was cancelled</li>
+  <li>isCollected - whether the job was collected. False for the jobs   that has been initiated but which results has never been retrieved</li>
+  <li>isFinished - whether the job has finished. This does not necessarily mean that the job has produced the result.   	The job can sometime finish in failure.</li>
+</ul>
+<h3><a name="job_dir"></a>JABAWS Job Directory Content </h3>
+<p><img src="images/usage_statistics_job_details.gif" alt="JABAWS- job details" width="716" height="420"></p>
+<p>STARTED and FINISHED files contain Unix timestamp - when the job was started and completed respectively. STARTED is replaced by SUBMITTED if the job has been submitted to the cluster, as opposed to executed locally, on the server. </p>
+<p>COLLECTED file is empty and indicates that the job results were collected by the user. Due to asynchronous   nature of the job it is possible that the job was started and finished, but the results has never been requested. </p>
+<p>RunnerConfig.xml file contains a complete description of the job and JABAWS can restart the job based on this description. </p>
+<p>procError.txt and procOutput.txt files  contains the content of the standard out and standard error streams of the process. </p>
+<p>result.txt file contains the results. </p>
+<p>input.txt file contains input into the process. </p>
+<p>There are maybe other files depending on the nature of the job, but the one described above will present in most cases. In this example, stat.log file stories the execution statistics generated by the process (clustal executable in this example).</p>
+<p> If you have deployed JABAWS WAR file or made changes to JABAWS configuration you may need to make a few changes to the Tomcat configuration to be able to see the content of the job directory. Please see <a href="#exec_stat_conf">Configuring JABAWS execution statistics</a> section for further details. </p>
+<h3><a name="exec_stat_conf"></a>Configuring JABAWS execution statistics</h3>
+<p>JABAWS execution statistics is a multi-component system. First is a crawler which job is to collect and preprocess the statistics from the job temporary directories and record the collected statistics into the database. The second part of the system is a web application which job is to visualise the statistics from the database. </p>
+<p>It is possible to enable/disable the statistics collector by changing the following properties in the conf/Cluster.engine.properties and conf/Local.engine.properties files. </p>
+<p class="box"># Enable/disable cluster statistics collector true = enable, false = disable <br>
+  cluster.stat.collector.enable=false
+  <br/>
+  # Maximum amount of time the job is considered be running in hours. Optional defaults to 7 days (168h) <br>
+  cluster.stat.maxruntime=24</p>
+<p class="box"># Enable/disable cluster statistics collector true = enable, false = disable <br>
+  local.stat.collector.enable=true
+  <br/>
+  # Maximum amount of time the job is considered to be running in hours. Optional defaults to 24 hours<br>
+  local.stat.maxruntime=6</p>
+<p>If the statistics collector is enabled then the crawler  starts automatically soon after (10 minutes for local engine, and 60 minutes for cluster engine) the JABAWS web application and will be collecting the execution statistics every 24 hours after the start. </p>
+<p>The details of the job are only available if the job temporary directory is located within a JABAWS web application. If not, the system administrator can create a symbolic link pointing to  the temporary job directories outside of a web application and configure the  application server to allow navigation to the links.  For the Tomcat application server the context configuration file should be created and copied to the &lt;TOMCAT_ROOT&gt;/conf/Catalina/localhost directory. The name of the file should be the same as the web application context name, for example &quot;<span class="hightlight">jabaws.xml</span>&quot; for jabaws. Where the TOMCAT_ROOT is the location of the Tomcat web application server. Here is an example of such a file: </p>
+<p><span class="code">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;<br>
+&lt;Context antiResourceLocking=&quot;false&quot; privileged=&quot;true&quot; allowLinking=&quot;true&quot;/&gt;</span></p>
+<p>The key option here is this: <span class="hightlight">allowLinking=&quot;true&quot;</span>. Please also make sure that you have defined the user in role &quot;<span class="hightlight">admin</span>&quot; as described <a href="#conf_tomcat_user">below</a>.</p>
+<h3><a name="conf_tomcat_user" id="conf_tomcat_user"></a>Configuring a privileged   access for Tomcat web application server</h3>
+<p>Access to configuration files, detailed job execution statistics and job directories are allowed only for authenticated users in role &quot;<span class="hightlight">admin</span>&quot;. </p>
+<p>If you use Tomcat, then the simplest way to set up privileged   access is to use a plain text configuration file <span class="hightlight">conf/tomcat-user.xml</span>. Here is an example of such configuration file defining user &quot;<span class="hightlight">peter</span>&quot; in role &quot;<span class="hightlight">admin</span>&quot;. <span class="code">&lt;tomcat-users&gt;<br/>
+  &lt;role rolename=&quot;admin&quot;/&gt;<br />
+  &lt;user username=&quot;peter&quot; password=&quot;your password here &quot; roles=&quot;admin&quot;/&gt;<br/>
+  &lt;/tomcat-users&gt;</span></p>
+<p>For more information on users and roles please consult Apache-Tomcat help pages. </p>
+<p><br>
+</p>
+</div>
+
+<!-- content end-->
+<div id="copyright">Last update: 16 September 2011<br />
+ Peter Troshin, Jim Procter and Geoff Barton, The Barton Group, University of
+Dundee, UK</div>
+</div>
+
+<!-- wrapper end-->
+</div>
+<!-- page end-->
+
+<!-- Google analitics -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try{
+var pageTracker = _gat._getTracker("UA-5356328-1");
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+</body>
+</html>
+

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="US-ASCII" standalone="yes"?>
+<limits>
+ <runnerClassName>compbio.runner.mafft.Mafft</runnerClassName>
+	<limit isDefault="true">
+		<seqNumber>1000</seqNumber>
+		<seqLength>1000</seqLength>
+	</limit>
+	<limit isDefault="false">
+		<preset># LocalEngineExecutionLimit #</preset>
+		<seqNumber>20</seqNumber>
+		<seqLength>500</seqLength>
+	</limit>
+	
+	<!-- Limits for presets	--> 
+
+	<limit isDefault="false">
+		<preset>L-INS-i (Accuracy-oriented)</preset>
+		<seqNumber>500</seqNumber>
+		<seqLength>1000</seqLength>
+	</limit>
+	<limit isDefault="false">
+		<preset>G-INS-i (Accuracy-oriented)</preset>
+		<seqNumber>500</seqNumber>
+		<seqLength>1000</seqLength>
+	</limit>
+	<limit isDefault="false">
+		<preset>E-INS-i (Accuracy-oriented)</preset>
+		<seqNumber>500</seqNumber>
+		<seqLength>1000</seqLength>
+	</limit>
+	<limit isDefault="false">
+		<preset>FFT-NS-i (Speed oriented)</preset>
+		<seqNumber>2000</seqNumber>
+		<seqLength>1000</seqLength>
+	</limit>
+	<limit isDefault="false">
+		<preset>FFT-NS-1 (Speed oriented)</preset>
+		<seqNumber>2000</seqNumber>
+		<seqLength>1000</seqLength>
+	</limit>
+	<limit isDefault="false">
+		<preset>NW-NS-PartTree-1 (Speed oriented)</preset>
+		<seqNumber>2000</seqNumber>
+		<seqLength>1000</seqLength>
+	</limit>
+	
+</limits>

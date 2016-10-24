@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<runConfiguration>
+    <taskId>@Tcoffee#9974534735170965</taskId>
+    <workDirectory>/cluster/gjb_lab/fc/www-jws2/jaba/jobsout/@Tcoffee#9974534735170965</workDirectory>
+    <parameters>
+        <paramList>
+            <entry>
+                <key>-output</key>
+                <value>
+                    <position>-1</position>
+                    <name>-output</name>
+                    <value>clustalw</value>
+                </value>
+            </entry>
+            <entry>
+                <key>-seq</key>
+                <value>
+                    <position>-1</position>
+                    <name>-seq</name>
+                    <value>fasta.in</value>
+                </value>
+            </entry>
+            <entry>
+                <key>-n_core</key>
+                <value>
+                    <position>-1</position>
+                    <name>-n_core</name>
+                    <value>4</value>
+                </value>
+            </entry>
+        </paramList>
+        <nameValueSeparator>=</nameValueSeparator>
+    </parameters>
+    <error>error.txt</error>
+    <output>fasta.out</output>
+    <input>/cluster/gjb_lab/fc/www-jws2/jaba/jobsout/@Tcoffee#9974534735170965/fasta.in</input>
+    <runnerClassName>compbio.runner.msa.Tcoffee</runnerClassName>
+</runConfiguration>

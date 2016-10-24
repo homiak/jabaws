@@ -1,0 +1,75 @@
+done.
+scoremtx = 1
+Gap Penalty = -1.53, +0.00, +0.00
+
+
+
+Making a distance matrix ..
+
+    1 / 11
+   11 / 11
+done.
+
+Constructing a UPGMA tree ... 
+
+    0 / 11
+done.
+
+Progressive alignment ... 
+
+STEP     1 / 10 f
+STEP     2 / 10 f
+STEP     3 / 10 f
+STEP     4 / 10 d
+STEP     5 / 10 f
+STEP     6 / 10 d
+STEP     7 / 10 d
+STEP     8 / 10 d
+STEP     9 / 10 d
+Reallocating..done. *alloclen = 1464
+
+STEP    10 / 10 d
+done.
+
+disttbfast (aa) Version 6.713b alg=A, model=BLOSUM62,  1.530, -0.000, -0.000
+blosum 62 / kimura 200
+done.
+scoremtx = 1
+Gap Penalty = -1.53, +0.00, +0.00
+Making a distance matrix .. 
+
+    0 / 10
+done.
+
+Constructing a UPGMA tree ... 
+
+    0 / 11
+done.
+
+Progressive alignment ... 
+
+STEP     1 /10 f
+STEP     2 /10 f
+STEP     3 /10 f
+STEP     4 /10 f
+STEP     5 /10 d
+STEP     6 /10 d
+STEP     7 /10 d
+STEP     8 /10 d
+STEP     9 /10 d
+STEP    10 /10 d
+done.
+tbfast (aa) Version 6.713b alg=A, model=BLOSUM62,  1.530, -0.000, -0.000
+comment = FFT-NS-2
+done.
+scoremtx = 1
+
+
+Strategy:
+ FFT-NS-2 (Fast but rough)
+ Progressive method (guide trees were built 2 times.)
+
+If unsure which option to use, try 'mafft --auto input > output'.
+If the possibility of long gaps can be excluded, add '--ep 0.123'.
+For more information, see 'mafft --help', 'mafft --man' and the mafft page.
+

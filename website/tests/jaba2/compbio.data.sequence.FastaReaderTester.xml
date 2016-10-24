@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="compbio.data.sequence.FastaReaderTester" failures="0" tests="1" time="1.625" errors="0">
+  <properties/>
+  <testcase name="test" time="1.625" classname="compbio.data.sequence.FastaReaderTester"/>
+</testsuite>

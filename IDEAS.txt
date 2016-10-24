@@ -1,0 +1,103 @@
+FUTURE TODO
+
+Pack the test cases and build file to run them in one of the distributives 
+
+? Better native Mac support (and maybe abandon native windows support in 
+favour of VM)
+
+Cluster stats: 
+ -Remove hyperlinks from tasks which workdirs were removed 
+ Way to do: Crawler is to update DB records if the directory is not found to prevent link 
+generation for stats. 
+ -graph generation 
+ -user documentation (do not forget how to enable follow symlinks!)
+   
+Webpage for testing web services?
+
+Add interface for Jalview annotation 
+
+Develop generic Interface to return Jalview annotation for easy to add new 
+services (?) 
+
+Philogeny Mrbayes + Philip
+ 
+USE CASE - TURN ALIGNMENT INTO PROFILE AND SEARCH SEQUENCE DATABASE USECASE
+- Receive user alignment 
+- use hmmerbuild to turn it to profile
+- use hmmersearch to search the database 
+
+#END OF - TURN ALIGNMENT INTO PROFILE AND SEARCH SEQUENCE DATABASE USECASE 
+
+New data model for representing psiblast,blast,phmmer,jackhmmer results
+
+new parsers for the above programmes output (Stockholm MSA format?)
+
+Think hard on what to do with large output files? 
+e.g. serve the hits table in full, but retrieve alignments on demand.
+What actually needs to be sent?   
+
+
+Add facility to distribute other results of the calculations like the trees and 
+annotation file for probcons. 
+
+(later) WRAP Amps
+
+(later) Implement utility to rerun died tasks from command line
+
+Registry for jalview WS - gives list of web services providers
+ - checks the status of the web services
+ - web service providers gives list of available WS
+ - synchronises with other registries
+ - UI for adding new WS from third party provider
+ - Jalview should include component for adding new Web service and WS registry  
+ 
+ With Jim: 
+Integration with Jalview
+Jalview 
+ - should use local engine to run tasks locally
+ - keep sufficient information about the task to be able to re-run it on the same 
+ or different service provider (task persistence)
+ - Provide for configuration for choosing which registries/ws providers to use
+ - be able to bypass firewalls and proxies to access WS
+ 
+ 
+NOTES
+1) Keep in mind that jobs could be submitted from behind the firewalls and proxies make sure to support this
+2) Make sure it will be possible to distinguish between communication errors,  execution errors  
+and possibly misconfiguration errors
+
+FUTURE TASKS 
+Prepare HMM profile for the user alignment and call jnet - instead of jpred. 
+JPRED REWRITING Wrap Jpred
+Wrap scanPS    
+
+CBS soft: 
+Transmembrane regions
+Phosphorilation sites
+Glycozilation sites
+Signal P
+
+They all have SOAP WS...
+ 
+CDD domains
+PFAM domains
+ 
+JPRED IMPROVEMENTS
+1) Make sure PSIBLAST does not generate large output (e.g. one approach is to stop on the first iteration
+if large number of sequences is already generated, second approach is to search PFAM to see if the sequence is from the family
+and if it is so, then use the family)
+2) Use blast -m 7 option - generate xml output its 8 times more compact
+3) Paralellize PSI blast
+4) Improve unmask alignments routine 
+ 
+/homes/ws-dev1/NOBACK/jpred3_submit_concise
+/homes/ws-dev1/servers/JalviewWS/webapps/JalviewWS/WEB-INF/classes/vamsas/pl/bin/jpred3_submit_concise
+/homes/ws-dev1/servers/Test/webapps/JalviewWS/WEB-INF/classes/vamsas/pl/bin/jpred3_submit_concise
+/homes/ws-dev1/servers/Test/webapps/TestJWS/WEB-INF/classes/vamsas/pl/bin/jpred3_submit_concise
+/homes/ws-dev1/servers/Test/webapps/JalviewWS-back/WEB-INF/classes/vamsas/pl/bin/jpred3_submit_concise
+
+
+JAXB - cannot serialize Maps and instance variables in Enums!
+Best replacement for Maps is a custom object for key->value pair and a HashSet for storing the pairs.
+JaxB cannot serialize instances of generic classes(?) 
+ 

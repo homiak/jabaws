@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="compbio.stat.collector.StatDBTester" failures="0" tests="4" time="1.446" errors="0">
+  <properties/>
+  <testcase name="testGetEarliestRecord" time="0.329" classname="compbio.stat.collector.StatDBTester"/>
+  <testcase name="testReadOneMonthData" time="0.217" classname="compbio.stat.collector.StatDBTester"/>
+  <testcase name="testReadYearData" time="0.1" classname="compbio.stat.collector.StatDBTester"/>
+  <testcase name="testVerifyJobsCount" time="0.218" classname="compbio.stat.collector.StatDBTester"/>
+</testsuite>

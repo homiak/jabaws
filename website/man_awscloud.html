@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "XHTML 1.0 Strict"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="Last-modified" content="Mon, 4 Apr 2011 12:00:00 GMT"/>
+<title>Java Bioinformatics Analyses Web Services (JABAWS) Server Virtual Appliance Manual</title>
+<link href="ws.css" rel="stylesheet" type="text/css" media=
+"screen, projection, handheld, tv" />
+<link rel="stylesheet" type="text/css" media="print" href=
+"print.css" />
+<script type="text/javascript" src="prototype-1.6.0.3.js"></script>
+</head>
+<body>
+<div id="page">
+<div id="banner">
+<table> 
+<tr><td style="width:158px;"><a href="http://www.dundee.ac.uk"><img src="images/uod_lt_long.gif"  alt="University of Dundee" width="158" height="90" class="logo"  title="University of Dundee" longdesc="http://www.dundee.ac.uk"/></a></td>
+<td class="bg"><img src="images/jabaws2.png" alt="JABAWS-2.0" title="Java Bioinformatics Analysis Web Services version 2.0"/></td>
+<td class="bg"><img src="images/banner_right.png" alt="Disorder" width="200" height="80"/></td>
+</tr>
+</table>
+</div><!-- banner end-->
+
+<div id="wrapper">
+<div id="panel"><a href="index.html">Home</a> 
+ <a href="quick_start.html">Getting Started</a> 
+ <a class="selected" href="man_about.html">Manual</a> 
+	<div id="submenu">
+		<a href="man_about.html">About</a>
+		<a href="man_servervm.html" title="JABAWS Server as Virtual Appliance">Server VA</a>
+		<a class="selected" href="man_awscloud.html" title="JABAWS Server in the Amazon EC2 Cloud">Server in the Cloud</a>
+		<a href="man_serverwar.html" title="JABAWS Server as Web Application aRchive">Server WAR</a>
+		<a href="man_configuration.html" >Server<br/>
+		Configuration</a>
+		<a href="man_client.html" title="JABAWS Command Line Client">CMD Client</a>
+		<a href="man_stats.html" title="JABAWS Usage Statistics">Usage Statistics</a>
+		<a href="man_dev.html" title="Accessing JABAWS from your program">Accessing<br/>
+		JABAWS</a>	
+		<a href="man_server_dev.html" >JABAWS Development</a>
+	</div>
+<a href="http://www.compbio.dundee.ac.uk/download">Download</a> 
+<a href="PublicAnnualStat" title="JABAWS usage statistics">Usage Statistics</a>
+ <a href="ServiceStatus" title="JABAWS webservices status. Click to test all web services. Please be patient while the services are being checked">Services Status</a>
+<a href="contacts.html">Contact Us</a>
+<a href="http://www.compbio.dundee.ac.uk" title="University of Dundee, The Barton Group" >Barton Group</a>
+</div>
+
+<!-- panel end-->
+<div id="content">
+<h2 id="headtitle">JABAWS MANUAL</h2>
+
+<h2>JABAWS Server in the Amazon Cloud</h2>
+<ul>
+  <li><a href="#jabawsOnCloud">JABAWS on the Cloud</a></li>
+    <li><a href="man_awscloud_ec2.html">How to use JABAWS on the Amazon EC2 cloud</a></li>
+    <li><a href="man_awscloud_bs.html">How to use JABAWS WAR on Amazon Elastic Beanstalk</a> </li>
+</ul>
+<div id="jabaws_on_cloud">
+  <h3><a name="jabawsOnCloud" id="jabawsOnCloud"></a>JABAWS on the Cloud</h3>
+  <p>We provide pre-configured JABAWS Amazon Machine Image (AMI) which you can use on the <a href="http://aws.amazon.com/what-is-aws">Amazon EC2 cloud</a>. Typical use cases are </p>
+  <ul>
+  <li>you need to perform large scale calculations but do not have the resources available locally </li>
+  <li>your organization already uses the Amazon cloud and you do not want to do any special arrangements for the JABAWS  </li>
+  <li>you want to benefit from the Amazon automatic scaling and monitoring to make sure JABAWS is always ready </li>
+</ul>
+<p>If you know what to do than JABAWS AMI ID is  <strong>ami-d1d5e9a5</strong>, manifest  <strong>846107356395/JABAWS 2</strong>   to get you started, if not please refer to <a href="man_awscloud_ec2.html">How to use JABAWS on the Amazon EC2 cloud</a> pages. </p>
+<p>Alternatively you can use JABAWS on the <a href="http://docs.amazonwebservices.com/elasticbeanstalk/latest/dg/index.html?GettingStarted.html">Amazon Elastic BeanStalk</a>. You may want to use this option to deploy JABAWS in the cluster configuration.</p>
+</div>   
+<!-- end of jabaws_on_cloud div -->
+</div>
+<!-- content end-->
+<div id="copyright">Last update: 16 September 2011<br />
+ Peter Troshin, Jim Procter and Geoff Barton, The Barton Group, University of
+Dundee, UK</div>
+</div>
+
+<!-- wrapper end-->
+</div>
+<!-- page end-->
+
+<!-- Google analitics -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try{
+var pageTracker = _gat._getTracker("UA-5356328-1");
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+</body>
+</html>
+

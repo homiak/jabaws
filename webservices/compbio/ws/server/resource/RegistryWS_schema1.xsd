@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://msa.data.compbio/01/12/2010/" xmlns:tns="http://msa.data.compbio/01/12/2010/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="getLastTested" type="tns:getLastTested"/>
+
+  <xs:element name="getLastTestedOn" type="tns:getLastTestedOn"/>
+
+  <xs:element name="getLastTestedOnResponse" type="tns:getLastTestedOnResponse"/>
+
+  <xs:element name="getLastTestedResponse" type="tns:getLastTestedResponse"/>
+
+  <xs:element name="getServiceCategories" type="tns:getServiceCategories"/>
+
+  <xs:element name="getServiceCategoriesResponse" type="tns:getServiceCategoriesResponse"/>
+
+  <xs:element name="getServiceDescription" type="tns:getServiceDescription"/>
+
+  <xs:element name="getServiceDescriptionResponse" type="tns:getServiceDescriptionResponse"/>
+
+  <xs:element name="getSupportedServices" type="tns:getSupportedServices"/>
+
+  <xs:element name="getSupportedServicesResponse" type="tns:getSupportedServicesResponse"/>
+
+  <xs:element name="isOperating" type="tns:isOperating"/>
+
+  <xs:element name="isOperatingResponse" type="tns:isOperatingResponse"/>
+
+  <xs:element name="testAllServices" type="tns:testAllServices"/>
+
+  <xs:element name="testAllServicesResponse" type="tns:testAllServicesResponse"/>
+
+  <xs:element name="testService" type="tns:testService"/>
+
+  <xs:element name="testServiceResponse" type="tns:testServiceResponse"/>
+
+  <xs:complexType name="testAllServices">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="testAllServicesResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getLastTestedOn">
+    <xs:sequence>
+      <xs:element name="arg0" type="tns:services" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getLastTestedOnResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:dateTime" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getServiceDescription">
+    <xs:sequence>
+      <xs:element name="arg0" type="tns:services" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getServiceDescriptionResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getSupportedServices">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="getSupportedServicesResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:services" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getServiceCategories">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="getServiceCategoriesResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:category" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="category">
+    <xs:sequence>
+      <xs:element name="name" type="xs:string" minOccurs="0"/>
+      <xs:element name="services" type="tns:services" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="isOperating">
+    <xs:sequence>
+      <xs:element name="arg0" type="tns:services" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="isOperatingResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="testService">
+    <xs:sequence>
+      <xs:element name="arg0" type="tns:services" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="testServiceResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getLastTested">
+    <xs:sequence>
+      <xs:element name="arg0" type="tns:services" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getLastTestedResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="services">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="MafftWS"/>
+      <xs:enumeration value="MuscleWS"/>
+      <xs:enumeration value="ClustalWS"/>
+      <xs:enumeration value="ClustalOWS"/>
+      <xs:enumeration value="TcoffeeWS"/>
+      <xs:enumeration value="ProbconsWS"/>
+      <xs:enumeration value="AAConWS"/>
+      <xs:enumeration value="JronnWS"/>
+      <xs:enumeration value="DisemblWS"/>
+      <xs:enumeration value="GlobPlotWS"/>
+      <xs:enumeration value="IUPredWS"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>
+

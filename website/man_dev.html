@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "XHTML 1.0 Strict"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="Last-modified" content="Mon, 4 Apr 2011 12:00:00 GMT"/>
+<title>Java Bioinformatics Analyses Web Services (JABAWS) client developers manual</title>
+<link href="ws.css" rel="stylesheet" type="text/css" media=
+"screen, projection, handheld, tv" />
+<link rel="stylesheet" type="text/css" media="print" href=
+"print.css" />
+<script type="text/javascript" src="prototype-1.6.0.3.js"></script>
+</head>
+<body>
+<div id="page">
+<div id="banner">
+<table> 
+<tr><td style="width:158px;"><a href="http://www.dundee.ac.uk"><img src="images/uod_lt_long.gif"  alt="University of Dundee" width="158" height="90" class="logo"  title="University of Dundee" longdesc="http://www.dundee.ac.uk"/></a></td>
+<td class="bg"><img src="images/jabaws2.png" alt="JABAWS-2.0" title="Java Bioinformatics Analysis Web Services version 2.0"/></td>
+<td class="bg"><img src="images/banner_right.png" alt="Disorder" width="200" height="80"/></td>
+</tr>
+</table>
+</div><!-- banner end-->
+
+<div id="wrapper">
+<div id="panel"><a href="index.html">Home</a> 
+ <a href="quick_start.html">Getting Started</a> 
+ <a class="selected" href="man_about.html">Manual</a> 
+	<div id="submenu">
+		<a href="man_about.html">About</a>
+		<a href="man_servervm.html" title="JABAWS Server as Virtual Appliance">Server VA</a>
+		<a href="man_awscloud.html" title="JABAWS Server in the Amazon EC2 Cloud">Server in the Cloud</a>
+		<a href="man_serverwar.html" title="JABAWS Server as Web Application aRchive">Server WAR</a>
+		<a href="man_configuration.html" >Server<br/>
+		Configuration</a>
+		<a href="man_client.html" title="JABAWS Command Line Client">CMD Client</a>
+		<a href="man_stats.html" title="JABAWS Usage Statistics">Usage Statistics</a>
+		<a class="selected" href="man_dev.html" title="Accessing JABAWS from your program">Accessing<br/>
+		JABAWS</a>	
+		<a href="man_server_dev.html" >JABAWS Development</a>
+	</div>
+<a href="http://www.compbio.dundee.ac.uk/download">Download</a> 
+<a href="PublicAnnualStat" title="JABAWS server usage statistics">Usage Statistics</a>
+ <a href="ServiceStatus" title="JABAWS webservices status. Click to test all web services. Please be patient while the services are being checked">Services Status</a>
+<a href="contacts.html">Contact Us</a>
+<a href="http://www.compbio.dundee.ac.uk" title="University of Dundee, The Barton Group" >Barton Group</a>
+
+</div>
+
+<!-- panel end-->
+<div id="content">
+<h2 id="headtitle">JABAWS MANUAL</h2>
+
+<h2>Using JABAWS From Your Program </h2>
+<ul>
+  <li><a href="#wsfunctions">Web services functions overview </a></li>
+  <li><a href="#templatestr">The template client structure</a></li>
+  <li><a href="#connectto">Connecting to JABAWS</a></li>
+  <li><a href="#validnames">Valid JABAWS service names and WSDL files</a></li>
+  <li><a href="#defalign">Aligning sequences</a></li>
+  <li><a href="#checkresults">Checking the status of the calculation </a></li>
+  <li><a href="#presetalign">Aligning with presets</a></li>
+  <li><a href="#customalign">Aligning with custom parameters</a></li>
+  <li><a href="#writingaltofile">Writing alignments to a file</a></li>
+  <li><a href="#compex">A complete client example </a></li>
+  <li><a href="#buildart">Building web services artifacts</a></li>
+</ul>
+<h3><a name="wsfunctions" id="wsfunctions"></a>Web services functions overview </h3>
+<p>All JABA multiple sequence alignment web services comply to the same interface, thus the function described below are available from all the services. </p>
+<p><strong>Functions for initiating the alignment </strong><span class="code">  String id = align(List&lt;FastaSequence&gt; list)<br />
+  String id = customAlign(List&lt;FastaSequence&gt; sequenceList, List&lt;Option&gt; optionList)<br />
+  String id = presetAlign(List&lt;FastaSequence&gt; sequenceList, Preset preset)</span></p>
+<p><strong>Functions pertaining to job monitoring and control</strong><br />
+  <span class="code">JobStatus status = getJobStatus(String id)<br />
+  Alignment al = getResult(String id)<br />
+  boolean cancelled = cancelJob(String id)<br />
+  ChunkHolder chunk = pullExecStatistics(String id, long marker)</span></p>
+<p><strong>Functions relating to service features discovery</strong><br />
+  <span class="code">RunnerConfig rc = getRunnerOptions()<br />
+  Limit limit = getLimit(String name)<br />
+  LimitsManager lm = getLimits()<br />
+  PresetManager pm = getPresets()</span></p>
+<p>Please refer to a <a href="dm_javadoc/compbio/data/msa/MsaWS.html">data model  javadoc</a> for a detailed description of each methods. </p>
+<h3><a name="templatestr" id="templatestr"></a>Structure of the template command line client</h3>
+<table width="100%" border="1">
+  <tr>
+    <td style="width:19%"><strong>Packages</strong></td>
+    <td style="width:81%"><strong>Classes and Interfaces </strong></td>
+  </tr>
+  <tr>
+    <td>compbio.data.msa </td>
+    <td>MsaWS the interface for all multiple sequence alignment web services </td>
+  </tr>
+  <tr>
+    <td>compbio.data.sequence</td>
+    <td>JABAWS data types </td>
+  </tr>
+  <tr>
+    <td>compbio.metadata</td>
+    <td>JABAWS meta data types </td>
+  </tr>
+  <tr>
+    <td>compbio.ws.client</td>
+    <td>JABAWS command line client </td>
+  </tr>
+</table>
+<p>Additional utility libraries this client depend upon is the compbio-util-1.3.jar and compbio-annotation-1.0.jar. <br />
+  Please refer to a <a href="dm_javadoc/index.html">data model javadoc</a> for a detailed description of each class and its methods. </p>
+<h3><a name="connectto" id="connectto"></a>Connecting to JABAWS</h3>
+<p class="attention">For a complete working example of JABAWS command line client please see compbio.ws.client.Jws2Client class. JABAWS command line client source code is available from the <a href="http://www.compbio.dundee.ac.uk/download">download page</a>. Please note that for now all the examples are in Java other languages will follow given a sufficient demand. </p>
+<p>Download a binary JABAWS client. Add the client to the class path. The following code excerpt will connect your program to Clustal web service deployed in the University of Dundee. </p>
+<p class="code"> import java.net.URL;<br />
+  import javax.xml.namespace.QName;<br />
+  import javax.xml.ws.Service;<br />
+  ...............<br />
+  1) String qualifiedName = &quot;http://msa.data.compbio/01/01/2010/&quot;;<br />
+  2) URL url = new URL(&quot;http://www.compbio.dundee.ac.uk/jabaws/ClustalWS?wsdl&quot;);<br />
+  3) QName qname = new QName(, &quot;ClustalWS&quot;);<br />
+  4) Service serv = Service.create(url, qname);<br />
+  5) MsaWS msaws = serv.getPort(new QName(qualifiedName, &quot;ClustalWSPort&quot;),
+  MsaWS.class);</p>
+<p>Line 1 makes a qualified name for JABA web services.<br />
+  Line 2 
+  constructs the URL to the web services WSDL. <br />
+  Line 3 makes a qualified name instance for Clustal JABA web service. <br />
+  Line 4 creates a service instance.<br />
+  Line 5 makes a connection to the server. </p>
+<p>A more generic connection method would look like this </p>
+<p class="code"> import java.net.URL;<br />
+  import javax.xml.namespace.QName;<br />
+  import javax.xml.ws.Service;<br />
+  import compbio.ws.client.Services<br />
+  .............. <br />
+  String qualifiedServiceName = &quot;http://msa.data.compbio/01/01/2010/&quot;;<br />
+  String host = &quot;http://www.compbio.dundee.ac.uk/jabaws&quot;;<br />
+  // In real life the service name can come from args<br />
+  Services clustal = Services.ClustalWS;<br />
+  URL url = new URL(host + &quot;/&quot; + clustal.toString() + &quot;?wsdl&quot;);<br />
+  QName qname = new QName(qualifiedServiceName, clustal.toString());<br />
+  Service serv = Service.create(url, qname);<br />
+  MsaWS msaws = serv.getPort(new QName(qualifiedServiceName, clustal<br />
+  + &quot;Port&quot;), MsaWS.class);</p>
+<p>Where Services is enumeration of JABAWS web services. All JABAWS multiple sequence alignment methods confirm to MsaWS specification, thus from the caller point of view all JABAWS web services can be represented by MsaWS interface. The full documentation of MsaWS functions is available from the <a href="dm_javadoc/compbio/data/msa/MsaWS.html">javadoc</a>. </p>
+<h3><a name="validnames" id="validnames"></a>Valid JABAWS service names and WSDL files </h3>
+<p>Multiple sequence alignment services </p>
+<ul><li><a href="http://www.compbio.dundee.ac.uk/jabaws/ClustalOWS?wsdl">ClustalOWS</a> (http://www.compbio.dundee.ac.uk/jabaws/ClustalOWS?wsdl) </li>
+  <li><a href="http://www.compbio.dundee.ac.uk/jabaws/ClustalWS?wsdl">ClustalWS</a> (http://www.compbio.dundee.ac.uk/jabaws/ClustalWS?wsdl) </li>
+  <li><a href="http://www.compbio.dundee.ac.uk/jabaws/MuscleWS?wsdl">MuscleWS</a> (http://www.compbio.dundee.ac.uk/jabaws/MuscleWS?wsdl) </li>
+  <li><a href="http://www.compbio.dundee.ac.uk/jabaws/MafftWS?wsdl">MafftWS</a> (http://www.compbio.dundee.ac.uk/jabaws/MafftWS?wsdl) </li>
+  <li><a href="http://www.compbio.dundee.ac.uk/jabaws/TcoffeeWS?wsdl">TcoffeeWS</a> (http://www.compbio.dundee.ac.uk/jabaws/TcoffeeWS?wsdl) </li>
+  <li><a href="http://www.compbio.dundee.ac.uk/jabaws/ProbconsWS?wsdl">ProbconsWS</a> (http://www.compbio.dundee.ac.uk/jabaws/ProbconsWS?wsdl) </li>
+  </ul>
+<p>Protein disorder prediction services </p>
+<ul>
+  <li><a href="http://www.compbio.dundee.ac.uk/jabaws/IUPredWS?wsdl">IUPredWS</a> (http://www.compbio.dundee.ac.uk/jabaws/IUPredWS?wsdl) </li>
+  <li><a href="http://www.compbio.dundee.ac.uk/jabaws/GlobPlotWS?wsdl">GlobPlotWS</a> (http://www.compbio.dundee.ac.uk/jabaws/GlobPlotWS?wsdl) </li>
+  <li><a href="http://www.compbio.dundee.ac.uk/jabaws/DisemblWS?wsdl">DisemblWS</a> (http://www.compbio.dundee.ac.uk/jabaws/DisemblWS?wsdl) </li>
+  <li><a href="http://www.compbio.dundee.ac.uk/jabaws/JronnWS?wsdl">JronnWS</a> (http://www.compbio.dundee.ac.uk/jabaws/JronnWS?wsdl) </li>
+  </ul>
+<p>Amino acid conservation service</p>
+<ul>
+  <li><a href="http://www.compbio.dundee.ac.uk/jabaws/AAConWS?wsdl">AAConWS</a> (http://www.compbio.dundee.ac.uk/jabaws/AAConWS?wsdl) </li>
+  </ul>
+<p>Please replace <span class="hightlight">http://www.compbio.dundee.ac.uk/</span> with your JABAWS instance host name, and <span class="hightlight">jabaws</span> with your JABAWS context name to access your local version of JABAWS web services. For example <span class="hightlight">http://localhost:8080/jabaws</span> would be a valid URL for the default Apache-Tomcat installation and jabaws.war file deployment. </p>
+<h3><a name="defalign" id="defalign"></a>Aligning sequences </h3>
+<p>Given that <span class="hightlight">msaws</span> is web service proxy, created as described in &quot;Connecting to JABAWS&quot; section, the actual alignment can be obtained as follows: </p>
+<p class="code">1) List&lt;FastaSequence&gt; fastalist = SequenceUtil.readFasta(new FileInputStream(file));<br />
+  2) String jobId = msaws.align(fastalist); <br />
+  3) Alignment alignment = msaws.getResult(jobId);</p>
+<p>Line  one loads FASTA sequence from the file<br />
+  Line two submits them to web service represented by msaws proxy <br />
+  Line three retrieves the alignment from a web service. This line will block the execution until the result is available. Use this with caution. In general, you should make sure that the calculation has been completed before attempting retrieving results. This is to avoid keeping the connection to the server on hold for a prolonged periods of time. While this may be ok with your local server, our public server (<a href="http://www.compbio.dundee.ac.uk/jabaws">www.compbio.dundee.ac.uk/jabaws</a>) will not let you hold the connection for longer than 10 minutes. This is done to prevent excessive load on the server. The next section describes how to check the status of the calculation.<br />
+  Methods and classes mentioned in the excerpt are available from the JABAWS client library. </p>
+<h3><a name="checkresults" id="checkresults"></a>Checking the status of the calculation </h3>
+<p> You may have noticed that there was no pause between submitting the job and retrieving of the results. This is because <span class="hightlight">getResult(jobId)</span> method block the processing until the calculation is completed. However, taking into account that the connection holds server resources, our public server (<a href="http://www.compbio.dundee.ac.uk/jabaws">www.compbio.dundee.ac.uk/jabaws</a>) is configured to reset the connection after 10 minutes of waiting. To work around the connection reset you are encouraged to check whether the calculation has been completed before accessing the results.	You can do it like this: </p>
+<p> <span class="code">while (msaws.getJobStatus(jobId) != JobStatus.FINISHED) {<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;Thread.sleep(2000); // wait two  seconds, then recheck the status <br />
+  }</span></p>
+<h3><a name="presetalign" id="presetalign"></a>Aligning with presets</h3>
+<p class="code">1) PresetManager presetman = msaws.getPresets();<br />
+  2) Preset preset = presetman.getPresetByName(presetName);<br />
+  3) List&lt;FastaSequence&gt; fastalist = SequenceUtil.readFasta(new FileInputStream(file));<br />
+  4) String jobId = msaws.presetAlign(fastalist, preset);<br />
+  5) Alignment alignment = msaws.getResult(jobId);</p>
+<p>Line one obtains the lists of presets supported by a web service.<br />
+  Line two return a particular Preset 
+  by its name<br />
+  Lines three to five  are doing the same job as in the first <a href="#defalign"> aligning sequences example</a>.</p>
+<h3><a name="customalign" id="customalign"></a>Aligning with  custom parameters</h3>
+<p class="code"> 1) RunnerConfig options = msaws.getRunnerOptions();<br />
+  2) Argument matrix = options.getArgument(&quot;MATRIX&quot;);<br />
+  3) matrix.setValue(&quot;PAM300&quot;);<br />
+  4) Argument gapopenpenalty = options.getArgument(&quot;GAPOPEN&quot;);<br />
+  5) gapopenpenalty.setValue(&quot;20&quot;);<br />
+  6) List&lt;Argument&gt; arguments = new ArrayList&lt;Argument&gt;(); <br />
+  7) arguments.add(matrix);
+  arguments.add(gapopenpenalty);<br />
+  8) List&lt;FastaSequence&gt; fastalist = SequenceUtil.readFasta(new FileInputStream(file));<br />
+  9) String jobId = msaws.customAlign(fastalist, arguments);<br />
+  10) Alignment alignment = msaws.getResult(jobId);</p>
+<p>Line one obtains the <span class="hightlight">RunnerConfig</span> object that holds information on supported parameters and their values<br />
+  Line two retrieve a particular parameter from the holder by its name<br />
+  Lines three sets a value to this parameter which will be used in the calculation. <br />
+  Line four and five do the same but for another parameter<br />
+  Line 6 makes a List to hold the parameters <br />
+  Line seven puts the parameters into that list<br />
+  Line eight 
+  and ten is the same as in previous examples<br />
+  Line nine submit an alignment request with the sequences and the parameters <br />
+  The names of all the parameters supported by a web service e.g. &quot;PAM300&quot; can be obtained using <span class="hightlight">options.getArguments() </span>method. Further details on the methods available from <span class="hightlight">RunnerConfig</span> object are available from the <a href="dm_javadoc/index.html">javadoc</a>. </p>
+<h3><a name="writingaltofile" id="writingaltofile"></a>Writing alignments to a file</h3>
+<p>There is a utility method in the client library that does exactly that. </p>
+<p> <span class="code">Alignment alignment = align(...) <br />
+  FileOutputStream outStream = new FileOutputStream(file);<br />
+  ClustalAlignmentUtil.writeClustalAlignment(outStream, align);</span></p>
+<h3><a name="compex" id="compex"></a>A complete client example </h3>
+<p>Finally, a complete example of the program that connects to JABAWS Clustal service and aligns sequences using one of the  Clustal web service preset. Three is also a <a href="Example_template.pdf">PDF version</a> of this example with syntax highlighted. The text comments are commented by block style comments e.g. /* comment */, the alternatives given in the code are line commented // comment. You may want to remove line style comments to test alternatives of the functions. All you need for this to work is a <a href="http://www.compbio.dundee.ac.uk/download/get?id=min-jaba-client-2.0.jar">JABAWS binary client</a>. Please make sure that the client is in the Java class path before running this example.</p>
+<pre class="code" style="line-height:1em;">
+import java.io.ByteArrayInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.net.URL;
+import java.util.List;
+
+import javax.xml.namespace.QName;
+import javax.xml.ws.Service;
+
+import compbio.data.msa.MsaWS;
+import compbio.data.sequence.Alignment;
+import compbio.data.sequence.FastaSequence;
+import compbio.data.sequence.SequenceUtil;
+import compbio.metadata.JobSubmissionException;
+import compbio.metadata.LimitExceededException;
+import compbio.metadata.Preset;
+import compbio.metadata.PresetManager;
+import compbio.metadata.ResultNotAvailableException;
+import compbio.metadata.UnsupportedRuntimeException;
+import compbio.metadata.WrongParameterException;
+
+public class Example {
+
+	/*
+	 * Input sequences for alignment
+	 */
+	static final String input = &quot;&gt;Foo\r\n&quot;
+			+ &quot;MTADGPRELLQLRAAVRHRPQDFVAWLMLADAELGMGDTTAGEMAVQRGLALHPGHPEAVARLGR&quot;
+			+ &quot;VRWTQQRHAEAAVLLQQASDAAPEHPGIALWLGHALEDAGQAEAAAAAYTRAHQLLPEEPYITAQ&quot;
+			+ &quot;LLNWRRRLCDWRALDVLSAQVRAAVAQGVGAVEPFAFLSEDASAAEQLACARTRAQAIAASVRPL&quot;
+			+ &quot;APTRVRSKGPLRVGFVSNGFGAHPTGLLTVALFEALQRRQPDLQMHLFATSGDDGSTLRTRLAQA&quot;
+			+ &quot;STLHDVTALGHLATAKHIRHHGIDLLFDLRGWGGGGRPEVFALRPAPVQVNWLAYPGTSGAPWMD&quot;
+			+ &quot;YVLGDAFALPPALEPFYSEHVLRLQGAFQPSDTSRVVAEPPSRTQCGLPEQGVVLCCFNNSYKLN&quot;
+			+ &quot;PQSMARMLAVLREVPDSVLWLLSGPGEADARLRAFAHAQGVDAQRLVFMPKLPHPQYLARYRHAD&quot;
+			+ &quot;LFLDTHPYNAHTTASDALWTGCPVLTTPGETFAARVAGSLNHHLGLDEMNVADDAAFVAKAVALAS&quot;
+			+ &quot;DPAALTALHARVDVLRRESGVFEMDGFADDFGALLQALARRHGWLGI\r\n&quot;
+			+ &quot;\r\n&quot;
+			+ &quot;&gt;Bar\r\n&quot;
+			+ &quot;MGDTTAGEMAVQRGLALHQQRHAEAAVLLQQASDAAPEHPGIALWLHALEDAGQAEAAAAYTRAH&quot;
+			+ &quot;QLLPEEPYITAQLLNAVAQGVGAVEPFAFLSEDASAAESVRPLAPTRVRSKGPLRVGFVSNGFGA&quot;
+			+ &quot;HPTGLLTVALFEALQRRQPDLQMHLFATSGDDGSTLRTRLAQASTLHDVTALGHLATAKHIRHHG&quot;
+			+ &quot;IDLLFDLRGWGGGGRPEVFALRPAPVQVNWLAYPGTSGAPWMDYVLGDAFALPPALEPFYSEHVL&quot;
+			+ &quot;RLQGAFQPSDTSRVVAEPPSRTQCGLPEQGVVLCCFNNSYKLNPQSMARMLAVLREVPDSVLWLL&quot;
+			+ &quot;SGPGEADARLRAFAHAQGVDAQRLVFMPKLPHPQYLARYRHADLFLDTHPYNAHTTASDALWTGC&quot;
+			+ &quot;PVLTTPGETFAARVAGSLNHHLGLDEMNVADDAAFVAKAVALASDPAALTALHARVDVLRRESGV&quot;
+			+ &quot;FEMDGFADDFGALLQALARRHGWLGI\r\n&quot;
+			+ &quot;\r\n&quot;
+			+ &quot;&gt;Friends\r\n&quot;
+			+ &quot;MTADGPRELLQLRAAVRHRPQDVAWLMLADAELGMGDTTAGEMAVQRGLALHPGHPEAVARLGRV&quot;
+			+ &quot;RWTQQRHAEAAVLLQQASDAAPEHPGIALWLGHALEDHQLLPEEPYITAQLDVLSAQVRAAVAQG&quot;
+			+ &quot;VGAVEPFAFLSEDASAAEQLACARTRAQAIAASVRPLAPTRVRSKGPLRVGFVSNGFGAHPTGLL&quot;
+			+ &quot;TVALFEALQRRQPDLQMHLFATSGDDGSTLRTRLAQASTLHDVTALGHLATAKHIRHHGIDLLFD&quot;
+			+ &quot;LRGWGGGGRPEVFALRPAPVQVNWLAYPGTSGAPWMDYVLGDAFALPPALEPFYSEHVLRLQGAF&quot;
+			+ &quot;QPSDTSRVVAEPPSRTQCGLPEQGVVLCCFNNSYKLNPQSMARMLAVLREVPDSVLWLLSGPGEA&quot;
+			+ &quot;DARLRAFAHAQGVDAQRLVFMPKLPHPQYLARYRHADLFLDTHPYNAHTTASDALWTGCPVLTTP&quot;
+			+ &quot;GETFAARVAGSLNHHLGLDEMNVADDAAFVAKAVALASDPAALTALHARVDVLRRESI&quot;;
+
+	public static void main(String[] args) throws UnsupportedRuntimeException,
+			LimitExceededException, JobSubmissionException,
+			WrongParameterException, FileNotFoundException, IOException,
+			ResultNotAvailableException, InterruptedException {
+
+		String qualifiedServiceName = &quot;http://msa.data.compbio/01/01/2010/&quot;;
+
+		/* Make a URL pointing to web service WSDL */
+		URL url = new URL(
+				&quot;http://www.compbio.dundee.ac.uk/jabaws/ClustalWS?wsdl&quot;);
+
+		/*
+		 * If you are making a client that connects to different web services
+		 * you can use something like this:
+		 */
+		// URL url = new URL(host + &quot;/&quot; + Services.ClustalWS.toString() +
+		// &quot;?wsdl&quot;);
+
+		QName qname = new QName(qualifiedServiceName, &quot;ClustalWS&quot;);
+		Service serv = Service.create(url, qname);
+		/*
+		 * Multiple sequence alignment interface for Clustal web service
+		 * instance
+		 */
+		MsaWS msaws = serv.getPort(new QName(qualifiedServiceName, &quot;ClustalWS&quot;
+				+ &quot;Port&quot;), MsaWS.class);
+
+		/* Get the list of available presets */
+		PresetManager presetman = msaws.getPresets();
+
+		/* Get the Preset object by preset name */
+		Preset preset = presetman
+				.getPresetByName(&quot;Disable gap weighting (Speed-oriented)&quot;);
+
+		/*
+		 * Load sequences in FASTA format from the file You can use something
+		 * like new FileInputStream(&lt;filename&gt;) to load sequence from the file
+		 */
+		List&lt;FastaSequence&gt; fastalist = SequenceUtil
+				.readFasta(new ByteArrayInputStream(input.getBytes()));
+
+		/*
+		 * Submit loaded sequences for an alignment using preset. The job
+		 * identifier is returned by this method, you can retrieve the results
+		 * with it sometime later.
+		 */
+		String jobId = msaws.presetAlign(fastalist, preset);
+
+		/* This method will block for the duration of the calculation */
+		Alignment alignment = msaws.getResult(jobId);
+
+		/*
+		 * This is a better way of obtaining results, it does not involve
+		 * holding the connection open for the duration of the calculation,
+		 * Besides, as the University of Dundee public server will reset the
+		 * connection after 10 minutes of idling, this is the only way to obtain
+		 * the results of long running task from our public server.
+		 */
+		// while (msaws.getJobStatus(jobId) != JobStatus.FINISHED) {
+		// Thread.sleep(1000); // wait a second, then recheck the status
+		// }
+
+		/* Output the alignment to standard out */
+		System.out.println(alignment);
+
+		// Alternatively, you can record retrieved alignment into the file in
+		// ClustalW format
+
+		// ClustalAlignmentUtil.writeClustalAlignment(new FileOutputStream(
+		// &quot;output.al&quot;), alignment);
+
+	}
+}
+</pre>
+For a more detailed description of all available types and their functions please refer to the <a href="dm_javadoc/index.html">data model javadoc</a>.
+<h3><a name="buildart" id="buildart"></a>Building web services artifacts</h3>
+<p>JABAWS are the standard <a href="http://jax-ws.java.net/">JAX-WS</a> SOAP web services, which are <a href="http://www.ws-i.org/">WS-I</a> basic   profile compatible. This means that you could use whatever tool your language has to work with web services. Below is how you can generate portable artifacts to work with JABAWS from Java. However,  if programming in Java we recommend using our  client library as it provides a handful of useful methods in addition to plain data types. </p>
+<p class="code">wsimport -keep http://www.compbio.dundee.ac.uk/jabaws/ClustalWS?wsdl</p>
+</div>
+
+<!-- content end-->
+<div id="copyright">Last update: 16 September 2011<br />
+ Peter Troshin, Jim Procter and Geoff Barton, The Barton Group, University of
+Dundee, UK</div>
+</div>
+
+<!-- wrapper end-->
+</div>
+<!-- page end-->
+
+<!-- Google analitics -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try{
+var pageTracker = _gat._getTracker("UA-5356328-1");
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+</body>
+</html>
+

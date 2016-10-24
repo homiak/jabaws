@@ -1,0 +1,1675 @@
+<testng-results>
+  <reporter-output>
+  </reporter-output>
+  <suite name="Ant suite">
+    <groups>
+      <group name="engine">
+        <method signature="compbio.engine.FilePullerTester.testGetDelay()" name="testGetDelay" class="compbio.engine.FilePullerTester"/>
+        <method signature="compbio.engine.FilePullerTester.testPull()" name="testPull" class="compbio.engine.FilePullerTester"/>
+        <method signature="compbio.engine.FilePullerTester.testCache()" name="testCache" class="compbio.engine.FilePullerTester"/>
+        <method signature="compbio.engine.cluster.drmaa.DrmaaAsyncClusterEngineTester.testCancel()" name="testCancel" class="compbio.engine.cluster.drmaa.DrmaaAsyncClusterEngineTester"/>
+        <method signature="compbio.engine.cluster.drmaa.DrmaaAsyncClusterEngineTester.testGetJobStatus()" name="testGetJobStatus" class="compbio.engine.cluster.drmaa.DrmaaAsyncClusterEngineTester"/>
+        <method signature="compbio.engine.cluster.drmaa.DrmaaAsyncClusterEngineTester.testSubmit()" name="testSubmit" class="compbio.engine.cluster.drmaa.DrmaaAsyncClusterEngineTester"/>
+        <method signature="compbio.engine.local.AsyncLocalRunnerTester.testAsyncCancelOperation()" name="testAsyncCancelOperation" class="compbio.engine.local.AsyncLocalRunnerTester"/>
+        <method signature="compbio.engine.local.AsyncLocalRunnerTester.testAsyncRetrievOperation()" name="testAsyncRetrievOperation" class="compbio.engine.local.AsyncLocalRunnerTester"/>
+        <method signature="compbio.engine.local.AsyncLocalRunnerTester.testCancelCompletedTaskLocally()" name="testCancelCompletedTaskLocally" class="compbio.engine.local.AsyncLocalRunnerTester"/>
+        <method signature="compbio.engine.local.AsyncLocalRunnerTester.testCancelLocally()" name="testCancelLocally" class="compbio.engine.local.AsyncLocalRunnerTester"/>
+        <method signature="compbio.engine.local.AsyncLocalRunnerTester.testGetStatus()" name="testGetStatus" class="compbio.engine.local.AsyncLocalRunnerTester"/>
+        <method signature="compbio.engine.local.AsyncLocalRunnerTester.testMultipleCancelLocally()" name="testMultipleCancelLocally" class="compbio.engine.local.AsyncLocalRunnerTester"/>
+        <method signature="compbio.engine.local.AsyncLocalRunnerTester.testSubmitLocally()" name="testSubmitLocally" class="compbio.engine.local.AsyncLocalRunnerTester"/>
+        <method signature="compbio.engine.local.LocalRunnerTester.testCancelCompletedTaskLocally()" name="testCancelCompletedTaskLocally" class="compbio.engine.local.LocalRunnerTester"/>
+        <method signature="compbio.engine.local.LocalRunnerTester.testCancelLocally()" name="testCancelLocally" class="compbio.engine.local.LocalRunnerTester"/>
+        <method signature="compbio.engine.local.LocalRunnerTester.testMultipleCancelLocally()" name="testMultipleCancelLocally" class="compbio.engine.local.LocalRunnerTester"/>
+        <method signature="compbio.engine.cluster.drmaa.ClusterSessionTester.testTaskList()" name="testTaskList" class="compbio.engine.cluster.drmaa.ClusterSessionTester"/>
+        <method signature="compbio.engine.cluster.drmaa.DrmaaClusterEngineTester.testCancel()" name="testCancel" class="compbio.engine.cluster.drmaa.DrmaaClusterEngineTester"/>
+        <method signature="compbio.engine.cluster.drmaa.DrmaaClusterEngineTester.testSubmit()" name="testSubmit" class="compbio.engine.cluster.drmaa.DrmaaClusterEngineTester"/>
+      </group>
+      <group name="cluster">
+        <method signature="compbio.engine.cluster.drmaa.DrmaaAsyncClusterEngineTester.testCancel()" name="testCancel" class="compbio.engine.cluster.drmaa.DrmaaAsyncClusterEngineTester"/>
+        <method signature="compbio.engine.cluster.drmaa.DrmaaAsyncClusterEngineTester.testGetJobStatus()" name="testGetJobStatus" class="compbio.engine.cluster.drmaa.DrmaaAsyncClusterEngineTester"/>
+        <method signature="compbio.engine.cluster.drmaa.DrmaaAsyncClusterEngineTester.testSubmit()" name="testSubmit" class="compbio.engine.cluster.drmaa.DrmaaAsyncClusterEngineTester"/>
+        <method signature="compbio.engine.conf.PropertyHelperManagerTester.testClusterEngineConf()" name="testClusterEngineConf" class="compbio.engine.conf.PropertyHelperManagerTester"/>
+        <method signature="compbio.runner.conservation.AAConTester.testRunOnClusterAsync()" name="testRunOnClusterAsync" class="compbio.runner.conservation.AAConTester"/>
+        <method signature="compbio.runner.disorder.DisemblTester.testRunOnCluster()" name="testRunOnCluster" class="compbio.runner.disorder.DisemblTester"/>
+        <method signature="compbio.runner.disorder.DisemblTester.testRunOnClusterAsync()" name="testRunOnClusterAsync" class="compbio.runner.disorder.DisemblTester"/>
+        <method signature="compbio.runner.disorder.GlobPlotTester.testRunOnCluster()" name="testRunOnCluster" class="compbio.runner.disorder.GlobPlotTester"/>
+        <method signature="compbio.runner.disorder.GlobPlotTester.testRunOnClusterAsync()" name="testRunOnClusterAsync" class="compbio.runner.disorder.GlobPlotTester"/>
+        <method signature="compbio.runner.disorder.IUPredTester.testRunOnCluster()" name="testRunOnCluster" class="compbio.runner.disorder.IUPredTester"/>
+        <method signature="compbio.runner.disorder.IUPredTester.testRunOnClusterAsync()" name="testRunOnClusterAsync" class="compbio.runner.disorder.IUPredTester"/>
+        <method signature="compbio.runner.disorder.JronnTester.testRunOnCluster()" name="testRunOnCluster" class="compbio.runner.disorder.JronnTester"/>
+        <method signature="compbio.runner.disorder.JronnTester.testRunOnClusterAsync()" name="testRunOnClusterAsync" class="compbio.runner.disorder.JronnTester"/>
+        <method signature="compbio.runner.msa.MafftTester.testClusterExecute()" name="testClusterExecute" class="compbio.runner.msa.MafftTester"/>
+        <method signature="compbio.runner.msa.MafftTester.testRunOnClusterAsyncCheckStatusLongPoolingTime()" name="testRunOnClusterAsyncCheckStatusLongPoolingTime" class="compbio.runner.msa.MafftTester"/>
+        <method signature="compbio.runner.msa.MuscleTester.testRunOnCluster()" name="testRunOnCluster" class="compbio.runner.msa.MuscleTester"/>
+        <method signature="compbio.runner.msa.ProbconsTester.testClusterExecute()" name="testClusterExecute" class="compbio.runner.msa.ProbconsTester"/>
+        <method signature="compbio.runner.msa.TcoffeeTester.testClusterExecute()" name="testClusterExecute" class="compbio.runner.msa.TcoffeeTester"/>
+        <method signature="compbio.runner.msa.TcoffeeTester.testPersistance()" name="testPersistance" class="compbio.runner.msa.TcoffeeTester"/>
+        <method signature="compbio.runner.msa.ClustalWTester.readStatisticsClusterExecution()" name="readStatisticsClusterExecution" class="compbio.runner.msa.ClustalWTester"/>
+        <method signature="compbio.runner.msa.ClustalWTester.testRunOnCluster()" name="testRunOnCluster" class="compbio.runner.msa.ClustalWTester"/>
+        <method signature="compbio.engine.cluster.drmaa.ClusterSessionTester.testTaskList()" name="testTaskList" class="compbio.engine.cluster.drmaa.ClusterSessionTester"/>
+        <method signature="compbio.engine.cluster.drmaa.DrmaaClusterEngineTester.testCancel()" name="testCancel" class="compbio.engine.cluster.drmaa.DrmaaClusterEngineTester"/>
+        <method signature="compbio.engine.cluster.drmaa.DrmaaClusterEngineTester.testSubmit()" name="testSubmit" class="compbio.engine.cluster.drmaa.DrmaaClusterEngineTester"/>
+      </group>
+      <group name="runner">
+        <method signature="compbio.runner.conservation.AAConTester.readStatistics()" name="readStatistics" class="compbio.runner.conservation.AAConTester"/>
+        <method signature="compbio.runner.conservation.AAConTester.testConfigurationLoading()" name="testConfigurationLoading" class="compbio.runner.conservation.AAConTester"/>
+        <method signature="compbio.runner.conservation.AAConTester.testPersistance()" name="testPersistance" class="compbio.runner.conservation.AAConTester"/>
+        <method signature="compbio.runner.conservation.AAConTester.testRunLocally()" name="testRunLocally" class="compbio.runner.conservation.AAConTester"/>
+        <method signature="compbio.runner.conservation.AAConTester.testRunLocallyOnTwoCpu()" name="testRunLocallyOnTwoCpu" class="compbio.runner.conservation.AAConTester"/>
+        <method signature="compbio.runner.conservation.AAConTester.testRunLocallyWithPreset()" name="testRunLocallyWithPreset" class="compbio.runner.conservation.AAConTester"/>
+        <method signature="compbio.runner.conservation.AAConTester.testRunOnCluster()" name="testRunOnCluster" class="compbio.runner.conservation.AAConTester"/>
+        <method signature="compbio.runner.conservation.AAConTester.testRunOnClusterAsync()" name="testRunOnClusterAsync" class="compbio.runner.conservation.AAConTester"/>
+        <method signature="compbio.runner.disorder.DisemblTester.readStatistics()" name="readStatistics" class="compbio.runner.disorder.DisemblTester"/>
+        <method signature="compbio.runner.disorder.DisemblTester.testConfigurationLoading()" name="testConfigurationLoading" class="compbio.runner.disorder.DisemblTester"/>
+        <method signature="compbio.runner.disorder.DisemblTester.testPersistance()" name="testPersistance" class="compbio.runner.disorder.DisemblTester"/>
+        <method signature="compbio.runner.disorder.DisemblTester.testRunLocally()" name="testRunLocally" class="compbio.runner.disorder.DisemblTester"/>
+        <method signature="compbio.runner.disorder.DisemblTester.testRunOnCluster()" name="testRunOnCluster" class="compbio.runner.disorder.DisemblTester"/>
+        <method signature="compbio.runner.disorder.DisemblTester.testRunOnClusterAsync()" name="testRunOnClusterAsync" class="compbio.runner.disorder.DisemblTester"/>
+        <method signature="compbio.runner.disorder.GlobPlotTester.readStatistics()" name="readStatistics" class="compbio.runner.disorder.GlobPlotTester"/>
+        <method signature="compbio.runner.disorder.GlobPlotTester.testConfigurationLoading()" name="testConfigurationLoading" class="compbio.runner.disorder.GlobPlotTester"/>
+        <method signature="compbio.runner.disorder.GlobPlotTester.testPersistance()" name="testPersistance" class="compbio.runner.disorder.GlobPlotTester"/>
+        <method signature="compbio.runner.disorder.GlobPlotTester.testRunLocally()" name="testRunLocally" class="compbio.runner.disorder.GlobPlotTester"/>
+        <method signature="compbio.runner.disorder.GlobPlotTester.testRunOnCluster()" name="testRunOnCluster" class="compbio.runner.disorder.GlobPlotTester"/>
+        <method signature="compbio.runner.disorder.GlobPlotTester.testRunOnClusterAsync()" name="testRunOnClusterAsync" class="compbio.runner.disorder.GlobPlotTester"/>
+        <method signature="compbio.runner.disorder.IUPredTester.testConfigurationLoading()" name="testConfigurationLoading" class="compbio.runner.disorder.IUPredTester"/>
+        <method signature="compbio.runner.disorder.IUPredTester.testPersistance()" name="testPersistance" class="compbio.runner.disorder.IUPredTester"/>
+        <method signature="compbio.runner.disorder.IUPredTester.testReadResults()" name="testReadResults" class="compbio.runner.disorder.IUPredTester"/>
+        <method signature="compbio.runner.disorder.IUPredTester.testRunLocally()" name="testRunLocally" class="compbio.runner.disorder.IUPredTester"/>
+        <method signature="compbio.runner.disorder.IUPredTester.testRunLocallyWithParams()" name="testRunLocallyWithParams" class="compbio.runner.disorder.IUPredTester"/>
+        <method signature="compbio.runner.disorder.IUPredTester.testRunOnCluster()" name="testRunOnCluster" class="compbio.runner.disorder.IUPredTester"/>
+        <method signature="compbio.runner.disorder.IUPredTester.testRunOnClusterAsync()" name="testRunOnClusterAsync" class="compbio.runner.disorder.IUPredTester"/>
+        <method signature="compbio.runner.disorder.IUPredTester.testSetParameter()" name="testSetParameter" class="compbio.runner.disorder.IUPredTester"/>
+        <method signature="compbio.runner.disorder.JronnTester.readStatistics()" name="readStatistics" class="compbio.runner.disorder.JronnTester"/>
+        <method signature="compbio.runner.disorder.JronnTester.testConfigurationLoading()" name="testConfigurationLoading" class="compbio.runner.disorder.JronnTester"/>
+        <method signature="compbio.runner.disorder.JronnTester.testPersistance()" name="testPersistance" class="compbio.runner.disorder.JronnTester"/>
+        <method signature="compbio.runner.disorder.JronnTester.testRunLocally()" name="testRunLocally" class="compbio.runner.disorder.JronnTester"/>
+        <method signature="compbio.runner.disorder.JronnTester.testRunLocallyOnTwoCpu()" name="testRunLocallyOnTwoCpu" class="compbio.runner.disorder.JronnTester"/>
+        <method signature="compbio.runner.disorder.JronnTester.testRunOnCluster()" name="testRunOnCluster" class="compbio.runner.disorder.JronnTester"/>
+        <method signature="compbio.runner.disorder.JronnTester.testRunOnClusterAsync()" name="testRunOnClusterAsync" class="compbio.runner.disorder.JronnTester"/>
+        <method signature="compbio.runner.msa.ClustalWParametersTester.testArguments()" name="testArguments" class="compbio.runner.msa.ClustalWParametersTester"/>
+        <method signature="compbio.runner.msa.ClustalWParametersTester.testConstrainedParametersMaxValues()" name="testConstrainedParametersMaxValues" class="compbio.runner.msa.ClustalWParametersTester"/>
+        <method signature="compbio.runner.msa.ClustalWParametersTester.testConstrainedParametersMinValues()" name="testConstrainedParametersMinValues" class="compbio.runner.msa.ClustalWParametersTester"/>
+        <method signature="compbio.runner.msa.ClustalWParametersTester.testConstrainedParametersRandomValues()" name="testConstrainedParametersRandomValues" class="compbio.runner.msa.ClustalWParametersTester"/>
+        <method signature="compbio.runner.msa.ClustalWParametersTester.testDefaultParameters()" name="testDefaultParameters" class="compbio.runner.msa.ClustalWParametersTester"/>
+        <method signature="compbio.runner.msa.ClustalWParametersTester.testOptions()" name="testOptions" class="compbio.runner.msa.ClustalWParametersTester"/>
+        <method signature="compbio.runner.msa.ClustalWParametersTester.testParameters()" name="testParameters" class="compbio.runner.msa.ClustalWParametersTester"/>
+        <method signature="compbio.runner.msa.ClustalWParametersTester.testPresets()" name="testPresets" class="compbio.runner.msa.ClustalWParametersTester"/>
+        <method signature="compbio.runner.msa.MafftParametersTester.testArguments()" name="testArguments" class="compbio.runner.msa.MafftParametersTester"/>
+        <method signature="compbio.runner.msa.MafftParametersTester.testConstrainedParametersMaxValues()" name="testConstrainedParametersMaxValues" class="compbio.runner.msa.MafftParametersTester"/>
+        <method signature="compbio.runner.msa.MafftParametersTester.testConstrainedParametersMinValues()" name="testConstrainedParametersMinValues" class="compbio.runner.msa.MafftParametersTester"/>
+        <method signature="compbio.runner.msa.MafftParametersTester.testConstrainedParametersRandomValues()" name="testConstrainedParametersRandomValues" class="compbio.runner.msa.MafftParametersTester"/>
+        <method signature="compbio.runner.msa.MafftParametersTester.testDefaultParameters()" name="testDefaultParameters" class="compbio.runner.msa.MafftParametersTester"/>
+        <method signature="compbio.runner.msa.MafftParametersTester.testOptions()" name="testOptions" class="compbio.runner.msa.MafftParametersTester"/>
+        <method signature="compbio.runner.msa.MafftParametersTester.testParameters()" name="testParameters" class="compbio.runner.msa.MafftParametersTester"/>
+        <method signature="compbio.runner.msa.MafftParametersTester.testPresets()" name="testPresets" class="compbio.runner.msa.MafftParametersTester"/>
+        <method signature="compbio.runner.msa.MafftTester.readStatistics()" name="readStatistics" class="compbio.runner.msa.MafftTester"/>
+        <method signature="compbio.runner.msa.MafftTester.testClusterExecute()" name="testClusterExecute" class="compbio.runner.msa.MafftTester"/>
+        <method signature="compbio.runner.msa.MafftTester.testConfigurationLoading()" name="testConfigurationLoading" class="compbio.runner.msa.MafftTester"/>
+        <method signature="compbio.runner.msa.MafftTester.testExecute()" name="testExecute" class="compbio.runner.msa.MafftTester"/>
+        <method signature="compbio.runner.msa.MafftTester.testPersistance()" name="testPersistance" class="compbio.runner.msa.MafftTester"/>
+        <method signature="compbio.runner.msa.MafftTester.testRunOnClusterAsyncCheckStatusLongPoolingTime()" name="testRunOnClusterAsyncCheckStatusLongPoolingTime" class="compbio.runner.msa.MafftTester"/>
+        <method signature="compbio.runner.msa.MafftTester.testSetInputTester()" name="testSetInputTester" class="compbio.runner.msa.MafftTester"/>
+        <method signature="compbio.runner.msa.MuscleParametersTester.testArguments()" name="testArguments" class="compbio.runner.msa.MuscleParametersTester"/>
+        <method signature="compbio.runner.msa.MuscleParametersTester.testConstrainedParametersMaxValues()" name="testConstrainedParametersMaxValues" class="compbio.runner.msa.MuscleParametersTester"/>
+        <method signature="compbio.runner.msa.MuscleParametersTester.testConstrainedParametersMinValues()" name="testConstrainedParametersMinValues" class="compbio.runner.msa.MuscleParametersTester"/>
+        <method signature="compbio.runner.msa.MuscleParametersTester.testConstrainedParametersRandomValues()" name="testConstrainedParametersRandomValues" class="compbio.runner.msa.MuscleParametersTester"/>
+        <method signature="compbio.runner.msa.MuscleParametersTester.testDefaultParameters()" name="testDefaultParameters" class="compbio.runner.msa.MuscleParametersTester"/>
+        <method signature="compbio.runner.msa.MuscleParametersTester.testOptions()" name="testOptions" class="compbio.runner.msa.MuscleParametersTester"/>
+        <method signature="compbio.runner.msa.MuscleParametersTester.testParameters()" name="testParameters" class="compbio.runner.msa.MuscleParametersTester"/>
+        <method signature="compbio.runner.msa.MuscleParametersTester.testPresets()" name="testPresets" class="compbio.runner.msa.MuscleParametersTester"/>
+        <method signature="compbio.runner.msa.MuscleTester.readStatistics()" name="readStatistics" class="compbio.runner.msa.MuscleTester"/>
+        <method signature="compbio.runner.msa.MuscleTester.testConfigurationLoading()" name="testConfigurationLoading" class="compbio.runner.msa.MuscleTester"/>
+        <method signature="compbio.runner.msa.MuscleTester.testPersistance()" name="testPersistance" class="compbio.runner.msa.MuscleTester"/>
+        <method signature="compbio.runner.msa.MuscleTester.testRunLocally()" name="testRunLocally" class="compbio.runner.msa.MuscleTester"/>
+        <method signature="compbio.runner.msa.MuscleTester.testRunOnCluster()" name="testRunOnCluster" class="compbio.runner.msa.MuscleTester"/>
+        <method signature="compbio.runner.msa.ProbconsParametersTester.testArguments()" name="testArguments" class="compbio.runner.msa.ProbconsParametersTester"/>
+        <method signature="compbio.runner.msa.ProbconsParametersTester.testConstrainedParametersMaxValues()" name="testConstrainedParametersMaxValues" class="compbio.runner.msa.ProbconsParametersTester"/>
+        <method signature="compbio.runner.msa.ProbconsParametersTester.testConstrainedParametersMinValues()" name="testConstrainedParametersMinValues" class="compbio.runner.msa.ProbconsParametersTester"/>
+        <method signature="compbio.runner.msa.ProbconsParametersTester.testConstrainedParametersRandomValues()" name="testConstrainedParametersRandomValues" class="compbio.runner.msa.ProbconsParametersTester"/>
+        <method signature="compbio.runner.msa.ProbconsParametersTester.testDefaultParameters()" name="testDefaultParameters" class="compbio.runner.msa.ProbconsParametersTester"/>
+        <method signature="compbio.runner.msa.ProbconsParametersTester.testOptions()" name="testOptions" class="compbio.runner.msa.ProbconsParametersTester"/>
+        <method signature="compbio.runner.msa.ProbconsParametersTester.testParameters()" name="testParameters" class="compbio.runner.msa.ProbconsParametersTester"/>
+        <method signature="compbio.runner.msa.ProbconsTester.readStatistics()" name="readStatistics" class="compbio.runner.msa.ProbconsTester"/>
+        <method signature="compbio.runner.msa.ProbconsTester.testClusterExecute()" name="testClusterExecute" class="compbio.runner.msa.ProbconsTester"/>
+        <method signature="compbio.runner.msa.ProbconsTester.testConfigurationLoading()" name="testConfigurationLoading" class="compbio.runner.msa.ProbconsTester"/>
+        <method signature="compbio.runner.msa.ProbconsTester.testExecute()" name="testExecute" class="compbio.runner.msa.ProbconsTester"/>
+        <method signature="compbio.runner.msa.ProbconsTester.testPersistance()" name="testPersistance" class="compbio.runner.msa.ProbconsTester"/>
+        <method signature="compbio.runner.msa.ProbconsTester.testSetInputTester()" name="testSetInputTester" class="compbio.runner.msa.ProbconsTester"/>
+        <method signature="compbio.runner.msa.TcoffeeParametersTester.testArguments()" name="testArguments" class="compbio.runner.msa.TcoffeeParametersTester"/>
+        <method signature="compbio.runner.msa.TcoffeeParametersTester.testConstrainedParametersMaxValues()" name="testConstrainedParametersMaxValues" class="compbio.runner.msa.TcoffeeParametersTester"/>
+        <method signature="compbio.runner.msa.TcoffeeParametersTester.testConstrainedParametersMinValues()" name="testConstrainedParametersMinValues" class="compbio.runner.msa.TcoffeeParametersTester"/>
+        <method signature="compbio.runner.msa.TcoffeeParametersTester.testConstrainedParametersRandomValues()" name="testConstrainedParametersRandomValues" class="compbio.runner.msa.TcoffeeParametersTester"/>
+        <method signature="compbio.runner.msa.TcoffeeParametersTester.testDefaultParameters()" name="testDefaultParameters" class="compbio.runner.msa.TcoffeeParametersTester"/>
+        <method signature="compbio.runner.msa.TcoffeeParametersTester.testOptions()" name="testOptions" class="compbio.runner.msa.TcoffeeParametersTester"/>
+        <method signature="compbio.runner.msa.TcoffeeParametersTester.testParameters()" name="testParameters" class="compbio.runner.msa.TcoffeeParametersTester"/>
+        <method signature="compbio.runner.msa.TcoffeeParametersTester.testPresets()" name="testPresets" class="compbio.runner.msa.TcoffeeParametersTester"/>
+        <method signature="compbio.runner.msa.TcoffeeTester.readStatistics()" name="readStatistics" class="compbio.runner.msa.TcoffeeTester"/>
+        <method signature="compbio.runner.msa.TcoffeeTester.testClusterExecute()" name="testClusterExecute" class="compbio.runner.msa.TcoffeeTester"/>
+        <method signature="compbio.runner.msa.TcoffeeTester.testConfigurationLoading()" name="testConfigurationLoading" class="compbio.runner.msa.TcoffeeTester"/>
+        <method signature="compbio.runner.msa.TcoffeeTester.testExecute()" name="testExecute" class="compbio.runner.msa.TcoffeeTester"/>
+        <method signature="compbio.runner.msa.TcoffeeTester.testNcore()" name="testNcore" class="compbio.runner.msa.TcoffeeTester"/>
+        <method signature="compbio.runner.msa.TcoffeeTester.testPersistance()" name="testPersistance" class="compbio.runner.msa.TcoffeeTester"/>
+        <method signature="compbio.runner.msa.ClustalWTester.testRunWithMatrix()" name="testRunWithMatrix" class="compbio.runner.msa.ClustalWTester"/>
+        <method signature="compbio.runner.msa.ClustalWTester.testConfigurationLoading()" name="testConfigurationLoading" class="compbio.runner.msa.ClustalWTester"/>
+        <method signature="compbio.runner.msa.ClustalWTester.testRunLocally()" name="testRunLocally" class="compbio.runner.msa.ClustalWTester"/>
+        <method signature="compbio.runner.msa.ClustalWTester.readStatisticsClusterExecution()" name="readStatisticsClusterExecution" class="compbio.runner.msa.ClustalWTester"/>
+        <method signature="compbio.runner.msa.ClustalWTester.testRunOnCluster()" name="testRunOnCluster" class="compbio.runner.msa.ClustalWTester"/>
+        <method signature="compbio.runner.msa.ClustalWTester.readStatistics()" name="readStatistics" class="compbio.runner.msa.ClustalWTester"/>
+        <method signature="compbio.runner.msa.ClustalWTester.testOptionsLocally()" name="testOptionsLocally" class="compbio.runner.msa.ClustalWTester"/>
+        <method signature="compbio.runner.msa.ClustalWTester.testPersistance()" name="testPersistance" class="compbio.runner.msa.ClustalWTester"/>
+      </group>
+      <group name="non_windows">
+        <method signature="compbio.runner.msa.MafftParametersTester.testArguments()" name="testArguments" class="compbio.runner.msa.MafftParametersTester"/>
+        <method signature="compbio.runner.msa.MafftParametersTester.testConstrainedParametersMaxValues()" name="testConstrainedParametersMaxValues" class="compbio.runner.msa.MafftParametersTester"/>
+        <method signature="compbio.runner.msa.MafftParametersTester.testConstrainedParametersMinValues()" name="testConstrainedParametersMinValues" class="compbio.runner.msa.MafftParametersTester"/>
+        <method signature="compbio.runner.msa.MafftParametersTester.testConstrainedParametersRandomValues()" name="testConstrainedParametersRandomValues" class="compbio.runner.msa.MafftParametersTester"/>
+        <method signature="compbio.runner.msa.MafftParametersTester.testDefaultParameters()" name="testDefaultParameters" class="compbio.runner.msa.MafftParametersTester"/>
+        <method signature="compbio.runner.msa.MafftParametersTester.testOptions()" name="testOptions" class="compbio.runner.msa.MafftParametersTester"/>
+        <method signature="compbio.runner.msa.MafftParametersTester.testParameters()" name="testParameters" class="compbio.runner.msa.MafftParametersTester"/>
+        <method signature="compbio.runner.msa.MafftParametersTester.testPresets()" name="testPresets" class="compbio.runner.msa.MafftParametersTester"/>
+        <method signature="compbio.runner.msa.MafftTester.readStatistics()" name="readStatistics" class="compbio.runner.msa.MafftTester"/>
+        <method signature="compbio.runner.msa.MafftTester.testClusterExecute()" name="testClusterExecute" class="compbio.runner.msa.MafftTester"/>
+        <method signature="compbio.runner.msa.MafftTester.testExecute()" name="testExecute" class="compbio.runner.msa.MafftTester"/>
+        <method signature="compbio.runner.msa.MafftTester.testPersistance()" name="testPersistance" class="compbio.runner.msa.MafftTester"/>
+        <method signature="compbio.runner.msa.MafftTester.testRunOnClusterAsyncCheckStatusLongPoolingTime()" name="testRunOnClusterAsyncCheckStatusLongPoolingTime" class="compbio.runner.msa.MafftTester"/>
+        <method signature="compbio.runner.msa.MafftTester.testSetInputTester()" name="testSetInputTester" class="compbio.runner.msa.MafftTester"/>
+        <method signature="compbio.runner.msa.ProbconsParametersTester.testArguments()" name="testArguments" class="compbio.runner.msa.ProbconsParametersTester"/>
+        <method signature="compbio.runner.msa.ProbconsParametersTester.testConstrainedParametersMaxValues()" name="testConstrainedParametersMaxValues" class="compbio.runner.msa.ProbconsParametersTester"/>
+        <method signature="compbio.runner.msa.ProbconsParametersTester.testConstrainedParametersMinValues()" name="testConstrainedParametersMinValues" class="compbio.runner.msa.ProbconsParametersTester"/>
+        <method signature="compbio.runner.msa.ProbconsParametersTester.testConstrainedParametersRandomValues()" name="testConstrainedParametersRandomValues" class="compbio.runner.msa.ProbconsParametersTester"/>
+        <method signature="compbio.runner.msa.ProbconsParametersTester.testDefaultParameters()" name="testDefaultParameters" class="compbio.runner.msa.ProbconsParametersTester"/>
+        <method signature="compbio.runner.msa.ProbconsParametersTester.testOptions()" name="testOptions" class="compbio.runner.msa.ProbconsParametersTester"/>
+        <method signature="compbio.runner.msa.ProbconsParametersTester.testParameters()" name="testParameters" class="compbio.runner.msa.ProbconsParametersTester"/>
+        <method signature="compbio.runner.msa.ProbconsTester.readStatistics()" name="readStatistics" class="compbio.runner.msa.ProbconsTester"/>
+        <method signature="compbio.runner.msa.ProbconsTester.testClusterExecute()" name="testClusterExecute" class="compbio.runner.msa.ProbconsTester"/>
+        <method signature="compbio.runner.msa.ProbconsTester.testExecute()" name="testExecute" class="compbio.runner.msa.ProbconsTester"/>
+        <method signature="compbio.runner.msa.ProbconsTester.testPersistance()" name="testPersistance" class="compbio.runner.msa.ProbconsTester"/>
+        <method signature="compbio.runner.msa.ProbconsTester.testSetInputTester()" name="testSetInputTester" class="compbio.runner.msa.ProbconsTester"/>
+        <method signature="compbio.runner.msa.TcoffeeParametersTester.testArguments()" name="testArguments" class="compbio.runner.msa.TcoffeeParametersTester"/>
+        <method signature="compbio.runner.msa.TcoffeeParametersTester.testConstrainedParametersMaxValues()" name="testConstrainedParametersMaxValues" class="compbio.runner.msa.TcoffeeParametersTester"/>
+        <method signature="compbio.runner.msa.TcoffeeParametersTester.testConstrainedParametersMinValues()" name="testConstrainedParametersMinValues" class="compbio.runner.msa.TcoffeeParametersTester"/>
+        <method signature="compbio.runner.msa.TcoffeeParametersTester.testConstrainedParametersRandomValues()" name="testConstrainedParametersRandomValues" class="compbio.runner.msa.TcoffeeParametersTester"/>
+        <method signature="compbio.runner.msa.TcoffeeParametersTester.testDefaultParameters()" name="testDefaultParameters" class="compbio.runner.msa.TcoffeeParametersTester"/>
+        <method signature="compbio.runner.msa.TcoffeeParametersTester.testOptions()" name="testOptions" class="compbio.runner.msa.TcoffeeParametersTester"/>
+        <method signature="compbio.runner.msa.TcoffeeParametersTester.testParameters()" name="testParameters" class="compbio.runner.msa.TcoffeeParametersTester"/>
+        <method signature="compbio.runner.msa.TcoffeeParametersTester.testPresets()" name="testPresets" class="compbio.runner.msa.TcoffeeParametersTester"/>
+        <method signature="compbio.runner.msa.TcoffeeTester.readStatistics()" name="readStatistics" class="compbio.runner.msa.TcoffeeTester"/>
+        <method signature="compbio.runner.msa.TcoffeeTester.testClusterExecute()" name="testClusterExecute" class="compbio.runner.msa.TcoffeeTester"/>
+        <method signature="compbio.runner.msa.TcoffeeTester.testExecute()" name="testExecute" class="compbio.runner.msa.TcoffeeTester"/>
+        <method signature="compbio.runner.msa.TcoffeeTester.testNcore()" name="testNcore" class="compbio.runner.msa.TcoffeeTester"/>
+        <method signature="compbio.runner.msa.TcoffeeTester.testPersistance()" name="testPersistance" class="compbio.runner.msa.TcoffeeTester"/>
+      </group>
+    </groups>
+    <test name="Ant test">
+      <class name="compbio.engine.client.CommandBuilderTester">
+        <test-method status="PASS" signature="testCommandBuilding()" name="testCommandBuilding" duration-ms="1" started-at="2011-06-23T10:35:12Z" finished-at="2011-06-23T10:35:12Z">
+        </test-method>
+        <test-method status="PASS" signature="testOptionsToCommand()" name="testOptionsToCommand" duration-ms="40" started-at="2011-06-23T10:35:12Z" finished-at="2011-06-23T10:35:12Z">
+        </test-method>
+        <test-method status="PASS" signature="testSpaceDelimiterExecutable()" name="testSpaceDelimiterExecutable" duration-ms="0" started-at="2011-06-23T10:35:12Z" finished-at="2011-06-23T10:35:12Z">
+        </test-method>
+      </class>
+      <class name="compbio.runner._impl.NetNglycTester">
+        <test-method status="PASS" signature="testGetTestCommand()" name="testGetTestCommand" duration-ms="1" started-at="2011-06-23T10:36:14Z" finished-at="2011-06-23T10:36:14Z">
+        </test-method>
+      </class>
+      <class name="compbio.engine.EngineConfiguratorTester">
+        <test-method status="PASS" signature="testGetAsyncEngine()" name="testGetAsyncEngine" duration-ms="12" started-at="2011-06-23T10:35:07Z" finished-at="2011-06-23T10:35:07Z">
+        </test-method>
+        <test-method status="PASS" signature="testGetSyncEngine()" name="testGetSyncEngine" duration-ms="1" started-at="2011-06-23T10:35:07Z" finished-at="2011-06-23T10:35:07Z">
+        </test-method>
+      </class>
+      <class name="compbio.runner.disorder.GlobPlotTester">
+        <test-method status="PASS" signature="init()" name="init" is-config="true" duration-ms="0" started-at="2011-06-23T10:36:37Z" finished-at="2011-06-23T10:36:37Z">
+        </test-method>
+        <test-method status="PASS" signature="readStatistics()" name="readStatistics" duration-ms="0" started-at="2011-06-23T10:36:37Z" finished-at="2011-06-23T10:36:37Z">
+        </test-method>
+        <test-method status="PASS" signature="testConfigurationLoading()" name="testConfigurationLoading" duration-ms="43" started-at="2011-06-23T10:36:37Z" finished-at="2011-06-23T10:36:37Z">
+        </test-method>
+        <test-method status="PASS" signature="init()" name="init" is-config="true" duration-ms="0" started-at="2011-06-23T10:36:37Z" finished-at="2011-06-23T10:36:37Z">
+        </test-method>
+        <test-method status="PASS" signature="init()" name="init" is-config="true" duration-ms="0" started-at="2011-06-23T10:36:37Z" finished-at="2011-06-23T10:36:37Z">
+        </test-method>
+        <test-method status="PASS" signature="testPersistance()" name="testPersistance" duration-ms="980" started-at="2011-06-23T10:36:37Z" finished-at="2011-06-23T10:36:38Z">
+        </test-method>
+        <test-method status="PASS" signature="testRunLocally()" name="testRunLocally" duration-ms="454" started-at="2011-06-23T10:36:38Z" finished-at="2011-06-23T10:36:38Z">
+        </test-method>
+        <test-method status="PASS" signature="init()" name="init" is-config="true" duration-ms="0" started-at="2011-06-23T10:36:38Z" finished-at="2011-06-23T10:36:38Z">
+        </test-method>
+        <test-method status="PASS" signature="testRunOnCluster()" name="testRunOnCluster" duration-ms="2503" started-at="2011-06-23T10:36:38Z" finished-at="2011-06-23T10:36:41Z">
+        </test-method>
+        <test-method status="PASS" signature="init()" name="init" is-config="true" duration-ms="0" started-at="2011-06-23T10:36:38Z" finished-at="2011-06-23T10:36:38Z">
+        </test-method>
+        <test-method status="PASS" signature="testRunOnClusterAsync()" name="testRunOnClusterAsync" duration-ms="6021" started-at="2011-06-23T10:36:41Z" finished-at="2011-06-23T10:36:47Z">
+        </test-method>
+        <test-method status="PASS" signature="init()" name="init" is-config="true" duration-ms="0" started-at="2011-06-23T10:36:41Z" finished-at="2011-06-23T10:36:41Z">
+        </test-method>
+      </class>
+      <class name="compbio.stat.collector.ExecutionStatCollectorTester">
+        <test-method status="PASS" signature="testCollectStat()" name="testCollectStat" duration-ms="271" started-at="2011-06-23T10:41:52Z" finished-at="2011-06-23T10:41:52Z">
+        </test-method>
+        <test-method status="PASS" signature="testHasCompleted()" name="testHasCompleted" duration-ms="1" started-at="2011-06-23T10:41:52Z" finished-at="2011-06-23T10:41:52Z">
+        </test-method>
+        <test-method status="PASS" signature="testUpdateStatTester()" name="testUpdateStatTester" duration-ms="35012" started-at="2011-06-23T10:41:52Z" finished-at="2011-06-23T10:42:27Z">
+        </test-method>
+      </class>
+      <class name="compbio.engine.local.AsyncLocalRunnerTester">
+        <test-method status="PASS" signature="testAsyncCancelOperation()" name="testAsyncCancelOperation" duration-ms="17" started-at="2011-06-23T10:35:31Z" finished-at="2011-06-23T10:35:31Z">
+        </test-method>
+        <test-method status="PASS" signature="testAsyncRetrievOperation()" name="testAsyncRetrievOperation" duration-ms="124" started-at="2011-06-23T10:35:31Z" finished-at="2011-06-23T10:35:31Z">
+        </test-method>
+        <test-method status="PASS" signature="testCancelCompletedTaskLocally()" name="testCancelCompletedTaskLocally" duration-ms="3017" started-at="2011-06-23T10:35:31Z" finished-at="2011-06-23T10:35:34Z">
+        </test-method>
+        <test-method status="PASS" signature="testCancelLocally()" name="testCancelLocally" duration-ms="13" started-at="2011-06-23T10:35:34Z" finished-at="2011-06-23T10:35:34Z">
+          <exception class="java.util.concurrent.CancellationException">
+            <full-stacktrace>
+              <![CDATA[java.util.concurrent.CancellationException
+	at java.util.concurrent.FutureTask$Sync.innerGet(FutureTask.java:220)
+	at java.util.concurrent.FutureTask.get(FutureTask.java:83)
+	at compbio.engine.local.LocalEngineUtil.getResults(LocalEngineUtil.java:108)
+	at compbio.engine.local.AsyncLocalRunner.getResults(AsyncLocalRunner.java:130)
+	at compbio.engine.local.AsyncLocalRunnerTester.testCancelLocally(AsyncLocalRunnerTester.java:105)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodHelper.invokeMethod(MethodHelper.java:609)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:532)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:686)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1018)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:128)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:759)
+	at org.testng.TestRunner.privateRun(TestRunner.java:592)
+	at org.testng.TestRunner.run(TestRunner.java:486)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:327)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:299)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:204)
+	at org.testng.TestNG.createAndRunSuiteRunners(TestNG.java:912)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:876)
+	at org.testng.TestNG.run(TestNG.java:784)
+	at org.testng.TestNG.privateMain(TestNG.java:949)
+	at org.testng.TestNG.main(TestNG.java:922)
+]]>
+            </full-stacktrace>
+          </exception>
+        </test-method>
+        <test-method status="PASS" signature="testGetStatus()" name="testGetStatus" duration-ms="19351" started-at="2011-06-23T10:35:34Z" finished-at="2011-06-23T10:35:54Z">
+        </test-method>
+        <test-method status="PASS" signature="testGetStatus()" name="testGetStatus" duration-ms="19362" started-at="2011-06-23T10:35:34Z" finished-at="2011-06-23T10:35:54Z">
+        </test-method>
+        <test-method status="PASS" signature="testGetStatus()" name="testGetStatus" duration-ms="19322" started-at="2011-06-23T10:35:34Z" finished-at="2011-06-23T10:35:54Z">
+        </test-method>
+        <test-method status="PASS" signature="testGetStatus()" name="testGetStatus" duration-ms="19358" started-at="2011-06-23T10:35:34Z" finished-at="2011-06-23T10:35:54Z">
+        </test-method>
+        <test-method status="PASS" signature="testGetStatus()" name="testGetStatus" duration-ms="19298" started-at="2011-06-23T10:35:54Z" finished-at="2011-06-23T10:36:13Z">
+        </test-method>
+        <test-method status="PASS" signature="testMultipleCancelLocally()" name="testMultipleCancelLocally" duration-ms="54" started-at="2011-06-23T10:36:13Z" finished-at="2011-06-23T10:36:13Z">
+          <exception class="java.util.concurrent.CancellationException">
+            <full-stacktrace>
+              <![CDATA[java.util.concurrent.CancellationException
+	at java.util.concurrent.FutureTask$Sync.innerGet(FutureTask.java:220)
+	at java.util.concurrent.FutureTask.get(FutureTask.java:83)
+	at compbio.engine.local.LocalEngineUtil.getResults(LocalEngineUtil.java:108)
+	at compbio.engine.local.AsyncLocalRunner.getResults(AsyncLocalRunner.java:130)
+	at compbio.engine.local.AsyncLocalRunnerTester.testMultipleCancelLocally(AsyncLocalRunnerTester.java:239)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodHelper.invokeMethod(MethodHelper.java:609)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:532)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:686)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1018)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:128)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:759)
+	at org.testng.TestRunner.privateRun(TestRunner.java:592)
+	at org.testng.TestRunner.run(TestRunner.java:486)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:327)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:299)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:204)
+	at org.testng.TestNG.createAndRunSuiteRunners(TestNG.java:912)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:876)
+	at org.testng.TestNG.run(TestNG.java:784)
+	at org.testng.TestNG.privateMain(TestNG.java:949)
+	at org.testng.TestNG.main(TestNG.java:922)
+]]>
+            </full-stacktrace>
+          </exception>
+        </test-method>
+        <test-method status="PASS" signature="testSubmitLocally()" name="testSubmitLocally" duration-ms="187" started-at="2011-06-23T10:36:13Z" finished-at="2011-06-23T10:36:13Z">
+        </test-method>
+        <test-method status="PASS" signature="testSubmitLocally()" name="testSubmitLocally" duration-ms="170" started-at="2011-06-23T10:36:13Z" finished-at="2011-06-23T10:36:13Z">
+        </test-method>
+        <test-method status="PASS" signature="testSubmitLocally()" name="testSubmitLocally" duration-ms="122" started-at="2011-06-23T10:36:13Z" finished-at="2011-06-23T10:36:13Z">
+        </test-method>
+        <test-method status="PASS" signature="testSubmitLocally()" name="testSubmitLocally" duration-ms="151" started-at="2011-06-23T10:36:13Z" finished-at="2011-06-23T10:36:13Z">
+        </test-method>
+        <test-method status="PASS" signature="testSubmitLocally()" name="testSubmitLocally" duration-ms="105" started-at="2011-06-23T10:36:13Z" finished-at="2011-06-23T10:36:13Z">
+        </test-method>
+      </class>
+      <class name="compbio.runner.msa.MafftTester">
+        <test-method status="PASS" signature="init()" name="init" is-config="true" duration-ms="0" started-at="2011-06-23T10:38:49Z" finished-at="2011-06-23T10:38:49Z">
+        </test-method>
+        <test-method status="PASS" signature="readStatistics()" name="readStatistics" duration-ms="516" started-at="2011-06-23T10:38:49Z" finished-at="2011-06-23T10:38:49Z">
+        </test-method>
+        <test-method status="PASS" signature="testClusterExecute()" name="testClusterExecute" duration-ms="1264" started-at="2011-06-23T10:38:49Z" finished-at="2011-06-23T10:38:51Z">
+        </test-method>
+        <test-method status="PASS" signature="init()" name="init" is-config="true" duration-ms="0" started-at="2011-06-23T10:38:49Z" finished-at="2011-06-23T10:38:49Z">
+        </test-method>
+        <test-method status="PASS" signature="init()" name="init" is-config="true" duration-ms="0" started-at="2011-06-23T10:38:51Z" finished-at="2011-06-23T10:38:51Z">
+        </test-method>
+        <test-method status="PASS" signature="testConfigurationLoading()" name="testConfigurationLoading" duration-ms="62" started-at="2011-06-23T10:38:51Z" finished-at="2011-06-23T10:38:51Z">
+        </test-method>
+        <test-method status="PASS" signature="testExecute()" name="testExecute" duration-ms="162" started-at="2011-06-23T10:38:51Z" finished-at="2011-06-23T10:38:51Z">
+        </test-method>
+        <test-method status="PASS" signature="init()" name="init" is-config="true" duration-ms="0" started-at="2011-06-23T10:38:51Z" finished-at="2011-06-23T10:38:51Z">
+        </test-method>
+        <test-method status="PASS" signature="init()" name="init" is-config="true" duration-ms="0" started-at="2011-06-23T10:38:51Z" finished-at="2011-06-23T10:38:51Z">
+        </test-method>
+        <test-method status="PASS" signature="testPersistance()" name="testPersistance" duration-ms="305" started-at="2011-06-23T10:38:51Z" finished-at="2011-06-23T10:38:51Z">
+        </test-method>
+        <test-method status="PASS" signature="init()" name="init" is-config="true" duration-ms="0" started-at="2011-06-23T10:38:51Z" finished-at="2011-06-23T10:38:51Z">
+        </test-method>
+        <test-method status="PASS" signature="testRunOnClusterAsyncCheckStatusLongPoolingTime()" name="testRunOnClusterAsyncCheckStatusLongPoolingTime" duration-ms="5535" started-at="2011-06-23T10:38:51Z" finished-at="2011-06-23T10:38:57Z">
+        </test-method>
+        <test-method status="PASS" signature="testSetInputTester()" name="testSetInputTester" duration-ms="0" started-at="2011-06-23T10:38:57Z" finished-at="2011-06-23T10:38:57Z">
+        </test-method>
+        <test-method status="PASS" signature="init()" name="init" is-config="true" duration-ms="0" started-at="2011-06-23T10:38:57Z" finished-at="2011-06-23T10:38:57Z">
+        </test-method>
+      </class>
+      <class name="compbio.data.sequence.ClustalAlignmentUtilTester">
+        <test-method status="PASS" signature="testReadClustalFile()" name="testReadClustalFile" duration-ms="12" started-at="2011-06-23T10:35:06Z" finished-at="2011-06-23T10:35:06Z">
+        </test-method>
+        <test-method status="PASS" signature="testReadClustalFileLongNames()" name="testReadClustalFileLongNames" duration-ms="19" started-at="2011-06-23T10:35:06Z" finished-at="2011-06-23T10:35:06Z">
+        </test-method>
+        <test-method status="PASS" signature="testReadClustalFileShortNames()" name="testReadClustalFileShortNames" duration-ms="14" started-at="2011-06-23T10:35:06Z" finished-at="2011-06-23T10:35:06Z">
+        </test-method>
+      </class>
+      <class name="compbio.runner.disorder.IUPredTester">
+        <test-method status="PASS" signature="init()" name="init" is-config="true" duration-ms="0" started-at="2011-06-23T10:36:47Z" finished-at="2011-06-23T10:36:47Z">
+        </test-method>
+        <test-method status="PASS" signature="testConfigurationLoading()" name="testConfigurationLoading" duration-ms="69" started-at="2011-06-23T10:36:47Z" finished-at="2011-06-23T10:36:47Z">
+        </test-method>
+        <test-method status="PASS" signature="init()" name="init" is-config="true" duration-ms="1" started-at="2011-06-23T10:36:47Z" finished-at="2011-06-23T10:36:47Z">
+        </test-method>
+        <test-method status="PASS" signature="testPersistance()" name="testPersistance" duration-ms="308" started-at="2011-06-23T10:36:47Z" finished-at="2011-06-23T10:36:47Z">
+        </test-method>
+        <test-method status="PASS" signature="init()" name="init" is-config="true" duration-ms="0" started-at="2011-06-23T10:36:47Z" finished-at="2011-06-23T10:36:47Z">
+        </test-method>
+        <test-method status="PASS" signature="testReadResults()" name="testReadResults" duration-ms="25" started-at="2011-06-23T10:36:47Z" finished-at="2011-06-23T10:36:47Z">
+        </test-method>
+        <test-method status="PASS" signature="init()" name="init" is-config="true" duration-ms="0" started-at="2011-06-23T10:36:47Z" finished-at="2011-06-23T10:36:47Z">
+        </test-method>
+        <test-method status="PASS" signature="testRunLocally()" name="testRunLocally" duration-ms="196" started-at="2011-06-23T10:36:47Z" finished-at="2011-06-23T10:36:47Z">
+        </test-method>
+        <test-method status="PASS" signature="init()" name="init" is-config="true" duration-ms="0" started-at="2011-06-23T10:36:47Z" finished-at="2011-06-23T10:36:47Z">
+        </test-method>
+        <test-method status="PASS" signature="testRunLocallyWithParams()" name="testRunLocallyWithParams" duration-ms="71" started-at="2011-06-23T10:36:47Z" finished-at="2011-06-23T10:36:47Z">
+        </test-method>
+        <test-method status="PASS" signature="testRunOnCluster()" name="testRunOnCluster" duration-ms="3308" started-at="2011-06-23T10:36:47Z" finished-at="2011-06-23T10:36:51Z">
+        </test-method>
+        <test-method status="PASS" signature="init()" name="init" is-config="true" duration-ms="0" started-at="2011-06-23T10:36:47Z" finished-at="2011-06-23T10:36:47Z">
+        </test-method>
+        <test-method status="PASS" signature="testRunOnClusterAsync()" name="testRunOnClusterAsync" duration-ms="6025" started-at="2011-06-23T10:36:51Z" finished-at="2011-06-23T10:36:57Z">
+        </test-method>
+        <test-method status="PASS" signature="init()" name="init" is-config="true" duration-ms="0" started-at="2011-06-23T10:36:51Z" finished-at="2011-06-23T10:36:51Z">
+        </test-method>
+        <test-method status="PASS" signature="init()" name="init" is-config="true" duration-ms="0" started-at="2011-06-23T10:36:57Z" finished-at="2011-06-23T10:36:57Z">
+        </test-method>
+        <test-method status="PASS" signature="testSetParameter()" name="testSetParameter" duration-ms="0" started-at="2011-06-23T10:36:57Z" finished-at="2011-06-23T10:36:57Z">
+        </test-method>
+      </class>
+      <class name="compbio.engine.client.PathValidatorTester">
+        <test-method status="PASS" signature="testGetClassPath()" name="testGetClassPath" duration-ms="1" started-at="2011-06-23T10:35:12Z" finished-at="2011-06-23T10:35:12Z">
+        </test-method>
+        <test-method status="PASS" signature="testIsAbsolutePath()" name="testIsAbsolutePath" duration-ms="0" started-at="2011-06-23T10:35:12Z" finished-at="2011-06-23T10:35:12Z">
+        </test-method>
+      </class>
+      <class name="compbio.stat.collector.StatDBTester">
+        <test-method status="PASS" signature="init()" name="init" is-config="true" duration-ms="11" started-at="2011-06-23T10:42:27Z" finished-at="2011-06-23T10:42:27Z">
+        </test-method>
+        <test-method status="PASS" signature="testVerifyJobsCount()" name="testVerifyJobsCount" duration-ms="412" started-at="2011-06-23T10:42:27Z" finished-at="2011-06-23T10:42:27Z">
+        </test-method>
+      </class>
+      <class name="compbio.stat.servlet.util.StatCollectionTester">
+        <test-method status="PASS" signature="testGetStats()" name="testGetStats" duration-ms="22" started-at="2011-06-23T10:42:27Z" finished-at="2011-06-23T10:42:27Z">
+        </test-method>
+      </class>
+      <class name="compbio.engine.cluster.drmaa.DrmaaClusterEngineTester">
+        <test-method status="PASS" signature="testCancel()" name="testCancel" duration-ms="1538" started-at="2011-06-23T10:35:26Z" finished-at="2011-06-23T10:35:27Z">
+        </test-method>
+        <test-method status="PASS" signature="testSubmit()" name="testSubmit" duration-ms="3508" started-at="2011-06-23T10:35:27Z" finished-at="2011-06-23T10:35:31Z">
+        </test-method>
+      </class>
+      <class name="compbio.engine.cluster.drmaa.DrmaaAsyncClusterEngineTester">
+        <test-method status="PASS" signature="testCancel()" name="testCancel" duration-ms="1257" started-at="2011-06-23T10:35:16Z" finished-at="2011-06-23T10:35:17Z">
+          <exception class="compbio.metadata.ResultNotAvailableException">
+            <message>
+              <![CDATA[java.io.FileNotFoundException: Result for the jobId /homes/pvtroshin/workspace/jaba2/local_jobsout/ClustalW#6405924652151282 with file name TO1381.clustal.cluster.out is not found!]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[compbio.metadata.ResultNotAvailableException: java.io.FileNotFoundException: Result for the jobId /homes/pvtroshin/workspace/jaba2/local_jobsout/ClustalW#6405924652151282 with file name TO1381.clustal.cluster.out is not found!
+	at compbio.runner.msa.ClustalW.getResults(ClustalW.java:73)
+	at compbio.runner.msa.ClustalW.getResults(ClustalW.java:34)
+	at compbio.engine.client.ConfExecutable.getResults(ConfExecutable.java:207)
+	at compbio.engine.cluster.drmaa.DrmaaAsyncClusterEngineTester.testCancel(DrmaaAsyncClusterEngineTester.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodHelper.invokeMethod(MethodHelper.java:609)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:532)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:686)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1018)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:128)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:759)
+	at org.testng.TestRunner.privateRun(TestRunner.java:592)
+	at org.testng.TestRunner.run(TestRunner.java:486)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:327)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:299)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:204)
+	at org.testng.TestNG.createAndRunSuiteRunners(TestNG.java:912)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:876)
+	at org.testng.TestNG.run(TestNG.java:784)
+	at org.testng.TestNG.privateMain(TestNG.java:949)
+	at org.testng.TestNG.main(TestNG.java:922)
+Caused by: java.io.FileNotFoundException: Result for the jobId /homes/pvtroshin/workspace/jaba2/local_jobsout/ClustalW#6405924652151282 with file name TO1381.clustal.cluster.out is not found!
+	at compbio.runner.Util.readClustalFile(Util.java:93)
+	at compbio.runner.msa.ClustalW.getResults(ClustalW.java:70)
+	... 25 more
+]]>
+            </full-stacktrace>
+          </exception>
+        </test-method>
+        <test-method status="PASS" signature="testGetJobStatus()" name="testGetJobStatus" duration-ms="4765" started-at="2011-06-23T10:35:17Z" finished-at="2011-06-23T10:35:22Z">
+        </test-method>
+        <test-method status="PASS" signature="testSubmit()" name="testSubmit" duration-ms="3976" started-at="2011-06-23T10:35:22Z" finished-at="2011-06-23T10:35:26Z">
+        </test-method>
+      </class>
+      <class name="compbio.runner.conservation.AAConTester">
+        <test-method status="PASS" signature="init()" name="init" is-config="true" duration-ms="1" started-at="2011-06-23T10:36:14Z" finished-at="2011-06-23T10:36:14Z">
+        </test-method>
+        <test-method status="PASS" signature="readStatistics()" name="readStatistics" duration-ms="1493" started-at="2011-06-23T10:36:14Z" finished-at="2011-06-23T10:36:15Z">
+        </test-method>
+        <test-method status="PASS" signature="init()" name="init" is-config="true" duration-ms="1" started-at="2011-06-23T10:36:15Z" finished-at="2011-06-23T10:36:15Z">
+        </test-method>
+        <test-method status="PASS" signature="testConfigurationLoading()" name="testConfigurationLoading" duration-ms="113" started-at="2011-06-23T10:36:15Z" finished-at="2011-06-23T10:36:15Z">
+        </test-method>
+        <test-method status="PASS" signature="init()" name="init" is-config="true" duration-ms="0" started-at="2011-06-23T10:36:15Z" finished-at="2011-06-23T10:36:15Z">
+        </test-method>
+        <test-method status="PASS" signature="testPersistance()" name="testPersistance" duration-ms="775" started-at="2011-06-23T10:36:15Z" finished-at="2011-06-23T10:36:16Z">
+        </test-method>
+        <test-method status="PASS" signature="init()" name="init" is-config="true" duration-ms="1" started-at="2011-06-23T10:36:16Z" finished-at="2011-06-23T10:36:16Z">
+        </test-method>
+        <test-method status="PASS" signature="testRunLocally()" name="testRunLocally" duration-ms="827" started-at="2011-06-23T10:36:16Z" finished-at="2011-06-23T10:36:17Z">
+        </test-method>
+        <test-method status="PASS" signature="testRunLocallyOnTwoCpu()" name="testRunLocallyOnTwoCpu" duration-ms="289" started-at="2011-06-23T10:36:17Z" finished-at="2011-06-23T10:36:17Z">
+        </test-method>
+        <test-method status="PASS" signature="init()" name="init" is-config="true" duration-ms="0" started-at="2011-06-23T10:36:17Z" finished-at="2011-06-23T10:36:17Z">
+        </test-method>
+        <test-method status="PASS" signature="init()" name="init" is-config="true" duration-ms="1" started-at="2011-06-23T10:36:17Z" finished-at="2011-06-23T10:36:17Z">
+        </test-method>
+        <test-method status="PASS" signature="testRunLocallyWithPreset()" name="testRunLocallyWithPreset" duration-ms="653" started-at="2011-06-23T10:36:17Z" finished-at="2011-06-23T10:36:18Z">
+        </test-method>
+        <test-method status="PASS" signature="init()" name="init" is-config="true" duration-ms="1" started-at="2011-06-23T10:36:18Z" finished-at="2011-06-23T10:36:18Z">
+        </test-method>
+        <test-method status="PASS" signature="testRunOnCluster()" name="testRunOnCluster" duration-ms="3640" started-at="2011-06-23T10:36:18Z" finished-at="2011-06-23T10:36:22Z">
+        </test-method>
+        <test-method status="PASS" signature="init()" name="init" is-config="true" duration-ms="0" started-at="2011-06-23T10:36:22Z" finished-at="2011-06-23T10:36:22Z">
+        </test-method>
+        <test-method status="PASS" signature="testRunOnClusterAsync()" name="testRunOnClusterAsync" duration-ms="5018" started-at="2011-06-23T10:36:22Z" finished-at="2011-06-23T10:36:27Z">
+        </test-method>
+      </class>
+      <class name="compbio.runner.disorder.DisemblTester">
+        <test-method status="PASS" signature="testConfigurationLoading()" name="testConfigurationLoading" duration-ms="44" started-at="2011-06-23T10:36:27Z" finished-at="2011-06-23T10:36:27Z">
+        </test-method>
+        <test-method status="PASS" signature="readStatistics()" name="readStatistics" duration-ms="0" started-at="2011-06-23T10:36:27Z" finished-at="2011-06-23T10:36:27Z">
+        </test-method>
+        <test-method status="PASS" signature="init()" name="init" is-config="true" duration-ms="0" started-at="2011-06-23T10:36:27Z" finished-at="2011-06-23T10:36:27Z">
+        </test-method>
+        <test-method status="PASS" signature="init()" name="init" is-config="true" duration-ms="0" started-at="2011-06-23T10:36:27Z" finished-at="2011-06-23T10:36:27Z">
+        </test-method>
+        <test-method status="PASS" signature="init()" name="init" is-config="true" duration-ms="1" started-at="2011-06-23T10:36:27Z" finished-at="2011-06-23T10:36:27Z">
+        </test-method>
+        <test-method status="PASS" signature="testPersistance()" name="testPersistance" duration-ms="1297" started-at="2011-06-23T10:36:27Z" finished-at="2011-06-23T10:36:28Z">
+        </test-method>
+        <test-method status="PASS" signature="testRunLocally()" name="testRunLocally" duration-ms="579" started-at="2011-06-23T10:36:28Z" finished-at="2011-06-23T10:36:29Z">
+        </test-method>
+        <test-method status="PASS" signature="init()" name="init" is-config="true" duration-ms="0" started-at="2011-06-23T10:36:28Z" finished-at="2011-06-23T10:36:28Z">
+        </test-method>
+        <test-method status="PASS" signature="init()" name="init" is-config="true" duration-ms="0" started-at="2011-06-23T10:36:29Z" finished-at="2011-06-23T10:36:29Z">
+        </test-method>
+        <test-method status="PASS" signature="testRunOnCluster()" name="testRunOnCluster" duration-ms="2047" started-at="2011-06-23T10:36:29Z" finished-at="2011-06-23T10:36:31Z">
+        </test-method>
+        <test-method status="PASS" signature="init()" name="init" is-config="true" duration-ms="1" started-at="2011-06-23T10:36:31Z" finished-at="2011-06-23T10:36:31Z">
+        </test-method>
+        <test-method status="PASS" signature="testRunOnClusterAsync()" name="testRunOnClusterAsync" duration-ms="6011" started-at="2011-06-23T10:36:31Z" finished-at="2011-06-23T10:36:37Z">
+        </test-method>
+      </class>
+      <class name="compbio.runner._impl.RPSBlastTester">
+        <test-method status="PASS" signature="testGetTestCommand()" name="testGetTestCommand" duration-ms="0" started-at="2011-06-23T10:36:14Z" finished-at="2011-06-23T10:36:14Z">
+        </test-method>
+        <test-method status="PASS" signature="testGetTestArgsCommand()" name="testGetTestArgsCommand" duration-ms="0" started-at="2011-06-23T10:36:14Z" finished-at="2011-06-23T10:36:14Z">
+        </test-method>
+      </class>
+      <class name="compbio.engine.PulledFileCacheTester">
+        <test-method status="PASS" signature="test()" name="test" duration-ms="5011" started-at="2011-06-23T10:35:07Z" finished-at="2011-06-23T10:35:12Z">
+        </test-method>
+      </class>
+      <class name="compbio.runner._impl.MclTester">
+        <test-method status="PASS" signature="testGetTestCommand()" name="testGetTestCommand" duration-ms="0" started-at="2011-06-23T10:36:14Z" finished-at="2011-06-23T10:36:14Z">
+        </test-method>
+      </class>
+      <class name="compbio.engine.cluster.dundee._QueueTester">
+        <test-method status="PASS" signature="testQueue()" name="testQueue" duration-ms="0" started-at="2011-06-23T10:35:31Z" finished-at="2011-06-23T10:35:31Z">
+        </test-method>
+      </class>
+      <class name="compbio.engine.LoadBalancerTester">
+        <test-method status="PASS" signature="testLoadBalance()" name="testLoadBalance" duration-ms="57" started-at="2011-06-23T10:35:07Z" finished-at="2011-06-23T10:35:07Z">
+        </test-method>
+      </class>
+      <class name="compbio.runner.msa.ProbconsParametersTester">
+        <test-method status="PASS" signature="setup()" name="setup" is-config="true" duration-ms="36" started-at="2011-06-23T10:39:16Z" finished-at="2011-06-23T10:39:16Z">
+        </test-method>
+        <test-method status="PASS" signature="testArguments()" name="testArguments" duration-ms="1819" started-at="2011-06-23T10:39:16Z" finished-at="2011-06-23T10:39:17Z">
+        </test-method>
+        <test-method status="PASS" signature="setup()" name="setup" is-config="true" duration-ms="22" started-at="2011-06-23T10:39:17Z" finished-at="2011-06-23T10:39:17Z">
+        </test-method>
+        <test-method status="PASS" signature="testConfiguration()" name="testConfiguration" duration-ms="0" started-at="2011-06-23T10:39:17Z" finished-at="2011-06-23T10:39:17Z">
+        </test-method>
+        <test-method status="PASS" signature="setup()" name="setup" is-config="true" duration-ms="20" started-at="2011-06-23T10:39:17Z" finished-at="2011-06-23T10:39:18Z">
+        </test-method>
+        <test-method status="PASS" signature="testConstrainedParametersMaxValues()" name="testConstrainedParametersMaxValues" duration-ms="37102" started-at="2011-06-23T10:39:18Z" finished-at="2011-06-23T10:39:55Z">
+        </test-method>
+        <test-method status="PASS" signature="setup()" name="setup" is-config="true" duration-ms="22" started-at="2011-06-23T10:39:55Z" finished-at="2011-06-23T10:39:55Z">
+        </test-method>
+        <test-method status="PASS" signature="testConstrainedParametersMinValues()" name="testConstrainedParametersMinValues" duration-ms="768" started-at="2011-06-23T10:39:55Z" finished-at="2011-06-23T10:39:55Z">
+        </test-method>
+        <test-method status="PASS" signature="setup()" name="setup" is-config="true" duration-ms="22" started-at="2011-06-23T10:39:55Z" finished-at="2011-06-23T10:39:55Z">
+        </test-method>
+        <test-method status="PASS" signature="testConstrainedParametersRandomValues()" name="testConstrainedParametersRandomValues" duration-ms="70319" started-at="2011-06-23T10:39:55Z" finished-at="2011-06-23T10:41:06Z">
+        </test-method>
+        <test-method status="PASS" signature="setup()" name="setup" is-config="true" duration-ms="22" started-at="2011-06-23T10:41:06Z" finished-at="2011-06-23T10:41:06Z">
+        </test-method>
+        <test-method status="PASS" signature="testDefaultParameters()" name="testDefaultParameters" duration-ms="4845" started-at="2011-06-23T10:41:06Z" finished-at="2011-06-23T10:41:11Z">
+        </test-method>
+        <test-method status="PASS" signature="setup()" name="setup" is-config="true" duration-ms="21" started-at="2011-06-23T10:41:11Z" finished-at="2011-06-23T10:41:11Z">
+        </test-method>
+        <test-method status="PASS" signature="testOptions()" name="testOptions" duration-ms="443" started-at="2011-06-23T10:41:11Z" finished-at="2011-06-23T10:41:11Z">
+        </test-method>
+        <test-method status="PASS" signature="setup()" name="setup" is-config="true" duration-ms="22" started-at="2011-06-23T10:41:11Z" finished-at="2011-06-23T10:41:11Z">
+        </test-method>
+        <test-method status="PASS" signature="testParameters()" name="testParameters" duration-ms="1344" started-at="2011-06-23T10:41:11Z" finished-at="2011-06-23T10:41:12Z">
+        </test-method>
+      </class>
+      <class name="compbio.metadata.RunnerConfigTester">
+        <test-method status="PASS" signature="setup()" name="setup" is-config="true" duration-ms="14" started-at="2011-06-23T10:36:14Z" finished-at="2011-06-23T10:36:14Z">
+        </test-method>
+        <test-method status="PASS" signature="setup()" name="setup" is-config="true" duration-ms="14" started-at="2011-06-23T10:36:14Z" finished-at="2011-06-23T10:36:14Z">
+        </test-method>
+        <test-method status="PASS" signature="testCreateNumParameterWithoutValidValue()" name="testCreateNumParameterWithoutValidValue" duration-ms="0" started-at="2011-06-23T10:36:14Z" finished-at="2011-06-23T10:36:14Z">
+          <exception class="java.lang.IllegalStateException">
+            <message>
+              <![CDATA[Attempting to set default value for parameter: Option name: Matrix
+Description: DNA weight matrix
+URL: null
+Is required: false
+
+ Without possible values! Please define possible value first!]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalStateException: Attempting to set default value for parameter: Option name: Matrix
+Description: DNA weight matrix
+URL: null
+Is required: false
+
+ Without possible values! Please define possible value first!
+	at compbio.metadata.Parameter.setDefaultValue(Parameter.java:234)
+	at compbio.metadata.RunnerConfigTester.testCreateNumParameterWithoutValidValue(RunnerConfigTester.java:222)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodHelper.invokeMethod(MethodHelper.java:609)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:532)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:686)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1018)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:128)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:759)
+	at org.testng.TestRunner.privateRun(TestRunner.java:592)
+	at org.testng.TestRunner.run(TestRunner.java:486)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:327)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:299)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:204)
+	at org.testng.TestNG.createAndRunSuiteRunners(TestNG.java:912)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:876)
+	at org.testng.TestNG.run(TestNG.java:784)
+	at org.testng.TestNG.privateMain(TestNG.java:949)
+	at org.testng.TestNG.main(TestNG.java:922)
+]]>
+            </full-stacktrace>
+          </exception>
+        </test-method>
+        <test-method status="PASS" signature="setup()" name="setup" is-config="true" duration-ms="14" started-at="2011-06-23T10:36:14Z" finished-at="2011-06-23T10:36:14Z">
+        </test-method>
+        <test-method status="PASS" signature="testCreateParameter()" name="testCreateParameter" duration-ms="0" started-at="2011-06-23T10:36:14Z" finished-at="2011-06-23T10:36:14Z">
+          <exception class="compbio.metadata.WrongParameterException">
+            <message>
+              <![CDATA[Attempting to set illegal value 'pam22' for the parameter: Option name: Matrix1
+Description: Protein weight matrix
+URL: http://www.compbio.dundee.ac.uk/users/pvtroshin/ws/Index.html
+Is required: true
+Option Names: 
+--AAMATRIX
+POSSIBLE VALUES:
+BLOSUM
+GONNET
+ID
+PAM
+
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[compbio.metadata.WrongParameterException: Attempting to set illegal value 'pam22' for the parameter: Option name: Matrix1
+Description: Protein weight matrix
+URL: http://www.compbio.dundee.ac.uk/users/pvtroshin/ws/Index.html
+Is required: true
+Option Names: 
+--AAMATRIX
+POSSIBLE VALUES:
+BLOSUM
+GONNET
+ID
+PAM
+
+
+	at compbio.metadata.Parameter.setDefaultValue(Parameter.java:240)
+	at compbio.metadata.RunnerConfigTester.testCreateParameter(RunnerConfigTester.java:93)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodHelper.invokeMethod(MethodHelper.java:609)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:532)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:686)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1018)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:128)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:759)
+	at org.testng.TestRunner.privateRun(TestRunner.java:592)
+	at org.testng.TestRunner.run(TestRunner.java:486)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:327)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:299)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:204)
+	at org.testng.TestNG.createAndRunSuiteRunners(TestNG.java:912)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:876)
+	at org.testng.TestNG.run(TestNG.java:784)
+	at org.testng.TestNG.privateMain(TestNG.java:949)
+	at org.testng.TestNG.main(TestNG.java:922)
+]]>
+            </full-stacktrace>
+          </exception>
+        </test-method>
+        <test-method status="PASS" signature="testCreateParameterWithValidValueConstrain()" name="testCreateParameterWithValidValueConstrain" duration-ms="0" started-at="2011-06-23T10:36:14Z" finished-at="2011-06-23T10:36:14Z">
+        </test-method>
+        <test-method status="PASS" signature="setup()" name="setup" is-config="true" duration-ms="14" started-at="2011-06-23T10:36:14Z" finished-at="2011-06-23T10:36:14Z">
+        </test-method>
+        <test-method status="PASS" signature="setup()" name="setup" is-config="true" duration-ms="14" started-at="2011-06-23T10:36:14Z" finished-at="2011-06-23T10:36:14Z">
+        </test-method>
+        <test-method status="PASS" signature="testOptionNoDefaultValidate()" name="testOptionNoDefaultValidate" duration-ms="0" started-at="2011-06-23T10:36:14Z" finished-at="2011-06-23T10:36:14Z">
+          <exception class="javax.xml.bind.ValidationException">
+            <message>
+              <![CDATA[Default value is required as multiple optionNames are defined for option: Option name: Matrix1
+Description: Protein weight matrix
+URL: http://www.compbio.dundee.ac.uk/users/pvtroshin/ws/Index.html
+Is required: true
+Option Names: 
+--AAMATRIX
+--ABMAT
+--BBBB
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[javax.xml.bind.ValidationException: Default value is required as multiple optionNames are defined for option: Option name: Matrix1
+Description: Protein weight matrix
+URL: http://www.compbio.dundee.ac.uk/users/pvtroshin/ws/Index.html
+Is required: true
+Option Names: 
+--AAMATRIX
+--ABMAT
+--BBBB
+
+	at compbio.metadata.Option.validate(Option.java:317)
+	at compbio.metadata.RunnerConfigTester.testOptionNoDefaultValidate(RunnerConfigTester.java:149)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodHelper.invokeMethod(MethodHelper.java:609)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:532)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:686)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1018)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:128)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:759)
+	at org.testng.TestRunner.privateRun(TestRunner.java:592)
+	at org.testng.TestRunner.run(TestRunner.java:486)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:327)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:299)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:204)
+	at org.testng.TestNG.createAndRunSuiteRunners(TestNG.java:912)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:876)
+	at org.testng.TestNG.run(TestNG.java:784)
+	at org.testng.TestNG.privateMain(TestNG.java:949)
+	at org.testng.TestNG.main(TestNG.java:922)
+]]>
+            </full-stacktrace>
+          </exception>
+        </test-method>
+        <test-method status="PASS" signature="testOptionSetInvalidValue()" name="testOptionSetInvalidValue" duration-ms="0" started-at="2011-06-23T10:36:14Z" finished-at="2011-06-23T10:36:14Z">
+          <exception class="compbio.metadata.WrongParameterException">
+            <message>
+              <![CDATA[Attempting to set illegal defaultValue 'AAA' which is not defined optionNames for option: Option name: Matrix1
+Description: Protein weight matrix
+URL: http://www.compbio.dundee.ac.uk/users/pvtroshin/ws/Index.html
+Is required: true
+Option Names: 
+--AAMATRIX
+--ABMAT
+--BBBB
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[compbio.metadata.WrongParameterException: Attempting to set illegal defaultValue 'AAA' which is not defined optionNames for option: Option name: Matrix1
+Description: Protein weight matrix
+URL: http://www.compbio.dundee.ac.uk/users/pvtroshin/ws/Index.html
+Is required: true
+Option Names: 
+--AAMATRIX
+--ABMAT
+--BBBB
+
+	at compbio.metadata.Option.setDefaultValue(Option.java:130)
+	at compbio.metadata.RunnerConfigTester.testOptionSetInvalidValue(RunnerConfigTester.java:172)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodHelper.invokeMethod(MethodHelper.java:609)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:532)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:686)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1018)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:128)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:759)
+	at org.testng.TestRunner.privateRun(TestRunner.java:592)
+	at org.testng.TestRunner.run(TestRunner.java:486)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:327)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:299)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:204)
+	at org.testng.TestNG.createAndRunSuiteRunners(TestNG.java:912)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:876)
+	at org.testng.TestNG.run(TestNG.java:784)
+	at org.testng.TestNG.privateMain(TestNG.java:949)
+	at org.testng.TestNG.main(TestNG.java:922)
+]]>
+            </full-stacktrace>
+          </exception>
+        </test-method>
+        <test-method status="PASS" signature="setup()" name="setup" is-config="true" duration-ms="13" started-at="2011-06-23T10:36:14Z" finished-at="2011-06-23T10:36:14Z">
+        </test-method>
+        <test-method status="PASS" signature="testOptionToCommand()" name="testOptionToCommand" duration-ms="0" started-at="2011-06-23T10:36:14Z" finished-at="2011-06-23T10:36:14Z">
+        </test-method>
+        <test-method status="PASS" signature="setup()" name="setup" is-config="true" duration-ms="13" started-at="2011-06-23T10:36:14Z" finished-at="2011-06-23T10:36:14Z">
+        </test-method>
+        <test-method status="PASS" signature="testParameterToCommand()" name="testParameterToCommand" duration-ms="0" started-at="2011-06-23T10:36:14Z" finished-at="2011-06-23T10:36:14Z">
+        </test-method>
+        <test-method status="PASS" signature="setup()" name="setup" is-config="true" duration-ms="13" started-at="2011-06-23T10:36:14Z" finished-at="2011-06-23T10:36:14Z">
+        </test-method>
+        <test-method status="PASS" signature="setup()" name="setup" is-config="true" duration-ms="14" started-at="2011-06-23T10:36:14Z" finished-at="2011-06-23T10:36:14Z">
+        </test-method>
+        <test-method status="PASS" signature="testValidate()" name="testValidate" duration-ms="0" started-at="2011-06-23T10:36:14Z" finished-at="2011-06-23T10:36:14Z">
+        </test-method>
+        <test-method status="PASS" signature="setup()" name="setup" is-config="true" duration-ms="13" started-at="2011-06-23T10:36:14Z" finished-at="2011-06-23T10:36:14Z">
+        </test-method>
+        <test-method status="PASS" signature="testValidateBoundaryConstrainCheck()" name="testValidateBoundaryConstrainCheck" duration-ms="0" started-at="2011-06-23T10:36:14Z" finished-at="2011-06-23T10:36:14Z">
+        </test-method>
+        <test-method status="PASS" signature="testValidateLowerBoundaryConstrainCheck()" name="testValidateLowerBoundaryConstrainCheck" duration-ms="0" started-at="2011-06-23T10:36:14Z" finished-at="2011-06-23T10:36:14Z">
+          <exception class="compbio.metadata.WrongParameterException">
+            <message>
+              <![CDATA[Attempting to set default value outside boundaries defined by the constraint: Type: Float
+Min: -10.12
+Max: 0
+
+ For parameter: Option name: Matrix1
+Description: Protein weight matrix
+URL: http://www.compbio.dundee.ac.uk/users/pvtroshin/ws/Index.html
+Is required: true
+Option Names: 
+--AAMATRIX
+Type: Float
+Min: -10.12
+Max: 0
+
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[compbio.metadata.WrongParameterException: Attempting to set default value outside boundaries defined by the constraint: Type: Float
+Min: -10.12
+Max: 0
+
+ For parameter: Option name: Matrix1
+Description: Protein weight matrix
+URL: http://www.compbio.dundee.ac.uk/users/pvtroshin/ws/Index.html
+Is required: true
+Option Names: 
+--AAMATRIX
+Type: Float
+Min: -10.12
+Max: 0
+
+
+	at compbio.metadata.Parameter.setDefaultValue(Parameter.java:248)
+	at compbio.metadata.RunnerConfigTester.testValidateLowerBoundaryConstrainCheck(RunnerConfigTester.java:268)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodHelper.invokeMethod(MethodHelper.java:609)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:532)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:686)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1018)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:128)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:759)
+	at org.testng.TestRunner.privateRun(TestRunner.java:592)
+	at org.testng.TestRunner.run(TestRunner.java:486)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:327)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:299)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:204)
+	at org.testng.TestNG.createAndRunSuiteRunners(TestNG.java:912)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:876)
+	at org.testng.TestNG.run(TestNG.java:784)
+	at org.testng.TestNG.privateMain(TestNG.java:949)
+	at org.testng.TestNG.main(TestNG.java:922)
+]]>
+            </full-stacktrace>
+          </exception>
+        </test-method>
+        <test-method status="PASS" signature="setup()" name="setup" is-config="true" duration-ms="13" started-at="2011-06-23T10:36:14Z" finished-at="2011-06-23T10:36:14Z">
+        </test-method>
+        <test-method status="PASS" signature="testValidateUpperBoundaryConstrainCheck()" name="testValidateUpperBoundaryConstrainCheck" duration-ms="1" started-at="2011-06-23T10:36:14Z" finished-at="2011-06-23T10:36:14Z">
+          <exception class="compbio.metadata.WrongParameterException">
+            <message>
+              <![CDATA[Attempting to set default value outside boundaries defined by the constraint: Type: Float
+Min: -10.12
+Max: 0
+
+ For parameter: Option name: Matrix1
+Description: Protein weight matrix
+URL: http://www.compbio.dundee.ac.uk/users/pvtroshin/ws/Index.html
+Is required: true
+Option Names: 
+--AAMATRIX
+Type: Float
+Min: -10.12
+Max: 0
+
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[compbio.metadata.WrongParameterException: Attempting to set default value outside boundaries defined by the constraint: Type: Float
+Min: -10.12
+Max: 0
+
+ For parameter: Option name: Matrix1
+Description: Protein weight matrix
+URL: http://www.compbio.dundee.ac.uk/users/pvtroshin/ws/Index.html
+Is required: true
+Option Names: 
+--AAMATRIX
+Type: Float
+Min: -10.12
+Max: 0
+
+
+	at compbio.metadata.Parameter.setDefaultValue(Parameter.java:248)
+	at compbio.metadata.RunnerConfigTester.testValidateUpperBoundaryConstrainCheck(RunnerConfigTester.java:296)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodHelper.invokeMethod(MethodHelper.java:609)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:532)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:686)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1018)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:128)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:759)
+	at org.testng.TestRunner.privateRun(TestRunner.java:592)
+	at org.testng.TestRunner.run(TestRunner.java:486)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:327)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:299)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:204)
+	at org.testng.TestNG.createAndRunSuiteRunners(TestNG.java:912)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:876)
+	at org.testng.TestNG.run(TestNG.java:784)
+	at org.testng.TestNG.privateMain(TestNG.java:949)
+	at org.testng.TestNG.main(TestNG.java:922)
+]]>
+            </full-stacktrace>
+          </exception>
+        </test-method>
+        <test-method status="PASS" signature="setup()" name="setup" is-config="true" duration-ms="13" started-at="2011-06-23T10:36:14Z" finished-at="2011-06-23T10:36:14Z">
+        </test-method>
+        <test-method status="PASS" signature="testValidateValueConstrain()" name="testValidateValueConstrain" duration-ms="0" started-at="2011-06-23T10:36:14Z" finished-at="2011-06-23T10:36:14Z">
+          <exception class="javax.xml.bind.ValidationException">
+            <message>
+              <![CDATA[Both boundaries (min and max) is undefined for ValueConstrain: Type: Float
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[javax.xml.bind.ValidationException: Both boundaries (min and max) is undefined for ValueConstrain: Type: Float
+
+	at compbio.metadata.ValueConstrain.validate(ValueConstrain.java:208)
+	at compbio.metadata.RunnerConfigTester.testValidateValueConstrain(RunnerConfigTester.java:341)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodHelper.invokeMethod(MethodHelper.java:609)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:532)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:686)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1018)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:128)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:759)
+	at org.testng.TestRunner.privateRun(TestRunner.java:592)
+	at org.testng.TestRunner.run(TestRunner.java:486)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:327)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:299)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:204)
+	at org.testng.TestNG.createAndRunSuiteRunners(TestNG.java:912)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:876)
+	at org.testng.TestNG.run(TestNG.java:784)
+	at org.testng.TestNG.privateMain(TestNG.java:949)
+	at org.testng.TestNG.main(TestNG.java:922)
+]]>
+            </full-stacktrace>
+          </exception>
+        </test-method>
+      </class>
+      <class name="compbio.runner.msa.MafftParametersTester">
+        <test-method status="PASS" signature="setup()" name="setup" is-config="true" duration-ms="39" started-at="2011-06-23T10:38:32Z" finished-at="2011-06-23T10:38:32Z">
+        </test-method>
+        <test-method status="PASS" signature="testArguments()" name="testArguments" duration-ms="3027" started-at="2011-06-23T10:38:32Z" finished-at="2011-06-23T10:38:35Z">
+        </test-method>
+        <test-method status="PASS" signature="setup()" name="setup" is-config="true" duration-ms="67" started-at="2011-06-23T10:38:35Z" finished-at="2011-06-23T10:38:35Z">
+        </test-method>
+        <test-method status="PASS" signature="testConfiguration()" name="testConfiguration" duration-ms="0" started-at="2011-06-23T10:38:35Z" finished-at="2011-06-23T10:38:35Z">
+        </test-method>
+        <test-method status="PASS" signature="setup()" name="setup" is-config="true" duration-ms="37" started-at="2011-06-23T10:38:35Z" finished-at="2011-06-23T10:38:35Z">
+        </test-method>
+        <test-method status="PASS" signature="testConstrainedParametersMaxValues()" name="testConstrainedParametersMaxValues" duration-ms="1461" started-at="2011-06-23T10:38:35Z" finished-at="2011-06-23T10:38:37Z">
+        </test-method>
+        <test-method status="PASS" signature="setup()" name="setup" is-config="true" duration-ms="38" started-at="2011-06-23T10:38:37Z" finished-at="2011-06-23T10:38:37Z">
+        </test-method>
+        <test-method status="PASS" signature="testConstrainedParametersMinValues()" name="testConstrainedParametersMinValues" duration-ms="886" started-at="2011-06-23T10:38:37Z" finished-at="2011-06-23T10:38:37Z">
+        </test-method>
+        <test-method status="PASS" signature="setup()" name="setup" is-config="true" duration-ms="37" started-at="2011-06-23T10:38:37Z" finished-at="2011-06-23T10:38:38Z">
+        </test-method>
+        <test-method status="PASS" signature="testConstrainedParametersRandomValues()" name="testConstrainedParametersRandomValues" duration-ms="3530" started-at="2011-06-23T10:38:38Z" finished-at="2011-06-23T10:38:41Z">
+        </test-method>
+        <test-method status="PASS" signature="setup()" name="setup" is-config="true" duration-ms="37" started-at="2011-06-23T10:38:41Z" finished-at="2011-06-23T10:38:41Z">
+        </test-method>
+        <test-method status="PASS" signature="testDefaultParameters()" name="testDefaultParameters" duration-ms="4507" started-at="2011-06-23T10:38:41Z" finished-at="2011-06-23T10:38:46Z">
+        </test-method>
+        <test-method status="PASS" signature="setup()" name="setup" is-config="true" duration-ms="34" started-at="2011-06-23T10:38:46Z" finished-at="2011-06-23T10:38:46Z">
+        </test-method>
+        <test-method status="PASS" signature="testOptions()" name="testOptions" duration-ms="971" started-at="2011-06-23T10:38:46Z" finished-at="2011-06-23T10:38:47Z">
+        </test-method>
+        <test-method status="PASS" signature="setup()" name="setup" is-config="true" duration-ms="40" started-at="2011-06-23T10:38:47Z" finished-at="2011-06-23T10:38:47Z">
+        </test-method>
+        <test-method status="PASS" signature="testParameters()" name="testParameters" duration-ms="1179" started-at="2011-06-23T10:38:47Z" finished-at="2011-06-23T10:38:48Z">
+        </test-method>
+        <test-method status="PASS" signature="setup()" name="setup" is-config="true" duration-ms="36" started-at="2011-06-23T10:38:48Z" finished-at="2011-06-23T10:38:48Z">
+        </test-method>
+        <test-method status="PASS" signature="testPresets()" name="testPresets" duration-ms="965" started-at="2011-06-23T10:38:48Z" finished-at="2011-06-23T10:38:49Z">
+        </test-method>
+      </class>
+      <class name="compbio.runner.disorder.JronnTester">
+        <test-method status="PASS" signature="init()" name="init" is-config="true" duration-ms="0" started-at="2011-06-23T10:36:57Z" finished-at="2011-06-23T10:36:57Z">
+        </test-method>
+        <test-method status="PASS" signature="readStatistics()" name="readStatistics" duration-ms="18639" started-at="2011-06-23T10:36:57Z" finished-at="2011-06-23T10:37:15Z">
+        </test-method>
+        <test-method status="PASS" signature="testConfigurationLoading()" name="testConfigurationLoading" duration-ms="45" started-at="2011-06-23T10:37:15Z" finished-at="2011-06-23T10:37:15Z">
+        </test-method>
+        <test-method status="PASS" signature="init()" name="init" is-config="true" duration-ms="0" started-at="2011-06-23T10:37:15Z" finished-at="2011-06-23T10:37:15Z">
+        </test-method>
+        <test-method status="PASS" signature="init()" name="init" is-config="true" duration-ms="0" started-at="2011-06-23T10:37:15Z" finished-at="2011-06-23T10:37:15Z">
+        </test-method>
+        <test-method status="PASS" signature="testPersistance()" name="testPersistance" duration-ms="18613" started-at="2011-06-23T10:37:15Z" finished-at="2011-06-23T10:37:34Z">
+        </test-method>
+        <test-method status="PASS" signature="init()" name="init" is-config="true" duration-ms="0" started-at="2011-06-23T10:37:34Z" finished-at="2011-06-23T10:37:34Z">
+        </test-method>
+        <test-method status="PASS" signature="testRunLocally()" name="testRunLocally" duration-ms="18541" started-at="2011-06-23T10:37:34Z" finished-at="2011-06-23T10:37:52Z">
+        </test-method>
+        <test-method status="PASS" signature="init()" name="init" is-config="true" duration-ms="1" started-at="2011-06-23T10:37:52Z" finished-at="2011-06-23T10:37:52Z">
+        </test-method>
+        <test-method status="PASS" signature="testRunLocallyOnTwoCpu()" name="testRunLocallyOnTwoCpu" duration-ms="7131" started-at="2011-06-23T10:37:52Z" finished-at="2011-06-23T10:38:00Z">
+        </test-method>
+        <test-method status="PASS" signature="init()" name="init" is-config="true" duration-ms="1" started-at="2011-06-23T10:38:00Z" finished-at="2011-06-23T10:38:00Z">
+        </test-method>
+        <test-method status="PASS" signature="testRunOnCluster()" name="testRunOnCluster" duration-ms="13058" started-at="2011-06-23T10:38:00Z" finished-at="2011-06-23T10:38:13Z">
+        </test-method>
+        <test-method status="PASS" signature="init()" name="init" is-config="true" duration-ms="1" started-at="2011-06-23T10:38:13Z" finished-at="2011-06-23T10:38:13Z">
+        </test-method>
+        <test-method status="PASS" signature="testRunOnClusterAsync()" name="testRunOnClusterAsync" duration-ms="11022" started-at="2011-06-23T10:38:13Z" finished-at="2011-06-23T10:38:24Z">
+        </test-method>
+      </class>
+      <class name="compbio.runner._impl.RonnTester">
+        <test-method status="PASS" signature="testGetTestCommand()" name="testGetTestCommand" duration-ms="0" started-at="2011-06-23T10:36:14Z" finished-at="2011-06-23T10:36:14Z">
+        </test-method>
+      </class>
+      <class name="compbio.runner.msa.ProbconsTester">
+        <test-method status="PASS" signature="readStatistics()" name="readStatistics" duration-ms="455" started-at="2011-06-23T10:41:12Z" finished-at="2011-06-23T10:41:13Z">
+        </test-method>
+        <test-method status="PASS" signature="init()" name="init" is-config="true" duration-ms="0" started-at="2011-06-23T10:41:12Z" finished-at="2011-06-23T10:41:12Z">
+        </test-method>
+        <test-method status="PASS" signature="init()" name="init" is-config="true" duration-ms="0" started-at="2011-06-23T10:41:13Z" finished-at="2011-06-23T10:41:13Z">
+        </test-method>
+        <test-method status="PASS" signature="testClusterExecute()" name="testClusterExecute" duration-ms="2710" started-at="2011-06-23T10:41:13Z" finished-at="2011-06-23T10:41:16Z">
+        </test-method>
+        <test-method status="PASS" signature="init()" name="init" is-config="true" duration-ms="0" started-at="2011-06-23T10:41:16Z" finished-at="2011-06-23T10:41:16Z">
+        </test-method>
+        <test-method status="PASS" signature="testConfigurationLoading()" name="testConfigurationLoading" duration-ms="89" started-at="2011-06-23T10:41:16Z" finished-at="2011-06-23T10:41:16Z">
+        </test-method>
+        <test-method status="PASS" signature="testExecute()" name="testExecute" duration-ms="455" started-at="2011-06-23T10:41:16Z" finished-at="2011-06-23T10:41:16Z">
+        </test-method>
+        <test-method status="PASS" signature="init()" name="init" is-config="true" duration-ms="0" started-at="2011-06-23T10:41:16Z" finished-at="2011-06-23T10:41:16Z">
+        </test-method>
+        <test-method status="PASS" signature="init()" name="init" is-config="true" duration-ms="1" started-at="2011-06-23T10:41:16Z" finished-at="2011-06-23T10:41:16Z">
+        </test-method>
+        <test-method status="PASS" signature="testPersistance()" name="testPersistance" duration-ms="527" started-at="2011-06-23T10:41:16Z" finished-at="2011-06-23T10:41:17Z">
+        </test-method>
+        <test-method status="PASS" signature="init()" name="init" is-config="true" duration-ms="1" started-at="2011-06-23T10:41:17Z" finished-at="2011-06-23T10:41:17Z">
+        </test-method>
+        <test-method status="PASS" signature="testSetInputTester()" name="testSetInputTester" duration-ms="0" started-at="2011-06-23T10:41:17Z" finished-at="2011-06-23T10:41:17Z">
+        </test-method>
+      </class>
+      <class name="compbio.engine.conf.PropertyHelperManagerTester">
+        <test-method status="PASS" signature="testLoadResources()" name="testLoadResources" is-config="true" duration-ms="3" started-at="2011-06-23T10:35:31Z" finished-at="2011-06-23T10:35:31Z">
+        </test-method>
+        <test-method status="PASS" signature="testClusterEngineConf()" name="testClusterEngineConf" duration-ms="1" started-at="2011-06-23T10:35:31Z" finished-at="2011-06-23T10:35:31Z">
+        </test-method>
+        <test-method status="PASS" signature="validateClustalConfiguration()" name="validateClustalConfiguration" duration-ms="0" started-at="2011-06-23T10:35:31Z" finished-at="2011-06-23T10:35:31Z">
+        </test-method>
+        <test-method status="PASS" signature="validateMafftConfiguration()" name="validateMafftConfiguration" duration-ms="2" started-at="2011-06-23T10:35:31Z" finished-at="2011-06-23T10:35:31Z">
+        </test-method>
+        <test-method status="PASS" signature="validateMuscleConfiguration()" name="validateMuscleConfiguration" duration-ms="0" started-at="2011-06-23T10:35:31Z" finished-at="2011-06-23T10:35:31Z">
+        </test-method>
+        <test-method status="PASS" signature="validateTcoffeeConfiguration()" name="validateTcoffeeConfiguration" duration-ms="0" started-at="2011-06-23T10:35:31Z" finished-at="2011-06-23T10:35:31Z">
+        </test-method>
+      </class>
+      <class name="compbio.metadata.OptionCombinatorTester">
+        <test-method status="PASS" signature="setup()" name="setup" is-config="true" duration-ms="109" started-at="2011-06-23T10:36:13Z" finished-at="2011-06-23T10:36:13Z">
+        </test-method>
+        <test-method status="PASS" signature="testgetAllOptions()" name="testgetAllOptions" duration-ms="1" started-at="2011-06-23T10:36:13Z" finished-at="2011-06-23T10:36:13Z">
+        </test-method>
+        <test-method status="PASS" signature="setup()" name="setup" is-config="true" duration-ms="101" started-at="2011-06-23T10:36:13Z" finished-at="2011-06-23T10:36:14Z">
+        </test-method>
+        <test-method status="PASS" signature="testgetAllParameters()" name="testgetAllParameters" duration-ms="3" started-at="2011-06-23T10:36:14Z" finished-at="2011-06-23T10:36:14Z">
+        </test-method>
+      </class>
+      <class name="compbio.engine.FilePullerTester">
+        <test-method status="PASS" signature="init()" name="init" is-config="true" duration-ms="298" started-at="2011-06-23T10:34:54Z" finished-at="2011-06-23T10:34:54Z">
+        </test-method>
+        <test-method status="PASS" signature="loadPresets()" name="loadPresets" is-config="true" duration-ms="62" started-at="2011-06-23T10:34:54Z" finished-at="2011-06-23T10:34:54Z">
+        </test-method>
+        <test-method status="PASS" signature="testPull()" name="testPull" duration-ms="14" started-at="2011-06-23T10:34:54Z" finished-at="2011-06-23T10:34:54Z">
+        </test-method>
+        <test-method status="PASS" signature="testCache()" name="testCache" duration-ms="6008" started-at="2011-06-23T10:34:54Z" depends-on-methods="compbio.engine.FilePullerTester.testPull" finished-at="2011-06-23T10:35:00Z">
+        </test-method>
+        <test-method status="PASS" signature="testGetDelay()" name="testGetDelay" duration-ms="0" started-at="2011-06-23T10:35:07Z" finished-at="2011-06-23T10:35:07Z">
+        </test-method>
+        <test-method status="PASS" signature="testGet()" name="testGet" duration-ms="2" started-at="2011-06-23T10:35:07Z" finished-at="2011-06-23T10:35:07Z">
+        </test-method>
+      </class>
+      <class name="compbio.runner.msa.MuscleTester">
+        <test-method status="PASS" signature="init()" name="init" is-config="true" duration-ms="0" started-at="2011-06-23T10:39:11Z" finished-at="2011-06-23T10:39:11Z">
+        </test-method>
+        <test-method status="PASS" signature="readStatistics()" name="readStatistics" duration-ms="520" started-at="2011-06-23T10:39:11Z" finished-at="2011-06-23T10:39:11Z">
+        </test-method>
+        <test-method status="PASS" signature="init()" name="init" is-config="true" duration-ms="0" started-at="2011-06-23T10:39:11Z" finished-at="2011-06-23T10:39:11Z">
+        </test-method>
+        <test-method status="PASS" signature="testConfigurationLoading()" name="testConfigurationLoading" duration-ms="43" started-at="2011-06-23T10:39:11Z" finished-at="2011-06-23T10:39:11Z">
+        </test-method>
+        <test-method status="PASS" signature="init()" name="init" is-config="true" duration-ms="1" started-at="2011-06-23T10:39:11Z" finished-at="2011-06-23T10:39:11Z">
+        </test-method>
+        <test-method status="PASS" signature="testPersistance()" name="testPersistance" duration-ms="233" started-at="2011-06-23T10:39:11Z" finished-at="2011-06-23T10:39:12Z">
+        </test-method>
+        <test-method status="PASS" signature="testRunLocally()" name="testRunLocally" duration-ms="100" started-at="2011-06-23T10:39:12Z" finished-at="2011-06-23T10:39:12Z">
+        </test-method>
+        <test-method status="PASS" signature="init()" name="init" is-config="true" duration-ms="0" started-at="2011-06-23T10:39:12Z" finished-at="2011-06-23T10:39:12Z">
+        </test-method>
+        <test-method status="PASS" signature="init()" name="init" is-config="true" duration-ms="0" started-at="2011-06-23T10:39:12Z" finished-at="2011-06-23T10:39:12Z">
+        </test-method>
+        <test-method status="PASS" signature="testRunOnCluster()" name="testRunOnCluster" duration-ms="3867" started-at="2011-06-23T10:39:12Z" finished-at="2011-06-23T10:39:16Z">
+        </test-method>
+      </class>
+      <class name="compbio.runner.msa.TcoffeeTester">
+        <test-method status="PASS" signature="init()" name="init" is-config="true" duration-ms="0" started-at="2011-06-23T10:41:45Z" finished-at="2011-06-23T10:41:45Z">
+        </test-method>
+        <test-method status="PASS" signature="readStatistics()" name="readStatistics" duration-ms="516" started-at="2011-06-23T10:41:45Z" finished-at="2011-06-23T10:41:46Z">
+        </test-method>
+        <test-method status="PASS" signature="init()" name="init" is-config="true" duration-ms="1" started-at="2011-06-23T10:41:46Z" finished-at="2011-06-23T10:41:46Z">
+        </test-method>
+        <test-method status="PASS" signature="testClusterExecute()" name="testClusterExecute" duration-ms="5084" started-at="2011-06-23T10:41:46Z" finished-at="2011-06-23T10:41:51Z">
+        </test-method>
+        <test-method status="PASS" signature="init()" name="init" is-config="true" duration-ms="1" started-at="2011-06-23T10:41:51Z" finished-at="2011-06-23T10:41:51Z">
+        </test-method>
+        <test-method status="PASS" signature="testConfigurationLoading()" name="testConfigurationLoading" duration-ms="39" started-at="2011-06-23T10:41:51Z" finished-at="2011-06-23T10:41:51Z">
+        </test-method>
+        <test-method status="PASS" signature="testExecute()" name="testExecute" duration-ms="364" started-at="2011-06-23T10:41:51Z" finished-at="2011-06-23T10:41:51Z">
+        </test-method>
+        <test-method status="PASS" signature="init()" name="init" is-config="true" duration-ms="0" started-at="2011-06-23T10:41:51Z" finished-at="2011-06-23T10:41:51Z">
+        </test-method>
+        <test-method status="PASS" signature="testNcore()" name="testNcore" duration-ms="0" started-at="2011-06-23T10:41:51Z" finished-at="2011-06-23T10:41:51Z">
+        </test-method>
+        <test-method status="PASS" signature="init()" name="init" is-config="true" duration-ms="0" started-at="2011-06-23T10:41:51Z" finished-at="2011-06-23T10:41:51Z">
+        </test-method>
+        <test-method status="PASS" signature="init()" name="init" is-config="true" duration-ms="0" started-at="2011-06-23T10:41:51Z" finished-at="2011-06-23T10:41:51Z">
+        </test-method>
+        <test-method status="PASS" signature="testPersistance()" name="testPersistance" duration-ms="769" started-at="2011-06-23T10:41:51Z" finished-at="2011-06-23T10:41:52Z">
+        </test-method>
+      </class>
+      <class name="compbio.runner.msa.LimitTester">
+        <test-method status="PASS" signature="setup()" name="setup" is-config="true" duration-ms="22" started-at="2011-06-23T10:38:32Z" finished-at="2011-06-23T10:38:32Z">
+        </test-method>
+        <test-method status="PASS" signature="testLimitExceeded()" name="testLimitExceeded" duration-ms="14" started-at="2011-06-23T10:38:32Z" finished-at="2011-06-23T10:38:32Z">
+        </test-method>
+        <test-method status="PASS" signature="setup()" name="setup" is-config="true" duration-ms="18" started-at="2011-06-23T10:38:32Z" finished-at="2011-06-23T10:38:32Z">
+        </test-method>
+        <test-method status="PASS" signature="testLoadLimits()" name="testLoadLimits" duration-ms="0" started-at="2011-06-23T10:38:32Z" finished-at="2011-06-23T10:38:32Z">
+        </test-method>
+      </class>
+      <class name="compbio.runner._impl.OBTester">
+        <test-method status="PASS" signature="testGetTestCommand()" name="testGetTestCommand" duration-ms="0" started-at="2011-06-23T10:36:14Z" finished-at="2011-06-23T10:36:14Z">
+        </test-method>
+        <test-method status="PASS" signature="testGetTestArgsCommand()" name="testGetTestArgsCommand" duration-ms="0" started-at="2011-06-23T10:36:14Z" finished-at="2011-06-23T10:36:14Z">
+        </test-method>
+      </class>
+      <class name="compbio.engine.local.LocalRunnerTester">
+        <test-method status="PASS" signature="testCancelCompletedTaskLocally()" name="testCancelCompletedTaskLocally" duration-ms="49" started-at="2011-06-23T10:36:13Z" finished-at="2011-06-23T10:36:13Z">
+          <exception class="java.util.concurrent.CancellationException">
+            <full-stacktrace>
+              <![CDATA[java.util.concurrent.CancellationException
+	at java.util.concurrent.FutureTask$Sync.innerGet(FutureTask.java:220)
+	at java.util.concurrent.FutureTask.get(FutureTask.java:83)
+	at compbio.engine.local.LocalEngineUtil.getResults(LocalEngineUtil.java:108)
+	at compbio.engine.local.LocalRunner.waitForResult(LocalRunner.java:99)
+	at compbio.engine.local.LocalRunnerTester.testCancelCompletedTaskLocally(LocalRunnerTester.java:139)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodHelper.invokeMethod(MethodHelper.java:609)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:532)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:686)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1018)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:128)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:759)
+	at org.testng.TestRunner.privateRun(TestRunner.java:592)
+	at org.testng.TestRunner.run(TestRunner.java:486)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:327)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:299)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:204)
+	at org.testng.TestNG.createAndRunSuiteRunners(TestNG.java:912)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:876)
+	at org.testng.TestNG.run(TestNG.java:784)
+	at org.testng.TestNG.privateMain(TestNG.java:949)
+	at org.testng.TestNG.main(TestNG.java:922)
+]]>
+            </full-stacktrace>
+          </exception>
+        </test-method>
+        <test-method status="PASS" signature="testCancelLocally()" name="testCancelLocally" duration-ms="17" started-at="2011-06-23T10:36:13Z" finished-at="2011-06-23T10:36:13Z">
+          <exception class="java.util.concurrent.CancellationException">
+            <full-stacktrace>
+              <![CDATA[java.util.concurrent.CancellationException
+	at java.util.concurrent.FutureTask$Sync.innerGet(FutureTask.java:220)
+	at java.util.concurrent.FutureTask.get(FutureTask.java:83)
+	at compbio.engine.local.LocalEngineUtil.getResults(LocalEngineUtil.java:108)
+	at compbio.engine.local.LocalRunner.waitForResult(LocalRunner.java:99)
+	at compbio.engine.local.LocalRunnerTester.testCancelLocally(LocalRunnerTester.java:66)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodHelper.invokeMethod(MethodHelper.java:609)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:532)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:686)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1018)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:128)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:759)
+	at org.testng.TestRunner.privateRun(TestRunner.java:592)
+	at org.testng.TestRunner.run(TestRunner.java:486)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:327)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:299)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:204)
+	at org.testng.TestNG.createAndRunSuiteRunners(TestNG.java:912)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:876)
+	at org.testng.TestNG.run(TestNG.java:784)
+	at org.testng.TestNG.privateMain(TestNG.java:949)
+	at org.testng.TestNG.main(TestNG.java:922)
+]]>
+            </full-stacktrace>
+          </exception>
+        </test-method>
+        <test-method status="PASS" signature="testMultipleCancelLocally()" name="testMultipleCancelLocally" duration-ms="44" started-at="2011-06-23T10:36:13Z" finished-at="2011-06-23T10:36:13Z">
+          <exception class="java.util.concurrent.CancellationException">
+            <full-stacktrace>
+              <![CDATA[java.util.concurrent.CancellationException
+	at java.util.concurrent.FutureTask$Sync.innerGet(FutureTask.java:220)
+	at java.util.concurrent.FutureTask.get(FutureTask.java:83)
+	at compbio.engine.local.LocalEngineUtil.getResults(LocalEngineUtil.java:108)
+	at compbio.engine.local.LocalRunner.waitForResult(LocalRunner.java:99)
+	at compbio.engine.local.LocalRunnerTester.testMultipleCancelLocally(LocalRunnerTester.java:114)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodHelper.invokeMethod(MethodHelper.java:609)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:532)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:686)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1018)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:128)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:759)
+	at org.testng.TestRunner.privateRun(TestRunner.java:592)
+	at org.testng.TestRunner.run(TestRunner.java:486)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:327)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:299)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:204)
+	at org.testng.TestNG.createAndRunSuiteRunners(TestNG.java:912)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:876)
+	at org.testng.TestNG.run(TestNG.java:784)
+	at org.testng.TestNG.privateMain(TestNG.java:949)
+	at org.testng.TestNG.main(TestNG.java:922)
+]]>
+            </full-stacktrace>
+          </exception>
+        </test-method>
+      </class>
+      <class name="compbio.runner._impl.Tmhmm2Tester">
+        <test-method status="PASS" signature="testGetTestCommand()" name="testGetTestCommand" duration-ms="0" started-at="2011-06-23T10:36:14Z" finished-at="2011-06-23T10:36:14Z">
+        </test-method>
+      </class>
+      <class name="compbio.runner.msa.MuscleParametersTester">
+        <test-method status="PASS" signature="setup()" name="setup" is-config="true" duration-ms="48" started-at="2011-06-23T10:38:57Z" finished-at="2011-06-23T10:38:57Z">
+        </test-method>
+        <test-method status="PASS" signature="testArguments()" name="testArguments" duration-ms="4387" started-at="2011-06-23T10:38:57Z" finished-at="2011-06-23T10:39:01Z">
+        </test-method>
+        <test-method status="PASS" signature="setup()" name="setup" is-config="true" duration-ms="37" started-at="2011-06-23T10:39:01Z" finished-at="2011-06-23T10:39:01Z">
+        </test-method>
+        <test-method status="PASS" signature="testConfiguration()" name="testConfiguration" duration-ms="1" started-at="2011-06-23T10:39:01Z" finished-at="2011-06-23T10:39:01Z">
+        </test-method>
+        <test-method status="PASS" signature="setup()" name="setup" is-config="true" duration-ms="34" started-at="2011-06-23T10:39:01Z" finished-at="2011-06-23T10:39:01Z">
+        </test-method>
+        <test-method status="PASS" signature="testConstrainedParametersMaxValues()" name="testConstrainedParametersMaxValues" duration-ms="1977" started-at="2011-06-23T10:39:01Z" finished-at="2011-06-23T10:39:03Z">
+        </test-method>
+        <test-method status="PASS" signature="setup()" name="setup" is-config="true" duration-ms="36" started-at="2011-06-23T10:39:03Z" finished-at="2011-06-23T10:39:03Z">
+        </test-method>
+        <test-method status="PASS" signature="testConstrainedParametersMinValues()" name="testConstrainedParametersMinValues" duration-ms="1112" started-at="2011-06-23T10:39:03Z" finished-at="2011-06-23T10:39:04Z">
+        </test-method>
+        <test-method status="PASS" signature="setup()" name="setup" is-config="true" duration-ms="35" started-at="2011-06-23T10:39:04Z" finished-at="2011-06-23T10:39:04Z">
+        </test-method>
+        <test-method status="PASS" signature="testConstrainedParametersRandomValues()" name="testConstrainedParametersRandomValues" duration-ms="2749" started-at="2011-06-23T10:39:04Z" finished-at="2011-06-23T10:39:07Z">
+        </test-method>
+        <test-method status="PASS" signature="setup()" name="setup" is-config="true" duration-ms="34" started-at="2011-06-23T10:39:07Z" finished-at="2011-06-23T10:39:07Z">
+        </test-method>
+        <test-method status="PASS" signature="testDefaultParameters()" name="testDefaultParameters" duration-ms="100" started-at="2011-06-23T10:39:07Z" finished-at="2011-06-23T10:39:07Z">
+        </test-method>
+        <test-method status="PASS" signature="setup()" name="setup" is-config="true" duration-ms="35" started-at="2011-06-23T10:39:07Z" finished-at="2011-06-23T10:39:07Z">
+        </test-method>
+        <test-method status="PASS" signature="testOptions()" name="testOptions" duration-ms="1360" started-at="2011-06-23T10:39:07Z" finished-at="2011-06-23T10:39:09Z">
+        </test-method>
+        <test-method status="PASS" signature="setup()" name="setup" is-config="true" duration-ms="35" started-at="2011-06-23T10:39:09Z" finished-at="2011-06-23T10:39:09Z">
+        </test-method>
+        <test-method status="PASS" signature="testParameters()" name="testParameters" duration-ms="1919" started-at="2011-06-23T10:39:09Z" finished-at="2011-06-23T10:39:11Z">
+        </test-method>
+        <test-method status="PASS" signature="setup()" name="setup" is-config="true" duration-ms="36" started-at="2011-06-23T10:39:11Z" finished-at="2011-06-23T10:39:11Z">
+        </test-method>
+        <test-method status="PASS" signature="testPresets()" name="testPresets" duration-ms="242" started-at="2011-06-23T10:39:11Z" finished-at="2011-06-23T10:39:11Z">
+        </test-method>
+      </class>
+      <class name="compbio.data.sequence.FastaSequenceGeneratorTester">
+        <test-method status="PASS" signature="testProteinSequenceGeneration()" name="testProteinSequenceGeneration" duration-ms="7" started-at="2011-06-23T10:35:06Z" finished-at="2011-06-23T10:35:06Z">
+        </test-method>
+      </class>
+      <class name="compbio.engine.cluster.drmaa.ClusterSessionTester">
+        <test-method status="PASS" signature="testTaskList()" name="testTaskList" duration-ms="3953" started-at="2011-06-23T10:35:12Z" finished-at="2011-06-23T10:35:16Z">
+        </test-method>
+      </class>
+      <class name="compbio.data.sequence.FastaReaderTester">
+        <test-method status="PASS" signature="test()" name="test" duration-ms="18" started-at="2011-06-23T10:35:06Z" finished-at="2011-06-23T10:35:06Z">
+        </test-method>
+      </class>
+      <class name="compbio.data.sequence.FastaSequenceTester">
+        <test-method status="PASS" signature="testGetFormattedFasta()" name="testGetFormattedFasta" duration-ms="0" started-at="2011-06-23T10:35:06Z" finished-at="2011-06-23T10:35:06Z">
+        </test-method>
+      </class>
+      <class name="compbio.data.sequence.SequenceUtilTester">
+        <test-method status="PASS" signature="loadJronnFile()" name="loadJronnFile" duration-ms="27" started-at="2011-06-23T10:35:06Z" finished-at="2011-06-23T10:35:06Z">
+        </test-method>
+        <test-method status="PASS" signature="testCleanProteinSequence()" name="testCleanProteinSequence" duration-ms="1" started-at="2011-06-23T10:35:06Z" finished-at="2011-06-23T10:35:06Z">
+        </test-method>
+        <test-method status="PASS" signature="testDeepCleanSequence()" name="testDeepCleanSequence" duration-ms="0" started-at="2011-06-23T10:35:06Z" finished-at="2011-06-23T10:35:06Z">
+        </test-method>
+        <test-method status="PASS" signature="testReadAAConResults()" name="testReadAAConResults" duration-ms="269" started-at="2011-06-23T10:35:06Z" finished-at="2011-06-23T10:35:06Z">
+        </test-method>
+        <test-method status="PASS" signature="testCleanSequence()" name="testCleanSequence" duration-ms="0" started-at="2011-06-23T10:35:06Z" finished-at="2011-06-23T10:35:06Z">
+        </test-method>
+        <test-method status="PASS" signature="testReadDisemblResults()" name="testReadDisemblResults" duration-ms="125" started-at="2011-06-23T10:35:06Z" finished-at="2011-06-23T10:35:06Z">
+        </test-method>
+        <test-method status="PASS" signature="testReadGlobPlotResults()" name="testReadGlobPlotResults" duration-ms="104" started-at="2011-06-23T10:35:06Z" finished-at="2011-06-23T10:35:06Z">
+        </test-method>
+        <test-method status="PASS" signature="testReadIUPredForGlobDomain()" name="testReadIUPredForGlobDomain" duration-ms="6" started-at="2011-06-23T10:35:06Z" finished-at="2011-06-23T10:35:06Z">
+        </test-method>
+        <test-method status="PASS" signature="testReadIUPredForShortAndLongDisorder()" name="testReadIUPredForShortAndLongDisorder" duration-ms="36" started-at="2011-06-23T10:35:06Z" finished-at="2011-06-23T10:35:06Z">
+        </test-method>
+        <test-method status="PASS" signature="testReadWriteFasta()" name="testReadWriteFasta" duration-ms="8" started-at="2011-06-23T10:35:06Z" finished-at="2011-06-23T10:35:07Z">
+        </test-method>
+        <test-method status="PASS" signature="testisNonAmbNucleotideSequence()" name="testisNonAmbNucleotideSequence" duration-ms="1" started-at="2011-06-23T10:35:07Z" finished-at="2011-06-23T10:35:07Z">
+        </test-method>
+        <test-method status="PASS" signature="testisProteinSequence()" name="testisProteinSequence" duration-ms="0" started-at="2011-06-23T10:35:07Z" finished-at="2011-06-23T10:35:07Z">
+        </test-method>
+      </class>
+      <class name="compbio.runner.msa.TcoffeeParametersTester">
+        <test-method status="PASS" signature="setup()" name="setup" is-config="true" duration-ms="0" started-at="2011-06-23T10:41:17Z" finished-at="2011-06-23T10:41:17Z">
+        </test-method>
+        <test-method status="PASS" signature="testArguments()" name="testArguments" duration-ms="4098" started-at="2011-06-23T10:41:17Z" finished-at="2011-06-23T10:41:21Z">
+        </test-method>
+        <test-method status="PASS" signature="setup()" name="setup" is-config="true" duration-ms="0" started-at="2011-06-23T10:41:21Z" finished-at="2011-06-23T10:41:21Z">
+        </test-method>
+        <test-method status="PASS" signature="setup()" name="setup" is-config="true" duration-ms="0" started-at="2011-06-23T10:41:21Z" finished-at="2011-06-23T10:41:21Z">
+        </test-method>
+        <test-method status="PASS" signature="testConfiguration()" name="testConfiguration" duration-ms="0" started-at="2011-06-23T10:41:21Z" finished-at="2011-06-23T10:41:21Z">
+        </test-method>
+        <test-method status="PASS" signature="testConstrainedParametersMaxValues()" name="testConstrainedParametersMaxValues" duration-ms="4319" started-at="2011-06-23T10:41:21Z" finished-at="2011-06-23T10:41:25Z">
+        </test-method>
+        <test-method status="PASS" signature="setup()" name="setup" is-config="true" duration-ms="1" started-at="2011-06-23T10:41:25Z" finished-at="2011-06-23T10:41:25Z">
+        </test-method>
+        <test-method status="PASS" signature="testConstrainedParametersMinValues()" name="testConstrainedParametersMinValues" duration-ms="2887" started-at="2011-06-23T10:41:25Z" finished-at="2011-06-23T10:41:28Z">
+        </test-method>
+        <test-method status="PASS" signature="testConstrainedParametersRandomValues()" name="testConstrainedParametersRandomValues" duration-ms="8762" started-at="2011-06-23T10:41:28Z" finished-at="2011-06-23T10:41:37Z">
+        </test-method>
+        <test-method status="PASS" signature="setup()" name="setup" is-config="true" duration-ms="0" started-at="2011-06-23T10:41:28Z" finished-at="2011-06-23T10:41:28Z">
+        </test-method>
+        <test-method status="PASS" signature="setup()" name="setup" is-config="true" duration-ms="0" started-at="2011-06-23T10:41:37Z" finished-at="2011-06-23T10:41:37Z">
+        </test-method>
+        <test-method status="PASS" signature="testDefaultParameters()" name="testDefaultParameters" duration-ms="3850" started-at="2011-06-23T10:41:37Z" finished-at="2011-06-23T10:41:41Z">
+        </test-method>
+        <test-method status="PASS" signature="testOptions()" name="testOptions" duration-ms="377" started-at="2011-06-23T10:41:41Z" finished-at="2011-06-23T10:41:41Z">
+        </test-method>
+        <test-method status="PASS" signature="setup()" name="setup" is-config="true" duration-ms="0" started-at="2011-06-23T10:41:41Z" finished-at="2011-06-23T10:41:41Z">
+        </test-method>
+        <test-method status="PASS" signature="setup()" name="setup" is-config="true" duration-ms="0" started-at="2011-06-23T10:41:41Z" finished-at="2011-06-23T10:41:41Z">
+        </test-method>
+        <test-method status="PASS" signature="testParameters()" name="testParameters" duration-ms="3800" started-at="2011-06-23T10:41:41Z" finished-at="2011-06-23T10:41:45Z">
+        </test-method>
+        <test-method status="PASS" signature="setup()" name="setup" is-config="true" duration-ms="0" started-at="2011-06-23T10:41:45Z" finished-at="2011-06-23T10:41:45Z">
+        </test-method>
+        <test-method status="PASS" signature="testPresets()" name="testPresets" duration-ms="214" started-at="2011-06-23T10:41:45Z" finished-at="2011-06-23T10:41:45Z">
+        </test-method>
+      </class>
+      <class name="compbio.runner.msa.ClustalWTester">
+        <test-method status="PASS" signature="testRunWithMatrix()" name="testRunWithMatrix" duration-ms="130" started-at="2011-06-23T10:38:24Z" finished-at="2011-06-23T10:38:24Z">
+        </test-method>
+        <test-method status="PASS" signature="testConfigurationLoading()" name="testConfigurationLoading" duration-ms="46" started-at="2011-06-23T10:38:24Z" finished-at="2011-06-23T10:38:24Z">
+        </test-method>
+        <test-method status="PASS" signature="testRunLocally()" name="testRunLocally" duration-ms="132" started-at="2011-06-23T10:38:24Z" finished-at="2011-06-23T10:38:24Z">
+        </test-method>
+        <test-method status="PASS" signature="readStatisticsClusterExecution()" name="readStatisticsClusterExecution" duration-ms="1640" started-at="2011-06-23T10:38:24Z" finished-at="2011-06-23T10:38:26Z">
+        </test-method>
+        <test-method status="PASS" signature="testRunOnCluster()" name="testRunOnCluster" duration-ms="5003" started-at="2011-06-23T10:38:26Z" finished-at="2011-06-23T10:38:31Z">
+        </test-method>
+        <test-method status="PASS" signature="readStatistics()" name="readStatistics" duration-ms="518" started-at="2011-06-23T10:38:31Z" finished-at="2011-06-23T10:38:31Z">
+        </test-method>
+        <test-method status="PASS" signature="testOptionsLocally()" name="testOptionsLocally" duration-ms="429" started-at="2011-06-23T10:38:31Z" finished-at="2011-06-23T10:38:32Z">
+        </test-method>
+        <test-method status="PASS" signature="testPersistance()" name="testPersistance" duration-ms="303" started-at="2011-06-23T10:38:32Z" finished-at="2011-06-23T10:38:32Z">
+        </test-method>
+      </class>
+      <class name="compbio.engine.cluster.drmaa.UtilTester">
+        <test-method status="PASS" signature="testParser()" name="testParser" duration-ms="1" started-at="2011-06-23T10:35:31Z" finished-at="2011-06-23T10:35:31Z">
+        </test-method>
+      </class>
+      <class name="compbio.engine.conf.DirectoryManagerTester">
+        <test-method status="PASS" signature="testGetDirectory()" name="testGetDirectory" duration-ms="104" started-at="2011-06-23T10:35:31Z" finished-at="2011-06-23T10:35:31Z">
+        </test-method>
+        <test-method status="PASS" signature="testGetDirectory()" name="testGetDirectory" duration-ms="101" started-at="2011-06-23T10:35:31Z" finished-at="2011-06-23T10:35:31Z">
+        </test-method>
+        <test-method status="PASS" signature="testGetDirectory()" name="testGetDirectory" duration-ms="98" started-at="2011-06-23T10:35:31Z" finished-at="2011-06-23T10:35:31Z">
+        </test-method>
+        <test-method status="PASS" signature="testGetDirectory()" name="testGetDirectory" duration-ms="97" started-at="2011-06-23T10:35:31Z" finished-at="2011-06-23T10:35:31Z">
+        </test-method>
+      </class>
+      <class name="compbio.metadata.PresetTester">
+        <test-method status="PASS" signature="marshallPreset()" name="marshallPreset" duration-ms="14" started-at="2011-06-23T10:36:14Z" finished-at="2011-06-23T10:36:14Z">
+        </test-method>
+        <test-method status="PASS" signature="testPresetWithMuptiOptions()" name="testPresetWithMuptiOptions" duration-ms="1" started-at="2011-06-23T10:36:14Z" finished-at="2011-06-23T10:36:14Z">
+        </test-method>
+        <test-method status="PASS" signature="validatePresets()" name="validatePresets" duration-ms="1" started-at="2011-06-23T10:36:14Z" finished-at="2011-06-23T10:36:14Z">
+        </test-method>
+      </class>
+      <class name="compbio.metadata.OptionMarshallerTester">
+        <test-method status="PASS" signature="testMarshalling()" name="testMarshalling" duration-ms="33" started-at="2011-06-23T10:36:14Z" finished-at="2011-06-23T10:36:14Z">
+          <exception class="javax.xml.bind.MarshalException">
+            <full-stacktrace>
+              <![CDATA[javax.xml.bind.MarshalException
+ - with linked exception:
+[org.xml.sax.SAXParseException: cvc-complex-type.2.4.a: Invalid content was found starting with element 'options'. One of '{runnerClassName}' is expected.]
+	at com.sun.xml.bind.v2.runtime.MarshallerImpl.write(MarshallerImpl.java:323)
+	at com.sun.xml.bind.v2.runtime.MarshallerImpl.marshal(MarshallerImpl.java:249)
+	at javax.xml.bind.helpers.AbstractMarshallerImpl.marshal(AbstractMarshallerImpl.java:75)
+	at compbio.engine.conf.RunnerConfigMarshaller.writeAndValidate(RunnerConfigMarshaller.java:88)
+	at compbio.metadata.OptionMarshallerTester.testMarshalling(OptionMarshallerTester.java:140)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodHelper.invokeMethod(MethodHelper.java:609)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:532)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:686)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1018)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:128)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:759)
+	at org.testng.TestRunner.privateRun(TestRunner.java:592)
+	at org.testng.TestRunner.run(TestRunner.java:486)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:327)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:299)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:204)
+	at org.testng.TestNG.createAndRunSuiteRunners(TestNG.java:912)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:876)
+	at org.testng.TestNG.run(TestNG.java:784)
+	at org.testng.TestNG.privateMain(TestNG.java:949)
+	at org.testng.TestNG.main(TestNG.java:922)
+Caused by: org.xml.sax.SAXParseException: cvc-complex-type.2.4.a: Invalid content was found starting with element 'options'. One of '{runnerClassName}' is expected.
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:195)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.error(ErrorHandlerWrapper.java:131)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:384)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:318)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator$XSIErrorReporter.reportError(XMLSchemaValidator.java:410)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.reportSchemaError(XMLSchemaValidator.java:3165)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.handleStartElement(XMLSchemaValidator.java:1777)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.startElement(XMLSchemaValidator.java:685)
+	at com.sun.org.apache.xerces.internal.jaxp.validation.ValidatorHandlerImpl.startElement(ValidatorHandlerImpl.java:549)
+	at org.xml.sax.helpers.XMLFilterImpl.startElement(XMLFilterImpl.java:527)
+	at com.sun.xml.bind.v2.runtime.output.SAXOutput.endStartTag(SAXOutput.java:128)
+	at com.sun.xml.bind.v2.runtime.output.ForkXmlOutput.endStartTag(ForkXmlOutput.java:106)
+	at com.sun.xml.bind.v2.runtime.XMLSerializer.endAttributes(XMLSerializer.java:310)
+	at com.sun.xml.bind.v2.runtime.XMLSerializer.childAsXsiType(XMLSerializer.java:699)
+	at com.sun.xml.bind.v2.runtime.property.ArrayElementNodeProperty.serializeItem(ArrayElementNodeProperty.java:69)
+	at com.sun.xml.bind.v2.runtime.property.ArrayElementProperty.serializeListBody(ArrayElementProperty.java:172)
+	at com.sun.xml.bind.v2.runtime.property.ArrayERProperty.serializeBody(ArrayERProperty.java:159)
+	at com.sun.xml.bind.v2.runtime.ClassBeanInfoImpl.serializeBody(ClassBeanInfoImpl.java:344)
+	at com.sun.xml.bind.v2.runtime.XMLSerializer.childAsSoleContent(XMLSerializer.java:597)
+	at com.sun.xml.bind.v2.runtime.ClassBeanInfoImpl.serializeRoot(ClassBeanInfoImpl.java:328)
+	at com.sun.xml.bind.v2.runtime.XMLSerializer.childAsRoot(XMLSerializer.java:498)
+	at com.sun.xml.bind.v2.runtime.MarshallerImpl.write(MarshallerImpl.java:320)
+	... 26 more
+]]>
+            </full-stacktrace>
+          </exception>
+        </test-method>
+        <test-method status="PASS" signature="setup()" name="setup" is-config="true" duration-ms="0" started-at="2011-06-23T10:36:14Z" finished-at="2011-06-23T10:36:14Z">
+        </test-method>
+        <test-method status="PASS" signature="testUnMarshalling()" name="testUnMarshalling" duration-ms="65" started-at="2011-06-23T10:36:14Z" finished-at="2011-06-23T10:36:14Z">
+        </test-method>
+        <test-method status="PASS" signature="setup()" name="setup" is-config="true" duration-ms="0" started-at="2011-06-23T10:36:14Z" finished-at="2011-06-23T10:36:14Z">
+        </test-method>
+      </class>
+      <class name="compbio.runner.msa.ClustalWParametersTester">
+        <test-method status="PASS" signature="setup()" name="setup" is-config="true" duration-ms="52" started-at="2011-06-23T10:35:00Z" finished-at="2011-06-23T10:35:00Z">
+        </test-method>
+        <test-method status="PASS" signature="testArguments()" name="testArguments" duration-ms="1649" started-at="2011-06-23T10:35:00Z" finished-at="2011-06-23T10:35:02Z">
+        </test-method>
+        <test-method status="PASS" signature="setup()" name="setup" is-config="true" duration-ms="53" started-at="2011-06-23T10:35:02Z" finished-at="2011-06-23T10:35:02Z">
+        </test-method>
+        <test-method status="PASS" signature="testConfiguration()" name="testConfiguration" duration-ms="1" started-at="2011-06-23T10:35:02Z" finished-at="2011-06-23T10:35:02Z">
+        </test-method>
+        <test-method status="PASS" signature="setup()" name="setup" is-config="true" duration-ms="55" started-at="2011-06-23T10:35:02Z" finished-at="2011-06-23T10:35:02Z">
+        </test-method>
+        <test-method status="PASS" signature="testConstrainedParametersMaxValues()" name="testConstrainedParametersMaxValues" duration-ms="678" started-at="2011-06-23T10:35:02Z" finished-at="2011-06-23T10:35:02Z">
+        </test-method>
+        <test-method status="PASS" signature="setup()" name="setup" is-config="true" duration-ms="51" started-at="2011-06-23T10:35:02Z" finished-at="2011-06-23T10:35:03Z">
+        </test-method>
+        <test-method status="PASS" signature="testConstrainedParametersMinValues()" name="testConstrainedParametersMinValues" duration-ms="682" started-at="2011-06-23T10:35:03Z" finished-at="2011-06-23T10:35:03Z">
+        </test-method>
+        <test-method status="PASS" signature="setup()" name="setup" is-config="true" duration-ms="56" started-at="2011-06-23T10:35:03Z" finished-at="2011-06-23T10:35:03Z">
+        </test-method>
+        <test-method status="PASS" signature="testConstrainedParametersRandomValues()" name="testConstrainedParametersRandomValues" duration-ms="672" started-at="2011-06-23T10:35:03Z" finished-at="2011-06-23T10:35:04Z">
+        </test-method>
+        <test-method status="PASS" signature="setup()" name="setup" is-config="true" duration-ms="48" started-at="2011-06-23T10:35:04Z" finished-at="2011-06-23T10:35:04Z">
+        </test-method>
+        <test-method status="PASS" signature="testDefaultParameters()" name="testDefaultParameters" duration-ms="129" started-at="2011-06-23T10:35:04Z" finished-at="2011-06-23T10:35:04Z">
+        </test-method>
+        <test-method status="PASS" signature="setup()" name="setup" is-config="true" duration-ms="48" started-at="2011-06-23T10:35:04Z" finished-at="2011-06-23T10:35:04Z">
+        </test-method>
+        <test-method status="PASS" signature="testOptions()" name="testOptions" duration-ms="396" started-at="2011-06-23T10:35:04Z" finished-at="2011-06-23T10:35:05Z">
+        </test-method>
+        <test-method status="PASS" signature="setup()" name="setup" is-config="true" duration-ms="48" started-at="2011-06-23T10:35:05Z" finished-at="2011-06-23T10:35:05Z">
+        </test-method>
+        <test-method status="PASS" signature="testParameters()" name="testParameters" duration-ms="1074" started-at="2011-06-23T10:35:05Z" finished-at="2011-06-23T10:35:06Z">
+        </test-method>
+        <test-method status="PASS" signature="setup()" name="setup" is-config="true" duration-ms="49" started-at="2011-06-23T10:35:06Z" finished-at="2011-06-23T10:35:06Z">
+        </test-method>
+        <test-method status="PASS" signature="testPresets()" name="testPresets" duration-ms="129" started-at="2011-06-23T10:35:06Z" finished-at="2011-06-23T10:35:06Z">
+        </test-method>
+      </class>
+      <class name="compbio.engine.conf.RunnerConfigMarshallerTester">
+        <test-method status="PASS" signature="setup()" name="setup" is-config="true" duration-ms="15" started-at="2011-06-23T10:35:31Z" finished-at="2011-06-23T10:35:31Z">
+        </test-method>
+        <test-method status="PASS" signature="testMarshalling()" name="testMarshalling" duration-ms="4" started-at="2011-06-23T10:35:31Z" finished-at="2011-06-23T10:35:31Z">
+        </test-method>
+        <test-method status="PASS" signature="setup()" name="setup" is-config="true" duration-ms="13" started-at="2011-06-23T10:35:31Z" finished-at="2011-06-23T10:35:31Z">
+        </test-method>
+        <test-method status="PASS" signature="testSchemaFromCodeGeneration()" name="testSchemaFromCodeGeneration" duration-ms="130" started-at="2011-06-23T10:35:31Z" finished-at="2011-06-23T10:35:31Z">
+        </test-method>
+        <test-method status="PASS" signature="setup()" name="setup" is-config="true" duration-ms="14" started-at="2011-06-23T10:35:31Z" finished-at="2011-06-23T10:35:31Z">
+        </test-method>
+        <test-method status="PASS" signature="testUnMarshalling()" name="testUnMarshalling" duration-ms="17" started-at="2011-06-23T10:35:31Z" finished-at="2011-06-23T10:35:31Z">
+        </test-method>
+        <test-method status="PASS" signature="setup()" name="setup" is-config="true" duration-ms="14" started-at="2011-06-23T10:35:31Z" finished-at="2011-06-23T10:35:31Z">
+        </test-method>
+        <test-method status="PASS" signature="testValidation()" name="testValidation" duration-ms="82" started-at="2011-06-23T10:35:31Z" finished-at="2011-06-23T10:35:31Z">
+        </test-method>
+        <test-method status="PASS" signature="setup()" name="setup" is-config="true" duration-ms="14" started-at="2011-06-23T10:35:31Z" finished-at="2011-06-23T10:35:31Z">
+        </test-method>
+        <test-method status="PASS" signature="testValidationOnMarshalling()" name="testValidationOnMarshalling" duration-ms="10" started-at="2011-06-23T10:35:31Z" finished-at="2011-06-23T10:35:31Z">
+          <exception class="javax.xml.bind.MarshalException">
+            <full-stacktrace>
+              <![CDATA[javax.xml.bind.MarshalException
+ - with linked exception:
+[org.xml.sax.SAXParseException: cvc-complex-type.2.4.a: Invalid content was found starting with element 'options'. One of '{runnerClassName}' is expected.]
+	at com.sun.xml.bind.v2.runtime.MarshallerImpl.write(MarshallerImpl.java:323)
+	at com.sun.xml.bind.v2.runtime.MarshallerImpl.marshal(MarshallerImpl.java:249)
+	at javax.xml.bind.helpers.AbstractMarshallerImpl.marshal(AbstractMarshallerImpl.java:75)
+	at compbio.engine.conf.RunnerConfigMarshaller.writeAndValidate(RunnerConfigMarshaller.java:88)
+	at compbio.engine.conf.RunnerConfigMarshallerTester.testValidationOnMarshalling(RunnerConfigMarshallerTester.java:259)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodHelper.invokeMethod(MethodHelper.java:609)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:532)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:686)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1018)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:128)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:759)
+	at org.testng.TestRunner.privateRun(TestRunner.java:592)
+	at org.testng.TestRunner.run(TestRunner.java:486)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:327)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:299)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:204)
+	at org.testng.TestNG.createAndRunSuiteRunners(TestNG.java:912)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:876)
+	at org.testng.TestNG.run(TestNG.java:784)
+	at org.testng.TestNG.privateMain(TestNG.java:949)
+	at org.testng.TestNG.main(TestNG.java:922)
+Caused by: org.xml.sax.SAXParseException: cvc-complex-type.2.4.a: Invalid content was found starting with element 'options'. One of '{runnerClassName}' is expected.
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:195)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.error(ErrorHandlerWrapper.java:131)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:384)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:318)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator$XSIErrorReporter.reportError(XMLSchemaValidator.java:410)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.reportSchemaError(XMLSchemaValidator.java:3165)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.handleStartElement(XMLSchemaValidator.java:1777)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.startElement(XMLSchemaValidator.java:685)
+	at com.sun.org.apache.xerces.internal.jaxp.validation.ValidatorHandlerImpl.startElement(ValidatorHandlerImpl.java:549)
+	at org.xml.sax.helpers.XMLFilterImpl.startElement(XMLFilterImpl.java:527)
+	at com.sun.xml.bind.v2.runtime.output.SAXOutput.endStartTag(SAXOutput.java:128)
+	at com.sun.xml.bind.v2.runtime.output.ForkXmlOutput.endStartTag(ForkXmlOutput.java:106)
+	at com.sun.xml.bind.v2.runtime.XMLSerializer.endAttributes(XMLSerializer.java:310)
+	at com.sun.xml.bind.v2.runtime.XMLSerializer.childAsXsiType(XMLSerializer.java:699)
+	at com.sun.xml.bind.v2.runtime.property.ArrayElementNodeProperty.serializeItem(ArrayElementNodeProperty.java:69)
+	at com.sun.xml.bind.v2.runtime.property.ArrayElementProperty.serializeListBody(ArrayElementProperty.java:172)
+	at com.sun.xml.bind.v2.runtime.property.ArrayERProperty.serializeBody(ArrayERProperty.java:159)
+	at com.sun.xml.bind.v2.runtime.ClassBeanInfoImpl.serializeBody(ClassBeanInfoImpl.java:344)
+	at com.sun.xml.bind.v2.runtime.XMLSerializer.childAsSoleContent(XMLSerializer.java:597)
+	at com.sun.xml.bind.v2.runtime.ClassBeanInfoImpl.serializeRoot(ClassBeanInfoImpl.java:328)
+	at com.sun.xml.bind.v2.runtime.XMLSerializer.childAsRoot(XMLSerializer.java:498)
+	at com.sun.xml.bind.v2.runtime.MarshallerImpl.write(MarshallerImpl.java:320)
+	... 26 more
+]]>
+            </full-stacktrace>
+          </exception>
+        </test-method>
+      </class>
+    </test>
+  </suite>
+</testng-results>

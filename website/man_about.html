@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "XHTML 1.0 Strict" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="Last-modified" content="Mon, 4 Apr 2011 12:00:00 GMT"/>
+<title>Java Bioinformatics Analyses Web Services (JABAWS) manual - About</title>
+<link href="ws.css" rel="stylesheet" type="text/css" media="screen,  projection, handheld, tv" />
+<link rel="stylesheet" type="text/css" media="print" href="print.css"/>
+
+<script type="text/javascript" src="prototype-1.6.0.3.js"></script>
+</head>
+<body>
+<div id="page">
+<div id="banner">
+<table> 
+<tr><td style="width:158px;"><a href="http://www.dundee.ac.uk"><img src="images/uod_lt_long.gif"  alt="University of Dundee" width="158" height="90" class="logo"  title="University of Dundee" longdesc="http://www.dundee.ac.uk"/></a></td>
+<td class="bg"><img src="images/jabaws2.png" alt="JABAWS-2.0" title="Java Bioinformatics Analysis Web Services version 2.0"/></td>
+<td class="bg"><img src="images/banner_right.png" alt="Disorder" width="200" height="80"/></td>
+</tr>
+</table>
+</div><!-- banner end-->
+<div id="wrapper">
+<div id="panel">
+	<a href="index.html">Home</a>
+    <a href="quick_start.html">Getting Started</a> 
+	 <a class="selected" href="man_about.html">Manual</a> 
+	<div id="submenu">
+		<a class="selected" href="man_about.html">About</a>
+		<a href="man_servervm.html" title="JABAWS Server as Virtual Appliance">Server VA</a>
+		<a href="man_awscloud.html" title="JABAWS Server in the Amazon EC2 Cloud">Server in the Cloud</a>
+		<a href="man_serverwar.html" title="JABAWS Server as Web Application aRchive">Server WAR</a>
+		<a href="man_configuration.html" >Server<br/>
+		Configuration</a>
+		<a href="man_client.html" title="JABAWS Command Line Client">CMD Client</a>
+		<a href="man_stats.html" title="JABAWS Usage Statistics">Usage Statistics</a>
+		<a href="man_dev.html" title="Accessing JABAWS from your program">Accessing<br/>
+		JABAWS</a>	
+		<a href="man_server_dev.html" >JABAWS Development</a>
+	</div>
+	<a href="http://www.compbio.dundee.ac.uk/download">Download</a>
+	<a href="PublicAnnualStat" title="JABAWS usage statistics">Usage Statistics</a>
+     <a href="ServiceStatus" title="JABAWS webservices status. Click to test all web services. Please be patient while the services are being checked">Services Status</a>
+	<a href="contacts.html">Contact Us</a>
+    <a href="http://www.compbio.dundee.ac.uk" title="University of Dundee, The Barton Group" >Barton Group</a></div>
+
+<!-- panel end-->
+<div id="content">
+
+<h2 id="headtitle">JABAWS MANUAL</h2>
+<h2>About</h2>
+
+<ul>
+  <li><a href="#wisjaba">What is JABAWS?</a></li>
+  <li><a href="#wjaba">JABAWS Benefits</a></li>
+  <li><a href="#alprog">JABA Web Services Programs </a></li>
+  <li><a href="#jaba2">What is new in JABAWS 2?</a> </li>
+  <li><a href="#jabaclient">What is JABAWS Client</a>?</li>
+  <li><a href="#jalviewsup">JABAWS versions compatibility and Jalview support </a></li>
+  <li><a href="#cmdclient">Programmatic access to JABAWS</a></li>
+  </ul>
+
+
+<h3><a name="wisjaba" id="wisjaba"></a>What is JABAWS?</h3>
+<p>JABAWS stands for JAva Bioinformatics Analysis Web Services. As the name suggests, JABAWS is a collection of web services for bioinformatics, and currently provides services that make it easy to access well-known multiple sequence alignment and protein disorder prediction programs (see <a href="#alprog">the list of currently supported programs</a>) from <a href="http://www.jalview.org">Jalview</a>.
+  Future versions of JABAWS will incorporate many other tools.</p>
+<h4>Getting JABAWS</h4>
+<p>JABAWS consists of a server and client, but unlike most bioinformatics web service systems, you can download and run both parts on your own computer! If you want a server just for yourself, then download and install the JABAWS Virtual Appliance. It requires no configuration and is simple to install. If you want to install JABAWS for your lab or institution then download the JABAWS Web Application aRchive. It is slightly more complicated to configure but is very straightforward too. Finally, if you want to script against any version of JABAWS or are interested in writing your own client, the JABAWS command line client is what you need. </p>
+<h3><a name="wjaba" id="wjaba"></a>JABAWS Benefits</h3>
+<ul>
+<li>Can be deployed on most operating systems, as a VMware or other compatible Virtual Appliance or a Tomcat Java Web Application.</li>
+<li>Comes complete with sources and binaries for all the bioinformatics programs that it runs.</li>
+<li>Can operate as a stand alone server or one that submits jobs to a cluster <em>via</em> <a href="http://www.drmaa.org/">DRMAA</a>.</li>
+<li>Easy to access from <a href="http://www.jalview.org">Jalview</a> using its graphical client, or using the JABAWS command line client.</li>
+<li>Clients can submit jobs to any JABAWS servers that you might want to access, such as the one running on your local computer, your lab's server, or the publicly available services at the <a href="http://www.compbio.dundee.ac.uk/">University of Dundee</a>.</li>
+<li>Local or intranet installation eliminates any security concerns you might have about sending sensitive data over the internet.</li>
+<li>Wide range of configuration options to control size of jobs accepted by a server and the command line options available for the program run by a service.</li>
+</ul>
+<h3><a name="alprog" id="alprog"/>JABA Web Services Programs </h3>
+<p> JABAWS currently provides access to the following programs:</p>
+<p>Multiple Sequence Alignement </p>
+<ul>
+  <li><a href="http://www.clustal.org/omega">Clustal Omega </a> (version 1.0.2)</li>
+  <li><a href="http://www.clustal.org/clustal2">ClustalW</a> (version 2.0.12)</li>
+  <li><a href="http://align.bmr.kyushu-u.ac.jp/mafft/software/">Mafft</a> (version 6.857)</li>
+  <li><a href="http://www.drive5.com/muscle">Muscle</a> (version 3.8.31) </li>
+  <li><a href="http://www.tcoffee.org/Projects_home_page/t_coffee_home_page.html">Tcoffee</a> (version 8.99) </li>
+  <li><a href="http://probcons.stanford.edu/">Probcons</a> (version 1.12)</li>
+  </ul>
+
+<p>Protein disorder prediction</p>
+<ul>
+  <li><span style="color:black; font-weight:normal; text-align:left;"><a href="http://dis.embl.de/">DisEMBL</a></span> (1.5) </li>
+  <li><span style="color:black; font-weight:normal; text-align:left;"><a href="http://iupred.enzim.hu">IUPred</a></span> (1.0) </li>
+  <li><span style="color:black; font-weight:normal; text-align:left;"><a href="http://www.strubi.ox.ac.uk/RONN">Ronn</a></span> (3.1) </li>
+  <li><span style="color:black; font-weight:normal; text-align:left;"><a href="http://globplot.embl.de/">GlobPlot</a></span> (2.3) </li>
+  </ul>
+<p>Amino Acid conservation </p>
+<ul>
+  <li><span style="color:black; font-weight:normal; text-align:left;"><a href="http://www.compbio.dundee.ac.uk/aacon">AACon</a></span> (1.0) </li>
+  </ul>
+<h3><a name="jaba2"></a>What is new in JABAWS 2? </h3>
+<p>Comparing to previous version of JABAWS JABAWS 2  offers a greater number of diverse web services, Amazon EC 2 integration and improved easy of use. It contains </p>
+<ul><li>updates for all multiple sequence alignment services </li>
+  <li>four new protein disorder prediction services</li>
+  <li>Clustal Omega multiple sequence alignment web service  </li>
+  <li>amino acid conservation service  </li>
+  <li>web services execution statistics visialization </li>
+  <li>web services  status check from a web page    </li>
+  <li>VirtualBox support was dropped in favour of VMware</li>
+  <li>new WAR package for Mac users    </li>
+  <li>Amazon Machine Image (AMI) distributive to enable users to use JABAWS on the EC2 cloud    </li>
+  <li>Improved web services client API     </li>
+  <li>Simplified WAR package installation  </li>
+  </ul>
+  
+    <h3><a name="jabaclient" id="jabaclient"></a>What is JABAWS client?</h3>
+
+<p>A JABAWS client is a program that lets you run the bioinformatics methods for which a JABAWS server provides web services. 
+The most basic JABAWS client is a command line Java application which can call any of the JABAWS web services methods 
+on any instance of JABAWS Server that it can reach over the web. It is useful if you 
+want to test, or execute the programs provided by a JABAWS server in your own scripts, and do not want to handle any web service 
+specific details. The client is open source, so you can also use its source code to find 
+out how to work with JABA Web Services if you would like to write your own client 
+software. <a href="http://www.jalview.org/">Jalview</a>, which is a multiple sequence alignment and analysis application, provides a graphical JABAWS client. This client has the same 
+functionality as the command line client, but instead allows JABAWS services to be accessed in a more user-friendly manner, through a graphical user interface.</p>
+<h3><a name="jalviewsup"></a>JABAWS versions compatibility and Jalview support </h3>
+<p>JABAWS version 2 is fully backward compatible with JABAWS  version 1. That means that all JABAWS 1 clients should be able to use JABAWS 2  instead. However, they will be limited to the multiple sequence alignment web  services only. To benefit of new web services introduced in JABAWS 2 the  clients have to be updated. <br>
+Jalview since version 2.6.1 integrates fully with JABAWS 1. Therefore  it will be possible to use any versions of Jalview after 2.6.1 with JABAWS 1.  However, the full support for JABAWS 2 is introduced in Jalview version 2.8 or later.</p>
+<h3><a name="cmdclient" id="cmdclient"></a>Programmatic access to JABAWS </h3>
+<p>JABA Web Services are WS-I basic profile compliant, which means they can be accessed using 
+any programming language or system that can utilize standard SOAP web services. 
+The WSDL for each service is published on the JABAWS home page, and you can use this to automatically generate 
+service bindings for your program. If you use Java, however, then you may wish to use our 
+<a href="http://www.compbio.dundee.ac.uk/download">client package</a> to access JABAWS. 
+This package is based on the autogenerated source code produced by <span class="hightlight">wsimport</span>, which is the Java tool for creating web service bindings; 
+but in addition, offers some additional methods which simplify working with JABAWS. For more information please refer to the 
+<a href="dm_javadoc/index.html">data model javadoc</a>.
+</p>
+</div> 
+<!-- about end-->
+<!-- content end--> 
+<div id="copyright">Last update: 16 September 2011<br/>
+Peter Troshin, Jim Procter and Geoff Barton, The Barton Group, University of Dundee, UK</div>
+
+</div>
+</div><!-- wrapper end-->
+
+<!-- Google analitics -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try{
+var pageTracker = _gat._getTracker("UA-5356328-1");
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+
+</body>
+</html>
+

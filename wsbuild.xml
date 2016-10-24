@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project default="build-server" name="compbio-ws" basedir=".">
+
+	<!-- java -->
+	<property name="classes" location="${basedir}/WEB-INF/classes" />
+	<property name="lib.path" location="${basedir}/WEB-INF/lib" />
+
+	<path id="classes.path">
+		<pathelement location="${classes}" />
+	</path>
+
+	<!-- add libraries -->
+	<path id="project.classpath">
+		<fileset dir="${lib.path}">
+			<include name="*.jar" />
+		</fileset>
+	</path>
+
+	<property name="wsdl.dir" location="${basedir}/webservices/compbio/ws/server/resource" />
+	<property name="clustal.wsdl" location="${wsdl.dir}/ClustalWS.wsdl" />
+	<property name="muscle.wsdl" location="${wsdl.dir}/MuscleWS.wsdl" />
+	<property name="tcoffee.wsdl" location="${wsdl.dir}/TcoffeeWS.wsdl" />
+	<property name="mafft.wsdl" location="${wsdl.dir}/MafftWS.wsdl" />
+	<property name="aacon.wsdl" location="${wsdl.dir}/AAConWS.wsdl" />
+	<property name="disembl.wsdl" location="${wsdl.dir}/DisemblWS.wsdl" />
+	<property name="globplot.wsdl" location="${wsdl.dir}/GlobPlotWS.wsdl" />
+	<property name="iupred.wsdl" location="${wsdl.dir}/IUPredWS.wsdl" />
+	<property name="jronn.wsdl" location="${wsdl.dir}/JronnWS.wsdl" />
+	<property name="registry.wsdl" location="${wsdl.dir}/RegistryWS.wsdl" />
+	
+
+	<taskdef name="wsgen" onerror="report" classname="com.sun.tools.ws.ant.WsGen">
+		<classpath refid="project.classpath" />
+	</taskdef>
+
+	<target name="build-server">
+		<!-- TODO this runs file from Eclipse, but with Ant only this need to depends on clean and build! -->
+			<property name="server.artifacts.dir" location="${basedir}/webservices/compbio/ws/server/jaxws/" />
+
+			<mkdir dir="${server.artifacts.dir}" />
+			<mkdir dir="${wsdl.dir}" />
+			<delete quiet="false" verbose="true" failonerror="false">
+				<fileset dir="${server.artifacts.dir}">
+					<include name="*.java" />
+				</fileset>
+				<fileset dir="${wsdl.dir}">
+				</fileset>
+			</delete>
+			<!-- destdir - Where to put generated classes -->
+			<!-- sourcedestdir -  Where to put generated source files -->
+			<!-- resourcedestdir - Where to put generated source files -->
+
+		<wsgen sei="compbio.ws.server.AAConWS" 
+					sourcedestdir="${basedir}/webservices" 
+					destdir="${classes}" 
+					resourcedestdir="${wsdl.dir}" 
+					keep="true" genwsdl="true" 
+					extension="false" 
+					xendorsed="true"			
+					verbose="true">
+					<classpath refid="classes.path" />
+					<classpath refid="project.classpath" />
+		</wsgen>
+
+		<wsgen sei="compbio.ws.server.ClustalWS" 
+					sourcedestdir="${basedir}/webservices" 
+					destdir="${classes}" 
+					resourcedestdir="${wsdl.dir}" 
+					keep="true" genwsdl="true" 
+					extension="false" 
+					xendorsed="true"
+					verbose="true">
+					<classpath refid="classes.path" />
+					<classpath refid="project.classpath" />
+		</wsgen>
+		<wsgen sei="compbio.ws.server.MuscleWS" 
+						sourcedestdir="${basedir}/webservices" 
+						destdir="${classes}" 
+						resourcedestdir="${wsdl.dir}" 
+						keep="true" genwsdl="true" 
+						extension="false"
+						xendorsed="true"
+						verbose="true">
+						<classpath refid="classes.path" />
+						<classpath refid="project.classpath" />
+			</wsgen>
+		<wsgen sei="compbio.ws.server.MafftWS" 
+						sourcedestdir="${basedir}/webservices" 
+						destdir="${classes}" 
+						resourcedestdir="${wsdl.dir}" 
+						keep="true" genwsdl="true" 
+						extension="false"
+						xendorsed="true"
+						verbose="true">
+						<classpath refid="classes.path" />
+						<classpath refid="project.classpath" />
+			</wsgen>
+		<wsgen sei="compbio.ws.server.TcoffeeWS" 
+						sourcedestdir="${basedir}/webservices" 
+						destdir="${classes}" 
+						resourcedestdir="${wsdl.dir}" 
+						keep="true" genwsdl="true" 
+						extension="false" 
+						xendorsed="true"			
+						verbose="true">
+						<classpath refid="classes.path" />
+						<classpath refid="project.classpath" />
+		</wsgen>
+		
+		<wsgen sei="compbio.ws.server.DisemblWS" 
+						sourcedestdir="${basedir}/webservices" 
+						destdir="${classes}" 
+						resourcedestdir="${wsdl.dir}" 
+						keep="true" genwsdl="true" 
+						extension="false" 
+						xendorsed="true"			
+						verbose="true">
+						<classpath refid="classes.path" />
+						<classpath refid="project.classpath" />
+		</wsgen>
+		<wsgen sei="compbio.ws.server.GlobPlotWS" 
+						sourcedestdir="${basedir}/webservices" 
+						destdir="${classes}" 
+						resourcedestdir="${wsdl.dir}" 
+						keep="true" genwsdl="true" 
+						extension="false" 
+						xendorsed="true"			
+						verbose="true">
+						<classpath refid="classes.path" />
+						<classpath refid="project.classpath" />
+		</wsgen>
+		<wsgen sei="compbio.ws.server.JronnWS" 
+						sourcedestdir="${basedir}/webservices" 
+						destdir="${classes}" 
+						resourcedestdir="${wsdl.dir}" 
+						keep="true" genwsdl="true" 
+						extension="false" 
+						xendorsed="true"			
+						verbose="true">
+						<classpath refid="classes.path" />
+						<classpath refid="project.classpath" />
+		</wsgen>
+		<wsgen sei="compbio.ws.server.IUPredWS" 
+								sourcedestdir="${basedir}/webservices" 
+								destdir="${classes}" 
+								resourcedestdir="${wsdl.dir}" 
+								keep="true" genwsdl="true" 
+								extension="false" 
+								xendorsed="true"			
+								verbose="true">
+								<classpath refid="classes.path" />
+								<classpath refid="project.classpath" />
+		</wsgen>
+		<wsgen sei="compbio.ws.server.RegistryWS" 
+						sourcedestdir="${basedir}/webservices" 
+						destdir="${classes}" 
+						resourcedestdir="${wsdl.dir}" 
+						keep="true" genwsdl="true" 
+						extension="false" 
+						xendorsed="true"			
+						verbose="true">
+						<classpath refid="classes.path" />
+						<classpath refid="project.classpath" />
+		</wsgen>
+	</target>
+
+
+	<taskdef name="wsimport" classname="com.sun.tools.ws.ant.WsImport">
+		<classpath refid="project.classpath" />
+	</taskdef>
+
+	<target name="build-clients">
+			<property name="client.artifacts.dir" location="${basedir}/webservices/compbio/ws/client/stub" />
+
+			<mkdir dir="${client.artifacts.dir}" />
+			<delete quiet="false" verbose="true" failonerror="true">
+				<fileset dir="${client.artifacts.dir}">
+					<include name="*.java" />
+				</fileset>
+			</delete>
+			<wsimport wsdl="${clustal.wsdl}" 
+				sourcedestdir="${basedir}/webservices/" 
+				keep="true" extension="false" 
+				verbose="true" xnocompile="true" 
+				package="compbio.ws.client.stub" 
+				quiet="false">
+			</wsimport>
+			<wsimport wsdl="${muscle.wsdl}" 
+				sourcedestdir="${basedir}/webservices/" 
+				keep="true" extension="false" 
+				verbose="true" xnocompile="true" 
+				package="compbio.ws.client.stub" 
+				quiet="false">
+			</wsimport>
+			<wsimport wsdl="${mafft.wsdl}" 
+				sourcedestdir="${basedir}/webservices/" 
+				keep="true" extension="false" 
+				verbose="true" xnocompile="true" 
+				package="compbio.ws.client.stub" 
+				quiet="false">
+			</wsimport>
+			<wsimport wsdl="${tcoffee.wsdl}" 
+				sourcedestdir="${basedir}/webservices/" 
+				keep="true" extension="false" 
+				verbose="true" xnocompile="true" 
+				package="compbio.ws.client.stub" 
+				quiet="false">
+			</wsimport>
+			<wsimport wsdl="${iupred.wsdl}" 
+						sourcedestdir="${basedir}/webservices/" 
+						keep="true" extension="false" 
+						verbose="true" xnocompile="true" 
+						package="compbio.ws.client.stub" 
+						quiet="false">
+			</wsimport>
+		    <wsimport wsdl="${registry.wsdl}" 
+						sourcedestdir="${basedir}/webservices/" 
+						keep="true" extension="false" 
+						verbose="true" xnocompile="true" 
+						package="compbio.ws.client.stub" 
+						quiet="false">
+			</wsimport>
+			<!--		<xjcarg value="-cp" />
+						<xjcarg pathref="project.classpath" />
+						<xjcarg value="-Xcommons-lang" /> -->
+				
+		</target>
+
+	
+	<!-- 
+	
+	<target name="Build artifacts from schema" description="Test task to generate JaxB commons annotated data classes DOES NOT REALLY WORK">
+		<taskdef name="xjc" classname="com.sun.tools.xjc.XJCTask">
+			<classpath refid="project.classpath" />
+		</taskdef>
+		<mkdir dir="${basedir}/src/test" />
+		<xjc schema="${wsdl.dir}/SyncMsaWS_schema1.xsd" destdir="${basedir}/src/test">
+			<arg value="-Xcommons-lang" />
+		
+			<produces dir="${basedir}/src/test" />
+			<classpath refid="classes.path" />
+			<classpath>
+					<fileset dir="${basedir}/lib">
+						 //JAXB2 Basics library 
+						<include name="jaxb2-basics-*.jar"/>
+						 // JAXB2 Basics library dependencies 
+						<include name="jaxb2-basics-runtime-*.jar"/>
+						<include name="jaxb2-basics-tools-*.jar"/>
+						<include name="commons-beanutils-*.jar"/>
+						<include name="commons-lang-*.jar"/>
+						<include name="commons-logging-*.jar"/>
+					</fileset>
+				</classpath>
+		</xjc>
+	</target>
+
+					-Xequals
+					-XhashCode
+					-Xcopyable
+					-Xmergeable
+	
+	
+	
+	
+	<target name="build-Clustal-client-from-live-server">
+
+		<wsimport wsdl="http://localhost:7979/ClustalWS?wsdl" 
+			sourcedestdir="${basedir}/webservices/" 
+			keep="true" 
+			extension="false" 
+			verbose="true" 
+			xnocompile="true" 
+			package="compbio.ws.client.stub" 
+			quiet="false">
+		</wsimport>
+	</target>
+
+	<target name="build-Muscle-client-from-live-server">
+		<wsimport wsdl="http://localhost:7979/MuscleWS?wsdl" 
+					sourcedestdir="${basedir}/webservices/" 
+					keep="true" 
+					extension="false" 
+					verbose="true" 
+					xnocompile="true" 
+					package="compbio.ws.client.stub" 
+					quiet="false">
+		</wsimport>
+	</target>
+
+
+	<target name="build-client-jar" description="Pack WS client into a single jar THIS IS EXAMPLE ONLY!">
+		<echo>Jar file: wsclient</echo>
+		<delete file="${basedir}/resources/wsclient.jar">
+		</delete>
+		<jar jarfile="${basedir}/resources/wsclient.jar">
+			<fileset dir="${basedir}/WebContent/WEB-INF/classes/" includes="org/pimslims/ws/client/**/*.class" />
+			<fileset dir="${classes}" includes="org/pimslims/sec/*,org/pimslims/lab/Util.class" />
+			<zipfileset excludes="META-INF/*.SF" src="D:/workspace/current-pims-web/WebContent/WEB-INF/lib/webservices-rt.jar" />
+			<manifest>
+				<attribute name="Built-By" value="${user.name}" />
+				<attribute name="Main-Class" value="org.pimslims.ws.client.FileUploadClient" />
+				<attribute name="Class-Path" value="." />
+				<attribute name="Implementation-Title" value="PIMS File Upload Web Service Client" />
+				<attribute name="Implementation-Vendor" value="The PIMS team" />
+				<attribute name="Implementation-URL" value="http://www.pims-lims.org" />
+			</manifest>
+		</jar>
+	</target>
+
+
+	<target name="run-client-jar" description="THIS IS EXAMPLE ONLY">
+		<java jar="${basedir}/resources/wsclient.jar" fork="true" failonerror="true" maxmemory="256m">
+			<arg value="C:/Documents and Settings/pvt43/Desktop/Leeds Sequencing/Copy of Files to up load" />
+		</java>
+	</target>
+
+	<target name="run-client-class" description="THIS IS EXAMPLE ONLY">
+		<java classname="org.pimslims.ws.client.FileUploadClient" fork="true" failonerror="true" maxmemory="256m">
+			<classpath refid="project.classpath" />
+			<classpath refid="instrument.classpath" />
+		</java>
+	</target>
+-->
+</project>
+

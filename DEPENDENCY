@@ -1,0 +1,14 @@
+Compile time Dependencies of this project are: 
+
+compbio-annotations-1.0.jar
+compbio-util-1.4.jar
+
+source.jar (includes compbio-annotations and compbio-util) depends on
+ 
+Apache log 4j
+DRMAA library
+Servlet 2.5
+
+datamodel source depends on
+
+Apache log 4j

@@ -1,0 +1,4 @@
+This is a patched version of the biojava3-protein-disorder v3.0.4 build of JRonn.
+See these bugs: 
+http://issues.jalview.org/browse/JWS-27
+https://redmine.open-bio.org/issues/3362

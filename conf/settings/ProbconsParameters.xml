@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="US-ASCII" standalone="yes"?>
+<runnerConfig>
+ <runnerClassName>compbio.runner.probcons.Probcons</runnerClassName>
+    <!-- This is requires training -t, but training output probabil file instead of the alignment   
+    <options>
+        <name>Reestimate EP</name>
+        <description>Reestimate emission probabilities.</description>
+        <optionNames>-e</optionNames>
+        <furtherDetails>http://www.compbio.dundee.ac.uk/users/pvtroshin/ws/Index.html</furtherDetails>
+    </options>
+    -->
+    <options>
+        <name>Output aligned</name>
+        <description>Output sequences in alignment order rather than input order</description>
+        <optionNames>-a</optionNames>
+        <furtherDetails>prog_docs/probcons.pdf</furtherDetails>
+    </options>
+    <prmSeparator> </prmSeparator>
+	<!-- unsupported in practice 
+	<parameters>
+        <name>MATRIX</name>
+        <description>Protein weight matrix. Specifies the emission probabilities that are to be used for scoring alignments.</description>
+        <optionNames>-m</optionNames>
+        <furtherDetails>http://www.compbio.dundee.ac.uk/users/pvtroshin/ws/Index.html</furtherDetails>
+        <defaultValue>BLOSUM62</defaultValue>
+		<possibleValues>BLOSUM100</possibleValues>
+		<possibleValues>BLOSUM30</possibleValues>
+		<possibleValues>BLOSUM35</possibleValues>
+		<possibleValues>BLOSUM40</possibleValues>
+		<possibleValues>BLOSUM45</possibleValues>
+		<possibleValues>BLOSUM50</possibleValues>
+		<possibleValues>BLOSUM55</possibleValues>
+		<possibleValues>BLOSUM60</possibleValues>
+		<possibleValues>BLOSUM62</possibleValues>
+		<possibleValues>BLOSUM65</possibleValues>
+		<possibleValues>BLOSUM70</possibleValues>
+		<possibleValues>BLOSUM75</possibleValues>
+		<possibleValues>BLOSUM80</possibleValues>
+		<possibleValues>BLOSUM85</possibleValues>
+		<possibleValues>BLOSUM90</possibleValues>
+		<possibleValues>BLOSUMN</possibleValues>
+		<possibleValues>DAYHOFF</possibleValues>
+		<possibleValues>GONNET</possibleValues>
+		<possibleValues>IDENTITY</possibleValues>
+		<possibleValues>MATCH</possibleValues>
+		<possibleValues>NUC.4.2</possibleValues>
+		<possibleValues>NUC.4.4</possibleValues>
+		<possibleValues>PAM10</possibleValues>
+		<possibleValues>PAM100</possibleValues>
+		<possibleValues>PAM110</possibleValues>
+		<possibleValues>PAM120</possibleValues>
+		<possibleValues>PAM130</possibleValues>
+		<possibleValues>PAM140</possibleValues>
+		<possibleValues>PAM150</possibleValues>
+		<possibleValues>PAM160</possibleValues>
+		<possibleValues>PAM170</possibleValues>
+		<possibleValues>PAM180</possibleValues>
+		<possibleValues>PAM190</possibleValues>
+		<possibleValues>PAM20</possibleValues>
+		<possibleValues>PAM200</possibleValues>
+		<possibleValues>PAM210</possibleValues>
+		<possibleValues>PAM220</possibleValues>
+		<possibleValues>PAM230</possibleValues>
+		<possibleValues>PAM240</possibleValues>
+		<possibleValues>PAM250</possibleValues>
+		<possibleValues>PAM260</possibleValues>
+		<possibleValues>PAM270</possibleValues>
+		<possibleValues>PAM280</possibleValues>
+		<possibleValues>PAM290</possibleValues>
+		<possibleValues>PAM30</possibleValues>
+		<possibleValues>PAM300</possibleValues>
+		<possibleValues>PAM310</possibleValues>
+		<possibleValues>PAM320</possibleValues>
+		<possibleValues>PAM330</possibleValues>
+		<possibleValues>PAM340</possibleValues>
+		<possibleValues>PAM350</possibleValues>
+		<possibleValues>PAM360</possibleValues>
+		<possibleValues>PAM370</possibleValues>
+		<possibleValues>PAM380</possibleValues>
+		<possibleValues>PAM390</possibleValues>
+		<possibleValues>PAM40</possibleValues>
+		<possibleValues>PAM400</possibleValues>
+		<possibleValues>PAM410</possibleValues>
+		<possibleValues>PAM420</possibleValues>
+		<possibleValues>PAM430</possibleValues>
+		<possibleValues>PAM440</possibleValues>
+		<possibleValues>PAM450</possibleValues>
+		<possibleValues>PAM460</possibleValues>
+		<possibleValues>PAM470</possibleValues>
+		<possibleValues>PAM480</possibleValues>
+		<possibleValues>PAM490</possibleValues>
+		<possibleValues>PAM50</possibleValues>
+		<possibleValues>PAM500</possibleValues>
+		<possibleValues>PAM60</possibleValues>
+		<possibleValues>PAM70</possibleValues>
+		<possibleValues>PAM80</possibleValues>
+		<possibleValues>PAM90</possibleValues>
+	</parameters>
+	 -->
+    <parameters>
+        <name>Rounds of pre-training before aligning the sequences</name>
+        <description>This specifies the number of rounds of EM to be applied on the set of sequences being
+aligned. This option is used in case the default parameters are not appropriate for the
+particular sequences being aligned; in general, this option is not recommended as it may
+lead to unstable alignment parameters.</description>
+        <optionNames>-pre</optionNames>
+        <furtherDetails>prog_docs/probcons.pdf</furtherDetails>
+        <defaultValue>0</defaultValue>
+         <validValue>
+        	<type>Integer</type>
+            <min>0</min>
+            <max>20</max>
+        </validValue>
+    </parameters>
+    <parameters>
+        <name>Passes of iterative refinement</name>
+        <description>This specifies the number of iterations of iterative refinement to be performed. In each
+stage of iterative refinement, the set of sequences in the alignment is randomly
+partitioned into two groups. After projecting the alignments to these groups, the two
+groups are realigned, resulting in an alignment whose objective score is guaranteed to be
+at least that of the original alignment</description>
+        <optionNames>-ir</optionNames>
+        <furtherDetails>prog_docs/probcons.pdf</furtherDetails>
+         <defaultValue>100</defaultValue>
+         <validValue>
+        	<type>Integer</type>
+            <min>0</min>
+            <max>1000</max>
+        </validValue>
+    </parameters>
+    <parameters>
+        <name>Passes of consistency transformation</name>
+        <description>Each pass applies one round of the consistency transformation on the set of sequences.
+	The consistency transformation is described in detail in the mentioned papers. In each
+	round, the aligner computes the consistency transformation for each pair of sequences
+	using all other sequences. The aligner then updates the posterior probability matrices of
+	the pairwise alignments.</description>
+        <optionNames>-c</optionNames>
+        <furtherDetails>prog_docs/probcons.pdf</furtherDetails>
+        <defaultValue>2</defaultValue>
+         <validValue>
+        	<type>Integer</type>
+            <min>0</min>
+            <max>5</max>
+        </validValue>
+    </parameters>
+</runnerConfig>

@@ -1,0 +1,52 @@
+CLUSTAL format alignment by MAFFT FFT-NS-2 (v6.713b)
+
+
+Foobar          MTADGPRELLQLRAAVRHRPQDFVAWLMLADAELGMGDTTAGEMAVQRGLALHPGHPEAV
+Barbar          ------------------------------------------------------------
+Foofriend       MTADGPRELLQLRAAVRHRPQD-VAWLMLADAELGMGDTTAGEMAVQRGLALHPGHPEAV
+                                                                            
+
+Foobar          ARLGRVRWTQQRHAEAAVLLQQASDAAPEHPGIALWLGHALEDAGQAEAAAAAYTRAHQL
+Barbar          ----------------------ASDAAPEHPGIALWL-HALEDAGQAE-AAAAYTRAHQL
+Foofriend       ARLGRVRWTQQRHAEAAVLLQQASDAAPEHPGIALWLGHALED--------------HQL
+                                      *************** *****              ***
+
+Foobar          LPEEPYITAQLLNWRRRLCDWRALDVLSAQVRAAVAQGVGAVEPFAFLSEDASAAEQLAC
+Barbar          LPEEPYITAQLLN--------------------AVAQGVGAVEPFAFLSEDASAAE----
+Foofriend       LPEEPYITAQ-------------LDVLSAQVRAAVAQGVGAVEPFAFLSEDASAAEQLAC
+                **********                       ***********************    
+
+Foobar          ARTRAQAIAASVRPLAPTRVRSKGPLRVGFVSNGFGAHPTGLLTVALFEALQRRQPDLQM
+Barbar          ----------SVRPLAPTRVRSKGPLRVGFVSNGFGAHPTGLLTVALFEALQRRQPDLQM
+Foofriend       ARTRAQAIAASVRPLAPTRVRSKGPLRVGFVSNGFGAHPTGLLTVALFEALQRRQPDLQM
+                          **************************************************
+
+Foobar          HLFATSGDDGSTLRTRLAQASTLHDVTALGHLATAKHIRHHGIDLLFDLRGWGGGGRPEV
+Barbar          HLFATSGDDGSTLRTRLAQASTLHDVTALGHLATAKHIRHHGIDLLFDLRGWGGGGRPEV
+Foofriend       HLFATSGDDGSTLRTRLAQASTLHDVTALGHLATAKHIRHHGIDLLFDLRGWGGGGRPEV
+                ************************************************************
+
+Foobar          FALRPAPVQVNWLAYPGTSGAPWMDYVLGDAFALPPALEPFYSEHVLRLQGAFQPSDTSR
+Barbar          FALRPAPVQVNWLAYPGTSGAPWMDYVLGDAFALPPALEPFYSEHVLRLQGAFQPSDTSR
+Foofriend       FALRPAPVQVNWLAYPGTSGAPWMDYVLGDAFALPPALEPFYSEHVLRLQGAFQPSDTSR
+                ************************************************************
+
+Foobar          VVAEPPSRTQCGLPEQGVVLCCFNNSYKLNPQSMARMLAVLREVPDSVLWLLSGPGEADA
+Barbar          VVAEPPSRTQCGLPEQGVVLCCFNNSYKLNPQSMARMLAVLREVPDSVLWLLSGPGEADA
+Foofriend       VVAEPPSRTQCGLPEQGVVLCCFNNSYKLNPQSMARMLAVLREVPDSVLWLLSGPGEADA
+                ************************************************************
+
+Foobar          RLRAFAHAQGVDAQRLVFMPKLPHPQYLARYRHADLFLDTHPYNAHTTASDALWTGCPVL
+Barbar          RLRAFAHAQGVDAQRLVFMPKLPHPQYLARYRHADLFLDTHPYNAHTTASDALWTGCPVL
+Foofriend       RLRAFAHAQGVDAQRLVFMPKLPHPQYLARYRHADLFLDTHPYNAHTTASDALWTGCPVL
+                ************************************************************
+
+Foobar          TTPGETFAARVAGSLNHHLGLDEMNVADDAAFVAKA------------------------
+Barbar          TTPGETFAARVAGSLNHHLGLDEMNVADDAAFVAKAVALASDPAALTALHARVDVLRRES
+Foofriend       TTPGETFAARVAGSLNHHLGLDEMNVADDAAFVAKAVALASDPAALTALHARVDVLRRES
+                ************************************                        
+
+Foobar          ----------------------------
+Barbar          GVFEMDGFADDFGALLQALARRHGWLGI
+Foofriend       ---------------------------I
+                                            

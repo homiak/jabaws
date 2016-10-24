@@ -1,0 +1,389 @@
+
+#banner { background-color:white; }
+
+#mainpagefeatures {
+   margin: 0 2em 0 2em;
+}
+
+#wrapper #mainpagefeatures table, #wrapper #mainpagefeatures th, #wrapper #mainpagefeatures td, #wrapper #mainpagefeatures tr{
+  border:none;
+  border-collapse:collapse;
+  background-color: #fff; 
+  padding-bottom:2em;
+}
+
+#jabaws_on_cloud img {
+   border:1px solid #6994AF; 
+   clear:both;
+   margin: 2em 0;
+}
+
+#wrapper #choicematrix table, #wrapper #choicematrix th, #wrapper #choicematrix td, #wrapper #choicematrix tr{
+  border:1px solid grey;
+  background-color: #fff; 
+  padding:1em;
+}
+
+#wrapper #choicematrix th {
+  background-image:url(images/brickhead2.jpg); 
+  background-repeat:repeat-x;
+}
+
+.brick {
+padding-bottom:1em;
+    border: 2px solid #999;
+    -webkit-border-radius:20px;
+    -moz-border-radius:20px;
+	border-radius: 20px;
+    background-image:url(images/brickhead2_line.jpg);
+    background-repeat:repeat-x;
+}
+.brick_header {
+    display:block;
+	background:none;
+}
+
+.brick_header h2 {
+    font-weight: bold;
+	border:none;
+	background:none;
+	margin: 0.7em 0 0 0.5em;
+}
+
+.brick_content {
+  position:relative;
+  padding: 2em 1.5em 0em 1.5em;
+}
+
+
+/*
+td.vm {
+background-image:url(images/N_cell.jpg);
+background-repeat:repeat-x;
+}
+td.button a {
+display:block;
+background:#069;
+border:1px outset #069;
+text-decoration:none;
+font-weight:bold;
+line-height:1.5em;
+padding:0 .5em;
+color:#fff;
+}
+
+td.button a:hover {
+background:#09c;
+border-color:09c;
+}
+*/
+ /*
+#container .round {
+    display:block;
+    margin-right:10px;
+    background:#fff;
+    border: 1px solid #ccc;
+    -webkit-border-radius:20px;
+    -moz-border-radius:20px;
+	border-radius: 20px;
+    background-image:url(images/N_cell.jpg);
+    background-repeat:repeat-x;
+}
+ 
+
+#container .example5 div a {
+    padding:3px 20px;
+    border: 1px solid #ccc;
+    -webkit-border-radius:20px;
+    -moz-border-radius:15px;
+}
+ 
+#container .example5 div a:hover {
+    background:#5d9ddd;
+    border:1px solid #2a7ecd;
+    color:#fff;
+}
+*/
+/*
+
+  -webkit-border-radius:20px;
+    -moz-border-radius:15px;
+	
+See index.html banner commented out code for an example of use 
+.uniicon { overflow: hidden; display:inline; padding:0; margin:0; float:right; position:relative; top:1em; } 
+.uniicon a img {border:none;} 
+*/
+#panel { 
+	width:161px; 
+	background:url("images/panel_bg_long.png") repeat-y ; 
+	float:left;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	padding-top:1em;
+ }
+
+#content { 
+      margin-left:170px; 
+      border-bottom:solid 1px #6994af; 
+	  margin-right:0.9em;
+}
+
+#page { 
+  margin: 0;
+  background-color:#fff;
+}
+
+#copyright { text-align:right; 
+			 color:#999999; 
+			 font-family:Verdana, Arial, Helvetica, sans-serif;
+			 font-size:smaller;
+			 line-height:1em;
+			 padding:0.3em 0.9em 1em 0;
+ }
+
+#wrapper { 
+    background:url("images/panel_bg_long.png") repeat-y left top; 
+    margin:0; 
+    padding:0; 
+}
+
+ul {
+	list-style-type: circle;
+}
+
+#panel a:link, #panel a:visited {
+	    text-decoration: none;
+		display:block;
+		line-height: 1em;
+		padding:10px;
+		color:#000000; 
+	 }
+	 
+#panel a:hover {
+	    background-color: transparent;
+	    text-decoration: underline;
+	}
+
+#panel a.selected {
+ text-decoration:underline; 
+ font-weight:bolder;
+}
+
+
+#panel #submenu a {
+margin-left: 1.5em;
+margin-left: 20px;
+padding: 5px; 
+}
+
+strong {
+	font-weight:bold;
+	color:#003366;
+}
+
+pre {
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+p { 
+	line-height: 1.4em;
+}
+ 
+.i { 
+font-style:italic;
+}
+
+
+.hightlight { 
+font-style:italic;
+font-family:"Courier New", Courier, monospace;
+}
+
+
+/*
+.about {
+border-left: solid 4px #006633;
+border-left-style:ridged;
+padding-left: 1em;
+}*/
+
+
+.code { 
+	color:black;
+	background-color:#F5F5F5;
+	font-family:"Courier New",Courier,monospace;
+	font-style:normal;
+	margin:1em 0;
+	padding: 0.5em;
+	border: 1px dashed black;
+	display:block;
+}
+
+.box { 
+	color:black;
+	background-color:#F5F5F5;
+	font-family:Arial, Helvetica, sans-serif;
+	font-style:normal;
+	margin:1em 0;
+	padding: 0.5em;
+	border: 1px solid black;
+	display:block;
+}
+
+.u { text-decoration: underline; }
+
+.headeru { 
+		text-shadow:0 1px 3px black;
+		border-bottom: 1px solid white;
+} 
+
+#banner h1 { 
+	font-family:Helvetica, Arial, sans-serif;
+	white-space:nowrap;
+    color: white;
+	font-weight:bold;
+	text-shadow:0 1px 3px #100F0E;
+    font-size: 27px;
+}
+
+h3 {border-bottom: 1px solid grey; margin-top: 2em; }
+
+#headtitle { margin:0; padding-top:1em; text-align:center; color:#003b62; font-weight:600;} 
+
+h2 {margin:1.8em 0 0 0; color:#003b62; font-weight:600;}
+
+/* Table styles */
+
+#wrapper table {
+	border-collapse: collapse; 
+	border: 1px solid #666;
+	margin: 20px 0 20px 0;
+	width: 100%;
+}
+#wrapper th, #wrapper td {
+	margin: 2px 4px 2px 4px;
+	padding: 0 5px;
+	text-align: left;
+	vertical-align: top;
+	border: 1px solid #666;
+}
+
+#wrapper table caption {
+	font: 1.5em Georgia, "Times New Roman", Times, serif; 
+	padding: 1em;
+	background-color: #9c9;
+}
+
+
+#wrapper tr {
+	 background-color: #eee; 
+}
+
+#wrapper tr:nth-child(odd) {
+	 background-color: #ccc; 
+}
+
+span.directory {
+background: transparent url(images/dir.gif) no-repeat scroll left center;
+color:#666666;
+font-family:"Courier New",Courier,monospace;
+font-style:normal;
+padding:0 0 0 15px;
+}
+
+.attention { 
+color:#993333;
+}
+
+/* open/closed box related styles */
+
+.source { 
+	border:1px solid #858789;
+	display:block;
+	margin:26px 0;
+	overflow:visible;
+}
+
+/* OPEN state styles */
+.source .body {
+	background:#F5F5F5 none repeat scroll right 0;
+	color:#434546;
+	padding:7px 15px;
+/*	white-space:pre-wrap; */
+	white-space:normal;
+/*	word-wrap:break-word; # this prop does not exits*/
+}
+
+.source .header {
+	background:#E9EAEC url(images/minus.png) no-repeat scroll 98% center;
+	color:#3B3D3F;
+	cursor:pointer;
+	font-weight:bold;
+	height:30px;
+	line-height:30px;
+	padding:0 15px 0 15px;
+}
+
+/* CLOSED state styles */
+.source .body.collapsed {
+	display:none;
+}
+
+.source .header.collapsed  {
+	background:#E9EAEC url(images/plus.png) no-repeat scroll 98% center;
+	padding:0 15px 0 15px;
+}
+
+.body .code { 
+	margin:0;
+	padding:0;
+	border:0;
+	font-family:"Courier New",Courier,monospace;
+	font-style:normal;
+}
+
+body {
+	font-family:Arial, Helvetica, sans-serif;
+	/*	color: #494949; */
+    font: 12px/170% Verdana;
+	background-image:url(images/matrix_bg6.jpg);
+	background-repeat:repeat;
+/*	background-color: #EAEAEA; */
+	line-height: 2em;
+	min-width: 760px;
+	max-width: 1100px;
+	margin:0 auto;
+}
+
+
+#banner table {
+	border-collapse: collapse; 
+	border: none;
+	padding:0;
+	margin:0;
+	line-height:0.5em;
+	color:white;
+	text-align:center;
+	vertical-align:middle;
+	width: 100%;
+}
+
+
+#banner td.bg  {
+	border-collapse: collapse; 
+	background-image:url("images/banner_bg.gif");
+	background-repeat: repeat-x; 
+	background-color:transparent;
+	background-position:inherit;
+}
+
+img.logo  {
+/*	border-top:1px solid #003b62; 
+	border-left:1px solid #003b62; 
+	border-right:none; 
+	border-bottom: none; */
+	border:none;
+	margin:0; 
+	padding:0; 
+	display:inline
+	float:left;
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="compbio.runner.disorder.IUPredTester" failures="0" tests="8" time="13.105" errors="0">
+  <properties/>
+  <testcase name="testConfigurationLoading" time="0.034" classname="compbio.runner.disorder.IUPredTester"/>
+  <testcase name="testPersistance" time="0.357" classname="compbio.runner.disorder.IUPredTester"/>
+  <testcase name="testReadResults" time="0.064" classname="compbio.runner.disorder.IUPredTester"/>
+  <testcase name="testRunLocally" time="0.23" classname="compbio.runner.disorder.IUPredTester"/>
+  <testcase name="testRunLocallyWithParams" time="0.065" classname="compbio.runner.disorder.IUPredTester"/>
+  <testcase name="testRunOnCluster" time="5.834" classname="compbio.runner.disorder.IUPredTester"/>
+  <testcase name="testRunOnClusterAsync" time="6.027" classname="compbio.runner.disorder.IUPredTester"/>
+  <testcase name="testSetParameter" time="0.0" classname="compbio.runner.disorder.IUPredTester"/>
+</testsuite>

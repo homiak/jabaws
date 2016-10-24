@@ -1,0 +1,2550 @@
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="Generator" content="Microsoft Word 12 (filtered)">
+<title>MUSCLE User Guide</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"MS Mincho";
+	panose-1:2 2 6 9 4 2 5 8 3 4;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"Arial Black";
+	panose-1:2 11 10 4 2 1 2 2 2 4;}
+@font-face
+	{font-family:"\@MS Mincho";
+	panose-1:2 2 6 9 4 2 5 8 3 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";}
+h1
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-indent:0in;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:"Arial","sans-serif";}
+h2
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-indent:0in;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Arial","sans-serif";
+	font-weight:normal;}
+h3
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-indent:0in;
+	page-break-after:avoid;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:10.0pt;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";}
+p.MsoToc3, li.MsoToc3, div.MsoToc3
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:20.0pt;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";}
+p.MsoDate, li.MsoDate, div.MsoDate
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;}
+p.EquationNumber, li.EquationNumber, div.EquationNumber
+	{mso-style-name:EquationNumber;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	text-align:right;
+	text-indent:-.25in;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";}
+p.Code, li.Code, div.Code
+	{mso-style-name:Code;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.25in;
+	margin-bottom:.0001pt;
+	font-size:9.0pt;
+	font-family:"Courier New";}
+ /* Page Definitions */
+ @page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang="EN-US" link="blue" vlink="purple">
+
+<div class="WordSection1">
+
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal"><span style="font-size:24.0pt;font-family:&quot;Arial Black&quot;,&quot;sans-serif&quot;">MUSCLE
+User Guide</span></p>
+
+<p class="MsoNormal" style="text-align:right" align="right"><u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u></p>
+
+<p class="MsoNormal" style="text-align:right" align="right"><b><span style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</span></b></p>
+
+<p class="MsoNormal"><span style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</span></p>
+
+<p class="MsoNormal"><span style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</span></p>
+
+<p class="MsoNormal"><span style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</span></p>
+
+<p class="MsoNormal"><span style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</span></p>
+
+<p class="MsoNormal"><span style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</span></p>
+
+<p class="MsoNormal"><span style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">Multiple
+sequence comparison by log-expectation</span></p>
+
+<p class="MsoNormal"><span style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">by Robert C.
+Edgar</span></p>
+
+<p class="MsoNormal"><span style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</span></p>
+
+<p class="MsoNormal"><span style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">Version 3.8</span></p>
+
+<p class="MsoNormal"><span style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">May 2010</span></p>
+
+<p class="MsoNormal"><span style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</span></p>
+
+<p class="MsoNormal"><span style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</span></p>
+
+<p class="MsoNormal"><span style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;"><a href="http://www.drive5.com/muscle">http://www.drive5.com/muscle</a></span></p>
+
+<p class="MsoNormal"><span style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</span></p>
+
+<p class="MsoNormal"><span style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;"><a href="mailto:robert@drive5.com">robert@drive5.com</a></span></p>
+
+<p class="MsoNormal"><span style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</span></p>
+
+<p class="MsoNormal"><span style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</span></p>
+
+<p class="MsoNormal"><i><span style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">Citation:</span></i></p>
+
+<p class="MsoNormal"><span style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</span></p>
+
+<p class="MsoNormal"><span style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;"><a href="http://nar.oupjournals.org/cgi/content/full/32/5/1792?ijkey=48Nmt1tta0fMg&amp;keytype=ref">Edgar,
+Robert C. (2004), MUSCLE: multiple sequence alignment with high accuracy and
+high throughput, <i>Nucleic Acids Research</i> <b>32</b>(5), 1792-97</a>.</span></p>
+
+<p class="MsoNormal"><span style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</span></p>
+
+<p class="MsoNormal"><i><span style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">For a
+complete description of the algorithm, see also:</span></i></p>
+
+<p class="MsoNormal"><span style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</span></p>
+
+<p class="MsoNormal"><span style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;"><a href="http://www.biomedcentral.com/1471-2105/5/113">Edgar, Robert C (2004), MUSCLE:
+a multiple sequence alignment method with reduced time and space complexity. <i>BMC
+Bioinformatics</i>, <b>5</b>(1):113</a>.<br style="page-break-before:
+always" clear="all">
+</span><b><span style="font-size:16.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">Table
+of Contents</span></b></p>
+
+<p class="MsoToc1"><span class="MsoHyperlink"><a href="#_Toc260497010">1 Introduction<span style="color:windowtext;display:none;text-decoration:none">. </span><span style="color:windowtext;display:none;text-decoration:none">3</span></a></span></p>
+
+<p class="MsoToc1"><span class="MsoHyperlink"><a href="#_Toc260497011">2 Quick
+Start<span style="color:windowtext;display:none;text-decoration:none"> </span><span style="color:windowtext;display:none;text-decoration:none">3</span></a></span></p>
+
+<p class="MsoToc2"><span class="MsoHyperlink"><a href="#_Toc260497012">2.1
+Installation<span style="color:windowtext;display:none;text-decoration:none">. </span><span style="color:windowtext;display:none;text-decoration:none">3</span></a></span></p>
+
+<p class="MsoToc2"><span class="MsoHyperlink"><a href="#_Toc260497013">2.2 Making
+an alignment<span style="color:windowtext;display:none;text-decoration:none"> </span><span style="color:windowtext;display:none;text-decoration:none">3</span></a></span></p>
+
+<p class="MsoToc2"><span class="MsoHyperlink"><a href="#_Toc260497014">2.3 Large
+alignments<span style="color:windowtext;display:none;text-decoration:none">. </span><span style="color:windowtext;display:none;text-decoration:none">3</span></a></span></p>
+
+<p class="MsoToc2"><span class="MsoHyperlink"><a href="#_Toc260497015">2.4 Faster
+speed<span style="color:windowtext;display:none;text-decoration:none">. </span><span style="color:windowtext;display:none;text-decoration:none">4</span></a></span></p>
+
+<p class="MsoToc2"><span class="MsoHyperlink"><a href="#_Toc260497016">2.5 Huge
+alignments<span style="color:windowtext;display:none;text-decoration:none">. </span><span style="color:windowtext;display:none;text-decoration:none">4</span></a></span></p>
+
+<p class="MsoToc2"><span class="MsoHyperlink"><a href="#_Toc260497017">2.6
+Pipelining<span style="color:windowtext;display:none;text-decoration:none">. </span><span style="color:windowtext;display:none;text-decoration:none">4</span></a></span></p>
+
+<p class="MsoToc2"><span class="MsoHyperlink"><a href="#_Toc260497018">2.7 Refining
+an existing alignment<span style="color:windowtext;display:none;text-decoration:
+none"> </span><span style="color:windowtext;display:none;text-decoration:none">4</span></a></span></p>
+
+<p class="MsoToc2"><span class="MsoHyperlink"><a href="#_Toc260497019">2.8 Using a
+pre-computed guide tree<span style="color:windowtext;display:none;text-decoration:
+none">. </span><span style="color:windowtext;display:none;text-decoration:none">4</span></a></span></p>
+
+<p class="MsoToc2"><span class="MsoHyperlink"><a href="#_Toc260497020">2.9
+Profile-profile alignment<span style="color:windowtext;display:none;text-decoration:
+none"> </span><span style="color:windowtext;display:none;text-decoration:none">5</span></a></span></p>
+
+<p class="MsoToc2"><span class="MsoHyperlink"><a href="#_Toc260497021">2.10 Adding
+sequences to an existing alignment<span style="color:windowtext;display:none;
+text-decoration:none"> </span><span style="color:windowtext;display:none;text-decoration:none">5</span></a></span></p>
+
+<p class="MsoToc2"><span class="MsoHyperlink"><a href="#_Toc260497022">2.11
+Specifying a protein substitution matrix<span style="color:windowtext;
+display:none;text-decoration:none">. </span><span style="color:windowtext;display:none;text-decoration:none">5</span></a></span></p>
+
+<p class="MsoToc2"><span class="MsoHyperlink"><a href="#_Toc260497023">2.12
+Specifying a nucleotide substitution matrix<span style="color:windowtext;
+display:none;text-decoration:none">. </span><span style="color:windowtext;display:none;text-decoration:none">5</span></a></span></p>
+
+<p class="MsoToc2"><span class="MsoHyperlink"><a href="#_Toc260497024">2.13
+Refining a long alignment<span style="color:windowtext;display:none;text-decoration:
+none"> </span><span style="color:windowtext;display:none;text-decoration:none">6</span></a></span></p>
+
+<p class="MsoToc1"><span class="MsoHyperlink"><a href="#_Toc260497025">3 File
+Formats<span style="color:windowtext;display:none;text-decoration:none">. </span><span style="color:windowtext;display:none;text-decoration:none">6</span></a></span></p>
+
+<p class="MsoToc2"><span class="MsoHyperlink"><a href="#_Toc260497026">3.1 Input
+files<span style="color:windowtext;display:none;text-decoration:none">. </span><span style="color:windowtext;display:none;text-decoration:none">6</span></a></span></p>
+
+<p class="MsoToc3"><span class="MsoHyperlink"><a href="#_Toc260497027">3.1.1 Amino
+acid sequences<span style="color:windowtext;display:none;text-decoration:none">. </span><span style="color:windowtext;display:none;text-decoration:none">6</span></a></span></p>
+
+<p class="MsoToc3"><span class="MsoHyperlink"><a href="#_Toc260497028">3.1.2
+Nucleotide sequences<span style="color:windowtext;display:none;text-decoration:
+none">. </span><span style="color:windowtext;display:none;text-decoration:none">6</span></a></span></p>
+
+<p class="MsoToc3"><span class="MsoHyperlink"><a href="#_Toc260497029">3.1.3
+Determining sequence type<span style="color:windowtext;display:none;text-decoration:
+none">. </span><span style="color:windowtext;display:none;text-decoration:none">6</span></a></span></p>
+
+<p class="MsoToc2"><span class="MsoHyperlink"><a href="#_Toc260497030">3.2 Output
+files<span style="color:windowtext;display:none;text-decoration:none">. </span><span style="color:windowtext;display:none;text-decoration:none">7</span></a></span></p>
+
+<p class="MsoToc3"><span class="MsoHyperlink"><a href="#_Toc260497031">3.2.1
+Sequence grouping<span style="color:windowtext;display:none;text-decoration:
+none">. </span><span style="color:windowtext;display:none;text-decoration:none">7</span></a></span></p>
+
+<p class="MsoToc3"><span class="MsoHyperlink"><a href="#_Toc260497032">3.2.2 Output
+to multiple file formats<span style="color:windowtext;display:none;text-decoration:
+none">. </span><span style="color:windowtext;display:none;text-decoration:none">7</span></a></span></p>
+
+<p class="MsoToc2"><span class="MsoHyperlink"><a href="#_Toc260497033">3.3 CLUSTALW
+format<span style="color:windowtext;display:none;text-decoration:none"> </span><span style="color:windowtext;display:none;text-decoration:none">7</span></a></span></p>
+
+<p class="MsoToc2"><span class="MsoHyperlink"><a href="#_Toc260497034">3.4 MSF
+format<span style="color:windowtext;display:none;text-decoration:none"> </span><span style="color:windowtext;display:none;text-decoration:none">7</span></a></span></p>
+
+<p class="MsoToc2"><span class="MsoHyperlink"><a href="#_Toc260497035">3.5 HTML
+format<span style="color:windowtext;display:none;text-decoration:none"> </span><span style="color:windowtext;display:none;text-decoration:none">8</span></a></span></p>
+
+<p class="MsoToc2"><span class="MsoHyperlink"><a href="#_Toc260497036">3.6 Phylip
+format<span style="color:windowtext;display:none;text-decoration:none"> </span><span style="color:windowtext;display:none;text-decoration:none">8</span></a></span></p>
+
+<p class="MsoToc1"><span class="MsoHyperlink"><a href="#_Toc260497037">4 Using
+MUSCLE<span style="color:windowtext;display:none;text-decoration:none">.. </span><span style="color:windowtext;display:none;text-decoration:none">8</span></a></span></p>
+
+<p class="MsoToc2"><span class="MsoHyperlink"><a href="#_Toc260497038">4.1 How the
+algorithm works<span style="color:windowtext;display:none;text-decoration:none">. </span><span style="color:windowtext;display:none;text-decoration:none">8</span></a></span></p>
+
+<p class="MsoToc2"><span class="MsoHyperlink"><a href="#_Toc260497039">4.2
+Command-line options<span style="color:windowtext;display:none;text-decoration:
+none">. </span><span style="color:windowtext;display:none;text-decoration:none">9</span></a></span></p>
+
+<p class="MsoToc2"><span class="MsoHyperlink"><a href="#_Toc260497040">4.3 The
+maxiters option<span style="color:windowtext;display:none;text-decoration:none">. </span><span style="color:windowtext;display:none;text-decoration:none">9</span></a></span></p>
+
+<p class="MsoToc2"><span class="MsoHyperlink"><a href="#_Toc260497041">4.4 The
+maxtrees option<span style="color:windowtext;display:none;text-decoration:none">. </span><span style="color:windowtext;display:none;text-decoration:none">10</span></a></span></p>
+
+<p class="MsoToc2"><span class="MsoHyperlink"><a href="#_Toc260497042">4.5 The
+maxhours option<span style="color:windowtext;display:none;text-decoration:none">. </span><span style="color:windowtext;display:none;text-decoration:none">10</span></a></span></p>
+
+<p class="MsoToc2"><span class="MsoHyperlink"><a href="#_Toc260497043">4.6 The
+profile scoring function<span style="color:windowtext;display:none;text-decoration:
+none">. </span><span style="color:windowtext;display:none;text-decoration:none">10</span></a></span></p>
+
+<p class="MsoToc2"><span class="MsoHyperlink"><a href="#_Toc260497044">4.7 Diagonal
+optimization<span style="color:windowtext;display:none;text-decoration:none">. </span><span style="color:windowtext;display:none;text-decoration:none">10</span></a></span></p>
+
+<p class="MsoToc2"><span class="MsoHyperlink"><a href="#_Toc260497045">4.8 Anchor
+optimization<span style="color:windowtext;display:none;text-decoration:none">. </span><span style="color:windowtext;display:none;text-decoration:none">10</span></a></span></p>
+
+<p class="MsoToc2"><span class="MsoHyperlink"><a href="#_Toc260497046">4.9 Log file<span style="color:windowtext;display:none;text-decoration:none">. </span><span style="color:windowtext;display:none;text-decoration:none">11</span></a></span></p>
+
+<p class="MsoToc2"><span class="MsoHyperlink"><a href="#_Toc260497047">4.10
+Progress messages<span style="color:windowtext;display:none;text-decoration:
+none">. </span><span style="color:windowtext;display:none;text-decoration:none">11</span></a></span></p>
+
+<p class="MsoToc2"><span class="MsoHyperlink"><a href="#_Toc260497048">4.11 Running
+out of memory<span style="color:windowtext;display:none;text-decoration:none">. </span><span style="color:windowtext;display:none;text-decoration:none">11</span></a></span></p>
+
+<p class="MsoToc2"><span class="MsoHyperlink"><a href="#_Toc260497049">4.12
+Troubleshooting<span style="color:windowtext;display:none;text-decoration:none">. </span><span style="color:windowtext;display:none;text-decoration:none">12</span></a></span></p>
+
+<p class="MsoToc2"><span class="MsoHyperlink"><a href="#_Toc260497050">4.13
+Technical support<span style="color:windowtext;display:none;text-decoration:
+none"> </span><span style="color:windowtext;display:none;text-decoration:none">12</span></a></span></p>
+
+<p class="MsoToc1"><span class="MsoHyperlink"><a href="#_Toc260497051">5 Command
+Line Reference<span style="color:windowtext;display:none;text-decoration:none">. </span><span style="color:windowtext;display:none;text-decoration:none">12</span></a></span></p>
+
+<p class="MsoNormal"><span style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</span></p>
+
+<b><span style="font-size:16.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;"><br style="page-break-before:always" clear="all">
+</span></b>
+
+<h1 style="margin-left:0in;text-indent:0in"><a name="_Toc260497010">1 Introduction</a></h1>
+
+<p class="MsoNormal">MUSCLE is a program for creating multiple alignments of
+amino acid or nucleotide sequences. A range of options is provided that give
+you the choice of optimizing accuracy, speed, or some compromise between the
+two. Default parameters are those that gave the best average benchmark accuracy
+in my tests. However, benchmark accuracy is a rather dubious measure; see:</p>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal"><a href="http://nar.oxfordjournals.org/cgi/content/short/gkp1196v1?rss=1">Edgar,
+R.C. (2010) Quality measures for protein alignment benchmarks, <i>Nucleic Acids
+Res.</i>, 2010, 1–9.</a></p>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal"><b><span style="color:white;background:red">WARNING</span></b></p>
+
+<p class="MsoNormal"><b><span style="background:yellow">THE <i>-stable</i> OPTION
+HAD A SERIOUS BUG IN VERSIONS OF MUSCLE PRIOR TO v3.8 AND IS CURRENTLY NOT
+SUPPORTED.</span> Go to this link for latest news and work-arounds:</b></p>
+
+<p class="MsoNormal"><b>&nbsp;</b></p>
+
+<p class="MsoNormal"><b><a href="http://drive5.com/muscle/stable.html">http://drive5.com/muscle/stable.html</a></b></p>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<h1 style="margin-left:0in;text-indent:0in"><a name="_Toc260497011">2 Quick Start</a></h1>
+
+<p class="MsoNormal">The MUSCLE algorithm is delivered as a command-line program
+called <i>muscle</i>. If you are running under Linux or Unix you will be
+working at a shell prompt. If you are running under Windows, you should be in a
+command window (nostalgically known to us older people as a DOS prompt). If you
+don't know how to use command-line programs, you should get help from a local
+guru.</p>
+
+<h2 style="margin-left:0in;text-indent:0in"><a name="_Toc260497012">2.1 Installation</a></h2>
+
+<p class="MsoNormal">Copy the <i>muscle</i> binary file to a directory that is
+accessible from your computer. That's it—there are no configuration files,
+libraries, environment variables or other settings to worry about. If you are
+using Windows, then the binary file is named something like <i>muscle3.8.31_i86win32.exe</i>.
+From now on <i>muscle</i> should be understood to mean "the file or path
+name of your executable file".</p>
+
+<h2 style="margin-left:0in;text-indent:0in"><a name="_Toc260497013">2.2 Making
+an alignment</a></h2>
+
+<p class="MsoNormal">Make a FASTA file containing some sequences. (If you are not
+familiar with FASTA format, it is described in detail later in this Guide.) For
+now, just to make things fast, limit the number of sequence in the file to no
+more than 50 and the sequence length to be no more than 500. Call the input
+file <i>seqs.fa</i>. Make sure the directory containing the <i>muscle</i>
+binary is in your path. (If it isn't, you can run it by typing the full path
+name, and the following example command lines must be changed accordingly). Now
+type:</p>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="Code">muscle -in seqs.fa -out seqs.afa</p>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal">You should see some progress messages. If <i>muscle</i>
+completes successfully, it will create a file <i>seqs.afa</i> containing the
+alignment. By default, output is created in "aligned FASTA" format (hence
+the <i>.afa</i> extension). This is just like regular FASTA except that gaps
+are added in order to align the sequences. This is a nice format for computers
+but not very readable for people, so to look at the alignment you will want an
+alignment viewer such as Belvu, or a script that converts FASTA to a more readable
+format. You can also use the –<i>clw</i> command-line option to request output
+in CLUSTALW format, which is easier to understand for people. If <i>muscle</i>
+gives an error message and you don't know how to fix it, please read the
+Troubleshooting section.</p>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal">The default settings are designed to give the best accuracy,
+so this may be all you need to know.</p>
+
+<h2 style="margin-left:0in;text-indent:0in"><a name="_Toc260497014">2.3 Large
+alignments</a></h2>
+
+<p class="MsoNormal">If you have a large number of sequences (a few thousand), or
+they are very long, then the default settings of may be too slow for practical
+use. A good compromise between speed and accuracy is to run just the first two
+iterations of the algorithm. This is done by the option <i>–maxiters 2</i>, as
+in the following example.</p>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="Code">muscle -in seqs.fa -out seqs.afa -maxiters 2</p>
+
+<h2 style="margin-left:0in;text-indent:0in"><a name="_Toc260497015">2.4 Faster speed</a></h2>
+
+<p class="MsoNormal">The <i>–diags</i> option enables an optimization for speed
+by finding common words (6-mers in a compressed amino acid alphabet) between
+the two sequences as seeds for diagonals. This is related to optimizations in
+programs such as BLAST and FASTA: you get faster speed, but sometimes lower
+average accuracy. For large numbers of closely related sequences, this option
+works very well.</p>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal">If you want the fastest possible speed, then the following
+example shows the applicable options for proteins.</p>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="Code">muscle -in seqs.fa -out seqs.afa -maxiters 1 -diags -sv
+-distance1 kbit20_3</p>
+
+<p class="Code">&nbsp;</p>
+
+<p class="MsoNormal">For nucleotides, use:</p>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="Code">muscle -in seqs.fa -out seqs.afa -maxiters 1 -diags</p>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal">The alignments are not bad, especially when the sequences
+are closely related. However, as you might expect, this blazing speed comes at
+the cost of the lowest average accuracy of the options that <i>muscle</i>
+provides.</p>
+
+<h2 style="margin-left:0in;text-indent:0in"><a name="_Toc260497016">2.5 Huge
+alignments</a></h2>
+
+<p class="MsoNormal">If you have thousands of sequences, then attempting to
+create a multiple alignment is dubious for many technical reasons. It may be
+better to cluster first, then align the reduced set of sequences. Clustering
+can be done using UCLUST, which is an algorithm implemented in the USEARCH
+program:</p>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://www.drive5.com/usearch">http://www.drive5.com/usearch</a></p>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal">At the time of writing (May 2010), I'm working on methods
+for leveraging a combination of UCLUST and MUSCLE to create very large but
+still reasonably accurate alignments. If you're interested, <a href="mailto:robert@drive5.com">email me</a> and let's discuss.</p>
+
+<h2 style="margin-left:0in;text-indent:0in"><a name="_Toc260497017">2.6 Pipelining</a></h2>
+
+<p class="MsoNormal">Input can be taken from standard input, and output can be
+written to standard output. This is the default, so our first example would
+also work like this:</p>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="Code">muscle &lt; seqs.fa &gt; seqs.afa</p>
+
+<h2 style="margin-left:0in;text-indent:0in"><a name="_Toc260497018">2.7 Refining
+an existing alignment</a></h2>
+
+<p class="MsoNormal">You can ask <i>muscle</i> to try to improve an existing
+alignment by using the –<i>refine</i> option. The input file must then be a
+FASTA file containing an alignment. All sequences must be of equal length, gaps
+can be specified using dots "." or dashes "–". For example:</p>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="Code">muscle -in seqs.afa -out refined.afa -refine</p>
+
+<h2 style="margin-left:0in;text-indent:0in"><a name="_Toc260497019">2.8 Using a
+pre-computed guide tree</a></h2>
+
+<p class="MsoNormal">The –<i>usetree</i> option allows you to provide your own
+guide tree. For example,</p>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="Code">muscle -in seqs.fa -out seqs.afa -usetree mytree.phy</p>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal">The tree must by in Newick format, as used by the Phylip
+package (hence the <i>.phy</i> extension). The Newick format is described here:</p>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://evolution.genetics.washington.edu/phylip/newicktree.html">http://evolution.genetics.washington.edu/phylip/newicktree.html</a></p>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal"><b>WARNING</b>. Do not use this option just because you
+believe that you have an accurate evolutionary tree for your sequences. The
+best guide tree for multiple alignment is <i>not</i> in general the correct
+evolutionary tree. This can be understood by the following argument. Alignment
+accuracy decreases with lower sequence identity. It follows that given a set of
+profiles, the two that can be aligned most accurately will tend to be the pair
+with the highest identity, i.e. at the shortest evolutionary distance. This is
+exactly the pair selected by the nearest-neighbor criterion which MUSCLE uses
+by default. When mutation rates are variable, the <i>evolutionary </i>neighbor
+may not be the <i>nearest </i>neighbor. This explains why a nearest-neighbor
+tree may be superior to the true evolutionary tree for guiding a progressive
+alignment.</p>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal">You will get a warning if you use the –<i>usetree</i>
+option. To disable the warning, use ­<i>–usetree_nowarn</i> instead, </p>
+
+<p class="MsoNormal">e.g.:</p>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="Code">muscle -in seqs.fa -out seqs.afa -usetree_nowarn mytree.phy</p>
+
+<h2 style="margin-left:0in;text-indent:0in"><a name="_Toc260497020">2.9 Profile-profile
+alignment</a></h2>
+
+<p class="MsoNormal">A fundamental step in the MUSCLE algorithm is aligning two
+multiple sequence alignments. This operation is sometimes called
+"profile-profile alignment". If you have two existing alignments of
+related sequences you can use the <i>–profile</i> option of MUSCLE to align
+those two sequences. Typical usage is:</p>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="Code">muscle -profile -in1 one.afa -in2 two.afa -out both.afa</p>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal">The alignments in <i>one.afa</i> and <i>two.afa</i>, which
+must be in aligned FASTA format, are aligned to each other, keeping input
+columns intact and inserting columns of gaps where needed. Output is stored in <i>both.afa</i>.</p>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal">MUSCLE does not compute a similarity measure or measure of
+statistical significance (such as an E-value), so this option is not useful for
+discriminating homologs from unrelated sequences. For this task, I recommend
+Sadreyev &amp; Grishin's COMPASS program.</p>
+
+<h2 style="margin-left:0in;text-indent:0in"><a name="_Toc260497021">2.10 Adding
+sequences to an existing alignment</a></h2>
+
+<p class="MsoNormal">To add a sequence to an existing alignment that you wish to
+keep intact, use profile-profile alignment with the new sequence as a profile.
+For example, if you have an existing alignment <i>existing_aln.afa</i> and want
+to add a new sequence in <i>new_seq.fa</i>, use the following commands:</p>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="Code">muscle -profile -in1 existing_aln.afa -in2 new_seq.fa -out
+combined.afa</p>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal">If you have more than one new sequences, you can align them
+first then add them, for example:</p>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="Code">muscle -in new_seqs.fa -out new_seqs.afa</p>
+
+<p class="Code">muscle -profile -in1 existing_aln.afa -in2 new_seqs.afa -out
+combined.afas</p>
+
+<h2 style="margin-left:0in;text-indent:0in"><a name="_Toc260497022">2.11 Specifying
+a protein substitution matrix</a></h2>
+
+<p class="MsoNormal">You can specify your own substitution matrix by using the <i>-matrix</i>
+option. This reads a protein substitution matrix in NCBI or WU-BLAST format.
+The alphabet is assumed to be amino acid, and sum-of-pairs scoring is used. The
+­<i>-gapopen</i>, <i>-gapextend</i> and -<i>center</i> parameters should be
+specified; normally you will specify a zero value for the center. Note that gap
+penalties MUST be negative. The environment variable MUSCLE_MXPATH can be used
+to specify a path where the matrices are stored. For example,</p>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="Code">muscle -in seqs.fa -out seqs.afa -matrix /data/matrix/blosum62</p>
+
+<p class="Code">&nbsp;&nbsp; &nbsp;-gapopen -12.0 -gapextend -1.0 -center 0.0</p>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal">Example matrices can be downloaded from the NCBI FTP site.
+At the time of writing they are found here:</p>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="ftp://ftp.ncbi.nih.gov/blast/matrices/">ftp://ftp.ncbi.nih.gov/blast/matrices/</a></p>
+
+<h2 style="margin-left:0in;text-indent:0in"><a name="_Toc260497023">2.12 Specifying
+a nucleotide substitution matrix</a></h2>
+
+<p class="MsoNormal">MUSCLE isn't really designed to support a nucleotide matrix,
+but you can hack it by pretending that AGCT are amino acids and making a 20x20
+matrix out of the original 4x4 matrix. You MUST specify the <i>-seqtype protein</i>
+option to fool MUSCLE into believing that it is aligning amino acid sequences. For
+more information, see:</p>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal"><a href="http://drive5.com/muscle/nucmx.html">http://drive5.com/muscle/nucmx.html</a></p>
+
+<h2 style="margin-left:0in;text-indent:0in"><a name="_Toc260497024">2.13 Refining
+a long alignment</a></h2>
+
+<p class="MsoNormal">A long alignment can be refined using the –<i>refinew</i>
+option, which is primarily designed for refining whole-genome nucleotide
+alignments. Usage is:</p>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="Code">muscle -refinew -in input.afa -out output.afa</p>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal">MUSCLE divides the input alignment into non-overlapping
+windows and re-aligns each window from scratch, i.e. all gap characters are
+discarded. The –<i>refinewindow</i> option may be used to change the window
+length, which is 200 columns by default.</p>
+
+<h1 style="margin-left:0in;text-indent:0in"><a name="_Toc260497025">3 File
+Formats</a></h1>
+
+<p class="MsoNormal">MUSCLE uses FASTA format for both input and output. For
+output only, it also offers CLUSTALW, MSF, HTML, Phylip sequential and Phylip
+interleaved formats. See the following command-line options: &#8209;<i>clw</i>,
+&#8209;<i>clwstrict, </i>–<i>msf</i>, –<i>html</i>, –<i>phys</i>, –<i>phyi,</i>
+&#8209;<i>clwout</i>, &#8209;<i>clwstrictout, </i>–<i>msfout</i>, –<i>htmlout</i>,
+–<i>physout </i>and –<i>phyiout</i>.</p>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<h2 style="margin-left:0in;text-indent:0in"><a name="_Toc260497026">3.1 Input
+files</a></h2>
+
+<p class="MsoNormal">Input files must be in FASTA format. These are plain text
+files (word processing files such as Word documents are not understood!). Unix,
+Windows and DOS text files are supported (end-of-line may be NL or CR NL). There
+is no explicit limit on the length of a sequence, however if you are running a
+32-bit version of <i>muscle</i> then the maximum will be very roughly 10,000 letters
+due to maximum addressable size of tables required in memory. Each sequence
+starts with an annotation line, which is recognized by having a greater-than
+symbol "&gt;" as its first character. There is no limit on the length
+of an annotation line (this is new as of version 3.5), and there is no
+requirement that the annotation be unique. The sequence itself follows on one
+or more subsequent lines, and is terminated either by the next annotation line
+or by the end of the file. </p>
+
+<h3 style="margin-left:0in;text-indent:0in"><a name="_Toc260497027">3.1.1 Amino
+acid sequences</a></h3>
+
+<p class="MsoNormal">The standard single-letter amino acid alphabet is used. Upper
+and lower case is allowed, the case is not significant. The special characters
+X, B, Z and U are understood. X means "unknown amino acid", B is D or
+N, Z is E or Q. U is understood to be the 21st amino acid Selenocysteine. White
+space (spaces, tabs and the end-of-line characters CR and NL) is allowed inside
+sequence data. Dots "." and dashes "–" in sequences are
+allowed and are discarded unless the input is expected to be aligned (e.g. for
+the –<i>refine</i> option). </p>
+
+<h3 style="margin-left:0in;text-indent:0in"><a name="_Toc260497028">3.1.2 Nucleotide
+sequences</a></h3>
+
+<p class="MsoNormal">The usual letters A, G, C, T and U stand for nucleotides.
+The letters T and U are equivalent as far as MUSCLE is concerned. N is the
+wildcard meaning "unknown nucleotide". R means A or G, Y means C or
+T/U. Other wildcards, such as those used by RFAM, are not understood in this
+version and will be replaced by Ns. If you would like support for other DNA /
+RNA alphabets, please let me know.</p>
+
+<h3 style="margin-left:0in;text-indent:0in"><a name="_Toc260497029">3.1.3 Determining
+sequence type</a></h3>
+
+<p class="MsoNormal">By default, MUSCLE looks at the first 100 letters in the
+input sequence data (excluding gaps). If 95% or more of those letters are valid
+nucleotides (AGCTUN), then the file is treated as nucleotides, otherwise as
+amino acids. This method almost always guesses correctly, but you can make sure
+by specifying the sequence type on the command line. This is done using the –<i>seqtype</i>
+option, which can take the following values:</p>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal" style="page-break-after:avoid">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; –­<i>seqtype protein</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ Amino
+acid</p>
+
+<p class="MsoNormal" style="page-break-after:avoid">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; –s<i>eqtype dna</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ DNA
+(ACGT alphabet)</p>
+
+<p class="MsoNormal" style="page-break-after:avoid">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; –s<i>eqtype rna</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ DNA
+(ACGT alphabet)</p>
+
+<p class="MsoNormal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; –<i>seqtype auto</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ Automatic
+detection (default).</p>
+
+<h2 style="margin-left:0in;text-indent:0in"><a name="_Toc260497030">3.2 Output
+files</a></h2>
+
+<p class="MsoNormal">By default, output is also written in FASTA format. All
+letters are upper-case and gaps are represented by dashes "–". Output
+is written to the following destination(s):</p>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If no other output option is given, then standard
+output.</p>
+
+<p class="MsoNormal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If <i>-out</i> <i>&lt;filename&gt;</i> is given, to
+the specified file.</p>
+
+<p class="MsoNormal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; For all of the <i>-xxxout</i> options (e.g. -<i>fastaout</i>,
+-<i>clwout</i>), to the specified files.</p>
+
+<h3 style="margin-left:0in;text-indent:0in"><a name="_Toc260497031">3.2.1 Sequence
+grouping</a></h3>
+
+<p class="MsoNormal">By default, MUSCLE re-arranges sequences so that similar
+sequences are adjacent in the output file. (This is done by ordering sequences
+according to a prefix traversal of the guide tree). This makes the alignment
+easier to evaluate by eye. If you want to the sequences to be output in the
+same order as the input file, you can use the –<i>stable</i> option.</p>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal"><b><span style="color:white;background:red">WARNING</span></b></p>
+
+<p class="MsoNormal"><b><span style="background:yellow">THE <i>-stable</i> OPTION
+HAD A SERIOUS BUG IN VERSIONS OF MUSCLE PRIOR TO v3.8 AND IS CURRENTLY NOT
+SUPPORTED.</span></b></p>
+
+<h3 style="margin-left:0in;text-indent:0in"><a name="_Toc260497032">3.2.2 Output
+to multiple file formats</a></h3>
+
+<p class="MsoNormal">You can request output to more than one file format by using
+the -<i>xxxout</i> options. For example, to get both FASTA and CLUSTALW
+formats:</p>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="Code">muscle -in seqs.fa -fastaout seqs.afa -clwout seqs.aln</p>
+
+<h2 style="margin-left:0in;text-indent:0in"><a name="_Toc260497033">3.3 CLUSTALW
+format</a></h2>
+
+<p class="MsoNormal">You can request CLUSTALW output by using the –<i>clw</i>
+option. This should be compatible with CLUSTALW, with the exception of the
+program name in the file header. You can ask MUSCLE to impersonate CLUSTALW by
+writing "CLUSTAL W (1.81)" as the program name by using –<i>clwstrict</i>
+or <i>&#8209;clwstrictout</i>. Note that MUSCLE allows duplicate sequence
+labels, while CLUSTALW forbids duplicates. If you use the –<i>stable</i> option
+of <i>muscle</i>, then the order of the input sequences is preserved and
+sequences can be unambiguously identified even if the labels differ. If you
+have problems parsing MUSCLE output with scripts designed for CLUSTALW, please
+let me know and I'll do my best to provide a fix.</p>
+
+<h2 style="margin-left:0in;text-indent:0in"><a name="_Toc260497034">3.4 MSF
+format</a></h2>
+
+<p class="MsoNormal">MSF format, as used in the GCG package, is requested by
+using the –<i>msf</i> option. As with CLUSTALW format, this is easier for
+people to read than FASTA. As of MUSCLE 3.52, the MSF format has been tweaked
+to be more compatible with GCG. The following differences remain.</p>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal">(a) MUSCLE truncates at the first white space or after 63
+characters, which ever comes first. The GCG package apparently truncates after
+10 characters. If this is a problem for you, please let me know and I'll add an
+option to truncate after 10 in a future version.</p>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal">(b) MUSCLE allows duplicate sequence labels, while GCG
+forbids duplicates. If you use the –<i>stable</i> option of <i>muscle</i>, then
+the order of the input sequences is preserved and sequences can be
+unambiguously identified even if the labels differ.</p>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal">Thanks to Eric Martel for help with improving GCG
+compatibility.</p>
+
+<h2 style="margin-left:0in;text-indent:0in"><a name="_Toc260497035">3.5 HTML
+format</a></h2>
+
+<p class="MsoNormal">I added an experimental feature starting in version 3.4. To
+get a Web page as output, use the –<i>html</i> option. The alignment is colored
+using a color scheme from Eric Sonnhammer's Belvu editor, which is my personal
+favorite. A drawback of this option is that the Web page typically contains a
+very large number of HTML tags, which can be slow to display in the Internet
+Explorer browser. The Netscape browser works much better. If you have any ideas
+about good ways to make Web pages, please let me know.</p>
+
+<h2 style="margin-left:0in;text-indent:0in"><a name="_Toc260497036">3.6 Phylip
+format</a></h2>
+
+<p class="MsoNormal">The Phylip package supports two different multiple sequence
+alignment file formats, called sequential and interleaved respectively.</p>
+
+<h1 style="margin-left:0in;text-indent:0in"><a name="_Toc260497037">4 Using
+MUSCLE</a></h1>
+
+<p class="MsoNormal">In this section we give more details of the MUSCLE algorithm
+and the more important options offered by the <i>muscle</i> implementation.</p>
+
+<h2 style="margin-left:0in;text-indent:0in"><a name="_Toc260497038">4.1 How the
+algorithm works</a></h2>
+
+<p class="MsoNormal">I won't give a complete description of the MUSCLE algorithm
+here—for that, you will have to read the papers. (See citations on title page
+above). But hopefully a summary will help explain what some of the command-line
+options do and how they might be useful in your work.</p>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal">The first step is to calculate a tree. In CLUSTALW, this is
+done as follows. Each pair of input sequences is aligned, and used to compute
+the pair-wise identity of the pair. Identities are converted to a measure of
+distance. Finally, the distance matrix is converted to a tree using a
+clustering method (CLUSTALW uses neighbor-joining). If you have 1,000
+sequences, there are (1,000 <span style="font-family:Symbol">´</span> 999)/2 =
+499,500 pairs, so aligning every pair can take a while. MUSCLE uses a much
+faster, but somewhat more approximate, method to compute distances: it counts
+the number of short sub-sequences (known as <i>k</i>-mers, <i>k</i>-tuples or
+words) that two sequences have in common, without constructing an alignment.
+This is typically around 3,000 times faster that CLUSTALW's method, but the trees
+will generally be less accurate. We call this step "<i>k</i>-mer
+clustering".</p>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal">The second step is to use the tree to construct what is
+known as a progressive alignment. At each node of the binary tree, a pair-wise
+alignment is constructed, progressing from the leaves towards the root. The
+first alignment will be made from two sequences. Later alignments will be one
+of the three following types: sequence-sequence, profile-sequence or
+profile-profile, where "profile" means the multiple alignment of the sequences
+under a given internal node of the tree. This is very similar to what CLUSTALW
+does once it has built a tree.</p>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal" style="page-break-after:avoid">Now we have a multiple
+alignment, which has been built very quickly compared with conventional
+methods, mainly because of the distance calculation using <i>k</i>-mers rather
+than alignments. The quality of this alignment is typically pretty good—it will
+often tie or beat a T-Coffee alignment on our tests. However, on average, we
+find that it can be improved by proceeding through the following steps.</p>
+
+<p class="MsoNormal" style="page-break-after:avoid">&nbsp;</p>
+
+<p class="MsoNormal" style="page-break-after:avoid">From the multiple alignment,
+we can now compute the pair-wise identities of each pair of sequences. This
+gives us a new distance matrix, from which we estimate a new tree. We compare
+the old and new trees, and re-align subgroups where needed to produce a
+progressive multiple alignment from the new tree. If the two trees are
+identical, there is nothing to do; if there are no subtrees that agree (very unusual),
+then the whole progressive alignment procedure must be repeated from scratch.
+Typically we find that the tree is pretty stable near the leaves, but some
+re-alignments are needed closer the root. This procedure (compute pair-wise
+identities, estimate new tree, compare trees, re-align) is iterated until the
+tree stabilizes or until a specified maximum number of iterations has been
+done. We call this process "tree refinement", although it also tends
+to improve the alignment.</p>
+
+<p class="MsoNormal" style="page-break-after:avoid">&nbsp;</p>
+
+<p class="MsoNormal" style="page-break-after:avoid">We now keep the tree fixed
+and move to a new procedure which is designed to improve the multiple
+alignment. The set of sequences is divided into two subsets (i.e., we make a
+bipartition on the set of sequences). A profile is constructed for each of the
+two subsets based on the current multiple alignment. These two profiles are
+then re-aligned to each other using the same pair-wise alignment algorithm as
+used in the progressive stage. If this improves an "objective score"
+that measures the quality of the alignment, then the new multiple alignment is
+kept, otherwise it is discarded. By default, the objective score is the classic
+sum-of-pairs score that takes the (sequence weighted) average of the pair-wise
+alignment score of every pair of sequences in the alignment. Bipartitions are
+chosen by deleting an edge in the guide tree, each of the two resulting
+subtrees defines a subset of sequences. This procedure is called "tree
+dependent refinement". One iteration of tree dependent refinement tries
+bipartitions produced by deleting every edge of the tree in depth order moving
+from the leaves towards the center of the tree. Iterations continue until
+convergence or up to a specified maximum.</p>
+
+<p class="MsoNormal" style="page-break-after:avoid">&nbsp;</p>
+
+<p class="MsoNormal" style="page-break-after:avoid">For convenience, the major
+steps in MUSCLE are described as "iterations", though the first three
+iterations all do quite different things and may take very different lengths of
+time to complete. The tree-dependent refinement iterations 3, 4 ... are true
+iterations and will take similar lengths of time. </p>
+
+<p class="MsoNormal" style="page-break-after:avoid">&nbsp;</p>
+
+<table class="MsoNormalTable" style="border-collapse: collapse;" border="0" cellpadding="0" cellspacing="0">
+ <tbody><tr>
+  <td style="width: 66.6pt; border-width: medium medium 1pt; border-style: none none solid; border-color: -moz-use-text-color -moz-use-text-color windowtext; -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; -moz-border-image: none; padding: 0in 5.4pt;" valign="top" width="89">
+  <p class="MsoNormal" style="page-break-after:avoid"><b><span style="font-size:
+  9.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">Iteration</span></b></p>
+  </td>
+  <td style="width: 4.8in; border-width: medium medium 1pt; border-style: none none solid; border-color: -moz-use-text-color -moz-use-text-color windowtext; -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; -moz-border-image: none; padding: 0in 5.4pt;" valign="top" width="461">
+  <p class="MsoNormal" style="page-break-after:avoid"><b><span style="font-size:
+  9.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">Actions</span></b></p>
+  </td>
+ </tr>
+ <tr>
+  <td style="width: 66.6pt; border: medium none; padding: 0in 5.4pt;" valign="top" width="89">
+  <p class="MsoNormal" style="page-break-after:avoid">1</p>
+  </td>
+  <td style="width: 4.8in; border: medium none; padding: 0in 5.4pt;" valign="top" width="461">
+  <p class="MsoNormal" style="page-break-after:avoid">Distance matrix by <i>k</i>-mer
+  clustering, estimate tree, progressive alignment according to this tree.</p>
+  <p class="MsoNormal" style="page-break-after:avoid">&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td style="width: 66.6pt; padding: 0in 5.4pt;" valign="top" width="89">
+  <p class="MsoNormal" style="page-break-after:avoid">2</p>
+  </td>
+  <td style="width: 4.8in; padding: 0in 5.4pt;" valign="top" width="461">
+  <p class="MsoNormal" style="page-break-after:avoid">Distance matrix by
+  pair-wise identities from current multiple alignment, estimate tree,
+  progressive alignment according to new tree, repeat until convergence or specified
+  maximum number of times.</p>
+  <p class="MsoNormal" style="page-break-after:avoid">&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td style="width: 66.6pt; padding: 0in 5.4pt;" valign="top" width="89">
+  <p class="MsoNormal" style="page-break-after:avoid">3, 4 ...</p>
+  </td>
+  <td style="width: 4.8in; padding: 0in 5.4pt;" valign="top" width="461">
+  <p class="MsoNormal" style="page-break-after:avoid">Tree-dependent refinement.
+  One iteration visits every edge in the tree one time.</p>
+  </td>
+ </tr>
+</tbody></table>
+
+<h2 style="margin-left:0in;text-indent:0in"><a name="_Toc260497039">4.2 Command-line
+options</a></h2>
+
+<p class="MsoNormal">There are two types of command-line options: value options
+and flag options. Value options are followed by the value of the given
+parameter, for example –<i>in &lt;filename&gt;</i>; flag options just stand for
+themselves, such as –<i>msf</i>. All options are a dash (not two dashes!)
+followed by a long name; there are no single-letter equivalents. Value options
+must be separated from their values by white space in the command line. Thus, <i>muscle</i>
+does not follow Unix, Linux or Posix standards, for which we apologize. The
+order in which options are given is irrelevant unless two options contradict,
+in which case the right-most option silently wins.</p>
+
+<h2 style="margin-left:0in;text-indent:0in"><a name="_Toc260497040">4.3 The
+maxiters option</a></h2>
+
+<p class="MsoNormal">You can control the number of iterations that MUSCLE does by
+specifying the <i>–maxiters</i> option. If you specify 1, 2 or 3, then this is
+exactly the number of iterations that will be performed. If the value is
+greater than 3, then <i>muscle</i> will continue up to the maximum you specify
+or until convergence is reached, which ever happens sooner. The default is 16.
+If you have a large number of sequences, refinement may be rather slow.</p>
+
+<h2 style="margin-left:0in;text-indent:0in"><a name="_Toc260497041">4.4 The
+maxtrees option</a></h2>
+
+<p class="MsoNormal">This option controls the maximum number of new trees to
+create in iteration 2. Our experience suggests that a point of diminishing
+returns is typically reached after the first tree, so the default value is 1.
+If a larger value is given, the process will repeat until convergence or until
+this number of trees has been created, which ever comes first.</p>
+
+<h2 style="margin-left:0in;text-indent:0in"><a name="_Toc260497042">4.5 The
+maxhours option</a></h2>
+
+<p class="MsoNormal">If you have a large alignment, <i>muscle</i> may take a long
+time to complete. It is sometimes convenient to say "I want the best
+alignment I can get in 24 hours" rather than specifying a set of options
+that will take an unknown length of time. This is done by using <i>–maxhours</i>,
+which specifies a floating-point number of hours. If this time is exceeded, <i>muscle</i>
+will write out current alignment and stop. For example,</p>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="Code">muscle -in huge.fa -out huge.afa -maxiters 9999 -maxhours 24.0</p>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal">Note that the actual time may exceed the specified limit by
+a few minutes while <i>muscle</i> finishes up on a step. It is also possible
+for no alignment to be produced if the time limit is too small.</p>
+
+<h2 style="margin-left:0in;text-indent:0in"><a name="_Toc260497043">4.6 The
+profile scoring function</a></h2>
+
+<p class="MsoNormal">Three different protein profile scoring functions are
+supported, the log-expectation score (–<i>le</i> option) and a sum of pairs
+score using either the PAM200 matrix (–<i>sp</i>) or the VTML240 matrix (–<i>sv</i>).
+The log-expectation score is the default as it gives better results on our
+tests, but is typically somewhere between two or three times slower than the
+sum-of-pairs score. For nucleotides, –<i>spn</i> is currently the only option
+(which is of course the default for nucleotide data, so you don't need to
+specify this option).</p>
+
+<h2 style="margin-left:0in;text-indent:0in"><a name="_Toc260497044">4.7 Diagonal
+optimization</a></h2>
+
+<p class="MsoNormal">Creating a pair-wise alignment by dynamic programming
+requires computing an <i>L</i><sub>1</sub> <span style="font-family:Symbol">´</span>
+<i>L</i><sub>2</sub> matrix, where <i>L</i><sub>1</sub> and <i>L</i><sub>2</sub>
+are the sequence lengths. A trick used in algorithms such as BLAST is to reduce
+the size of this matrix by using fast methods to find "diagonals", also
+called "gapless high-scoring segment pairs", i.e. short regions of
+high similarity between the two sequences. This speeds up the algorithm at the
+expense of some reduction in accuracy. MUSCLE uses a technique called <i>k</i>-mer
+extension to find diagonals, which is described in this paper:</p>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal"><a href="http://nar.oxfordjournals.org/cgi/content/full/32/1/380">Edgar, R.C.
+(2004) Local homology recognition and distance measures in linear time using
+compressed amino acid alphabets, <i>Nucleic Acids Res.</i>, <b>32,</b> 1</a>.</p>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal">It is disabled by default because of the slight reduction in
+average accuracy and can be turned on by specifying the –<i>diags</i> option.
+To enable diagonal optimization in the first iteration, use –<i>diags1</i>, to
+enable diagonal optimization in the second iteration, use –<i>diags2</i>. These
+are provided separately because it would be a reasonable strategy to enable
+diagonals in the first iteration but not the second (because the main goal of
+the first iteration is to construct a multiple alignment quickly in order to
+improve the distance matrix, which is not very sensitive to alignment quality;
+whereas the goal of the second iteration is to make the best possible
+progressive alignment).</p>
+
+<h2 style="margin-left:0in;text-indent:0in"><a name="_Toc260497045">4.8 Anchor
+optimization</a></h2>
+
+<p class="MsoNormal">Tree-dependent refinement (iterations 3, 4 ... ) can be
+speeded up by dividing the alignment vertically into blocks. Block boundaries
+are found by identifying high-scoring columns (e.g., a perfectly conserved
+column of Cs or Ws would be a candidate). Each vertical block is then refined
+independently before reassembling the complete alignment, which is faster
+because of the <i>L</i><sup>2</sup> factor in dynamic programming (e.g.,
+suppose the alignment is split into two vertical blocks, then 2 <span style="font-family:Symbol">´</span> 0.5<sup>2</sup> = 0.5, so the dynamic
+programming time is roughly halved). The –<i>noanchors</i> option is used to disable
+this feature. This option has no effect if <i>–maxiters 1</i> or –<i>maxiters 2</i>
+is specified. On benchmark tests, enabling anchors has little or no effect on
+accuracy, but if you want to be very conservative and are striving for the best
+possible accuracy then –<i>noanchors</i> is a reasonable choice.</p>
+
+<h2 style="margin-left:0in;text-indent:0in"><a name="_Toc260497046">4.9 Log
+file</a></h2>
+
+<p class="MsoNormal">You can specify a log file by using –<i>log &lt;filename&gt;</i>
+or –<i>loga &lt;filename&gt;</i>. Using –<i>log</i> causes any existing file to
+be deleted, –<i>loga</i> appends to any existing file. A message will be
+written to the log file when <i>muscle</i> starts and stops. Error and warning
+messages will also be written to the log. If –<i>verbose</i> is specified, then
+more information will be written, including the command line used to invoke <i>muscle</i>,
+the resulting internal parameter settings, and also progress messages. The
+content and format of verbose log file output is subject to change in future
+versions. </p>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal">The use of a log file may seem contrary to Unix conventions for
+using standard output and standard error. I like these conventions, but never
+found a fully satisfactory way to use them. I like progress messages (see
+below), but they mess up a file if you re-direct standard error and there are
+errors or warning messages too. I could try to detect whether a standard file
+handle is a <i>tty</i> device or a disk file and change behavior accordingly,
+but I regard this as too complicated and too hard for the user to understand. On
+Windows it can be hard to re-direct standard file handles, especially when
+working in a GUI debugger. Maybe one day I will figure out a better solution
+(suggestions welcomed).</p>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal">I highly recommend using –<i>verbose </i>and ­–<i>log[a]</i>,
+especially when running <i>muscle</i> in a batch mode. This enables you to
+verify whether a particular alignment was completed and to review any errors or
+warnings that occurred.</p>
+
+<h2 style="margin-left:0in;text-indent:0in"><a name="_Toc260497047">4.10 Progress
+messages</a></h2>
+
+<p class="MsoNormal">By default, <i>muscle</i> writes progress messages to
+standard error periodically so that you know it's doing something and get some
+feedback about the time and memory requirements for the alignment. Here is a
+typical progress message.</p>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="Code">00:00:23&nbsp;&nbsp;&nbsp;&nbsp; 25 Mb (5%)&nbsp; Iter&nbsp;&nbsp; 2&nbsp; 87.20%&nbsp; Build guide tree</p>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal" style="page-break-after:avoid">The fields are as follows.</p>
+
+<p class="MsoNormal" style="page-break-after:avoid">&nbsp;</p>
+
+<table class="MsoNormalTable" style="border-collapse: collapse;" border="0" cellpadding="0" cellspacing="0">
+ <tbody><tr>
+  <td style="width: 88.2pt; padding: 0in 5.4pt;" valign="top" width="118">
+  <p class="Code" style="page-break-after:avoid">00:00:23</p>
+  </td>
+  <td style="width: 306.05pt; padding: 0in 5.4pt;" valign="top" width="408">
+  <p class="MsoNormal" style="page-break-after:avoid">Elapsed time since <i>muscle</i>
+  started.</p>
+  </td>
+ </tr>
+ <tr>
+  <td style="width: 88.2pt; padding: 0in 5.4pt;" valign="top" width="118">
+  <p class="Code" style="page-break-after:avoid">25 Mb (5%)</p>
+  </td>
+  <td style="width: 306.05pt; padding: 0in 5.4pt;" valign="top" width="408">
+  <p class="MsoNormal" style="page-break-after:avoid">Peak memory use in megabytes
+  (i.e., not the current usage, but the maximum amount of memory used since <i>muscle</i>
+  started). The number in parentheses is the fraction of physical memory (see –<i>maxmb</i>
+  option for more discussion).</p>
+  </td>
+ </tr>
+ <tr>
+  <td style="width: 88.2pt; padding: 0in 5.4pt;" valign="top" width="118">
+  <p class="Code" style="page-break-after:avoid">Iter 2</p>
+  </td>
+  <td style="width: 306.05pt; padding: 0in 5.4pt;" valign="top" width="408">
+  <p class="MsoNormal" style="page-break-after:avoid">Iteration currently in
+  progress.</p>
+  </td>
+ </tr>
+ <tr>
+  <td style="width: 88.2pt; padding: 0in 5.4pt;" valign="top" width="118">
+  <p class="Code" style="page-break-after:avoid">87.20%</p>
+  </td>
+  <td style="width: 306.05pt; padding: 0in 5.4pt;" valign="top" width="408">
+  <p class="MsoNormal" style="page-break-after:avoid">How much of the current step
+  has been completed (percentage).</p>
+  </td>
+ </tr>
+ <tr>
+  <td style="width: 88.2pt; padding: 0in 5.4pt;" valign="top" width="118">
+  <p class="Code">Build...</p>
+  </td>
+  <td style="width: 306.05pt; padding: 0in 5.4pt;" valign="top" width="408">
+  <p class="MsoNormal">A brief description of the current step.</p>
+  </td>
+ </tr>
+</tbody></table>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal">The –<i>quiet</i> command-line option disables writing
+progress messages to standard error. If the –<i>verbose</i> command-line option
+is specified, a progress message will be written to the log file when each
+iteration completes. So –<i>quiet</i> and –<i>verbose</i> are not
+contradictory.</p>
+
+<h2 style="margin-left:0in;text-indent:0in"><a name="_Toc260497048">4.11 Running
+out of memory</a></h2>
+
+<p class="MsoNormal">The <i>muscle</i> code tries to deal gracefully with
+low-memory conditions by using the following technique. A block of "emergency
+reserve" memory is allocated when <i>muscle</i> starts. If a later request
+to allocate memory fails, this reserve block is made available, and <i>muscle</i>
+attempts to save the current alignment. With luck, the reserved memory will be
+enough to allow <i>muscle</i> to save the alignment and exit gracefully with an
+informative error message.</p>
+
+<h2 style="margin-left:0in;text-indent:0in"><a name="_Toc260497049">4.12 Troubleshooting</a></h2>
+
+<p class="MsoNormal">Here is some general advice on what to do if <i>muscle</i>
+fails and you don't understand what happened. The code is designed to fail
+gracefully with an informative error message when something goes wrong, but
+there will no doubt be situations I haven't anticipated (not to mention bugs).</p>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal">Check the MUSCLE web site for updates, bug reports and other
+relevant information.</p>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal" style="page-break-after:avoid">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://www.drive5.com/muscle">http://www.drive5.com/muscle</a></p>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal">Check the input file to make sure it is in valid FASTA
+format. Try giving it to another sequence analysis program that can accept
+large FASTA files (e.g., the NCBI <i>formatdb</i> utility) to see if you get an
+informative error message. Try dividing the file into two halves and using each
+half individually as input. If one half fails and the other does not, repeat
+until the problem is localized as far as possible.</p>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal">Use –<i>log</i> or –<i>loga</i> and –­<i>verbose</i> and
+check the log file to see if there are any messages that give you a hint about the
+problem. Look at the peak memory requirements (reported in progress messages)
+to see if you may be exceeding the physical or virtual memory capacity of your
+computer.</p>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal">If <i>muscle</i> crashes without giving an error message, or
+hangs, then you may need to refer to the source code or use a debugger. A
+"debug" version, <i>muscled</i>, may be provided. This is built from
+the same source code but with the DEBUG macro defined and without compiler
+optimizations. This version runs much more slowly (perhaps by a factor of three
+or more), but does a lot more internal checking and may be able to catch
+something that is going wrong in the code. The –­<i>core</i> option specifies
+that <i>muscle</i> should not catch exceptions. When –<i>core</i> is specified,
+an exception may result in a debugger trap or a core dump, depending on the
+execution environment. The –<i>nocore</i> option has the opposite effect. In <i>muscle</i>,
+–<i>nocore</i> is the default, –­<i>core</i> is the default in <i>muscled</i>.</p>
+
+<h2 style="margin-left:0in;text-indent:0in"><a name="_Toc260497050">4.13 Technical
+support</a></h2>
+
+<p class="MsoNormal">I am happy to provide support. But I am busy, and am
+offering this program at no charge, so I ask you to make a reasonable effort to
+figure things out for yourself before <a href="mailto:robert@drive5.com">contacting
+me</a>.</p>
+
+<h1 style="margin-left:0in;text-indent:0in"><a name="_Toc260497051">5 Command Line
+Reference</a></h1>
+
+<p class="MsoNormal" style="page-break-after:avoid">&nbsp;</p>
+
+<table class="MsoNormalTable" style="border-collapse: collapse;" border="0" cellpadding="0" cellspacing="0">
+ <thead>
+  <tr>
+   <td style="width: 82.85pt; border-width: medium medium 1pt; border-style: none none solid; border-color: -moz-use-text-color -moz-use-text-color windowtext; -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; -moz-border-image: none; padding: 0in 5.4pt;" valign="top" width="110">
+   <p class="MsoNormal" style="page-break-after:avoid"><b><span style="font-size:
+   9.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">Value option</span></b></p>
+   </td>
+   <td style="width: 84.8pt; border-width: medium medium 1pt; border-style: none none solid; border-color: -moz-use-text-color -moz-use-text-color windowtext; -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; -moz-border-image: none; padding: 0in 5.4pt;" valign="top" width="113">
+   <p class="MsoNormal" style="page-break-after:avoid"><b><span style="font-size:
+   9.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">Legal values</span></b></p>
+   </td>
+   <td style="width: 77.35pt; border-width: medium medium 1pt; border-style: none none solid; border-color: -moz-use-text-color -moz-use-text-color windowtext; -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; -moz-border-image: none; padding: 0in 5.4pt;" valign="top" width="103">
+   <p class="MsoNormal" style="page-break-after:avoid"><b><span style="font-size:
+   9.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">Default</span></b></p>
+   </td>
+   <td style="width: 197.8pt; border-width: medium medium 1pt; border-style: none none solid; border-color: -moz-use-text-color -moz-use-text-color windowtext; -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; -moz-border-image: none; padding: 0in 5.4pt;" valign="top" width="264">
+   <p class="MsoNormal" style="page-break-after:avoid"><b><span style="font-size:
+   9.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">Description</span></b></p>
+   </td>
+  </tr>
+ </thead>
+ <tbody><tr>
+  <td style="width: 82.85pt; padding: 0in 5.4pt;" valign="top" width="110">
+  <p class="MsoNormal" style="page-break-after:avoid"><span style="font-size:
+  8.0pt;font-family:&quot;Courier New&quot;">anchorspacing</span></p>
+  </td>
+  <td style="width: 84.8pt; padding: 0in 5.4pt;" valign="top" width="113">
+  <p class="MsoNormal" style="page-break-after:avoid">Integer</p>
+  </td>
+  <td style="width: 77.35pt; padding: 0in 5.4pt;" valign="top" width="103">
+  <p class="MsoNormal" style="page-break-after:avoid"><span style="font-size:
+  8.0pt;font-family:&quot;Courier New&quot;">32</span></p>
+  </td>
+  <td style="width: 197.8pt; padding: 0in 5.4pt;" valign="top" width="264">
+  <p class="MsoNormal" style="page-break-after:avoid">Minimum spacing between
+  anchor columns.</p>
+  <p class="MsoNormal" style="page-break-after:avoid">&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td style="width: 82.85pt; padding: 0in 5.4pt;" valign="top" width="110">
+  <p class="MsoNormal" style="page-break-after:avoid"><span style="font-size:
+  8.0pt;font-family:&quot;Courier New&quot;">center</span></p>
+  </td>
+  <td style="width: 84.8pt; padding: 0in 5.4pt;" valign="top" width="113">
+  <p class="MsoNormal" style="page-break-after:avoid">Floating point</p>
+  </td>
+  <td style="width: 77.35pt; padding: 0in 5.4pt;" valign="top" width="103">
+  <p class="MsoNormal" style="page-break-after:avoid">[1]</p>
+  </td>
+  <td style="width: 197.8pt; padding: 0in 5.4pt;" valign="top" width="264">
+  <p class="MsoNormal" style="page-break-after:avoid">Center parameter. Should be
+  negative.</p>
+  <p class="MsoNormal" style="page-break-after:avoid">&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td style="width: 82.85pt; padding: 0in 5.4pt;" valign="top" width="110">
+  <p class="MsoNormal" style="page-break-after:avoid"><span style="font-size:
+  8.0pt;font-family:&quot;Courier New&quot;">cluster1</span></p>
+  <p class="MsoNormal" style="page-break-after:avoid"><span style="font-size:
+  8.0pt;font-family:&quot;Courier New&quot;">cluster2</span></p>
+  </td>
+  <td style="width: 84.8pt; padding: 0in 5.4pt;" valign="top" width="113">
+  <p class="MsoNormal" style="page-break-after:avoid"><span style="font-size:
+  8.0pt;font-family:&quot;Courier New&quot;">upgma</span></p>
+  <p class="MsoNormal" style="page-break-after:avoid"><span style="font-size:
+  8.0pt;font-family:&quot;Courier New&quot;">upgmb</span></p>
+  <p class="MsoNormal" style="page-break-after:avoid"><span style="font-size:
+  8.0pt;font-family:&quot;Courier New&quot;">neighborjoining</span></p>
+  </td>
+  <td style="width: 77.35pt; padding: 0in 5.4pt;" valign="top" width="103">
+  <p class="MsoNormal" style="page-break-after:avoid"><span style="font-size:
+  8.0pt;font-family:&quot;Courier New&quot;">upgmb</span></p>
+  </td>
+  <td style="width: 197.8pt; padding: 0in 5.4pt;" valign="top" width="264">
+  <p class="MsoNormal" style="page-break-after:avoid">Clustering method. cluster1
+  is used in iteration 1 and 2, cluster2 in later iterations.</p>
+  <p class="MsoNormal" style="page-break-after:avoid">&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td style="width: 82.85pt; padding: 0in 5.4pt;" valign="top" width="110">
+  <p class="MsoNormal" style="page-break-after:avoid"><span style="font-size:
+  8.0pt;font-family:&quot;Courier New&quot;">clwout</span></p>
+  </td>
+  <td style="width: 84.8pt; padding: 0in 5.4pt;" valign="top" width="113">
+  <p class="MsoNormal" style="page-break-after:avoid"><span style="font-size:
+  8.0pt;font-family:&quot;Courier New&quot;">File name</span></p>
+  </td>
+  <td style="width: 77.35pt; padding: 0in 5.4pt;" valign="top" width="103">
+  <p class="MsoNormal" style="page-break-after:avoid"><span style="font-size:
+  8.0pt;font-family:&quot;Courier New&quot;">None</span></p>
+  </td>
+  <td style="width: 197.8pt; padding: 0in 5.4pt;" valign="top" width="264">
+  <p class="MsoNormal" style="page-break-after:avoid">Write output in CLUSTALW
+  format to given file name.</p>
+  </td>
+ </tr>
+ <tr>
+  <td style="width: 82.85pt; padding: 0in 5.4pt;" valign="top" width="110">
+  <p class="MsoNormal" style="page-break-after:avoid"><span style="font-size:
+  8.0pt;font-family:&quot;Courier New&quot;">clwout</span></p>
+  </td>
+  <td style="width: 84.8pt; padding: 0in 5.4pt;" valign="top" width="113">
+  <p class="MsoNormal" style="page-break-after:avoid"><span style="font-size:
+  8.0pt;font-family:&quot;Courier New&quot;">File name</span></p>
+  </td>
+  <td style="width: 77.35pt; padding: 0in 5.4pt;" valign="top" width="103">
+  <p class="MsoNormal" style="page-break-after:avoid"><span style="font-size:
+  8.0pt;font-family:&quot;Courier New&quot;">None</span></p>
+  </td>
+  <td style="width: 197.8pt; padding: 0in 5.4pt;" valign="top" width="264">
+  <p class="MsoNormal" style="page-break-after:avoid">As <i>-clwout</i>, except
+  that header is strictly compatible with CLUSTALW 1.81.</p>
+  <p class="MsoNormal" style="page-break-after:avoid">&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td style="width: 82.85pt; padding: 0in 5.4pt;" valign="top" width="110">
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">diagbreak</span></p>
+  </td>
+  <td style="width: 84.8pt; padding: 0in 5.4pt;" valign="top" width="113">
+  <p class="MsoNormal">Integer</p>
+  </td>
+  <td style="width: 77.35pt; padding: 0in 5.4pt;" valign="top" width="103">
+  <p class="MsoNormal">1</p>
+  </td>
+  <td style="width: 197.8pt; padding: 0in 5.4pt;" valign="top" width="264">
+  <p class="MsoNormal">Maximum distance between two diagonals that allows them to
+  merge into one diagonal.</p>
+  <p class="MsoNormal">&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td style="width: 82.85pt; padding: 0in 5.4pt;" valign="top" width="110">
+  <p class="MsoNormal" style="page-break-after:avoid"><span style="font-size:
+  8.0pt;font-family:&quot;Courier New&quot;">diaglength</span></p>
+  </td>
+  <td style="width: 84.8pt; padding: 0in 5.4pt;" valign="top" width="113">
+  <p class="MsoNormal" style="page-break-after:avoid">Integer</p>
+  </td>
+  <td style="width: 77.35pt; padding: 0in 5.4pt;" valign="top" width="103">
+  <p class="MsoNormal" style="page-break-after:avoid"><span style="font-size:
+  8.0pt;font-family:&quot;Courier New&quot;">24</span></p>
+  </td>
+  <td style="width: 197.8pt; padding: 0in 5.4pt;" valign="top" width="264">
+  <p class="MsoNormal" style="page-break-after:avoid">Minimum length of diagonal.</p>
+  <p class="MsoNormal" style="page-break-after:avoid">&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td style="width: 82.85pt; padding: 0in 5.4pt;" valign="top" width="110">
+  <p class="MsoNormal" style="page-break-after:avoid"><span style="font-size:
+  8.0pt;font-family:&quot;Courier New&quot;">diagmargin</span></p>
+  </td>
+  <td style="width: 84.8pt; padding: 0in 5.4pt;" valign="top" width="113">
+  <p class="MsoNormal" style="page-break-after:avoid">Integer</p>
+  </td>
+  <td style="width: 77.35pt; padding: 0in 5.4pt;" valign="top" width="103">
+  <p class="MsoNormal" style="page-break-after:avoid"><span style="font-size:
+  8.0pt;font-family:&quot;Courier New&quot;">5</span></p>
+  </td>
+  <td style="width: 197.8pt; padding: 0in 5.4pt;" valign="top" width="264">
+  <p class="MsoNormal" style="page-break-after:avoid">Discard this many positions
+  at ends of diagonal.</p>
+  <p class="MsoNormal" style="page-break-after:avoid">&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td style="width: 82.85pt; padding: 0in 5.4pt;" valign="top" width="110">
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">distance1</span></p>
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">&nbsp;</span></p>
+  </td>
+  <td style="width: 84.8pt; padding: 0in 5.4pt;" valign="top" width="113">
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">kmer6_6</span></p>
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">kmer20_3</span></p>
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">kmer20_4</span></p>
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">kbit20_3</span></p>
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">kmer4_6</span></p>
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">&nbsp;</span></p>
+  </td>
+  <td style="width: 77.35pt; padding: 0in 5.4pt;" valign="top" width="103">
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">Kmer6_6
+  (amino) or Kmer4_6 (nucleo)</span></p>
+  </td>
+  <td style="width: 197.8pt; padding: 0in 5.4pt;" valign="top" width="264">
+  <p class="MsoNormal">Distance measure for iteration 1.</p>
+  </td>
+ </tr>
+ <tr>
+  <td style="width: 82.85pt; padding: 0in 5.4pt;" valign="top" width="110">
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">distance2</span></p>
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">&nbsp;</span></p>
+  </td>
+  <td style="width: 84.8pt; padding: 0in 5.4pt;" valign="top" width="113">
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">pctid_kimura</span></p>
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">pctid_log</span></p>
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">&nbsp;</span></p>
+  </td>
+  <td style="width: 77.35pt; padding: 0in 5.4pt;" valign="top" width="103">
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">pctid_kimura</span></p>
+  </td>
+  <td style="width: 197.8pt; padding: 0in 5.4pt;" valign="top" width="264">
+  <p class="MsoNormal">Distance measure for iterations 2, 3 ...</p>
+  <p class="MsoNormal">&nbsp;</p>
+  <p class="MsoNormal">&nbsp;</p>
+  <p class="MsoNormal">&nbsp;</p>
+  <p class="MsoNormal">&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td style="width: 82.85pt; padding: 0in 5.4pt;" valign="top" width="110">
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">fastaout</span></p>
+  </td>
+  <td style="width: 84.8pt; padding: 0in 5.4pt;" valign="top" width="113">
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">File
+  name</span></p>
+  </td>
+  <td style="width: 77.35pt; padding: 0in 5.4pt;" valign="top" width="103">
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">None</span></p>
+  </td>
+  <td style="width: 197.8pt; padding: 0in 5.4pt;" valign="top" width="264">
+  <p class="MsoNormal">Write output in FASTA format to the given file.</p>
+  <p class="MsoNormal">&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td style="width: 82.85pt; padding: 0in 5.4pt;" valign="top" width="110">
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">gapopen</span></p>
+  </td>
+  <td style="width: 84.8pt; padding: 0in 5.4pt;" valign="top" width="113">
+  <p class="MsoNormal">Floating point</p>
+  </td>
+  <td style="width: 77.35pt; padding: 0in 5.4pt;" valign="top" width="103">
+  <p class="MsoNormal">[1]</p>
+  </td>
+  <td style="width: 197.8pt; padding: 0in 5.4pt;" valign="top" width="264">
+  <p class="MsoNormal">The gap open score. Must be negative.</p>
+  <p class="MsoNormal">&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td style="width: 82.85pt; padding: 0in 5.4pt;" valign="top" width="110">
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">hydro</span></p>
+  </td>
+  <td style="width: 84.8pt; padding: 0in 5.4pt;" valign="top" width="113">
+  <p class="MsoNormal">Integer</p>
+  </td>
+  <td style="width: 77.35pt; padding: 0in 5.4pt;" valign="top" width="103">
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">5</span></p>
+  </td>
+  <td style="width: 197.8pt; padding: 0in 5.4pt;" valign="top" width="264">
+  <p class="MsoNormal">Window size for determining whether a region is hydrophobic.</p>
+  <p class="MsoNormal">&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td style="width: 82.85pt; padding: 0in 5.4pt;" valign="top" width="110">
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">hydrofactor</span></p>
+  </td>
+  <td style="width: 84.8pt; padding: 0in 5.4pt;" valign="top" width="113">
+  <p class="MsoNormal">Floating point</p>
+  </td>
+  <td style="width: 77.35pt; padding: 0in 5.4pt;" valign="top" width="103">
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">1.2</span></p>
+  </td>
+  <td style="width: 197.8pt; padding: 0in 5.4pt;" valign="top" width="264">
+  <p class="MsoNormal">Multiplier for gap open/close penalties in hydrophobic
+  regions.</p>
+  <p class="MsoNormal">&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td style="width: 82.85pt; padding: 0in 5.4pt;" valign="top" width="110">
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">in</span></p>
+  </td>
+  <td style="width: 84.8pt; padding: 0in 5.4pt;" valign="top" width="113">
+  <p class="MsoNormal">Any file name</p>
+  </td>
+  <td style="width: 77.35pt; padding: 0in 5.4pt;" valign="top" width="103">
+  <p class="MsoNormal">standard input</p>
+  </td>
+  <td style="width: 197.8pt; padding: 0in 5.4pt;" valign="top" width="264">
+  <p class="MsoNormal">Where to find the input sequences.</p>
+  <p class="MsoNormal">&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td style="width: 82.85pt; padding: 0in 5.4pt;" valign="top" width="110">
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">in1</span></p>
+  </td>
+  <td style="width: 84.8pt; padding: 0in 5.4pt;" valign="top" width="113">
+  <p class="MsoNormal">Any file name</p>
+  </td>
+  <td style="width: 77.35pt; padding: 0in 5.4pt;" valign="top" width="103">
+  <p class="MsoNormal">None</p>
+  </td>
+  <td style="width: 197.8pt; padding: 0in 5.4pt;" valign="top" width="264">
+  <p class="MsoNormal">Where to find an input alignment.</p>
+  <p class="MsoNormal">&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td style="width: 82.85pt; padding: 0in 5.4pt;" valign="top" width="110">
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">in2</span></p>
+  </td>
+  <td style="width: 84.8pt; padding: 0in 5.4pt;" valign="top" width="113">
+  <p class="MsoNormal">Any file name</p>
+  </td>
+  <td style="width: 77.35pt; padding: 0in 5.4pt;" valign="top" width="103">
+  <p class="MsoNormal">None</p>
+  </td>
+  <td style="width: 197.8pt; padding: 0in 5.4pt;" valign="top" width="264">
+  <p class="MsoNormal">Where to find an input alignment.</p>
+  <p class="MsoNormal">&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td style="width: 82.85pt; padding: 0in 5.4pt;" valign="top" width="110">
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">log</span></p>
+  </td>
+  <td style="width: 84.8pt; padding: 0in 5.4pt;" valign="top" width="113">
+  <p class="MsoNormal">File name</p>
+  </td>
+  <td style="width: 77.35pt; padding: 0in 5.4pt;" valign="top" width="103">
+  <p class="MsoNormal">None.</p>
+  </td>
+  <td style="width: 197.8pt; padding: 0in 5.4pt;" valign="top" width="264">
+  <p class="MsoNormal">Log file name (delete existing file).</p>
+  <p class="MsoNormal">&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td style="width: 82.85pt; padding: 0in 5.4pt;" valign="top" width="110">
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">loga</span></p>
+  </td>
+  <td style="width: 84.8pt; padding: 0in 5.4pt;" valign="top" width="113">
+  <p class="MsoNormal">File name</p>
+  </td>
+  <td style="width: 77.35pt; padding: 0in 5.4pt;" valign="top" width="103">
+  <p class="MsoNormal">None.</p>
+  </td>
+  <td style="width: 197.8pt; padding: 0in 5.4pt;" valign="top" width="264">
+  <p class="MsoNormal">Log file name (append to existing file).</p>
+  <p class="MsoNormal">&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td style="width: 82.85pt; padding: 0in 5.4pt;" valign="top" width="110">
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">matrix</span></p>
+  </td>
+  <td style="width: 84.8pt; padding: 0in 5.4pt;" valign="top" width="113">
+  <p class="MsoNormal">File name</p>
+  </td>
+  <td style="width: 77.35pt; padding: 0in 5.4pt;" valign="top" width="103">
+  <p class="MsoNormal">None</p>
+  </td>
+  <td style="width: 197.8pt; padding: 0in 5.4pt;" valign="top" width="264">
+  <p class="MsoNormal">File name for substitution matrix in NCBI or WU-BLAST
+  format. If you specify your own matrix, you should also specify:</p>
+  <p class="MsoNormal">&nbsp;</p>
+  <p class="MsoNormal">-gapopen &lt;g&gt;, -gapextend &lt;e&gt; -center 0.0</p>
+  <p class="MsoNormal">&nbsp;</p>
+  <p class="MsoNormal">Note that &lt;g&gt; and &lt;e&gt; MUST be negative.</p>
+  <p class="MsoNormal">&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td style="width: 82.85pt; padding: 0in 5.4pt;" valign="top" width="110">
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">maxhours</span></p>
+  </td>
+  <td style="width: 84.8pt; padding: 0in 5.4pt;" valign="top" width="113">
+  <p class="MsoNormal">Floating point</p>
+  </td>
+  <td style="width: 77.35pt; padding: 0in 5.4pt;" valign="top" width="103">
+  <p class="MsoNormal">None.</p>
+  </td>
+  <td style="width: 197.8pt; padding: 0in 5.4pt;" valign="top" width="264">
+  <p class="MsoNormal">Maximum time to run in hours. The actual time may exceed
+  the requested limit by a few minutes. Decimals are allowed, so 1.5 means one
+  hour and 30 minutes.</p>
+  <p class="MsoNormal">&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td style="width: 82.85pt; padding: 0in 5.4pt;" valign="top" width="110">
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">maxiters</span></p>
+  </td>
+  <td style="width: 84.8pt; padding: 0in 5.4pt;" valign="top" width="113">
+  <p class="MsoNormal">Integer 1, 2 ...</p>
+  </td>
+  <td style="width: 77.35pt; padding: 0in 5.4pt;" valign="top" width="103">
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">16</span></p>
+  </td>
+  <td style="width: 197.8pt; padding: 0in 5.4pt;" valign="top" width="264">
+  <p class="MsoNormal">Maximum number of iterations.</p>
+  <p class="MsoNormal">&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td style="width: 82.85pt; padding: 0in 5.4pt;" valign="top" width="110">
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">maxtrees</span></p>
+  </td>
+  <td style="width: 84.8pt; padding: 0in 5.4pt;" valign="top" width="113">
+  <p class="MsoNormal">Integer</p>
+  </td>
+  <td style="width: 77.35pt; padding: 0in 5.4pt;" valign="top" width="103">
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">1</span></p>
+  </td>
+  <td style="width: 197.8pt; padding: 0in 5.4pt;" valign="top" width="264">
+  <p class="MsoNormal">Maximum number of new trees to build in iteration 2.</p>
+  <p class="MsoNormal">&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td style="width: 82.85pt; padding: 0in 5.4pt;" valign="top" width="110">
+  <p class="MsoNormal" style="page-break-after:avoid"><span style="font-size:
+  8.0pt;font-family:&quot;Courier New&quot;">minbestcolscore</span></p>
+  </td>
+  <td style="width: 84.8pt; padding: 0in 5.4pt;" valign="top" width="113">
+  <p class="MsoNormal" style="page-break-after:avoid">Floating point </p>
+  </td>
+  <td style="width: 77.35pt; padding: 0in 5.4pt;" valign="top" width="103">
+  <p class="MsoNormal" style="page-break-after:avoid">[1]</p>
+  </td>
+  <td style="width: 197.8pt; padding: 0in 5.4pt;" valign="top" width="264">
+  <p class="MsoNormal" style="page-break-after:avoid">Minimum score a column must
+  have to be an anchor.</p>
+  <p class="MsoNormal" style="page-break-after:avoid">&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td style="width: 82.85pt; padding: 0in 5.4pt;" valign="top" width="110">
+  <p class="MsoNormal" style="page-break-after:avoid"><span style="font-size:
+  8.0pt;font-family:&quot;Courier New&quot;">minsmoothscore</span></p>
+  </td>
+  <td style="width: 84.8pt; padding: 0in 5.4pt;" valign="top" width="113">
+  <p class="MsoNormal" style="page-break-after:avoid">Floating point</p>
+  </td>
+  <td style="width: 77.35pt; padding: 0in 5.4pt;" valign="top" width="103">
+  <p class="MsoNormal" style="page-break-after:avoid">[1]</p>
+  </td>
+  <td style="width: 197.8pt; padding: 0in 5.4pt;" valign="top" width="264">
+  <p class="MsoNormal" style="page-break-after:avoid">Minimum smoothed score a
+  column must have to be an anchor.</p>
+  <p class="MsoNormal" style="page-break-after:avoid">&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td style="width: 82.85pt; padding: 0in 5.4pt;" valign="top" width="110">
+  <p class="MsoNormal" style="page-break-after:avoid"><span style="font-size:
+  8.0pt;font-family:&quot;Courier New&quot;">msaout</span></p>
+  </td>
+  <td style="width: 84.8pt; padding: 0in 5.4pt;" valign="top" width="113">
+  <p class="MsoNormal" style="page-break-after:avoid">File name</p>
+  </td>
+  <td style="width: 77.35pt; padding: 0in 5.4pt;" valign="top" width="103">
+  <p class="MsoNormal" style="page-break-after:avoid">None</p>
+  </td>
+  <td style="width: 197.8pt; padding: 0in 5.4pt;" valign="top" width="264">
+  <p class="MsoNormal" style="page-break-after:avoid">Write output to given file
+  name in MSF format.</p>
+  <p class="MsoNormal" style="page-break-after:avoid">&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td style="width: 82.85pt; padding: 0in 5.4pt;" valign="top" width="110">
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">objscore</span></p>
+  </td>
+  <td style="width: 84.8pt; padding: 0in 5.4pt;" valign="top" width="113">
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">sp</span></p>
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">ps</span></p>
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">dp</span></p>
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">xp</span></p>
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">spf</span></p>
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">spm</span></p>
+  </td>
+  <td style="width: 77.35pt; padding: 0in 5.4pt;" valign="top" width="103">
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">spm</span></p>
+  </td>
+  <td style="width: 197.8pt; padding: 0in 5.4pt;" valign="top" width="264">
+  <p class="MsoNormal">Objective score used by tree dependent refinement.</p>
+  <p class="MsoNormal">sp=sum-of-pairs score.</p>
+  <p class="MsoNormal">spf=sum-of-pairs score (dimer approximation)</p>
+  <p class="MsoNormal">spm=sp for &lt; 100 seqs, otherwise spf</p>
+  <p class="MsoNormal">dp=dynamic programming score.</p>
+  <p class="MsoNormal">ps=average profile-sequence score.</p>
+  <p class="MsoNormal">xp=cross profile score.</p>
+  <p class="MsoNormal">&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td style="width: 82.85pt; padding: 0in 5.4pt;" valign="top" width="110">
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">out</span></p>
+  </td>
+  <td style="width: 84.8pt; padding: 0in 5.4pt;" valign="top" width="113">
+  <p class="MsoNormal">File name</p>
+  </td>
+  <td style="width: 77.35pt; padding: 0in 5.4pt;" valign="top" width="103">
+  <p class="MsoNormal">standard output</p>
+  </td>
+  <td style="width: 197.8pt; padding: 0in 5.4pt;" valign="top" width="264">
+  <p class="MsoNormal">Where to write the alignment.</p>
+  <p class="MsoNormal">&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td style="width: 82.85pt; padding: 0in 5.4pt;" valign="top" width="110">
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">phyiout</span></p>
+  </td>
+  <td style="width: 84.8pt; padding: 0in 5.4pt;" valign="top" width="113">
+  <p class="MsoNormal">File name</p>
+  </td>
+  <td style="width: 77.35pt; padding: 0in 5.4pt;" valign="top" width="103">
+  <p class="MsoNormal">None</p>
+  </td>
+  <td style="width: 197.8pt; padding: 0in 5.4pt;" valign="top" width="264">
+  <p class="MsoNormal">Write output in Phylip interleaved format to given file
+  name.</p>
+  <p class="MsoNormal">&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td style="width: 82.85pt; padding: 0in 5.4pt;" valign="top" width="110">
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">physout</span></p>
+  </td>
+  <td style="width: 84.8pt; padding: 0in 5.4pt;" valign="top" width="113">
+  <p class="MsoNormal">File name</p>
+  </td>
+  <td style="width: 77.35pt; padding: 0in 5.4pt;" valign="top" width="103">
+  <p class="MsoNormal">None</p>
+  </td>
+  <td style="width: 197.8pt; padding: 0in 5.4pt;" valign="top" width="264">
+  <p class="MsoNormal">Write output in Phylip sequential format to given file
+  name.</p>
+  <p class="MsoNormal">&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td style="width: 82.85pt; padding: 0in 5.4pt;" valign="top" width="110">
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">refinewindow</span></p>
+  </td>
+  <td style="width: 84.8pt; padding: 0in 5.4pt;" valign="top" width="113">
+  <p class="MsoNormal">Integer</p>
+  </td>
+  <td style="width: 77.35pt; padding: 0in 5.4pt;" valign="top" width="103">
+  <p class="MsoNormal">200</p>
+  </td>
+  <td style="width: 197.8pt; padding: 0in 5.4pt;" valign="top" width="264">
+  <p class="MsoNormal">Length of window for <i>-refinew</i>.</p>
+  <p class="MsoNormal">&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td style="width: 82.85pt; padding: 0in 5.4pt;" valign="top" width="110">
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">root1</span></p>
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">root2</span></p>
+  </td>
+  <td style="width: 84.8pt; padding: 0in 5.4pt;" valign="top" width="113">
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">pseudo</span></p>
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">midlongestspan</span></p>
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">minavgleafdist</span></p>
+  </td>
+  <td style="width: 77.35pt; padding: 0in 5.4pt;" valign="top" width="103">
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">psuedo</span></p>
+  </td>
+  <td style="width: 197.8pt; padding: 0in 5.4pt;" valign="top" width="264">
+  <p class="MsoNormal">Method used to root tree; root1 is used in iteration 1 and
+  2, root2 in later iterations.</p>
+  <p class="MsoNormal">&nbsp;</p>
+  <p class="MsoNormal">&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td style="width: 82.85pt; padding: 0in 5.4pt;" valign="top" width="110">
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">scorefile</span></p>
+  </td>
+  <td style="width: 84.8pt; padding: 0in 5.4pt;" valign="top" width="113">
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">File
+  name</span></p>
+  </td>
+  <td style="width: 77.35pt; padding: 0in 5.4pt;" valign="top" width="103">
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">None</span></p>
+  </td>
+  <td style="width: 197.8pt; padding: 0in 5.4pt;" valign="top" width="264">
+  <p class="MsoNormal">File name where to write a score file. This contains one
+  line for each column in the alignment. The line contains the letters in the
+  column followed by the average BLOSUM62 score over pairs of letters in the column.</p>
+  <p class="MsoNormal">&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td style="width: 82.85pt; padding: 0in 5.4pt;" valign="top" width="110">
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">seqtype</span></p>
+  </td>
+  <td style="width: 84.8pt; padding: 0in 5.4pt;" valign="top" width="113">
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">protein</span></p>
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">dna</span></p>
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">rna</span></p>
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">auto</span></p>
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">&nbsp;</span></p>
+  </td>
+  <td style="width: 77.35pt; padding: 0in 5.4pt;" valign="top" width="103">
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">auto</span></p>
+  </td>
+  <td style="width: 197.8pt; padding: 0in 5.4pt;" valign="top" width="264">
+  <p class="MsoNormal">Sequence type.</p>
+  </td>
+ </tr>
+ <tr>
+  <td style="width: 82.85pt; padding: 0in 5.4pt;" valign="top" width="110">
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">smoothscoreceil</span></p>
+  </td>
+  <td style="width: 84.8pt; padding: 0in 5.4pt;" valign="top" width="113">
+  <p class="MsoNormal">Floating point</p>
+  </td>
+  <td style="width: 77.35pt; padding: 0in 5.4pt;" valign="top" width="103">
+  <p class="MsoNormal">[1]</p>
+  </td>
+  <td style="width: 197.8pt; padding: 0in 5.4pt;" valign="top" width="264">
+  <p class="MsoNormal">Maximum value of column score for smoothing purposes.</p>
+  <p class="MsoNormal">&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td style="width: 82.85pt; padding: 0in 5.4pt;" valign="top" width="110">
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">smoothwindow</span></p>
+  </td>
+  <td style="width: 84.8pt; padding: 0in 5.4pt;" valign="top" width="113">
+  <p class="MsoNormal">Integer</p>
+  </td>
+  <td style="width: 77.35pt; padding: 0in 5.4pt;" valign="top" width="103">
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">7</span></p>
+  </td>
+  <td style="width: 197.8pt; padding: 0in 5.4pt;" valign="top" width="264">
+  <p class="MsoNormal">Window used for anchor column smoothing.</p>
+  <p class="MsoNormal">&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td style="width: 82.85pt; padding: 0in 5.4pt;" valign="top" width="110">
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">spscore</span></p>
+  </td>
+  <td style="width: 84.8pt; padding: 0in 5.4pt;" valign="top" width="113">
+  <p class="MsoNormal">File name</p>
+  </td>
+  <td style="width: 77.35pt; padding: 0in 5.4pt;" valign="top" width="103">
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">&nbsp;</span></p>
+  </td>
+  <td style="width: 197.8pt; padding: 0in 5.4pt;" valign="top" width="264">
+  <p class="MsoNormal">Compute SP objective score of multiple alignment.</p>
+  <p class="MsoNormal">&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td style="width: 82.85pt; padding: 0in 5.4pt;" valign="top" width="110">
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">SUEFF</span></p>
+  </td>
+  <td style="width: 84.8pt; padding: 0in 5.4pt;" valign="top" width="113">
+  <p class="MsoNormal">Floating point value between 0 and 1.</p>
+  <p class="MsoNormal">&nbsp;</p>
+  </td>
+  <td style="width: 77.35pt; padding: 0in 5.4pt;" valign="top" width="103">
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">0.1</span></p>
+  </td>
+  <td style="width: 197.8pt; padding: 0in 5.4pt;" valign="top" width="264">
+  <p class="MsoNormal">Constant used in UPGMB clustering. Determines the relative
+  fraction of average linkage (SUEFF) vs. nearest-neighbor linkage (1 – SUEFF).<br>
+  <br>
+  </p>
+  </td>
+ </tr>
+ <tr>
+  <td style="width: 82.85pt; padding: 0in 5.4pt;" valign="top" width="110">
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">tree1</span></p>
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">tree2</span></p>
+  </td>
+  <td style="width: 84.8pt; padding: 0in 5.4pt;" valign="top" width="113">
+  <p class="MsoNormal">File name</p>
+  </td>
+  <td style="width: 77.35pt; padding: 0in 5.4pt;" valign="top" width="103">
+  <p class="MsoNormal">None</p>
+  </td>
+  <td style="width: 197.8pt; padding: 0in 5.4pt;" valign="top" width="264">
+  <p class="MsoNormal">Save tree produced in first or second iteration to given
+  file in Newick (Phylip-compatible) format.</p>
+  <p class="MsoNormal">&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td style="width: 82.85pt; padding: 0in 5.4pt;" valign="top" width="110">
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">usetree</span></p>
+  </td>
+  <td style="width: 84.8pt; padding: 0in 5.4pt;" valign="top" width="113">
+  <p class="MsoNormal">File name</p>
+  </td>
+  <td style="width: 77.35pt; padding: 0in 5.4pt;" valign="top" width="103">
+  <p class="MsoNormal">None</p>
+  </td>
+  <td style="width: 197.8pt; padding: 0in 5.4pt;" valign="top" width="264">
+  <p class="MsoNormal">Use given tree as guide tree. Must by in Newick
+  (Phyip-compatible) format.</p>
+  <p class="MsoNormal">&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td style="width: 82.85pt; padding: 0in 5.4pt;" valign="top" width="110">
+  <p class="MsoNormal" style="page-break-after:avoid"><span style="font-size:
+  8.0pt;font-family:&quot;Courier New&quot;">weight1</span></p>
+  <p class="MsoNormal" style="page-break-after:avoid"><span style="font-size:
+  8.0pt;font-family:&quot;Courier New&quot;">weight2</span></p>
+  </td>
+  <td style="width: 84.8pt; padding: 0in 5.4pt;" valign="top" width="113">
+  <p class="MsoNormal" style="page-break-after:avoid"><span style="font-size:
+  8.0pt;font-family:&quot;Courier New&quot;">none</span></p>
+  <p class="MsoNormal" style="page-break-after:avoid"><span style="font-size:
+  8.0pt;font-family:&quot;Courier New&quot;">henikoff</span></p>
+  <p class="MsoNormal" style="page-break-after:avoid"><span style="font-size:
+  8.0pt;font-family:&quot;Courier New&quot;">henikoffpb</span></p>
+  <p class="MsoNormal" style="page-break-after:avoid"><span style="font-size:
+  8.0pt;font-family:&quot;Courier New&quot;">gsc</span></p>
+  <p class="MsoNormal" style="page-break-after:avoid"><span style="font-size:
+  8.0pt;font-family:&quot;Courier New&quot;">clustalw</span></p>
+  <p class="MsoNormal" style="page-break-after:avoid"><span style="font-size:
+  8.0pt;font-family:&quot;Courier New&quot;">threeway</span></p>
+  </td>
+  <td style="width: 77.35pt; padding: 0in 5.4pt;" valign="top" width="103">
+  <p class="MsoNormal" style="page-break-after:avoid"><span style="font-size:
+  8.0pt;font-family:&quot;Courier New&quot;">clustalw</span></p>
+  <p class="MsoNormal" style="page-break-after:avoid">&nbsp;</p>
+  </td>
+  <td style="width: 197.8pt; padding: 0in 5.4pt;" valign="top" width="264">
+  <p class="MsoNormal" style="page-break-after:avoid">Sequence weighting scheme.</p>
+  <p class="MsoNormal" style="page-break-after:avoid">weight1 is used in
+  iterations 1 and 2.</p>
+  <p class="MsoNormal" style="page-break-after:avoid">weight2 is used for
+  tree-dependent refinement.</p>
+  <p class="MsoNormal" style="page-break-after:avoid">none=all sequences have
+  equal weight.</p>
+  <p class="MsoNormal" style="page-break-after:avoid">henikoff=Henikoff &amp;
+  Henikoff weighting scheme.</p>
+  <p class="MsoNormal" style="page-break-after:avoid">henikoffpb=Modified
+  Henikoff scheme as used in PSI-BLAST.</p>
+  <p class="MsoNormal" style="page-break-after:avoid">clustalw=CLUSTALW method.</p>
+  <p class="MsoNormal" style="page-break-after:avoid">threeway=Gotoh three-way
+  method.</p>
+  <p class="MsoNormal" style="page-break-after:avoid">&nbsp;</p>
+  </td>
+ </tr>
+</tbody></table>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<table class="MsoNormalTable" style="border-collapse: collapse;" border="0" cellpadding="0" cellspacing="0">
+ <thead>
+  <tr>
+   <td style="width: 102.6pt; border-width: medium medium 1pt; border-style: none none solid; border-color: -moz-use-text-color -moz-use-text-color windowtext; -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; -moz-border-image: none; padding: 0in 5.4pt;" valign="top" width="137">
+   <p class="MsoNormal" style="page-break-after:avoid"><b><span style="font-size:
+   9.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">Flag option</span></b></p>
+   </td>
+   <td style="width: 1.1in; border-width: medium medium 1pt; border-style: none none solid; border-color: -moz-use-text-color -moz-use-text-color windowtext; -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; -moz-border-image: none; padding: 0in 5.4pt;" valign="top" width="106">
+   <p class="MsoNormal" style="page-break-after:avoid"><b><span style="font-size:
+   9.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">Set by default?</span></b></p>
+   </td>
+   <td style="width: 261pt; border-width: medium medium 1pt; border-style: none none solid; border-color: -moz-use-text-color -moz-use-text-color windowtext; -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; -moz-border-image: none; padding: 0in 5.4pt;" valign="top" width="348">
+   <p class="MsoNormal" style="page-break-after:avoid"><b><span style="font-size:
+   9.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">Description</span></b></p>
+   </td>
+  </tr>
+ </thead>
+ <tbody><tr style="height: 6.25pt;">
+  <td style="width: 102.6pt; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="137">
+  <p class="MsoNormal" style="page-break-after:avoid"><span style="font-size:
+  8.0pt;font-family:&quot;Courier New&quot;">anchors</span></p>
+  </td>
+  <td style="width: 1.1in; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="106">
+  <p class="MsoNormal" style="page-break-after:avoid">yes</p>
+  </td>
+  <td style="width: 261pt; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="348">
+  <p class="MsoNormal" style="page-break-after:avoid">Use anchor optimization in
+  tree dependent refinement iterations.</p>
+  <p class="MsoNormal" style="page-break-after:avoid">&nbsp;</p>
+  </td>
+ </tr>
+ <tr style="height: 6.25pt;">
+  <td style="width: 102.6pt; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="137">
+  <p class="MsoNormal" style="page-break-after:avoid"><span style="font-size:
+  8.0pt;font-family:&quot;Courier New&quot;">brenner</span></p>
+  </td>
+  <td style="width: 1.1in; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="106">
+  <p class="MsoNormal" style="page-break-after:avoid">no</p>
+  </td>
+  <td style="width: 261pt; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="348">
+  <p class="MsoNormal" style="page-break-after:avoid">Use Steven Brenner's method
+  for computing the root alignment.</p>
+  <p class="MsoNormal" style="page-break-after:avoid">&nbsp;</p>
+  </td>
+ </tr>
+ <tr style="height: 6.25pt;">
+  <td style="width: 102.6pt; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="137">
+  <p class="MsoNormal" style="page-break-after:avoid"><span style="font-size:
+  8.0pt;font-family:&quot;Courier New&quot;">cluster</span></p>
+  </td>
+  <td style="width: 1.1in; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="106">
+  <p class="MsoNormal" style="page-break-after:avoid">no</p>
+  </td>
+  <td style="width: 261pt; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="348">
+  <p class="MsoNormal" style="page-break-after:avoid">Perform fast clustering of
+  input sequences. Use the –<i>tree1</i> option to save the tree.</p>
+  <p class="MsoNormal" style="page-break-after:avoid">&nbsp;</p>
+  </td>
+ </tr>
+ <tr style="height: 6.25pt;">
+  <td style="width: 102.6pt; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="137">
+  <p class="MsoNormal" style="page-break-after:avoid"><span style="font-size:
+  8.0pt;font-family:&quot;Courier New&quot;">dimer</span></p>
+  </td>
+  <td style="width: 1.1in; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="106">
+  <p class="MsoNormal" style="page-break-after:avoid">no</p>
+  </td>
+  <td style="width: 261pt; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="348">
+  <p class="MsoNormal" style="page-break-after:avoid">Use dimer approximation for
+  the SP score (faster, slightly less accurate).</p>
+  <p class="MsoNormal" style="page-break-after:avoid">&nbsp;</p>
+  </td>
+ </tr>
+ <tr style="height: 6.25pt;">
+  <td style="width: 102.6pt; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="137">
+  <p class="MsoNormal" style="page-break-after:avoid"><span style="font-size:
+  8.0pt;font-family:&quot;Courier New&quot;">clw</span></p>
+  </td>
+  <td style="width: 1.1in; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="106">
+  <p class="MsoNormal" style="page-break-after:avoid">no</p>
+  </td>
+  <td style="width: 261pt; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="348">
+  <p class="MsoNormal" style="page-break-after:avoid">Write output in CLUSTALW
+  format (default is FASTA).</p>
+  <p class="MsoNormal" style="page-break-after:avoid">&nbsp;</p>
+  </td>
+ </tr>
+ <tr style="height: 6.25pt;">
+  <td style="width: 102.6pt; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="137">
+  <p class="MsoNormal" style="page-break-after:avoid"><span style="font-size:
+  8.0pt;font-family:&quot;Courier New&quot;">clwstrict</span></p>
+  </td>
+  <td style="width: 1.1in; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="106">
+  <p class="MsoNormal" style="page-break-after:avoid">no</p>
+  </td>
+  <td style="width: 261pt; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="348">
+  <p class="MsoNormal" style="page-break-after:avoid">Write output in CLUSTALW
+  format with the "CLUSTAL W (1.81)" header rather than the MUSCLE
+  version. This is useful when a post-processing step is picky about the file
+  header.</p>
+  <p class="MsoNormal" style="page-break-after:avoid">&nbsp;</p>
+  </td>
+ </tr>
+ <tr style="height: 6.25pt;">
+  <td style="width: 102.6pt; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="137">
+  <p class="MsoNormal" style="page-break-after:avoid"><span style="font-size:
+  8.0pt;font-family:&quot;Courier New&quot;">core</span></p>
+  </td>
+  <td style="width: 1.1in; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="106">
+  <p class="MsoNormal" style="page-break-after:avoid">yes in muscle,</p>
+  <p class="MsoNormal" style="page-break-after:avoid">no in muscled.</p>
+  </td>
+  <td style="width: 261pt; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="348">
+  <p class="MsoNormal" style="page-break-after:avoid">Do not catch exceptions.</p>
+  <p class="MsoNormal" style="page-break-after:avoid">&nbsp;</p>
+  <p class="MsoNormal" style="page-break-after:avoid">&nbsp;</p>
+  </td>
+ </tr>
+ <tr style="height: 6.25pt;">
+  <td style="width: 102.6pt; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="137">
+  <p class="MsoNormal" style="page-break-after:avoid"><span style="font-size:
+  8.0pt;font-family:&quot;Courier New&quot;">diags</span></p>
+  </td>
+  <td style="width: 1.1in; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="106">
+  <p class="MsoNormal" style="page-break-after:avoid">no</p>
+  </td>
+  <td style="width: 261pt; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="348">
+  <p class="MsoNormal" style="page-break-after:avoid">Use diagonal optimizations.
+  Faster, especially for closely related sequences, but may be less accurate.</p>
+  <p class="MsoNormal" style="page-break-after:avoid">&nbsp;</p>
+  </td>
+ </tr>
+ <tr style="height: 6.25pt;">
+  <td style="width: 102.6pt; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="137">
+  <p class="MsoNormal" style="page-break-after:avoid"><span style="font-size:
+  8.0pt;font-family:&quot;Courier New&quot;">diags1</span></p>
+  </td>
+  <td style="width: 1.1in; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="106">
+  <p class="MsoNormal" style="page-break-after:avoid">no</p>
+  </td>
+  <td style="width: 261pt; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="348">
+  <p class="MsoNormal" style="page-break-after:avoid">Use diagonal optimizations
+  in first iteration.</p>
+  <p class="MsoNormal" style="page-break-after:avoid">&nbsp;</p>
+  </td>
+ </tr>
+ <tr style="height: 6.25pt;">
+  <td style="width: 102.6pt; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="137">
+  <p class="MsoNormal" style="page-break-after:avoid"><span style="font-size:
+  8.0pt;font-family:&quot;Courier New&quot;">diags2</span></p>
+  </td>
+  <td style="width: 1.1in; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="106">
+  <p class="MsoNormal" style="page-break-after:avoid">no</p>
+  </td>
+  <td style="width: 261pt; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="348">
+  <p class="MsoNormal" style="page-break-after:avoid">Use diagonal optimizations
+  in second iteration.</p>
+  <p class="MsoNormal" style="page-break-after:avoid">&nbsp;</p>
+  </td>
+ </tr>
+ <tr style="height: 6.25pt;">
+  <td style="width: 102.6pt; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="137">
+  <p class="MsoNormal" style="page-break-after:avoid"><span style="font-size:
+  8.0pt;font-family:&quot;Courier New&quot;">fasta</span></p>
+  </td>
+  <td style="width: 1.1in; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="106">
+  <p class="MsoNormal" style="page-break-after:avoid">yes</p>
+  </td>
+  <td style="width: 261pt; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="348">
+  <p class="MsoNormal" style="page-break-after:avoid">Write output in FASTA
+  format.</p>
+  <p class="MsoNormal" style="page-break-after:avoid">&nbsp;</p>
+  </td>
+ </tr>
+ <tr style="height: 6.25pt;">
+  <td style="width: 102.6pt; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="137">
+  <p class="MsoNormal" style="page-break-after:avoid"><span style="font-size:
+  8.0pt;font-family:&quot;Courier New&quot;">group</span></p>
+  </td>
+  <td style="width: 1.1in; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="106">
+  <p class="MsoNormal" style="page-break-after:avoid">yes</p>
+  </td>
+  <td style="width: 261pt; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="348">
+  <p class="MsoNormal" style="page-break-after:avoid">Group similar sequences
+  together in the output. This is the default. See also –<i>stable</i>.</p>
+  <p class="MsoNormal" style="page-break-after:avoid">&nbsp;</p>
+  </td>
+ </tr>
+ <tr style="height: 6.25pt;">
+  <td style="width: 102.6pt; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="137">
+  <p class="MsoNormal" style="page-break-after:avoid"><span style="font-size:
+  8.0pt;font-family:&quot;Courier New&quot;">html</span></p>
+  </td>
+  <td style="width: 1.1in; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="106">
+  <p class="MsoNormal" style="page-break-after:avoid">no</p>
+  </td>
+  <td style="width: 261pt; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="348">
+  <p class="MsoNormal" style="page-break-after:avoid">Write output in HTML format
+  (default is FASTA).</p>
+  <p class="MsoNormal" style="page-break-after:avoid">&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td style="width: 102.6pt; padding: 0in 5.4pt;" valign="top" width="137">
+  <p class="MsoNormal" style="page-break-after:avoid"><span style="font-size:
+  8.0pt;font-family:&quot;Courier New&quot;">le</span></p>
+  </td>
+  <td style="width: 1.1in; padding: 0in 5.4pt;" valign="top" width="106">
+  <p class="MsoNormal">maybe</p>
+  </td>
+  <td style="width: 261pt; padding: 0in 5.4pt;" valign="top" width="348">
+  <p class="MsoNormal">Use log-expectation profile score (VTML240). Alternatives
+  are to use –<i>sp</i> or <i>–sv</i>. This is the default for amino acid
+  sequences.</p>
+  <p class="MsoNormal">&nbsp;</p>
+  </td>
+ </tr>
+ <tr style="height: 6.25pt;">
+  <td style="width: 102.6pt; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="137">
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">msf</span></p>
+  </td>
+  <td style="width: 1.1in; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="106">
+  <p class="MsoNormal">no</p>
+  </td>
+  <td style="width: 261pt; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="348">
+  <p class="MsoNormal">Write output in MSF format (default is FASTA). Designed to
+  be compatible with the GCG package.</p>
+  <p class="MsoNormal">&nbsp;</p>
+  </td>
+ </tr>
+ <tr style="height: 6.25pt;">
+  <td style="width: 102.6pt; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="137">
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">noanchors</span></p>
+  </td>
+  <td style="width: 1.1in; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="106">
+  <p class="MsoNormal">no</p>
+  </td>
+  <td style="width: 261pt; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="348">
+  <p class="MsoNormal">Disable anchor optimization. Default is –<i>anchors</i>.</p>
+  <p class="MsoNormal">&nbsp;</p>
+  </td>
+ </tr>
+ <tr style="height: 6.25pt;">
+  <td style="width: 102.6pt; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="137">
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">nocore</span></p>
+  </td>
+  <td style="width: 1.1in; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="106">
+  <p class="MsoNormal">no in muscle,</p>
+  <p class="MsoNormal">yes in muscled.</p>
+  </td>
+  <td style="width: 261pt; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="348">
+  <p class="MsoNormal">Catch exceptions and give an error message if possible.</p>
+  <p class="MsoNormal">&nbsp;</p>
+  <p class="MsoNormal">&nbsp;</p>
+  </td>
+ </tr>
+ <tr style="height: 6.25pt;">
+  <td style="width: 102.6pt; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="137">
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">phyi</span></p>
+  </td>
+  <td style="width: 1.1in; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="106">
+  <p class="MsoNormal">no</p>
+  </td>
+  <td style="width: 261pt; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="348">
+  <p class="MsoNormal">Write output in Phylip interleaved format.</p>
+  <p class="MsoNormal">&nbsp;</p>
+  </td>
+ </tr>
+ <tr style="height: 6.25pt;">
+  <td style="width: 102.6pt; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="137">
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">phys</span></p>
+  </td>
+  <td style="width: 1.1in; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="106">
+  <p class="MsoNormal">no</p>
+  </td>
+  <td style="width: 261pt; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="348">
+  <p class="MsoNormal">Write output in Phylip sequential format.</p>
+  <p class="MsoNormal">&nbsp;</p>
+  </td>
+ </tr>
+ <tr style="height: 6.25pt;">
+  <td style="width: 102.6pt; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="137">
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">profile</span></p>
+  </td>
+  <td style="width: 1.1in; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="106">
+  <p class="MsoNormal">no</p>
+  </td>
+  <td style="width: 261pt; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="348">
+  <p class="MsoNormal">Compute profile-profile alignment. Input alignments must
+  be given using –<i>in1</i> and –<i>in2</i> options.</p>
+  <p class="MsoNormal">&nbsp;</p>
+  </td>
+ </tr>
+ <tr style="height: 6.25pt;">
+  <td style="width: 102.6pt; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="137">
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">quiet</span></p>
+  </td>
+  <td style="width: 1.1in; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="106">
+  <p class="MsoNormal">no</p>
+  </td>
+  <td style="width: 261pt; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="348">
+  <p class="MsoNormal">Do not display progress messages.</p>
+  <p class="MsoNormal">&nbsp;</p>
+  </td>
+ </tr>
+ <tr style="height: 6.25pt;">
+  <td style="width: 102.6pt; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="137">
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">refine</span></p>
+  </td>
+  <td style="width: 1.1in; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="106">
+  <p class="MsoNormal">no</p>
+  </td>
+  <td style="width: 261pt; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="348">
+  <p class="MsoNormal">Input file is already aligned, skip first two iterations
+  and begin tree dependent refinement.</p>
+  <p class="MsoNormal">&nbsp;</p>
+  </td>
+ </tr>
+ <tr style="height: 6.25pt;">
+  <td style="width: 102.6pt; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="137">
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">refinew</span></p>
+  </td>
+  <td style="width: 1.1in; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="106">
+  <p class="MsoNormal">no</p>
+  </td>
+  <td style="width: 261pt; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="348">
+  <p class="MsoNormal">Refine an alignment by dividing it into non-overlapping
+  windows and re-aligning each window. Typically used for whole-genome
+  nucleotide alignments.</p>
+  <p class="MsoNormal">&nbsp;</p>
+  </td>
+ </tr>
+ <tr style="height: 6.25pt;">
+  <td style="width: 102.6pt; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="137">
+  <p class="MsoNormal" style="page-break-after:avoid"><span style="font-size:
+  8.0pt;font-family:&quot;Courier New&quot;">sp</span></p>
+  </td>
+  <td style="width: 1.1in; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="106">
+  <p class="MsoNormal">no</p>
+  </td>
+  <td style="width: 261pt; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="348">
+  <p class="MsoNormal">Use sum-of-pairs protein profile score (PAM200). Default
+  is –<i>le.</i></p>
+  <p class="MsoNormal">&nbsp;</p>
+  </td>
+ </tr>
+ <tr style="height: 6.25pt;">
+  <td style="width: 102.6pt; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="137">
+  <p class="MsoNormal" style="page-break-after:avoid"><span style="font-size:
+  8.0pt;font-family:&quot;Courier New&quot;">spscore</span></p>
+  </td>
+  <td style="width: 1.1in; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="106">
+  <p class="MsoNormal">no</p>
+  </td>
+  <td style="width: 261pt; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="348">
+  <p class="MsoNormal">Compute alignment score of profile-profile alignment.
+  Input alignments must be given using –<i>in1</i> and –<i>in2</i> options.
+  These must be pre-aligned with gapped columns as needed, i.e. must be of the
+  same length (have same number of columns).</p>
+  <p class="MsoNormal">&nbsp;</p>
+  </td>
+ </tr>
+ <tr style="height: 6.25pt;">
+  <td style="width: 102.6pt; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="137">
+  <p class="MsoNormal" style="page-break-after:avoid"><span style="font-size:
+  8.0pt;font-family:&quot;Courier New&quot;">spn</span></p>
+  </td>
+  <td style="width: 1.1in; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="106">
+  <p class="MsoNormal">maybe</p>
+  <p class="MsoNormal">&nbsp;</p>
+  </td>
+  <td style="width: 261pt; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="348">
+  <p class="MsoNormal">Use sum-of-pairs nucleotide profile score. This is the
+  only option for nucleotides, and is therefore the default. The substitution
+  scores and gap penalty scores are "borrowed" from BLASTZ.</p>
+  <p class="MsoNormal">&nbsp;</p>
+  </td>
+ </tr>
+ <tr style="height: 6.25pt;">
+  <td style="width: 102.6pt; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="137">
+  <p class="MsoNormal" style="page-break-after:avoid"><span style="font-size:
+  8.0pt;font-family:&quot;Courier New&quot;">stable</span></p>
+  </td>
+  <td style="width: 1.1in; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="106">
+  <p class="MsoNormal">no</p>
+  </td>
+  <td style="width: 261pt; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="348">
+  <p class="MsoNormal">Preserve input order of sequences in output file. Default
+  is to group sequences by similarity (–<i>group</i>).</p>
+  <p class="MsoNormal"><b><span style="background:yellow">WARNING THIS OPTION WAS
+  BUGGY AND IS NOT SUPPORTED IN v3.8.</span> </b>Go to this link for more
+  information:&nbsp; <a href="http://drive5.com/muscle/stable.html">http://drive5.com/muscle/stable.html</a></p>
+  <p class="MsoNormal">&nbsp;</p>
+  </td>
+ </tr>
+ <tr style="height: 6.25pt;">
+  <td style="width: 102.6pt; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="137">
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">sv</span></p>
+  </td>
+  <td style="width: 1.1in; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="106">
+  <p class="MsoNormal">no</p>
+  </td>
+  <td style="width: 261pt; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="348">
+  <p class="MsoNormal">Use sum-of-pairs profile score (VTML240). Default is –<i>le.</i></p>
+  <p class="MsoNormal">&nbsp;</p>
+  </td>
+ </tr>
+ <tr style="height: 6.25pt;">
+  <td style="width: 102.6pt; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="137">
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">termgaps4</span></p>
+  </td>
+  <td style="width: 1.1in; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="106">
+  <p class="MsoNormal">yes</p>
+  </td>
+  <td style="width: 261pt; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="348">
+  <p class="MsoNormal">Use 4-way test for treatment of terminal gaps. (Cannot be
+  disabled in this version).</p>
+  <p class="MsoNormal">&nbsp;</p>
+  </td>
+ </tr>
+ <tr style="height: 6.25pt;">
+  <td style="width: 102.6pt; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="137">
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">termgapsfull</span></p>
+  </td>
+  <td style="width: 1.1in; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="106">
+  <p class="MsoNormal">no</p>
+  </td>
+  <td style="width: 261pt; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="348">
+  <p class="MsoNormal">Terminal gaps penalized with full penalty.</p>
+  <p class="MsoNormal">[1] Not fully supported in this version.</p>
+  <p class="MsoNormal">&nbsp;</p>
+  </td>
+ </tr>
+ <tr style="height: 6.25pt;">
+  <td style="width: 102.6pt; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="137">
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">termgapshalf</span></p>
+  </td>
+  <td style="width: 1.1in; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="106">
+  <p class="MsoNormal">yes</p>
+  </td>
+  <td style="width: 261pt; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="348">
+  <p class="MsoNormal">Terminal gaps penalized with half penalty.</p>
+  <p class="MsoNormal">[1] Not fully supported in this version.</p>
+  <p class="MsoNormal">&nbsp;</p>
+  </td>
+ </tr>
+ <tr style="height: 6.25pt;">
+  <td style="width: 102.6pt; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="137">
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">termgapshalflonger</span></p>
+  </td>
+  <td style="width: 1.1in; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="106">
+  <p class="MsoNormal">no</p>
+  </td>
+  <td style="width: 261pt; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="348">
+  <p class="MsoNormal">Terminal gaps penalized with half penalty if gap relative
+  to </p>
+  <p class="MsoNormal">longer sequence, otherwise with full penalty.</p>
+  <p class="MsoNormal">[1] Not fully supported in this version.</p>
+  <p class="MsoNormal">&nbsp;</p>
+  </td>
+ </tr>
+ <tr style="height: 6.25pt;">
+  <td style="width: 102.6pt; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="137">
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">verbose</span></p>
+  </td>
+  <td style="width: 1.1in; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="106">
+  <p class="MsoNormal">no</p>
+  </td>
+  <td style="width: 261pt; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="348">
+  <p class="MsoNormal">Write parameter settings and progress messages to log
+  file.</p>
+  <p class="MsoNormal">&nbsp;</p>
+  </td>
+ </tr>
+ <tr style="height: 6.25pt;">
+  <td style="width: 102.6pt; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="137">
+  <p class="MsoNormal"><span style="font-size:8.0pt;font-family:&quot;Courier New&quot;">version</span></p>
+  </td>
+  <td style="width: 1.1in; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="106">
+  <p class="MsoNormal">no</p>
+  </td>
+  <td style="width: 261pt; padding: 0in 5.4pt; height: 6.25pt;" valign="top" width="348">
+  <p class="MsoNormal">Write version string to stdout and exit.</p>
+  </td>
+ </tr>
+</tbody></table>
+
+<p class="MsoNormal"><i>&nbsp;</i></p>
+
+<p class="MsoNormal"><i>Notes</i></p>
+
+<p class="MsoNormal">[1] Default depends on the profile scoring function. To
+determine the default, use –<i>verbose –log</i> and check the log file.</p>
+
+<p class="MsoNormal"><u><span style="text-decoration:none">&nbsp;</span></u></p>
+
+</div>
+
+
+
+
+</body></html>

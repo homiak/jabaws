@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "XHTML 1.0 Strict"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="Last-modified" content="Mon, 4 Apr 2011 12:00:00 GMT"/>
+<title>Java Bioinformatics Analyses Web Services (JABAWS) Server Virtual Appliance Manual</title>
+<link href="ws.css" rel="stylesheet" type="text/css" media=
+"screen, projection, handheld, tv" />
+<link rel="stylesheet" type="text/css" media="print" href=
+"print.css" />
+<script type="text/javascript" src="prototype-1.6.0.3.js"></script>
+</head>
+<body>
+<div id="page">
+<div id="banner">
+<table> 
+<tr><td style="width:158px;"><a href="http://www.dundee.ac.uk"><img src="images/uod_lt_long.gif"  alt="University of Dundee" width="158" height="90" class="logo"  title="University of Dundee" longdesc="http://www.dundee.ac.uk"/></a></td>
+<td class="bg"><img src="images/jabaws2.png" alt="JABAWS-2.0" title="Java Bioinformatics Analysis Web Services version 2.0"/></td>
+<td class="bg"><img src="images/banner_right.png" alt="Disorder" width="200" height="80"/></td>
+</tr>
+</table>
+</div><!-- banner end-->
+
+<div id="wrapper">
+<div id="panel"><a href="index.html">Home</a> 
+ <a href="quick_start.html">Getting Started</a> 
+ <a class="selected" href="man_about.html">Manual</a> 
+	<div id="submenu">
+		<a href="man_about.html">About</a>
+		<a class="selected" href="man_servervm.html" title="JABAWS Server as Virtual Appliance">Server VA</a>
+		<a href="man_awscloud.html" title="JABAWS Server in the Amazon EC2 Cloud">Server in the Cloud</a>
+		<a href="man_serverwar.html" title="JABAWS Server as Web Application aRchive">Server WAR</a>
+		<a href="man_configuration.html" >Server<br/>
+		Configuration</a>
+		<a href="man_client.html" title="JABAWS Command Line Client">CMD Client</a>
+		<a href="man_stats.html" title="JABAWS Usage Statistics">Usage Statistics</a>
+		<a href="man_dev.html" title="Accessing JABAWS from your program">Accessing<br/>
+		JABAWS</a>	
+		<a href="man_server_dev.html" >JABAWS Development</a>
+	</div>
+<a href="http://www.compbio.dundee.ac.uk/download">Download</a> 
+<a href="PublicAnnualStat" title="JABAWS usage statistics">Usage Statistics</a>
+ <a href="ServiceStatus" title="JABAWS webservices status. Click to test all web services. Please be patient while the services are being checked">Services Status</a>
+<a href="contacts.html">Contact Us</a>
+<a href="http://www.compbio.dundee.ac.uk" title="University of Dundee, The Barton Group" >Barton Group</a>
+</div>
+
+<!-- panel end-->
+<div id="content">
+<h2 id="headtitle">JABAWS MANUAL</h2>
+
+<h2>JABAWS Server Virtual Appliance</h2>
+<ul>
+    <li><a href="#whatisvm">What is JABAWS Virtual Appliance?</a></li>
+    <li><a href="#whenvm">When to use virtual appliance</a> </li>
+    <li><a href="#howtoinstallvm">How to install VMware Player </a></li>
+	<li><a href="#vmplayer">VMware Player appliance configuration </a></li>
+	<li><a href="#jabawsAppliance">JABAWS Appliance details </a></li>
+    <li><a href="#jalviewWithJaba">Configuring Jalview to work with your JABAWS VM</a></li>
+    <li><a href="#vmiaccess">VM Network Settings </a></li>
+    </ul>
+
+<p>&nbsp;</p>
+<h3><a name="whatisvm" id="whatisvm"></a>What is the JABAWS Server Virtual Appliance?</h3>
+<p>The JABAWS <a href="http://en.wikipedia.org/wiki/Virtual_appliance">Virtual Appliance</a> is a 
+way to run JABAWS server locally without the need to connect to the internet or configure JABAWS. 
+What the appliance provides is a 'virtual server machine' (or more simply - virtual machine or VM), running an installation of the JABAWS 
+Web Application Archive (WAR) on TurnKey Linux. Once this has started up, it displays a message indicating the IP address of the JABAWS server, allowing any JABAWS client (such as Jalview or the JABAWS command line client) to connect to it.<br/>
+You can run the appliance with freely available program such as <a href="http://www.vmware.com/products/player">VMware Player</a>, but you will need to install it first. We have tested the JABAWS appliance 
+with VMware Player v 3.1.2 on Windows and Linux, and VMware Fusion on Mac. 
+  However, you are not limited to these virtualization systems and can use the JABAWS appliance with any other virtualization platform. You can use <a href="http://communities.vmware.com/community/vmtn/server/vsphere/automationtools/ovf">VMware OVF tool</a> to prepare JABAWS image for a different virtualization platform e.g. <a href="http://www.virtualbox.org/">VirtualBox</a>.</p>
+<h3><a name="whenvm" id="whenvm"/></a>When to use the JABAWS Virtual Appliance</h3>
+<p>The appliance best suits users who would like to use the JABA web services locally. This might be because they do not want to access 
+systems over an internet, or just  want to keep their data private. It is also 
+the recommended option for users who want to install JABAWS on Windows, which does not support all the bioinformatics programs that JABAWS can run.</p>
+<h3><a name="whennotvm" id="whennotvm"/>When <em>not</em> to use the JABAWS Virtual Appliance</h3>
+<p>
+For servers that will be used heavily, we recommend that a <a href="man_serverwar.html#instwar">JABAWS Server WAR distribution</a> is deployed, rather than the Virtual Appliance version of JABAWS. 
+This is because the JABAWS appliance is pre-configured to use only 1 CPU and 512M of memory 
+(where the minimum amount of memory required for a JABAWS server is about 378M), which is unlikely to be sufficient for heavy computation. 
+It is possible to reconfigure the virtual appliance so it uses more computation resources, 
+but for most production environments, the JABAWS WAR distribution will be  easier to deploy and fine tune to take advantage of the available resources.</p>
+
+<h3><a name="howtoinstallvm" id="howtoinstallvm"></a>How to install VMware Player</h3>
+<p>Please see the <a href="http://downloads.vmware.com/d/info/desktop_downloads/vmware_player/3_0">VMware Player</a>  
+ web sites for up to date instructions and downloads.</p>
+
+<h3><a name="vmplayer" id="vmplayer"/>VMware Player appliance configuration </h3>
+<p>The free <a href="http://downloads.vmware.com/d/info/desktop_downloads/vmware_player/3_0">VMware Player</a> can be used to run the JABAWS services from the Windows and Linux host operating systems. <a href="https://www.vmware.com/vmwarestore/buyfusion.html">VMware Fusion</a>, a commercial VMware product, offers virtual machine support for Mac. </p>
+<p>To run the JABAWS server on VMware player,  unpack the JABAWS VM into one of the folders on your local hard drive. Open VMware Player, click &quot;Open Virtual Machine&quot; and point the Player to the location of the JABAWS, then choose the JABAWS.vmx file to open an appliance. </p>
+<p>When you play the machine for the first time the Player might ask you whether &quot;This virtual machine may have been moved or copied.&quot;,  say that you have copied it. That is all. </p>
+<h3><a name="jabawsAppliance" id="jabawsAppliance"/>JABAWS Appliance details</h3>
+<p>By default, the JABAWS virtual appliance is configured with 512M of memory and 1 CPU, but you are free to change these settings. If you have more than one CPU or CPU core on your computer you can make them available for the JABAWS virtual machine by editing virtual machine settings. Please bear in mind that more CPU power will not make a single calculation go faster, but it will enable the VM to do calculations in parallel. Similarly, you can add more memory to the virtual machine. More memory lets your VM deal with larger tasks, e.g. work with large alignments.</p>
+<p>The VMware Player screen shot below displays JABAWS VM CPU settings. </p>
+<p><img src="images/VMware_cpu.png" alt="vmware cpu settings" width="708" height="267" style="border: solid black 1px" /></p>
+
+<p><strong>JABAWS appliance configuration: </strong></p>
+<p><strong>VMware info</strong><br />
+  - CPUs : 1<br />
+  - RAM : 512 MB<br />
+  - Networking : Host only (the VM has no access to the outside network, nothing from the outside network can access the VM)<br />
+  - Hard disk : 20 GB  (expanding)<br />
+  - VMware tools : Installed</p>
+<p><strong>OS info</strong><br />
+  - OS : TurnKey Linux, based on Ubuntu 8.0.4 JEOS (Just-Enough-Operation-System)<br />
+  - Installation : Oracle Java 6, Tomcat 7, JABAWS v. 2.0 <br />
+  - Hostname : tomcat <br />
+  - IPv4 address : dhcp<br />
+  - IPv6 address : auto<br />
+  - DNS name : none<br />
+  - Name server : dhcp<br />
+  - Route : dhcp<br />
+  - Keyboard : US_intl</p>
+<p><strong>Login credentials</strong><br />
+  - Root password: jabaws</p>
+<p>  <strong>Services</strong></p>
+<ul>
+  <li>Default virtual console Alt+F7 </li>
+  <li>Tomcat web server. <br />
+    <em>Access:</em> http://VM_IP</li>
+  <li><strong>JABAWS URL: http://VM_IP/jabaws</strong></li>
+  <li>Web Shell<br />
+    <em>Access:</em> https://VM_IP:12320/</li>
+  <li>Webmean<br />
+    <em>Access:</em> https://VM_IP:12321/</li>
+  <li>SSH/SFTP<br />
+    <em>Access:</em> root@VM_IP</li>
+  </ul>
+<p>Where VM_IP is the VM IP address. Under VMware Player host only networking, the first VM may have 192.168.227.128 IP address. </p>
+<h3><a name="jalviewWithJaba" id="jalviewWithJaba"/>Configuring Jalview to work with your JABAWS VM</a> </h3>
+<p>After booting the JABAWS VM, you should see similar screen, however, the IP address of your VM may be different. To enable Jalview to work with your JABAWS appliance you need to go to Jalview-&gt;Tools-&gt;Preferences-&gt;Web Services -&gt; New Service URL, and add JABAWS URL into the box provided. For more information please refer to Jalview <a href="http://www.jalview.org/help/html/webServices/JABAWS.html">help pages</a>. </p>
+<p><img src="images/vm_welcome_screen.png" alt="JABAWS welcome screen" width="734" height="461" /></p>
+<p>If you click on Advanced Menu, you will see the configuration console, similar to the one below.   </p>
+<p><img src="images/VMware_booted.png" alt="JABAWS welcome screen" width="735" height="461" /></p>
+<p>If you need to configure a static IP address the configuration console will help you with this. Shutting down the VM is best from the configuration console as well.</p>
+<h3><a name="vmiaccess" id="vmiaccess"/></a></a>VM Network Settings </h3>
+<p>By default the JABAWS VM is configured to use host-only networking. This means that the host can communicate with the VM via a network, but no other machines can. Similarly, the VM cannot communicate with any other computers apart from the host. If you want to connect to the Internet from the VM, configure your VM to use NAT network. However, you will not be able to connect to the VM from the host in such case. If you want to be able to connect to your VM and let VM connect to the internet at the same time you would have to use a Bridged network. In such a case you would have to configure the VM IP address manually (unless of course your network has a DHCP server to do that)</a></p>
+</div>
+
+<!-- content end-->
+<div id="copyright">Last update: 16 September 2011<br />
+ Peter Troshin, Jim Procter and Geoff Barton, The Barton Group, University of
+Dundee, UK</div>
+</div>
+
+<!-- wrapper end-->
+</div>
+<!-- page end-->
+
+<!-- Google analitics -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try{
+var pageTracker = _gat._getTracker("UA-5356328-1");
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+</body>
+</html>
+

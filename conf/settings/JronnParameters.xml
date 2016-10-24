@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="US-ASCII" standalone="yes"?>
+
+<!-- Although it is perfectly possible to specify this parameter, its not clear what it means
+	none of the original RONN web sites allow changing this -> so disable. 
+ 
+<runnerConfig>
+	<runnerClassName>compbio.runner.disorder.Jronn</runnerClassName>
+	<prmSeparator>=</prmSeparator>
+	<parameters>
+		<name>Disorder probability</name>
+		<description>The probability of disorder threshold</description>
+		<optionNames>-d</optionNames>
+		<furtherDetails>prog_docs/jronn.html</furtherDetails>
+		<defaultValue>0.53</defaultValue>
+		<validValue>
+			<type>Float</type>
+			<min>0.01</min>
+			<max>0.99</max>
+		</validValue>
+	</parameters>
+</runnerConfig>
+-->

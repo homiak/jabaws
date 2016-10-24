@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="compbio.runner.disorder.DisemblTester" failures="0" tests="6" time="12.747" errors="0">
+  <properties/>
+  <testcase name="readStatistics" time="0.0010" classname="compbio.runner.disorder.DisemblTester"/>
+  <testcase name="testConfigurationLoading" time="0.021" classname="compbio.runner.disorder.DisemblTester"/>
+  <testcase name="testPersistance" time="1.147" classname="compbio.runner.disorder.DisemblTester"/>
+  <testcase name="testRunLocally" time="0.679" classname="compbio.runner.disorder.DisemblTester"/>
+  <testcase name="testRunOnCluster" time="4.383" classname="compbio.runner.disorder.DisemblTester"/>
+  <testcase name="testRunOnClusterAsync" time="6.039" classname="compbio.runner.disorder.DisemblTester"/>
+</testsuite>

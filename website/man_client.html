@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "XHTML 1.0 Strict"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="Last-modified" content="Mon, 4 Apr 2011 12:00:00 GMT"/>
+<title>Java Bioinformatics Analyses Web Services (JABAWS) Command Line Client manual</title>
+<link href="ws.css" rel="stylesheet" type="text/css" media=
+"screen, projection, handheld, tv" />
+<link rel="stylesheet" type="text/css" media="print" href=
+"print.css" />
+<script type="text/javascript" src="prototype-1.6.0.3.js"></script>
+</head>
+<body>
+<div id="page">
+<div id="banner">
+<table> 
+<tr><td style="width:158px;"><a href="http://www.dundee.ac.uk"><img src="images/uod_lt_long.gif"  alt="University of Dundee" width="158" height="90" class="logo"  title="University of Dundee" longdesc="http://www.dundee.ac.uk"/></a></td>
+<td class="bg"><img src="images/jabaws2.png" alt="JABAWS-2.0" title="Java Bioinformatics Analysis Web Services version 2.0"/></td>
+<td class="bg"><img src="images/banner_right.png" alt="Disorder" width="200" height="80"/></td>
+</tr>
+</table>
+</div><!-- banner end-->
+
+<div id="wrapper">
+<div id="panel"><a href="index.html">Home</a> 
+  <a href="quick_start.html">Getting Started</a> 
+  <a class="selected" href="man_about.html">Manual</a> 
+	<div id="submenu">
+		<a href="man_about.html">About</a>
+		<a href="man_servervm.html" title="JABAWS Server as Virtual Appliance">Server VA</a>
+		<a href="man_awscloud.html" title="JABAWS Server in the Amazon EC2 Cloud">Server in the Cloud</a>
+		<a href="man_serverwar.html" title="JABAWS Server as Web Application aRchive">Server WAR</a>
+		<a href="man_configuration.html" >Server<br/>
+		Configuration</a>
+		<a class="selected" href="man_client.html" title="JABAWS Command Line Client">CMD Client</a>
+		<a href="man_stats.html" title="JABAWS Usage Statistics">Usage Statistics</a>
+		<a href="man_dev.html" title="Accessing JABAWS from your program">Accessing<br/>
+		JABAWS</a>	
+		<a href="man_server_dev.html" >JABAWS Development</a>
+	</div>
+<a href="http://www.compbio.dundee.ac.uk/download">Download</a> 
+<a href="PublicAnnualStat" title="JABAWS usage statistics">Usage Statistics</a>
+ <a href="ServiceStatus" title="JABAWS webservices status. Click to test all web services. Please be patient while the services are being checked">Services Status</a>
+<a href="contacts.html">Contact Us</a>
+<a href="http://www.compbio.dundee.ac.uk" title="University of Dundee, The Barton Group" >Barton Group</a>
+</div>
+
+<!-- panel end-->
+<div id="content">
+<h2 id="headtitle">JABAWS MANUAL</h2>
+
+<h2><a name="usingcclient" id="usingcclient"></a>JABAWS Command Line Client Usage </h2>
+<p>The command line client comes as a part of <a href="http://www.compbio.dundee.ac.uk/download"> client package</a> which you are welcome to download. The command line client can be used to align sequences using any of JABAWS supported web services. The client is OS independent and supports most of the functions which can be accessed programmatically via <a href="dm_javadoc/index.html">JABAWS API</a>. Using this client you could align sequences using presets or custom parameters, please see examples of this below. Here is the list of options supported by the command line client. </p>
+<span class="code"><strong>Usage:</strong> java -jar &lt;path_to_jar_file&gt; -h=host_and_context -s=serviceName ACTION [OPTIONS]<br />
+-h=&lt;host_and_context&gt; - a full URL to the JABAWS web server including context path e.g. http://10.31.10.159:8080/ws<br />
+-s=&lt;ServiceName&gt; - one of [MafftWS, MuscleWS, ClustalWS, ClustalOWS, TcoffeeWS, ProbconsWS, AAConWS, JronnWS, DisemblWS, GlobPlotWS, IUPredWS]
+</p>
+<br />
+<strong>ACTIONS:</strong><br />
+-i=&lt;inputFile&gt; - full path to fasta formatted sequence file, from which to align sequences<br />
+-parameters - lists parameters supported by web service<br />
+-presets - lists presets supported by web service<br />
+-limits - lists web services limits<br />
+Please note that if input file is specified other actions are ignored
+</p>
+<br />
+<strong> OPTIONS:</strong> (only for use with -i action):<br />
+-r=&lt;presetName&gt; - name of the preset to use<br />
+-o=&lt;outputFile&gt; - full path to the file where to write an alignment<br />
+-f=&lt;parameterInputFile&gt; - the name of the file with the list of parameters to use.<br />
+Please note that -r and -f options cannot be used together. Alignment is done with either preset or a parameters from the file, but not both!</span>
+<p>Align sequences from input.fasta file using Mafft web service with default settings, print alignment in Clustal format to console. </p>
+<p class="code">java -jar jabaws-min-client.jar -h=http://myhost.compbio.ac.uk:8080/jabaws -s=MafftWS -i=d:\input.fasta</p>
+<p>Content of input.fasta file is show below (please note sequences has been trimmed for clarity)<span class="code">&gt;Foobar<br />
+  MTADGPRELLQLRAAVRHRPQDFVAWL <br />
+  &gt;Bar<br />
+  MGDTTAGEMAVQRGLALHQ<br />
+  QRHAEAAVLLQQASDAAPE<br />
+  &gt;Foofriend<br />
+  MTADGPRELLQLRAAV</span></p>
+<p>Align as in above example, but write output alignment in a file out.clustal, using parameters defined in prm.in file</p>
+<p><span class="code">java -jar jabaws-min-client.jar -h=http://myhost.compbio.ac.uk:8080/jabaws  -s=MafftWS -i=d:\input.fasta -o=d:\out.clustal -f=prm.in </span></p>
+<p>The content of the prm.in file is shown below <span class="code">--nofft<br />
+  --noscore<br />
+  --fastaparttree<br />
+  --retree=10<br />
+  --op=2.2</span></p>
+<p>The format of the file is the same for all JABAWS web services. Parameters are specified in exactly the same way as for native executables - alignment programs like Mafft etc. So parameters which you can use with command line version of an alignment program can be used with JABAWS. Most of the settings controlling alignment process are supported, but the setting controlling output are not. This is due to the fact the output have to be handled by JABAWS, so must remain within its control. For a list of parameters supported by a web service see the next example. In <span class="hightlight">prm.in</span> parameters are separated by the new line, and name of the parameter is separated from its value with an equal sign. This format is constant no matter which JABAWS web service is used. <br />
+    <span class="code"> java -jar jabaws-min-client.jar -h=http://myhost.compbio.ac.uk:8080/jabaws -s=MafftWS -parameters</span></p>
+<p>The same client can be used to access JABAWS on different hosts. Just point the client to the host you want to use by changing the value of -h key. For example you used <span class="hightlight">-h=http://myhost.compbio.ac.uk:8080/jabaws</span> server, now you want to use another server to <span class="hightlight">-h=http://mylabserver.myuni.edu.</span> This comes handy if your favorite server is off and you need to do the job yesterday. </p>
+</div>
+
+<!-- content end-->
+<div id="copyright">Last update: 16 September 2011<br />
+ Peter Troshin, Jim Procter and Geoff Barton, The Barton Group, University of
+Dundee, UK</div>
+</div>
+
+<!-- wrapper end-->
+</div>
+<!-- page end-->
+
+<!-- Google analitics -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try{
+var pageTracker = _gat._getTracker("UA-5356328-1");
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+</body>
+</html>
+

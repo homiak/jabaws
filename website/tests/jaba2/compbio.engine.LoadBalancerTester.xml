@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="compbio.engine.LoadBalancerTester" failures="0" tests="1" time="1.11" errors="0">
+  <properties/>
+  <testcase name="testLoadBalance" time="1.094" classname="compbio.engine.LoadBalancerTester"/>
+</testsuite>

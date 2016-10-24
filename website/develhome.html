@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Java Bioinformatics Analyses Web Services (JABAWS) developers documentation</title>
+<link href="ws.css" rel="stylesheet" type="text/css" media="screen,  projection, handheld, tv" />
+<link rel="stylesheet" type="text/css" media="print" href="print.css"/>
+
+<script type="text/javascript" src="prototype-1.6.0.3.js"></script>
+
+</head>
+<body>
+<div id="page">
+<div id="banner">
+<table> 
+<tr><td style="width:130px;"><a href="http://www.dundee.ac.uk"><img src="images/uod_lt.gif"  alt="University of Dundee" class="logo"  title="University of Dundee" longdesc="http://www.dundee.ac.uk"/></a></td>
+<td class="bg"><img src="images/jabaws.png" title="JABAWS:MSA" alt="JABAWS:MSA"/></td>
+<td class="bg"><img src="images/align.png"/></td>
+</tr>
+</table>
+</div><!-- banner end-->
+
+<div id="wrapper">
+<div id="panel">
+	<a class="selected" href="index.html">Devel Home</a>
+	<a href="http://www.compbio.dundee.ac.uk/jabaws">JABAWS Production</a>
+<a href="http://www.compbio.dundee.ac.uk/user/www-jws2/wbstat" title="http://www.compbio.dundee.ac.uk/user/www-jws2/wbstat" rel="nofollow">Webalizer Access Stats</a>
+<a href="http://www.compbio.dundee.ac.uk/user/www-jws2/awstat_index.html" title="http://www.compbio.dundee.ac.uk/user/www-jws2" rel="nofollow">Awstat Access Stats</a></div>
+<!-- panel end-->
+<div id="content">
+
+  <h4>JABAWS Javadoc</h4>
+  <p><a href="dm_javadoc/index.html">Data model</a> javadoc- read this if your are coding against JABA Web Services</p>
+  <p><a href="full_javadoc/index.html">Complete</a> javadoc - for developers who want to use JABAWS framework and use Engines and Executables directly</p>
+  <h4>Starting up from the source code</h4>
+<p><a name="svn">SVN source repository:</a><a href="link to svn.lifesci.dundee.ac.uk/svn/barton/ptroshin/JABA_r1">https://svn.lifesci.dundee.ac.uk/svn/barton/ptroshin/JABA_r1</a><br/>
+The repository contains a complete JABAWS <a href="http://www.eclipse.org">Eclipse</a> project. To use Eclipse with this repository you need to install Eclipse SVN plugin which could be found here: http://subclipse.tigris.org/servlets/ProjectProcess?pageID=p4wYuA. Eclipse update web site address is <a href="http://subclipse.tigris.org/update_1.4.x">http://subclipse.tigris.org/update_1.4.x</a> Take care to install 1.4.x version of the plugin, as SVN repository will not work with more recent clients. it would help to install TestNG plugin as well which could be downloaded from <a href="http://testng.org/doc/download.html">http://testng.org/doc/download.html</a>. Please note however that no generated code is stored in the repository. That is to say that if you like to obtain client or server packages it is better to download them from the download section of this web site. Of cause If you want to make a modification to the source code you would need to generate distributives yourself. To do that first generate JAX-WS artifacts using <span class="hightlight">build-server</span> task from <span class="hightlight">wsbuild.xml</span> ant script, than you could use build.xml tasks to generate any of the distributives you need. </p>
+<h4>Structure of the project</h4>
+<img style="padding:0 1em;" align="left" src="images/ws-structure.png" alt="JABAWS layers" />
+<p>Layers in the source code are defined in a different source folders which are: 
+<br/><span class="hightlight">/webservices<br />
+  /runner<br />
+  /engine<br />
+  /datamodel</span></p>
+<p style="clear:both">JABAWS project is split into 4 layers. From bottom-up the first layer consists from the value classes used by all other layers of the hierarchy, in particular web services. So, to be able to use JABAWS one needs to have these classes. At the same time classes on this layer does not have any dependencies on the layers above.</p>
+<p>The second layer contains code for execution of the wrappers, which are the abstraction describing native executables. The code on this level code engine. JABAWS can execute tasks locally that is on the same machine as JVM and on the cluster. Thus currently code on this layer contain two engines. This layer depends on the layer underneath, the data model layer, but is completely independent from the code above.</p>
+<p>The third layer consists of the wrappers for the native executables and classes to handle their configuration. It depends on the engines and the data model, but know nothing about the web services.</p>
+<p>Finally, the upper layer contains the web services, that depend on all the layers below.</p>
+<p>The layer isolation is archived though specially designed compilation task which is executed sequentially in several stages so that the first layer compiles before any other layers, second layer compiles after that and process continies before all the code is compiled.  Any violation of the layer boundaries results in the compilation failure. Use Ant &quot;Compile&quot; or &quot;Complile_with_debug&quot; tasks to perform the staged compilation.</p>
+<p>A client package contains only classes from data model layer and a simple web services client. Framework package is for anyone who want to use JABAWS framework for controlling native executables in local or cluster environments. Framework exclude the web services layer. Server package contains all the code.</p>
+
+<h4>Running tests</h4>
+<p>The test results for the JABAWS package offered for download can be found here: <a href="http://www.compbio.dundee.ac.uk/user/www-jws2/tests/index.html">Test Results</a><br/>
+JABAWS uses <a href="http://testng.org/doc/index.html">TestNG</a> for testing. There is a TestNG plugin available for Eclipse which has functionality similar to JUnit. However, no plugins are necessary to run the test cases, as testng jar is supplied with JABAWS together with an ant tasks to run the test cases. </p>
+<p>The best way to ensure that JABAWS framework is completely functional on your system is to run all test cases. 
+Test cases tests all aspects of JABAWS functionality. Consequently, one need to have non windows operation system and support of the cluster to be able to run all tests. If your system does not support cluster, then you could run all test excluding those that depends on the cluster.
+Several testing groups are supported: 
+<ul>
+<li>All tests (Test)</li>
+<li>Cluster tests (Run_cluster_dependent_test)</li>
+<li>Cluster independent tests () </li>
+<li>Windows only tests (All_cluster_independent_windows_only_tests) </li>
+<li>Performance and stability tests (Long_tests) </li>
+<li>Re-run failed tests (Rerun_failed_tests) </li>
+<li>Run custom test (CustomTest) </li>
+</ul>
+<p>To run the tests you need to download all sources from <a href="#svn">repository</a>. Once you have done that, enter into the command line mode, change directory to the project directory and type: 
+  <span class="code">ant -f build.xml &lt;test group name&gt;</span>    </p>
+  <p>. Make sure you have <a href="http://ant.apache.org/">Apache Ant</a> 
+    installed and path to ant executable is defined in your path environmental variable. 
+    Replace test group name with the one of the names given in the list above to run required group of tests e.g for running cluster only tests 
+    use the following 
+    command: <span class="code">ant -f build.xml Run_cluster_dependent_test</span>
+    If you work under Linux you could use a simple script from the root folder of repository called <span class="hightlight">runtests.sh</span> This script simply contains a collection of the test commands described above and paths to java home directory and an ant executable, which you can define once for your system and then reuse.
+    </p>
+  </p>
+  <p>A handy feature of TestNG is its ability to re-run failed tests. Failed test ant file is stored in <span class="hightlight">test-output/testng-failed.xml</span>. and is used in the ant task called <span class="hightlight">Rerun_failed_tests</span>. So re-running failed tests requires no more work than running any other test group and could be accomplished with the command: <span class="code">ant -f build.xml Rerun_failed_tests</span> CustomTest runs the test defined in the project root directory file called <span class="hightlight">temp-testng-customsuite.xml</span>. This file is generated by TestNG plugin every time you run the test from Eclipse. Thus an easy way to run a test in a different environment is to run it from Eclipse first and then from ant using a custom test procedure. </p>
+  <p class="hightlight">For cluster execution make sure that the property LD_LIBRARY_PATH defined in build.xml points to cluster engine LD libraries directory in your local system.</p>
+
+ <h4>Preparing distributive's</h4>
+  <p>There are a number of ant tasks aimed for preparing distributives for download.
+  Currently a few types of JABAWS packages are offered 
+  <ol>
+  	  <li>Client only (contains classes required to access JABA Web Services)</li>
+  	  <li>Platform specific JABAWS (windows and other)</li>
+  	  <li>JABA Web Services without JAXWS libraries ( a the runtime dependency) </li>
+  	  <li>JABAWS without binaries</li>
+  	  <li>JABAWS without binaries and jax-ws </li>
+  	  <li>JABAWS framework </li>
+  </ol>
+  </p>
+  Corresponding build task names are: 
+  <ol>
+	 <li>min-jaba-client</li>
+	 <li>jaba-windows, jaba-complete</li>
+	 <li>jaba-without-jaxws</li>
+     <li>jaba-no-binaries</li>
+     <li>jaba-no-jaxws-no-binaries</li>
+     <li>full-jaba-client</li>
+  </ol>
+
+  <p>The easiest way to build all distributives is to call <span class="hightlight">build-all </span>ant task. There are more tasks defined in build.xml than described here. They are mostly self explanatory.  </p>
+  <p class="hightlight">If you made any changes to the data model and would like to generate a complete JABAWS distro make sure you have rebuilt jaxws artifact as described below.  </p>
+  <h4>Building web services artifacts</h4>
+<p>Server side artifacts should be rebuild whenever the data model, meta model or MSA interface were changed. To do that run build-server task from wsbuild.xml ant build file. WSDL files will be generated in <span class="hightlight">webservices/compbio/ws/server/resource</span> directory. It is not necessary to edit them if any of the JABAWS clients are used. However, if you would like to generate portable artifacts using wsimport based on the generated WSDL files then, <span class="code">&lt;soap:address location=&quot;REPLACE_WITH_ACTUAL_URL&quot;/&gt;</span></p>
+
+<p>must be replaced with an actual server URL including the web services context path. For example: </p>
+<p class="code">http://www.compbio.ac.uk:8080/ws</p>
+<p>JABAWS are the standard JAX-WS web services, which are WS-I basic profile compatible. </p>
+</div>
+<!-- content end--> 
+<div id="copyright">Last update: 16 September 2011<br/>
+  Peter Troshin, The Barton Group, University of Dundee, UK</div>
+</div><!-- wrapper end-->
+</div> <!-- page end-->
+<!-- Google analitics -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try{
+var pageTracker = _gat._getTracker("UA-5356328-1");
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+</body>
+</html>
+
