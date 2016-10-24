@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="compbio.runner.msa.MafftTester" failures="0" tests="7" time="10.939" errors="0">
+  <properties/>
+  <testcase name="readStatistics" time="0.57" classname="compbio.runner.msa.MafftTester"/>
+  <testcase name="testClusterExecute" time="3.947" classname="compbio.runner.msa.MafftTester"/>
+  <testcase name="testConfigurationLoading" time="0.049" classname="compbio.runner.msa.MafftTester"/>
+  <testcase name="testExecute" time="0.094" classname="compbio.runner.msa.MafftTester"/>
+  <testcase name="testPersistance" time="0.213" classname="compbio.runner.msa.MafftTester"/>
+  <testcase name="testRunOnClusterAsyncCheckStatusLongPoolingTime" time="5.539" classname="compbio.runner.msa.MafftTester"/>
+  <testcase name="testSetInputTester" time="0.0" classname="compbio.runner.msa.MafftTester"/>
+</testsuite>

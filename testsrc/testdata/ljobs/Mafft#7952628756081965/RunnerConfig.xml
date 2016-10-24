@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<runConfiguration>
+    <taskId>Mafft#7952628756081965</taskId>
+    <workDirectory>/cluster/gjb_lab/fc/www-jws2/jaba/local_jobsout/Mafft#7952628756081965</workDirectory>
+    <parameters>
+        <paramList>
+            <entry>
+                <key>--clustalout</key>
+                <value>
+                    <position>-1</position>
+                    <name>--clustalout</name>
+                </value>
+            </entry>
+            <entry>
+                <key>fasta.in</key>
+                <value>
+                    <position>-100</position>
+                    <name>fasta.in</name>
+                </value>
+            </entry>
+        </paramList>
+        <nameValueSeparator> </nameValueSeparator>
+    </parameters>
+    <error>error.txt</error>
+    <output>fasta.out</output>
+    <input>/cluster/gjb_lab/fc/www-jws2/jaba/local_jobsout/Mafft#7952628756081965/fasta.in</input>
+    <runnerClassName>compbio.runner.msa.Mafft</runnerClassName>
+</runConfiguration>

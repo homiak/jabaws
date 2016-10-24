@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="compbio.runner.disorder.GlobPlotTester" failures="0" tests="6" time="14.49" errors="0">
+  <properties/>
+  <testcase name="readStatistics" time="0.0010" classname="compbio.runner.disorder.GlobPlotTester"/>
+  <testcase name="testConfigurationLoading" time="0.047" classname="compbio.runner.disorder.GlobPlotTester"/>
+  <testcase name="testPersistance" time="0.987" classname="compbio.runner.disorder.GlobPlotTester"/>
+  <testcase name="testRunLocally" time="0.556" classname="compbio.runner.disorder.GlobPlotTester"/>
+  <testcase name="testRunOnCluster" time="7.155" classname="compbio.runner.disorder.GlobPlotTester"/>
+  <testcase name="testRunOnClusterAsync" time="5.012" classname="compbio.runner.disorder.GlobPlotTester"/>
+</testsuite>

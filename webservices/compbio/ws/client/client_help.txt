@@ -1,0 +1,65 @@
+
+JABAWS2 client August 2011 http://www.compbio.dundee.ac.uk/jabaws 
+ 
+Usage: <Class or Jar file name> -h=host_and_context <-s=serviceName> ACTION [OPTIONS] 
+
+-h=<host_context>  - a full URL to the JABAWS web server including context 
+                     path e.g. http://10.31.1.159:8080/ws
+-s=<ServiceName>   - one of [MafftWS, MuscleWS, ClustalWS, ClustalOWS, TcoffeeWS, 
+					 ProbconsWS, AAConWS, JronnWS, DisemblWS, GlobPlotWS, IUPredWS]
+                     <serviceName> is required for all ACTIONS but -list_services
+
+ACTIONS: 
+-list_services    - list available services
+-test             - test service 
+-i=<inputFile>    - full path to fasta formatted sequence file, from which to align 
+                    sequences
+-parameters       - lists parameters supported by web service
+-presets          - lists presets supported by web service
+-limits           - lists web services limits
+
+Please note that if input file is specified other actions are ignored
+
+OPTIONS (only for use with -i action):
+-r=<presetName>   - name of the preset to use
+-o=<outputFile>   - full path to the file where to write an alignment
+-f=<PrmInputFile> - the name of the file with the list of parameters to use.
+
+Please note that -r and -f options cannot be used together. Alignment is done with 
+either preset or a parameters from the file, but not both!
+
+EXAMPLES: 
+
+1) List all available services on the host 
+
+Jws2Client -h=http://www.compbio.dundee.ac.uk/jabaws -list_services
+
+2) Test Clustal web service 
+
+Jws2Client -h=http://www.compbio.dundee.ac.uk/jabaws -s=ClustalWS -test 
+
+3) Align sequence from file input.txt with Probcons. Record resulting alignment 
+into the output.txt 
+
+Jws2Client -h=http://www.compbio.dundee.ac.uk/jabaws -s=ProbconsWS -i=input.txt -o=output.txt
+
+4) Calculate disorder with Disembl take input from input.txt, output results to 
+the console 
+
+Jws2Client -h=http://www.compbio.dundee.ac.uk/jabaws -s=DisemblWS -i=input.txt 
+
+5) List all parameters available for AAconWS service 
+
+Jws2Client -h=http://www.compbio.dundee.ac.uk/jabaws -s=AAconWS -parameters
+
+6) Calculate conservation with AAConWS using LANDGRAF method, for Clustal alignment 
+from input.txt and report  the scores to the console 
+
+Jws2Client -h=http://www.compbio.dundee.ac.uk/jabaws -s=AAconWS -i=input.txt -f=prm.txt 
+
+Where the content of prm.txt file is -m=LANDGRAF
+The list of the supported parameters can be obtained as shown in the example 5. 
+
+Citation: Peter V. Troshin, James B. Procter and Geoffrey J. Barton - "Java 
+Bioinformatics Analysis Web Services for Multiple Sequence Alignment - 
+JABAWS:MSA" Bioinformatics 2011; doi: 10.1093/bioinformatics/btr304.

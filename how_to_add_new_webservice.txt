@@ -1,0 +1,82 @@
+How To add a new executable
+
+1) Add executable to the binaries folder. If it has source code and can be 
+recompiled for different platforms include it under binaries/src 
+Edit binaries/src setexecutableflag.sh and compilebin.sh scripts accordingly. 
+
+2) Make sure all the dependencies of the software being installed are satisfied. 
+If there are other binaries they should be included as well. Keep the dependant 
+binaries in subfolder for the main executable. Update compile and setexecflag 
+scripts accordingly. 
+
+3) Make sure executable 
+   - Does not have any hard links to its dependencies, e.g. is able to run from 
+   any installation folder and does not contain any hard coded paths. 
+   (TODO examples...) 
+
+4) Describe executable in conf/Exectuable.properties. The lowercase name of the 
+wrapper should be included in the name of the property for example Clustal 
+properties all include clustal as a part of the name e.g. local.clustalw.bin
+The same property for Mafft will be called local.mafft.bin. 
+
+5) Add <ExecutableName>Limit.xml, <ExecutableName>Parameters.xml and 
+<ExecutableName>Presets.xml. All are optional (should be at least). If the 
+executable does not support parameters you do not have to refer to the 
+XXXParameter.xml file into the Executable.properties file. The same is true for 
+Presets and Limits. 
+
+6) Create a Java wrapper class for your executable. Create it within runner 
+source directory. Examples of other wrappers can be found in compbio.runner.msa 
+or compbio.runner.disorder packages. Wrapper should extend SkeletalExecutable<T> 
+implements PipedExecutable<T> if you need to pass the input or collect the 
+results from the standard in/out. Please see Mafft code as example. Wrapper 
+should expend SkeletalExecutable<T> if input/output can be set as a parameter 
+for an executable. Please see ClustalW code as example. 
+
+7) Create a testcase suit for your wrapper and run the test cases. 
+
+8) Create parser for the output files of your executable. Suggested location 
+compbio.data.sequence.SequenceUtil  
+
+9) Test the parser
+
+10) Decide which web services interface your executable is going to match. 
+    For example if the executable output can be represented as 
+    SequenceAnnotation then SequenceAnnotation interface might be appropriate. 
+    For multiple sequence alignment an Msa interface should be used. 
+
+11) If you find a web interface that matches your returning data type, then 
+implement a web service which confirms to it within a webservices source folder 
+
+12) Register web service in WEB-INF/ web.xml and sun-jaxws.xml
+
+13) Add generated wsdl to wsbuild.xml ant script to generate the stubs
+
+14) Run build-server task in wsbuild file. Watch for errors. If the task fails 
+that means that JAXB cannot serialize some of the data structures. Add 
+appropriate annotations to your data types.
+Also check that 
+  - you do not have interfaces to serialize. JAXB cannot serialize them.
+  - you have a default no args constructor (can be private if you do not need it)
+  - JAXB cannot serialize a Map, use custom data structure instead!
+  - Enum cannot be serialized as its abstract class (do not confuse with enum 
+  which is fine)
+  - Fields serialization leave a little more space for manoeuvre, so use it. If 
+  you do then you can accept and return interfaces, e.g. List, Map; abstract 
+  classes etc, from your methods. 
+  
+If you have the data on the server side, but nothing is coming through to the 
+client, this is a JAXB serialization problem. They tend to be very silent and 
+thus hard to debug. Check your data structure can be serialized! 
+
+13) Modify the client to work with your new web service. Update Services 
+enumeration to include new service and ensure that all the methods of this 
+enumeration take into account the new service. In particular add the service to the 
+compbio.ws.client.Services enumeration. Modify the getServiceImpl() and getServiceType()
+methods. Update the client help text (client_help.txt) and insert it into the Constraints class.   
+
+14) Test the web service with the client. 
+
+15) Make sure the statistics collector works fine with a new web service. 
+
+16) Test on the cluster...

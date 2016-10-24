@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "XHTML 1.0 Strict"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="Last-modified" content="Mon, 4 Apr 2011 12:00:00 GMT"/>
+<title>Java Bioinformatics Analyses Web Services (JABAWS) Server Configuration manual</title>
+<link href="ws.css" rel="stylesheet" type="text/css" media=
+"screen, projection, handheld, tv" />
+<link rel="stylesheet" type="text/css" media="print" href=
+"print.css" />
+<script type="text/javascript" src="prototype-1.6.0.3.js"></script>
+</head>
+<body>
+<div id="page">
+<div id="banner">
+<table> 
+<tr><td style="width:158px;"><a href="http://www.dundee.ac.uk"><img src="images/uod_lt_long.gif"  alt="University of Dundee" width="158" height="90" class="logo"  title="University of Dundee" longdesc="http://www.dundee.ac.uk"/></a></td>
+<td class="bg"><img src="images/jabaws2.png" alt="JABAWS-2.0" title="Java Bioinformatics Analysis Web Services version 2.0"/></td>
+<td class="bg"><img src="images/banner_right.png" alt="Disorder" width="200" height="80"/></td>
+</tr>
+</table>
+</div><!-- banner end-->
+
+<div id="wrapper">
+<div id="panel"><a href="index.html">Home</a> 
+  <a href="quick_start.html">Getting Started</a> 
+  <a class="selected" href="man_about.html">Manual</a> 
+	<div id="submenu">
+		<a href="man_about.html">About</a>
+		<a href="man_servervm.html" title="JABAWS Server as Virtual Appliance">Server VA</a>
+		<a href="man_awscloud.html" title="JABAWS Server in the Amazon EC2 Cloud">Server in the Cloud</a>
+		<a href="man_serverwar.html" title="JABAWS Server as Web Application aRchive">Server WAR</a>
+		<a class="selected" href="man_configuration.html" >Server<br/>
+		Configuration</a>
+		<a href="man_client.html" title="JABAWS Command Line Client">CMD Client</a>
+		<a href="man_stats.html" title="JABAWS Usage Statistics">Usage Statistics</a>
+		<a href="man_dev.html" title="Accessing JABAWS from your program">Accessing<br/>
+		JABAWS</a>	
+		<a href="man_server_dev.html" >JABAWS Development</a>
+	</div>
+<a href="http://www.compbio.dundee.ac.uk/download">Download</a> 
+<a href="PublicAnnualStat" title="JABAWS usage statistics">Usage Statistics</a>
+ <a href="ServiceStatus" title="JABAWS webservices status. Click to test all web services. Please be patient while the services are being checked">Services Status</a>
+<a href="contacts.html">Contact Us</a>
+<a href="http://www.compbio.dundee.ac.uk" title="University of Dundee, The Barton Group" >Barton Group</a>
+</div>
+
+<!-- panel end-->
+<div id="content">
+<h2 id="headtitle">JABAWS MANUAL</h2>
+
+<h2>JABAWS Server Configuration </h2>
+<ul>
+  <li><a href="#defjabaconf">JABAWS Configuration </a></li>
+  <li><a href="#locEngConf">Local Engine Configuration</a></li>
+  <li><a href="#clustEngConf">Cluster Engine Configuration</a></li>
+  <li><a href="#exec">Executable Configuration</a></li>
+  <li><a href="#setexecenv">Defining Environment Variables for
+    Executables</a></li>
+  <li><a href="#mafftconf">Configure JABAWS to Work
+with Mafft</a></li>
+  <li><a href="#settinglimit">Limiting the size of the job accepted by JABAWS Server </a></li>
+  <li><a href="#diffbin">Using a different version of the alignment program with JABAWS</a></li>
+  <li><a href="#mixuse">Load balancing </a></li>
+  <li><a href="#testingJaba">Testing JABA Web Services</a></li>
+  <li><a href="#logs">JABAWS requests logging </a></li>
+  <li><a href="#logfiles">JABAWS internal logging </a></li>
+  <li><a href="#warfile">JABAWS War File Content</a></li>
+  <li><a href="#ga">JABAWS and Google Analytics</a></li>
+  </ul>
+<h3><a name="defjabaconf" id="defjabaconf"></a>JABAWS Configuration </h3>
+<p>There are three parts of the system you can configure. The local
+and the cluster engines, and the paths to the individual executables for
+each engine. These settings are stored in configuration files
+within the web application directory (for an overview, then take a
+look at the <a href="#warfile">war file content table</a>). </p>
+<p>Initially, JABAWS is configured with only the local engine
+  enabled, with job output written to directory called &quot;jobsout&quot;
+  within the web application itself. This means that JABAWS will work
+  out of the box, but may not be suitable for serving a whole lab or
+  a university.</p>
+<h3><a name="locEngConf" id="locEngConf"></a>Local Engine Configuration</h3>
+
+<p>The Local execution engine configuration is defined in the
+properties file <span class="hightlight">conf/Engine.local.properties. </span>The supported
+configuration settings are:<br />
+ <span class="hightlight">engine.local.enable=true</span> - #
+enable or disable local engine, valid values true | false<br />
+ <span class=
+"hightlight">local.tmp.directory=D:\\clusterengine\\testoutput</span>
+- a directory to use for temporary files storage, optional,
+defaults to java temporary directory<br />
+ <span class="hightlight">engine.local.thread.number=4</span> -
+Number of threads for tasks execution (valid values between 1 and
+2x cpu. Where x is a number of cores available in the system).
+Optional defaults to the number of cores for core number &lt;=4 and
+number of cores-1 for greater core numbers.</p>
+
+<p>If the local engine going to be heavily loaded (which is often the case if you do not have a cluster) it is a good idea to increase
+the amount of memory available for the web application server. If
+you are using Apache-Tomcat, then you can define its memory
+settings in the JAVA_OPTS environment variable. To specify which
+JVM to use for Apache-Tomcat, put the full path to the JRE
+installation in the JAVA_HOME environment variable (We would
+recommend using Sun Java Virtual Machine (JVM) in preference to
+Open JDK). Below is an example of code which can be added to <span
+class="hightlight">&lt;tomcat_dir&gt;/bin/setenv.sh</span> script
+to define which JVM to use and a memory settings for Tomcat server.
+Tomcat server startup script (<span class=
+"hightlight">catalina.sh</span>) will execute <span class=
+"hightlight">setenv.sh</span> on each server start
+automatically.<br />
+ <span class="code">export
+JAVA_HOME=/homes/ws-dev2/jdk1.6.0_17/<br />
+ export JAVA_OPTS=&quot;-server -Xincgc -Xms512m -Xmx1024m&quot;</span></p>
+
+<h3><a name="clustEngConf" id="clustEngConf"></a>Cluster Engine Configuration</h3>
+
+<p>Supported configuration settings:<br />
+ <span class="hightlight">engine.cluster.enable=true</span> - #
+enable or disable local engine true | false, defaults to
+false<br />
+ <span class=
+"hightlight">cluster.tmp.directory=/homes/clustengine/testoutput-</span>
+a directory to use for temporary files storage. The value must be
+an absolute path to the temporary directory. Required. The value
+must be different from what is defined for local engine. This
+directory must be accessible from all cluster nodes.<br />
+ For the cluster engine to work, the SGE_ROOT and LD_LIBRARY_PATH
+environment variables have to be defined. They tell the cluster
+engine where to find DRMAA libraries. These variables
+should be defined when the web application server starts up, e.g.</p>
+
+<p class="code">SGE_ROOT=/gridware/sge<br />
+ LD_LIBRARY_PATH=/gridware/sge/lib/lx24-amd64</p>
+
+<p>Finally, do not forget to configure executables for the cluster
+execution, they may be the same as for the local execution but may
+be different. Please refer to the executable configuration section
+for further details.</p>
+
+<h3><a name="exec" id="exec"></a>Executable Configuration</h3>
+
+<p>All the executable programs
+are configured in <span class="hightlight">conf/Executable.properties</span> file. Each executable
+is configured with a number of options. They are: <span class=
+"code">local.X.bin.windows=&lt;path to executable under windows
+system, optional&gt;<br />
+ local.X.bin=&lt;path to the executable under non-windows system,
+optional&gt;<br />
+ cluster.X.bin=&lt;path to the executable on the cluster, all
+cluster nodes must see it, optional&gt;<br />
+ X.bin.env=&lt;semicolon separated list of environment variables
+for executable, use hash symbol as name value separator,
+optional&gt;<br />
+ X.--aamatrix.path=&lt;path to the directory containing
+substitution matrices, optional&gt;<br />
+ X.presets.file=&lt;path to the preset configuration file, optional
+&gt;<br />
+ X.parameters.file=&lt;path to the parameters configuration file,
+optional&gt;<br />
+ X.limits.file=&lt;path to the limits configuration file,
+optional&gt;<br />
+ X.cluster.settings=&lt;list of the cluster specific options,
+optional&gt;</span></p>
+
+<p>Where X is either  clustal, muscle, mafft, probcons or tcoffee. </p>
+
+<p>Default JABAWS configuration includes path to local executables
+to be run by the local engine only, all cluster related settings
+are commented out, but they are there for you as example. Cluster
+engine is disabled by default. To configure executable for cluster
+execution un comment the X.cluster settings and change them
+appropriately. </p>
+<p>By default limits are set well in excess of what you may want to offer to the users outside your lab, to make sure that the tasks are never rejected. The default limit is 100000 sequences of 100000 letters on average for all of the JABA web services.  You can adjust the limits according to your needs by editing <span class="hightlight">conf/settings/&lt;X&gt;Limit.xml</span> files.<br />
+  After you have completed the editing your configuration may look like
+  this:<span class="code">local.mafft.bin.windows=<br />
+    local.mafft.bin=binaries/mafft<br />
+    cluster.mafft.bin=/homes/cengine/mafft<br />
+    mafft.bin.env=MAFFT_BINARIES#/homes/cengine/mafft;FASTA_4_MAFFT#/bin/fasta34;<br />
+    mafft.--aamatrix.path=binaries/matrices<br />
+    mafft.presets.file=conf/settings/MafftPresets.xml<br />
+    mafft.parameters.file=conf/settings/MafftParameters.xml<br />
+    mafft.limits.file=conf/settings/MafftLimits.xml<br />
+    mafft.cluster.settings=-q bigmem.q -l h_cpu=24:00:00 -l
+    h_vmem=6000M -l ram=6000M</span></p>
+<p>Please not that relative paths must only be specified for the
+files that reside inside web application directory, all other paths
+must be supplied as absolute!</p>
+
+<p>Furthermore, you should avoid using environment variables within the paths or options - since these will not be evaluated correctly.  Instead, please explicitly
+specify the absolute path to anything
+normally evaluated from an environment variable at execution time.</p>
+
+<p>If you are using JABAWS to submit jobs to the cluster (with
+cluster engine enabled), executables must be available from all
+cluster nodes the task can be sent to, also paths to the
+executables on the cluster e.g. <span class=
+"hightlight">cluster.&lt;exec_name&gt;.bin</span> must be
+absolute.</p>
+
+<p>Executables can be located anywhere in your system, they do not
+have to reside on the server as long as the web application server
+can access and execute them.</p>
+
+<p>Cluster settings are treated as a black box, the system will
+just pass whatever is specified in this line directly to the
+cluster submission library. This is how DRMAA itself treats this
+settings. More exactly DRMAA <span class="hightlight">JobTemplate.setNativeSpecification()</span> function will be called.</p>
+<p>For further details and examples of configuration please refer to the <span class="hightlight">Executable.properties</span> file supplied with JABAWS.</p>
+<h3><a name="setexecenv" />Defining Environment Variables for
+Executables</h3>
+
+<p>Environment variables can be defined in property <span class=
+"code">x.bin.env</span> Where <span class="hightlight">x</span> is
+one of five executables supported by JABAWS. Several environment
+variables can be specified in the same line. For example.<br />
+ <span class=
+"code">mafft.bin.env=MAFFT_BINARIES#/homes/cengine/mafft;FASTA_4_MAFFT#/bin/fasta34;</span></p>
+
+<p>The example above defines two environment variables with names
+MAFFT-BINARIES and FASTA_4_MAFFT and values /homes/cengine/mafft
+and /bin/fasta34 respectively. Semicolon is used as a separator
+between different environment variables whereas hash is used as a
+separator for name and value of the variable.</p>
+
+<h3><a name="mafftconf" id="mafftconf"></a>Configure JABAWS to Work
+with Mafft</h3>
+
+<p>If you use default configuration you do not need to read any
+further. The default configuration will work for you without any
+changes, however, if you want to install Mafft yourself then there
+is a couple of more steps to do.</p>
+
+<p>Mafft executable needs to know the location of other files
+supplied with Mafft. In addition some Mafft functions depends on
+the fasta executable, which is not supplied with Mafft, but is a
+separate package. Mafft needs to know the location of fasta34
+executable.</p>
+
+<p>To let Mafft know where the other files from its package are
+change the value of MAFFT-BINARIES environment variables. To let
+Mafft know where is the fasta34 executable set the value of
+FASTA_4_MAFFT environment variable to point to a location of
+fasta34 program. The latter can be added to the PATH variable
+instead. If you are using executables supplied with JABAWS, the
+path to Mafft binaries would be like <span class=
+"hightlight">&lt;relative path to web application
+directory&gt;/binaries/src/mafft/binaries</span> and the path to
+fasta34 binary would be <span class="hightlight">&lt;relative path
+to web application
+directory&gt;/binaries/src/fasta34/fasta34</span>. You can specify
+the location of Mafft binaries as well as fasta34 program elsewhere
+by providing an absolute path to them. All these settings are
+defined in <span class=
+"hightlight">conf/Executable.properties</span> file.</p>
+<h3><a name="settinglimit" id="settinglimit"></a>Limiting the size of the job accepted by JABAWS </h3>
+<p>JABAWS can be configured to reject excessively large tasks.  This is useful if you operate JABAWS service for many users. By defining a  maximum allowed task size you can provide an even service for all users and  prevents waist of resources on the tasks too large to complete  successfully. You can define the maximum number of sequences and the maximum average  sequence length that JABAWS accepts for each JABA Web Service independently. 
+Furthermore, you can define different limits for different  presets of the same web service. <br />
+By default limits are disabled. You can enable them by editing <span class="hightlight">conf/Executable.properties</span> file. You can adjust the limits according  to your needs by editing <span class="hightlight">conf/settings/&lt;X&gt;Limit.xml</span> files. </p>
+<h3><a name="diffbin" id="diffbin"></a>Using a different version of the alignment program with JABAWS</h3>
+<p>JABAWS supplied with binaries and source code of the executables which version it supports. So normally you would not need to install your own executables. However, if you have a different version of an executable (e.g. an alignment program) which you prefer, you could use it as long as it supports all the functions JABAWS executable supported. This could be the case with more recent executable. If the options supported by your chosen executable is different when the standard JABAWS executable, than you need to edit <em>ExecutableName</em>Paramaters.xml&nbsp; configuration file. </p>
+<h3><a name="mixuse" id="mixuse"></a>Load balancing </h3>
+<p>If your cluster is busy and have significant waiting times you can achieve a faster response by allowing the server machine to calculate small tasks and the reserve the cluster for bigger jobs. This works especially well if your server is a powerful machine with many CPUs. To do this you need to enable and configure both the cluster and the local engines. Once this is done decide on the maximum size of a task to be run on the server locally. Then, edit <span class="hightlight">&quot;# LocalEngineExecutionLimit #&quot; </span>preset in<span class="hightlight"> &lt;ServiceName&gt;Limits.xml</span> file accordingly. JABAWS server then will balance the load according to the following rule: If the task size is smaller then the maximum task size for local engine, and the local engine has idle threads, then calculate task locally otherwise submit the task to the cluster. </p>
+<h3><a name="testingJaba" id="testingJaba"></a>Testing JABA Web Services</h3>
+<p>Access <span class="code">&lt;your_JABAWS_server_URL&gt;/ServiceStatus</span> to test all web services. Each time you access this URL, all services are tested. You can test a particular web service by adding its name at the end of this URL. For example <span class="code">http://localhost:8080/jabaws/ServiceStatus/MuscleWS </span>will test MuscleWS webservice only. For production configuration we recommend prohibiting requests to this URL for non authenticated users to prevent excessive load on the server. </p>
+<p>Alternatively, you can use a command line client (part of the client only
+  package) to test your JABAWS installation as described <a href="man_client.html">here</a>. If you downloaded a JABAWS
+  server package, you can use <span class=
+"hightlight">&lt;your_jaba_context_name&gt;/WEB-INF/lib/jaba-client.jar</span> to test JABAWS installation as described in <a href=
+"man_serverwar.html#usingWsTester">here</a>. If you downloaded the source
+  code, then you could run a number of test suits defined in the
+  build.xml Apache Ant  file.</p>
+<h3><a name="logs" id="logs"></a>JABAWS requests logging </h3>
+<p>Enable Tomcat log valve. To do this uncomment the following section of <span class="hightlight">&lt;tomcat_root&gt;/conf/server.xml</span> configuration file. </p>
+<p class="code"> &lt;Valve className=&quot;org.apache.catalina.valves.AccessLogValve&quot; directory=&quot;logs&quot; <br />
+  prefix=&quot;localhost_access_log.&quot; suffix=&quot;.txt&quot; pattern=&quot;common&quot; resolveHosts=&quot;false&quot;/&gt;</p>
+<p> The following information will be logged:</p>
+<table width="100%" border="0" style="margin:0">
+  <tr>
+    <th>Remote IP</th>
+    <th>Date</th>
+    <th>Method server_URL protocol </th>
+    <th>HTTP status </th>
+    <th>Response size in bytes </th>
+  </tr>
+  <tr>
+    <td>10.31.11.159</td>
+    <td>[10/Feb/2010:16:51:32 +0000]</td>
+    <td>&quot;POST /jws2/MafftWS HTTP/1.1&quot;</td>
+    <td>200</td>
+    <td>2067</td>
+  </tr>
+</table>
+<p>Which can be processed in various programs for log analysis , such as <a href="http://www.webalizer.org/">WebAlizer</a>, <a href="http://www.analog.cx/">Analog</a>, <a href="http://awstats.sourceforge.net/">AWStats</a>. </p>
+<h3><a name="logfiles" id="logfiles"></a>JABAWS internal logging </h3>
+<p>JABAWS can be configured to log what it is doing. This comes
+  handy if you would like to see who is using your web services or
+  need to chase some problems. JABAWS uses <a href=
+"http://logging.apache.org/log4j/1.2/">log4j</a> to do the logging,
+  the example of log4j configuration is bundled with JABAWS war file.
+  You will find it in the <span class=
+"hightlight">/WEB-INF/classes/log4j.properties</span> file. All the
+  lines in this file are commented out. The reason why the logging is
+  disabled by default it simple, log4j have to know the exact
+  location where the log files should be stored. This is not known up
+  until the deployment time. To enable the logging you need to
+  define<span class="hightlight"> logDir</span> property in the <span
+class="hightlight">log4j.properties</span> and uncomment section of
+  the file which corresponds to your need. More information is given
+  in the <span class="hightlight">log4j.properties</span> file
+  itself. Restart the Tomcat or the JABAWS web application to apply
+  the settings.</p>
+<p>After you have done this, assuming that you did not change the
+  log4j.properties file yourself, you should see the application log
+  file called <span class="hightlight">activity.log</span>. The
+  amount of information logged can be adjusted using different
+  logging levels, it is reduced in the following order of log levels
+  TRACE, DEBUG, INFO, WARN, ERROR, FATAL.</p>
+<p>If you would like to know who is using your services, you might
+  want to <a href="#logs">enable Tomcat request
+    logging</a>.</p>
+<h3><a name="warfile" id="warfile"></a>JABAWS War File Content</h3>
+<table width="100%">
+  <tr>
+    <th style="width:19%">Directory</th>
+    <th style="width:81%">Content description</th>
+  </tr>
+  <tr>
+    <td>conf/</td>
+    <td>contains configuration files such as Executable.properties,
+      Engine.local.properties, Engine.cluster.properties</td>
+  </tr>
+  <tr>
+    <td>conf/settings</td>
+    <td>Contains individual executable description files. In particular
+      XXXParameters.xml, XXXPresets.xml, XXXLimits.xml where XXX is the
+      name of the executable</td>
+  </tr>
+  <tr>
+    <td>ExecutionStatistics</td>
+    <td>The database for storing the execution statistics. </td>
+  </tr>
+  <tr>
+    <td>statpages</td>
+    <td>Web pages for usage statistics visialization and webservices status queries. </td>
+  </tr>
+  <tr>
+    <td>jobsout/</td>
+    <td>Contains directories generated when running an individual executable. E.g. input and output files and some other task
+      related data. (optional)</td>
+  </tr>
+  <tr>
+    <td>binaries/</td>
+    <td>Directory contains native executables - programs,
+      windows binaries (optional)</td>
+  </tr>
+  <tr>
+    <td>binaries/src</td>
+    <td>Contains source of native executables and Linux i386
+      binaries.</td>
+  </tr>
+  <tr>
+    <td>binaries/windows</td>
+    <td>Contains binaries for MS Windows operating system. </td>
+  </tr>
+  <tr>
+    <td>binaries/matrices</td>
+    <td>Substitution matrices
+      <!-- what format ? --></td>
+  </tr>
+  <tr>
+    <td>WEB-INF</td>
+    <td>Web application descriptor</td>
+  </tr>
+  <tr>
+    <td>WEB-INF/lib</td>
+    <td>Web application libraries</td>
+  </tr>
+  <tr>
+    <td>WEB-INF/classes</td>
+    <td>log4j.properties - log configuration file (optional)</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Help Pages</strong> </td>
+  </tr>
+  <tr>
+    <td>/</td>
+    <td>help pages, index.html is the starting page</td>
+  </tr>
+  <tr>
+    <td>dm_javadoc</td>
+    <td>javadoc for JABAWS client (the link is available from How To
+      pages)</td>
+  </tr>
+  <tr>
+    <td>prog_docs</td>
+    <td>documentation for programs that JABAWS uses</td>
+  </tr>
+  <tr>
+    <td>images</td>
+    <td>images referenced by html pages</td>
+  </tr>
+</table>
+<h3><a name="ga" id="ga"></a>JABAWS and Google Analytics </h3>
+<p>JABAWS reports web services usage to our group Google Analytics (GA) account. JABAWS usage statistics are collected for funding and reporting purposes, and  no private information is collected. The data sent by JABAWS is as follows: </p>
+<ol>
+  <li>The IP address of the JABAWS server machine (the server IP can anonymized see <span class="hightlight">conf/GA.properties</span> config file)</li>
+  <li>The name of the web service that was called. </li>
+  <li>A few details of the system such as JABAWS version, java version, user language, color depth, screen
+    resolution and character encoding.</li>
+</ol>
+<p> Google Analytics can be disabled or adjusted by removing/editing <span class="hightlight">conf/GA.properties</span> Google Analytics (GA) settings file. We would appreciate it greatly if you could leave it on!</p>
+<p>All calls to GA are very lightweight, completed asynchronously, create very little overhead and do not influence the server response time or performance.</p>
+</div>
+<!-- content end-->
+<div id="copyright">Last update: 16 September 2011<br />
+ Peter Troshin, Jim Procter and Geoff Barton, The Barton Group, University of
+Dundee, UK</div>
+</div>
+
+<!-- wrapper end-->
+</div>
+<!-- page end-->
+
+<!-- Google analitics -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try{
+var pageTracker = _gat._getTracker("UA-5356328-1");
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+</body>
+</html>
+

@@ -1,0 +1,942 @@
+CLUSTAL 2.0.12 multiple sequence alignment
+
+
+Sequence0       ------------------------------------------------------------
+Sequence1       TACTCACTTTAGGTTCCACTCTACCCATCCTCCGTGATTCTTAATCCAATCATGTTGACA
+                                                                            
+
+Sequence0       ------------------------------------------------------------
+Sequence1       ACTTAGGGATCCTACCAGTCTACGGCATCTTTTATTAGTAGTAATTCTATATGTGGGTGA
+                                                                            
+
+Sequence0       ------------------------------------------------------------
+Sequence1       CAATAGTCTCCCCTACATCTTGGTTTTATACCCCAAAGTTTCAGTTCTCACAGTCAAATA
+                                                                            
+
+Sequence0       ------------------------------------------------------------
+Sequence1       TAGTTTGAAAATATTAAATAGAAACTTTCAGAAATAAAAAATCAATACATTGGAAATACA
+                                                                            
+
+Sequence0       ------------------------------------------------------------
+Sequence1       TTTATTAACATTGCTGTTTTTTATTATTAACCATTATTAATCTCTCAGTATACCTAGTTT
+                                                                            
+
+Sequence0       ------------------------------------------------------------
+Sequence1       GTAGTCAATATATGTTTAAATACATATGTTTATGTATTTGTGTGTGGGCACAAGGTTTGA
+                                                                            
+
+Sequence0       ------------------------------------------------------------
+Sequence1       CATACCTGTTGTTTCCGGCTTTCGCTGAGGACCTTGGGATGCATCCCGCTGAGTGTGGTG
+                                                                            
+
+Sequence0       ------------------------------------------------------------
+Sequence1       GGAGAATGCTGTTGTTCACACACAGATCTCTTCTCTATCCCAGGTCTCTGCTCGGCTCTG
+                                                                            
+
+Sequence0       ------------------------------------------------------------
+Sequence1       TGTCTGGGACAGCCGCTAGCTCTTGCTGGATTTAGCCAGCGGAAGAGAGACCTGTAGGAT
+                                                                            
+
+Sequence0       ------------------------------------------------------------
+Sequence1       TCTAGGAATGGAAGCTGATGTGTGTTTTATTTGCACTGTTATCAGGCAGAGGCTGGGACT
+                                                                            
+
+Sequence0       ------------------------------------------------------------
+Sequence1       AGCAAAGCACTCCGTCACTCTCCCTCAGCTCAGGCAGCCCGCTCTTCTCCTTTCATTCAT
+                                                                            
+
+Sequence0       ------------------------------------------------------------
+Sequence1       AAGCTGTAGAGAGGTAGCGACTTCCCGCCCTTGCCTGTGTCTGGCAGCTCACCTTCATGC
+                                                                            
+
+Sequence0       ------------------------------------------------------------
+Sequence1       TTTAGTCCTGGTGCCACCCACGTCCTTTAAATGACCTTCCCAATAGTGTCTCTGCGGTGG
+                                                                            
+
+Sequence0       ------------------------------------------------------------
+Sequence1       ACTATGGAGAGAGAATTCTTCATCCTGCCTTGACTGGGTCTGTCGTTTTGCTCTTTCACC
+                                                                            
+
+Sequence0       ------------------------------------------------------------
+Sequence1       GTCTTGCCTTTCCCTTCCTAGACACTTTATTGACTGCCCAATGCCAGCTTACTTTCATTG
+                                                                            
+
+Sequence0       ------------------------------------------------------------
+Sequence1       TCTATGCTGATGACCACTTATGCTAATTGTCTATGTTTTTTGTTCTTCTCCACATTGCTG
+                                                                            
+
+Sequence0       ------------------------------------------------------------
+Sequence1       AGATTTTGCCCTAGAACACAGGACATTTCCTTAATCCATTCTGCCATCCTTTGCAGTAAA
+                                                                            
+
+Sequence0       ------------------------------------------------------------
+Sequence1       ACATTATTTACTTATATTAAATTCACTTTTATTTATTTACTTTTGAAATAGTGTCTTGCT
+                                                                            
+
+Sequence0       ------------------------------------------------------------
+Sequence1       ACGTCACAAGGGTAGCCTTGAATTTATGATCCTCCTATGGTTGGGATGGCGGGACTATGC
+                                                                            
+
+Sequence0       ------------------------------------------------------------
+Sequence1       CATCACACTTGACTTGAAGTGTTTAAAATTTTTCAGCAATTATGTTGTATTTTCAAGGGT
+                                                                            
+
+Sequence0       ------------------------------------------------------------
+Sequence1       CTTCTCTTGCTTTTTTTTCCCCTTAGGTTCTTTGCTTCCTGCCAATCTGTCTCTGTTATG
+                                                                            
+
+Sequence0       ------------------------------------------------------------
+Sequence1       GGTCCAACTATGTCTGTAATCTGAAACCCAAGAGGAAGCTTTTGATACGTTGACCTGCTT
+                                                                            
+
+Sequence0       ------------------------------------------------------------
+Sequence1       TCCTTTTCTTTTTTTTGAGATCATTTTGATTCATCCTCTCTGTGCTGTTCGTTTTCTAAG
+                                                                            
+
+Sequence0       ------------------------------------------------------------
+Sequence1       CCTGCTGGCGACTGCTTATAGGAGAGAGCAAACGCGCTCTCCTTTGGGCGGCCGATGTGG
+                                                                            
+
+Sequence0       ------------------------------------------------------------
+Sequence1       CATCTTCTAGGGAGAATTAGGACAAATGCCTTACCCGTGGGAGCTTTGTGCTCTTAGGCC
+                                                                            
+
+Sequence0       ------------------------------------------------------------
+Sequence1       ATGCTTGGATGGCTTGCTTAGAACGAGCAGGGGTGTGTGTGTGTGTGTGTGTGTGTGTGT
+                                                                            
+
+Sequence0       ------------------------------------------------------------
+Sequence1       GTGTGCATGCACTCATGTGTGCACTTGCATAGGAGGGGGAGAGTAAAGGCACATTTCATA
+                                                                            
+
+Sequence0       ------------------------------------------------------------
+Sequence1       CAGGCCTGGCTCTCCGACAATGAGAACAAACTTCCAGTGTGGAAAATAGGCTCGATGAGC
+                                                                            
+
+Sequence0       ------------------------------------------------------------
+Sequence1       ATTATCTACAAACGAACTCCGTGGTGGTCACTAAACACAGTGATAAATGGAGGGTAAATC
+                                                                            
+
+Sequence0       ------------------------------------------------------------
+Sequence1       TAAGGGAGGCAACAATCAAAGAATAGTGCTCAGGGTGATTATAGCTGTTCACTACGCCTG
+                                                                            
+
+Sequence0       ------------------------------------------------------------
+Sequence1       AACCCCAGGTCCTCCTAGGACTATCGTGAATAATGGCTTTAAGCTAGACGTGGCTGATCC
+                                                                            
+
+Sequence0       ------------------------------------------------------------
+Sequence1       TTAGGGGGGGGGAGAGCGAGGGGTGTGTGGGAGCCCAGGGAGAGAGTATAGCTCCATCTG
+                                                                            
+
+Sequence0       ------------------TGATATTATCGCTGAGATAAGCGTTTTAGGTTCAAAATATAT
+Sequence1       TGGGTGCTTCTTCACAGCTTACATTTTCTCTCA-ACAGCCCTTGTGGAGTTTAGTTGCAG
+                                  * * *** ** ** * * *  * ** * *  *  *  *  * 
+
+Sequence0       TTCCAGGAGTCCTAAAAATATAGCTCCATCTTTTCAGAGTCTTCCATCATCCTATGTTGT
+Sequence1       CTCCACTGTAAGTAACGAGATGGCTCC-TGTGTCCAGACTGTGACCACTTCCCACACTGG
+                 ****       ***  * ** ***** * * * **** * *  *  * *** *   ** 
+
+Sequence0       TGACAAGACTGAGAATGGT------------------CTCTGTCTCTCC----TTTCCTT
+Sequence1       CTGTTACAGTGGGGACAGCAGCCATAAGTAGGCCTGACTTCAAGTCTTAGGAATCTTCCT
+                     * * ** * *  *                   **     ***      * * * *
+
+Sequence0       TGTAGGCAACCTTTCTCTTCCTGCTCCCACCCATGGAACATTTTA-----GAATCTTCTT
+Sequence1       TCAAGGAGAAGTCTGTCTTTCTGACCCCAGCT-TGGCTCACTGGGCCAAGGAATATACTG
+                *  ***  *  * * **** ***  **** *  ***  ** *        **** * ** 
+
+Sequence0       TTTTTTTTTTTTTTTTTTTTTTTTGG--TGTTTTGAAATTTTGCAGTACCTGTCTAG--G
+Sequence1       ACCTTGAGTGAACTGAGAGATTAAGAAACATTCAGGGGTTAGGAAAAGCCTTACCAGAAG
+                   **   *    *      **  *     **  *   **  * *   ***  * **  *
+
+Sequence0       TGTGGAGCAGTTCCCCGGGCTTCCTTTTAATCTGTAGCTCTGGAATACTCTTGCTATTGA
+Sequence1       TCTGGAG-GGCTGGACGCACCTGATGCTTCCCCCT-GCATTCCAAAATGATTCTTGTGGA
+                * *****  * *   **  * *  *  *   *  * **  *  ** *   **  * * **
+
+Sequence0       TGATTCTATGTGTCGACTATTTTGCTCACACCCCACCCAGATGCATTCTCTACTGTGGTT
+Sequence1       ACATTCTGAGGGGTGAGCAGTGAGGCCCGGTTCCAAGTCACTGAGGAAGATCAGGCGAGC
+                  *****  * *  **  * *  *  *     ***      **       *   * *   
+
+Sequence0       CT-CTGCTCTTCCCTGTGCCAGGGGA----AGCTGATGGCTCC--TTTGCTGGCAGGGCT
+Sequence1       CAGCTGTTCCTCCAGCTGAAGGGAAGTCACACCTGGGGAATGCAGCCTGCCAGCAGAATT
+                *  *** ** ***   **   **       * ***  *  * *    ***  ****   *
+
+Sequence0       C--CAGTTGGGTTTGGTCAATGGGAGGGACTGACAGGAGACTGGAAGTGGAAGGAGAGAG
+Sequence1       CTGCAGATAGGTCAGCTGGTCCTGGATGCCAGAGAGTGGG--GATACCAGAGAGTCGGGG
+                *  *** * ***  * *      *   * * ** **  *   *  *   **  *   * *
+
+Sequence0       AGGTTGGTAGAATTCTTTTCTACTTCCCCTTGCT-TCCATGCTGTCTGGAGGCGGTGGCA
+Sequence1       ATATTCCTGGGTTTTCCACGTGGTTTCTTTAGATGTACTTGCGCTAAGACAATGGTTTCC
+                *  **  * *  **      *  ** *  * * * * * ***  *  *     ***  * 
+
+Sequence0       TGCCTCCACACTACAGAAGC-TCCCACTGGGGGCCCTTCCTCTGCAGT----CCTCTGGC
+Sequence1       AATCTTCCTAGTGCTGAGACCTTTCAATACAGATCTTTGTGTTGCTGTGACCCCCCCCCC
+                   ** *  * * * **  * *  ** *   *  * **    *** **    ** *   *
+
+Sequence0       TGTGGTAATGTGGTTTTCTCCTT---TTGTTCTTTTAACTGTAGGGTGGTGATTGCTTCT
+Sequence1       CATCGTAAAATTATTTCATTGCTACTTCATTACTGTAATTTTCCTACGGTTATGAATCAT
+                  * ****  *  ***  *   *   *  **  * *** * *     *** **   *  *
+
+Sequence0       GTCTTCTGCCAGTCTCTGGGTGCCTCACCATTTCT----TGTTTCTTTCCTTTAACGCTT
+Sequence1       AATGTAAACATGTGATATGCTCCTCCCCCCTCCCCCCAATGGTTCAGAAGCACTGTGCTG
+                    *   *  **     * * *  * ** *  *     ** ***           *** 
+
+Sequence0       CCCACACCTCTGTAAGTTACCTTTTTATTAAAA-------TCCCTTTGTTTGACAATCTG
+Sequence1       AGGTCTGCTCAGCACAGTGCTAGACCACTAGAGGGCGCTGTTCCTTTTCCCAGCAGAGAC
+                    *  *** * *   * *      * ** *        * *****      **     
+
+Sequence0       GGGGTG---AATTATGTG-----TCCTGTGCAGACTATGACTG---------ATATGCTG
+Sequence1       AAAGTGTCTAATAGTGTGAAAAATACTGGTCACACTAGGGATGTAAATTACAAGATGCTA
+                   ***   ***  ****     * ***  ** **** *  **         * ***** 
+
+Sequence0       CCTTTCATTGTCTTGATTTTTCCTTCCTGGAAAT-----TTTAGT-----AATTGGATGA
+Sequence1       CCTACCTTCTAAGGGGTCATATGGTCCTAGAAAAGGACATTTAATCCTGGACTTAAATCC
+                ***  * *      * *  *    **** ****      **** *     * **  **  
+
+Sequence0       TGGGTCATTAGT------GTTAATCATCCATG---TCTCTTATTTTAGCTCTGAAGTTTT
+Sequence1       TGTCCTCCCAGGTACAAGGTGAATTTTCTGGAGGATATCCCACTTTTCTTTTCCTCCTCC
+                **       **       ** ***  **       * **  * ***   * *     *  
+
+Sequence0       CCATCTTTCTGTGTTT-TTGCTCTACATTATGGGATATTTCCTAAGCTGGTTCTCCCATC
+Sequence1       TGTTCTTACTATCCCTCTTCCTCCTCCTGCTCCTCCTCCTCCTCCTGCTCCTCTCCTCCT
+                   **** ** *   * ** ***  * *  *        ****        *****    
+
+Sequence0       CCTTCTAATGATGTGTTTTCAAATTTCAGTAGTCATGCTTAGTTTTCAAGGATTCTTTCT
+Sequence1       CCTCCTCCTCCTCCTCCTCCTCCTTCTCCTCCTCCTCCTCCTCCTCCTCCTCCTCCTCCT
+                *** **  *  *     * *   **    *  ** * **     * *      ** * **
+
+Sequence0       TGCTTTCTTAGTCTGTCTTATTTCACGGCAATCTGCTCTTGTTATATGGATT--CAGTAA
+Sequence1       CCTTCTCCTCCTCTTTTTCTTCTTTGGGCAAGACAGCGTTTCTCTGTGTAATAGCCCTAA
+                   * ** *  *** * *  * *   *****       **  * * ** * *  *  ***
+
+Sequence0       TTTCTCT--AATTTAGGCATTAAAGGAAGTT----TTGGTCTCTTAAAGTTAT-----TT
+Sequence1       TTCTCCTGGAACTCAGTTTGTAGACCAGGCTGGCCTGGAACTCACACAGATCCGCCTGCC
+                **   **  ** * **    ** *  * * *    * *  ***  * ** *         
+
+Sequence0       TCTATTCCCTAAGTT-----ATTTCAG--------CTTCTTTTGGGGTCAGTTATTTTGT
+Sequence1       TGTGCCTCTCAAGTGCTGGGATTGAAGGCATGTGCCACCATACCCGGCTTAATAGCCCAC
+                * *    *  ****      ***  **        *  * *    **     **      
+
+Sequence0       TTATTCATCTTGACCTATCTCCTTTGTGC-TGTTGATTTTCTAAATGTGTGAGGATCTTT
+Sequence1       TTTTCAAGGCTCAGTTTTCTCACCAGTGAATCTGGATGAGCACAGCTAGTTAGAGTAAGT
+                ** *  *   * *  * ****    ***  * * ***   *  *    ** **  *   *
+
+Sequence0       G-GTTCTCTGTTATAAGTACTGGAAAATAAACTGGTTTCC--CCGGATAGCTGATGTGGC
+Sequence1       GTGAGCACTGCAGCCGGCCCAGGAGTGGTGCTTGCTTCCCTTCCCGCTAGCTCCTTTGTT
+                * *  * ***      *  * ***        ** ** **  ** * *****  * **  
+
+Sequence0       TTCCCTCTGCT-ATAGCCTTCCA------TGAAAAAAGTAGGACAGCTTCCGGGAGCTAG
+Sequence1       AGTCTCCAGCCCATGGGTGCTCAGGCCTTTGAAACTGGTAGTGGCTCTCATGTGTTCTTG
+                   *  * **  ** *     **      *****   ****     **   * *  ** *
+
+Sequence0       CTATATGTGAGTGGACCATGCTT----GGCAGCT--GCCCTTCAGAA-TGCAC-AGGTTG
+Sequence1       TGGAAGCTGGCTTCCAAAGGCTCTACAGGCAGCCAGGCCCTTCATAAGTGCCCTGGGACG
+                    *  **  *     * ***     ******   ******** ** *** *  **  *
+
+Sequence0       CGGGCAGGGATGGCCAAGG-------------ACATTTCTCAGGGAGCT-GTGTGTATGG
+Sequence1       GTGACAGTGACCGTGATGGTGTCTGAGTTCCTGCATACGCACAGGAGCTAGTGTTCATGG
+                  * *** **  *  * **              ***       ****** ****  ****
+
+Sequence0       GATGGGTCTCTGAGAATGGAGAGCTT----------GATGAGTTCAGGC-----CGTGGA
+Sequence1       TTCTCTCTGTTGGAGCTGAGTGGCTTCTAAATGGCCAGTGATTTCAGATGTTCTCCTCCC
+                          **    **    ****            *** *****       * *   
+
+Sequence0       AGCAACATCTACACAAGCCTGGATCTGAGAAACTCAAC-CATACTCCCTGAAAATGGAGA
+Sequence1       AGGAGCTACCATTATAATCAGGTCCTGTAAAATAAATTTCTTCCTCTGTCAGAGTTGCCT
+                ** * *  * *    *  * **  ***  ***   *   * * ***  * * * * *   
+
+Sequence0       --GTTTACATGC--AGAATGAGTCTGGG-GGAGGCAG-CACTAGAAGGGCTGAAAGAGGA
+Sequence1       CCATTTGTGTACCTATGGGAGGCCTGGATGGTGACAGACACAAGAAGAT---ACAGAGTG
+                   ***   * *  *      * ****  ** * *** *** *****     * ****  
+
+Sequence0       AGAGAGTCAGACTGATTTCAGAGGGACCCATCCTAGAGGGACCACTGCCATGACTCCATG
+Sequence1       AGGAGACAAGGGTATCGTCCAGCCATCCCATTCGATTGTGCGCAGAGCTGGAGGCTTGTG
+                **      **  *    **       ***** * *  * *  **  **          **
+
+Sequence0       GGGA--CATTTCCAAGGGGAGCCACAGGAGGT---TTCACTGGAGAGTTGTGTAT----G
+Sequence1       GGAGTGCATTATGCAGTCGGGCCATGGAAGGTGGCCTGAAGGAGAAGCAGCATATTGCAG
+                **    ****    **  * ****  * ****    * *  *   **  *  ***    *
+
+Sequence0       TCTGTCCAGTGTCTAGGAG-GTGCTCACCATGGCTGAGCTTGCAGG-GCCTCTTAGGACT
+Sequence1       CCTGTCCACCTGGGATGAGAGTGGTCCCTAAGGAAGAGGTAAGAGGCACAAACCACAGCC
+                 *******      * *** *** ** * * **  *** *   ***  *     *   * 
+
+Sequence0       GTCCAGGTGAGATGTGTGGGTCGTGATGAGGGTTTGGAGAGGTTTCCAGCTAGAATTGGT
+Sequence1       AGTGAGCAGAAGCCTGAAGG-CGTAGCAGGGTTTATGCCCCAAATCTGGCTGCTTCTGGG
+                    **  **    **  ** ***     ** **  *       **  ***     *** 
+
+Sequence0       CGGGACAGCCCA----TTAGCTCTGGGGCAGAGGCTCAGGGAGGTGGGCAAGCATGCAGG
+Sequence1       CGGAGCGACTTTAGGCTCAGCTGTGGTCCTGTTGCTTCACCAGGGAGGCAGGGATG-AGG
+                ***  *  *       * **** ***  * *  ***     ***  **** * *** ***
+
+Sequence0       ACACAGGAATGCTTATAGCCACAGCTCTG------CAGGGTGTTTCTTGCCCA-------
+Sequence1       ATACCC-AGCTCTCAGAGCAGCTGTGATGAATAAATAGGGTAATTTCTGTGCAGTTTTAG
+                * **   *   ** * ***  * *   **       *****  **  **  **       
+
+Sequence0       -TAACTGTGTGGAGAGCCATT---CTCATCTCAACTCATTTCTTGCCACAACATCTCCCG
+Sequence1       GTACACCTCTGAAGGACCACTGGCCACAGTGCTAGGAACCATTTCCACTGGGATCCACCT
+                 **    * ** **  *** *   * **   * *   *    ** *      ***  ** 
+
+Sequence0       AAGCAAACTTTGTTATTAGCTCCGCTTTGCAGATGAGAATCTGGGGCAATGCGAGACGGC
+Sequence1       AAG-AGTTCCTGTGTGTGGATGATCCTGTTACCCCAGGAGGTCCACTAAGCTCAGATGAG
+                *** *     ***   * * *   * *   *    ** *  *     **    *** *  
+
+Sequence0       TTCTGTGCCCGGCTTGT------GACCAGTCACCACACTGACTCTCAATGTGGTGTAAGC
+Sequence1       TTTACCACACGGCCTCTTTGGGGGAGGGGTTGCCTTAGTGTATTAGAAGCAATAACCTGG
+                **     * **** * *      **   **  **  * **  *   **          * 
+
+Sequence0       AACTGTGAATGGGCCTGATTCCAAATCCCAGCAAATTT-------ACAGTAAGGAGGGTG
+Sequence1       CTCCATCATCGAATCCATTGCTGCAACCCTGCCTGTCTGTTCAGGATTGTCTTGATTGTT
+                  *  * *  *   *   * *   * *** **   * *       *  **   **  ** 
+
+Sequence0       CCT---GGGGTCTATCCATCCC-------CTGACTAGCTGATCTTCAGCTTCCTCATAGG
+Sequence1       TTTCTGGAAGCCCACCCACCTCTTTCCCTCTGGCCACATTGCCCTAATAACCCCCCCAGC
+                  *   *  * * * *** * *       *** * *  *   * * *    ** *  ** 
+
+Sequence0       ---ACCAGGGGGAATACTGAG--CATGCAGTGGACTGAGGTTCAGAGAGGTAATGTGGAG
+Sequence1       CCTGCCTCAGGCCTTGCTGTGTCCTCTCTTTGGGTCACCATCTAAAGAGGACACAGGTCA
+                    **   **   * *** *  *   *  ***       *  * *****  *   *   
+
+Sequence0       CGCTGCACAC---ACCTGAGGGAGTTGTGCGCCTGT--CTGACTTCCGGGTGATTCATGA
+Sequence1       GCTTGCTCTCTGGAGCTTAACTCATTCCTTTTCTGTGCTTAACTCTTTTCTGCTTCTCCA
+                   *** * *   * ** *     **      ****   * ***      ** ***   *
+
+Sequence0       GG----AACATTCC----TGATGGGGTGGGAAGGGAACC--------TGTCACTAAGCTA
+Sequence1       GGCCTCAGAGCTCTGAATTGATGATATGACATCGGAACCAGATCTTGTGTCATTCAGCTC
+                **    *    **     *****   **  *  ******        ***** * **** 
+
+Sequence0       T----------TTAGGAGAATCAGTCTCCAG--CAGGTCACACCAGCCAGCCACTTTTA-
+Sequence1       TGTGTGTACAGTCAGACAAAAAGGCTCACAGTTCATGTTGGGCTGAATAGGTAGAATGAG
+                *          * **   **   *    ***  ** **    *     **  *   * * 
+
+Sequence0       -TGGCAGAAGGAAAATCCTACCTAGCCCCTTCCCCAGAGATGGCAGAATGCAGCCTGGCT
+Sequence1       TTTATGAAAGGTGTCTGGTGTCTATCCATCATCCCTGGATTTCTCCCGAGGATTTCACCA
+                 *     ****    *  *  *** **     *** *   *        * *      * 
+
+Sequence0       GACTGGCAGAGCCTCTCAGGCTGTG--CTCCGGACCCTGGACTCCAGCAAGGGGGAAGA-
+Sequence1       TGTTCTTGGAACC-CAGAGACTCTAGCTTCTGCCTCCCAGGTTCTGTCTGGGATTAAAAT
+                   *    ** ** *  ** ** *    ** *   **  *  **   *  **   ** * 
+
+Sequence0       ACAGCAGCTCCCAGTTCT-------TTCTTACAGACTGCTTTCTTGAGGAGCTTCAAGTG
+Sequence1       GCAACCACTCCCCACTGTAGGAAAGTACATTTTAAGTCCATTCCGTGGTTGAGGAAACAG
+                 ** *  *****   * *       * * *    * * * ***    *  *    **  *
+
+Sequence0       CTCTGGCTATGATTGGTGCAGGGCTCTGCTGCCTCCAGAGGGTGCTGTCTCCTTTCCCTA
+Sequence1       GTTGAGAGAGAGGAGGAGGAAGCGTGCGCTAGAGCGTATACATGCAGTGTAGTTTGCCTG
+                 *   *  *     ** * * *  *  ***    *       *** ** *  *** *** 
+
+Sequence0       GCAGAGGCAAAGGGTCTGGCAGGC--AACTCTGGGAGTATTGGTTTAACCTGAAATGTCT
+Sequence1       CAAGTGGCAGGCTGACTTGTGTGTCTGACTCTAGGGCTGCCAGC---ACCT----CGCCT
+                  ** ****    * ** *   *    ***** **  *    *    ****     * **
+
+Sequence0       GCTAGGAAG-AGCTACCTACCCCTCTCCTGGGCATTATGGTCCTGAAGGAAGAGCTTGGA
+Sequence1       CCTGGGGGCTGGCTGTGGGTGCGGCTCCCAAAGTGGGCGGTGCTAGAGT-----TTTGTG
+                 ** **     ***       *  ****          *** **  **       ***  
+
+Sequence0       CTTTGGATTGAAAGTCCAGCCCTACCATCTACAAGTTGGCTGGCTGAGACAAGACACTCT
+Sequence1       GGCGGGTGTGGACTCCCGGCACAGGCAAGGACCAGCGGTGTGGCTGGGGCTGAGGAACAG
+                    **  ** *   ** ** *   **   ** **  *  ****** * *     *    
+
+Sequence0       ACTTCTTTGAGGCTCAGTTTTCTCGCCTGTGAGATGGGATGATCACACCACACCAGTTAG
+Sequence1       ATCTAGTGCAGAGTCAGTATTCGCCCCAGCGGGATTCAGCAAG-AGGTCAAGGTACCCAT
+                *  *  *  **  ***** *** * ** * * ***      *  *   **    *   * 
+
+Sequence0       GCATGAGGATGGACTAAGGGCAGGTTCACATGCTTCTGCCTGGCATGGGAGCTGTTTGCT
+Sequence1       CTTCCAGGACGCTGAGGGCGCTGCTTGGCTGAGGCCCCTGCAGCAGGGCGCCCGGAGGGC
+                     **** *      * ** * **  *      *      *** **   * *   *  
+
+Sequence0       GCTTTTACCACCATTT--CAGCTCTTCTGCTGTTCTCTGACCCACAAGAGCTAGGGTTCA
+Sequence1       TTCCTAGCCAGGACTTGGTGTCACATCTACAGACAGTAGACC---AGGGCTTGGTGCTCC
+                    *  ***  * **     * * *** * *      ****   * *   * * * ** 
+
+Sequence0       GGCTGCGTGCCTTGCGCAGTAGTTCTCAAATGTGTCTATGTGGAAGCTTGCCTCCAAGGG
+Sequence1       AGTCTCCTCACCTGGGACGTGGTGGTCTGGTACCTCGCCAGGTGAGTGCATCTGAGGAAG
+                 *   * *  * ** *  ** **  **   *   **     *  **     **      *
+
+Sequence0       CTTACCAGCAAATCCAGACCCCACACAGCTGCCCTGCAAGAAGGAGGTGACAGTGGCTGC
+Sequence1       TAAGCTGTCTATCTGAAGTGTCAAAGTGTGTGCAGGCAGGCATTCAGAACTGGCGGCTGG
+                    *   * *    *     ** *  *    *  *** * *    *     * ***** 
+
+Sequence0       GTTCTTGCCTGCAC-AGAGGA-CGGGTGTCCATAGAGCTCCCAGCTGGAGT--TGAGCAG
+Sequence1       TTGTGGGGATTTAGGAGAGGATCATCTGCCAGCAGCTGTCCATCCTAGGGTGATTGACAC
+                 *    *  *  *  ****** *   ** *   **   ***   ** * **  *   ** 
+
+Sequence0       TTTCTGGTCAAGCAATGTTCTCTGATTTTACATGTCTGGAAGCTACCATTACAATCAG--
+Sequence1       ATCGTGTTCATTGTTTTTCCTTTGATTAGGAAAGGGAACAGAGGAACTTTGGGGCCAGTG
+                 *  ** ***     * * ** *****    * *     *    * * **     ***  
+
+Sequence0       --GTCTTCTTAAATGTCCTCCCTCCCTCCGTCTTCCTTTCTTCCTTTCTTTCTTTGTC-A
+Sequence1       GTGCCGGTGGGGGTGGGATTGGTGCTGCACACTTGTGTCCACGGTTCAAAATGAAGTCCA
+                  * *        **   *   * *  *   ***   * *    **         *** *
+
+Sequence0       GATGCTGTGT-GTGGACTTGTGCTGGGATCTGGAGGCGGAGACAAGAGCTGTGACCT---
+Sequence1       GACAGGGTTTTACTGACTTTGCATGGTGTACGCCCCTTCAACCCAGGGCTATCACCTCCT
+                **    ** *    *****    ***  *  *       *  * ** *** * ****   
+
+Sequence0       ----AGACATAGGGGAGTGGGGAACAAAGGTGCTCAGGCAGACAACCA---ACTAGGCTG
+Sequence1       GTCAGTTCCTAGGGGACTTGATGGCAGCAACGCTGGAATGTGAATGTGGTCACCAGGAGG
+                       * ******* * *    **     ***         *       ** ***  *
+
+Sequence0       CTACATCTGCCTCTGCAGCAGAGCATGGG-AGGGTGGTAGGAATTTGTCATGGCA--GCA
+Sequence1       AGAGAGTCAAGTCAACACTTCTCCAGACCTAGGGCTGAAGAGGCAGGCCATTTCATTGTC
+                  * *      **  **      **     ****  * **      * ***  **  *  
+
+Sequence0       GGGACATCGGAGCTGGG--GTGCAACAGAGGAGC-AGCCGCTTTCCAGGTAGTCAAGACA
+Sequence1       GGGCTTTCTGAGTGGTCTTGTGGGACAGGCCAGTGAACTGTCCAACAGAGGATTGAGGGC
+                ***   ** ***  *    ***  ****   **  * * *     ***    *  **   
+
+Sequence0       GGAAGCAGCATGGTCCAGAAAGAAGAGATGACAGGTGCCAGTCTACAGCGATGGTGAGCA
+Sequence1       TTCAGGGACACCCTTTCACGTGTCTGAACCACA--TCCCAGCATCCTTAGAGGCTCCTCT
+                   **   **   *       *     *  ***  * ****  * *   ** * *   * 
+
+Sequence0       GAGGCCTGG--------GGGCTTGGCAGGTGGGTTCGCATCC-TGGATCTGGCTGTTTCT
+Sequence1       GGGACCTGGCTTCATAGAGGAGTAGTAAGTGGGGTTTTGTCAATGGATGAGGGGTATATT
+                * * *****         **  * * * ***** *    **  *****  **    *  *
+
+Sequence0       TAGCTG-----AGTGACTTTGGGCAAGTTGCTCAACCAC-TGAGTGTCACTTTGCTTCAT
+Sequence1       TAACTGTCTTTAACATCTCCTGGCCACTTGTGCATCAGCGTTGGCACTAACTCACTTCTC
+                ** ***     *    **   *** * ***  ** *  * *  *    *  *  ****  
+
+Sequence0       CAGCACGATGGGAATAAAAATGCCCACCTCTCAGAGCTGTTGTGATGATTAACTAAGGTA
+Sequence1       TTTCTTCTTTC---CAAAAATCTGTGTTTGGCAGGAGGGGTGCCA-GGTTGACCAGGGAT
+                   *    *      ******       *  ***    * **  * * ** ** * **  
+
+Sequence0       GTGTCTGCAGAGTCTATGCACTACAAAC--GGCAGCTGCCATTCTAGAGGGACCACTGCC
+Sequence1       CCAGTTCTGCTTCCTACA-GCTGTAACCTTGGCCAGGGCCTCTC-----ATCTCACTACC
+                     *       ***    **  ** *  ***    ***  **         **** **
+
+Sequence0       ATGACTTCATGGGGACATTTCCATGGGGAGCCACAGGAGGTTCACTGGACAGGTGTGTAT
+Sequence1       TCTCCTCCTTAAGATGGAACCAATGGCGCTGGACCGGTGGCTCAGTGGTTAAGGGCAC-T
+                    ** * *  *       * **** *    ** ** ** *** ***  * * *    *
+
+Sequence0       GTCCAGTGTTTAGGAGGTGCTCTTGAAGCAGATCTGTTACTCTCAGGAGGTTCTCTAAGC
+Sequence1       GGTGGCTCTTCCTAAGGA---CCTGGATTTGATTTCTGGCACCCACATAGCAGCTTGCAA
+                *     * **    ***    * ** *   *** * *  * * **    *     *    
+
+Sequence0       ACATATGTGACTTTGCCATGTGGGGATGGGGGGCAGGGAATTATAAGCTAGTGTAT-TCA
+Sequence1       CCATTTGTAACTCCAGTTCCAGGAGATATCAGTC------TCTCTTTCTGGTGTATCTCA
+                 *** *** ***         ** ***    * *      *      ** ****** ***
+
+Sequence0       AAACAGGAGCAGCCCTTG-TAAGCAAAGCTGTTCCATTATAGCCAAGTCATG--TGCATC
+Sequence1       GCACCAGACATGCATGTGGTATGCAAATATACA----TGCAGGCAGAACACGCCTACATA
+                  **  **   **   ** ** *****  *       *  ** **   ** *  * *** 
+
+Sequence0       TCAGCTCCAAAGGAGAAAGTGACCATTCTCATTG--AATTCTCATCGCCACAACCTTGGG
+Sequence1       TAAAATAAAAACGAAAGTTTAACTGGAGCTAGCGTTAGATGGGACCAC-GCGAATTTGCC
+                * *  *  *** ** *   * **       *  *  *  *   * * *  * *  ***  
+
+Sequence0       ACTGCCTGAGATAAGACACT---CCACTTCCAGGGCCCACCC---TGAGTTTTCACTCAC
+Sequence1       ATCTTTACAGCTCAACTACTGATCAAGCCATAGGGCTCAGCCCACTAATGCCTTCCTGGT
+                *       ** * *   ***   * *     ***** ** **   * *    *  **   
+
+Sequence0       ACCCTGGATGCCCATCTCCTTCCCT--CACCCTGGCTGAC-ATTCTCAGCCACACTGCCC
+Sequence1       GGGACTGTGGCATAGCTTATAGTTTAGTAGGATGGCCAATGAAAACCAATTGTATCTTCT
+                      *  **  * **  *    *   *   ****  *  *    **     *    * 
+
+Sequence0       TCCCCTGGTCTCC-AGGGGCTGAATGCTCCCAGCCTCAGG---GCTTTTGCCGTGGCTGT
+Sequence1       ACCCTGTGTCTCCTAGGAAACACGAACTCTCAGGGTAAGGTAAGGCCTTGTCTTCTTGAG
+                 ***   ****** ***         *** ***  * ***   *   *** * *      
+
+Sequence0       GCCATCCATCTG--GCCTATCGAACCCATTTGCTCACAG-CATCTCACCCC--CTGTAAT
+Sequence1       GAAAGGCATCTGCAGCCTGTCTTCCAAAATTCCTCCCAAACACTCTACTCTGATCCTCCT
+                *  *  ******  **** **   *  * ** *** **  **    ** *      *  *
+
+Sequence0       AATTTATTTCCCTC--TTTCCTTGTACCCTGTCTGTCTTCTCCCCCAGGGCTGAGAG-CT
+Sequence1       ACTTCAGTGGGCTCAGCTCCTCTCCAAGCCAGGCATCCCCTAGGTTGTCCACGGGAGTCT
+                * ** * *   ***   * *  *  *  *      **  **           * *** **
+
+Sequence0       CCAGAAGGAACCAAGGACAGGGAGCCTGTCTTGTCCAGCTCTG--GTGCCCAGCAGGAGA
+Sequence1       GCTCATAGCAGTGACGTTTGGATGTTTGTTGCCACAGCCTTTTCTGTGTCTATCTGGAGC
+                 *  *  * *   * *   **  *  ***     *   ** *   *** * * * **** 
+
+Sequence0       GCCAGGCTCATAGGAGGTCTGCAAGTAATGTTTCTGGACGAACTTATGAAAGGCAGGTCT
+Sequence1       CTCATCTTTGGGCGGATGGTGGAGGAAGCACATGGGGTCCATTTTGAATGATCCTGAGCT
+                  **   *     *     ** * * *     *  ** * *  **     *  * *  **
+
+Sequence0       TTTTATACCCATTTCATGGATGAGGAAACTGAGGCAGAGAGAGAGAGAGACAGGCAGACG
+Sequence1       AATCACTGGCTGTGCATAG--GGTTGATCCTCAGCTCTGAGACAGGAAGTATGGGAGTTT
+                  * *    *  * *** *  *    * *    **   **** **  **   ** **   
+
+Sequence0       CACACACCCCTAGACAGAGAGAAACACTCCTGGAGAAAGAGAAAGGGAGGGAGAGAGGGA
+Sequence1       GAT-CCTTTCCAGCCATGGGGCCAGAGGAGTCCTGCCTTACAAGTGGGCTCTGAGCAGGG
+                 *  *    * ** **  * *  * *    *   *    * **  **     ***  ** 
+
+Sequence0       GGGGGAGGGAGGGAGAGAGAGAGAGAGAGAGAGAGAGAAAGAAAGAAAGAAAGAAAGAAA
+Sequence1       CAGGGCTTGAGGGTACCACATGCGAGCTGTGTGAGACCAGGTGCTGGAGAAGGATC---A
+                  ***   *****    * *        * * ****  * *      **** **     *
+
+Sequence0       GAAAGAAAGAAAGAAAGAAAGAAAGAAAGAAAGAGAGAGAGAAAGACAGCGCAGCTCCAG
+Sequence1       GAGTGGCAATGGGTCCTGGTGTGTGCCATACTTTTCTGGATTAGCACCAGGCAGCTGCAG
+                **  *  *    *       *   *  * *        **  *  **   ****** ***
+
+Sequence0       CCTGCCTGTATCCAGGGTTGAGGTGGGCGTGAGAGACACACGCAGGCAGGGCTGCAGTTC
+Sequence1       TCAGGTAGACCCCGGGCATGGGCTCCTGATGGGAGGTG-AGGTCCCTTAGGCTGGAGTTG
+                 * *   *   ** **  ** * *     ** ***    * *       ***** **** 
+
+Sequence0       CGGGCAGGCCTTGG---GGGCTCAAGAT---GCGGCTCCCCAGGGCGAGT-GCTGGGGTC
+Sequence1       TTGGGGTGAATGGGAAGGGGATTTATATTTGACGGACGCCTATGATGAGCCAGTTTGGCT
+                  **   *  * **   *** *  * **    ***   ** * *  ***    *  **  
+
+Sequence0       CCGGGGCAGGCGGGCGGCTGGAGCGCTCTCGTGGGCGGGCGCAAGGGGCAGGCTGGGCGG
+Sequence1       TTGGGGACCCCGACCTGCCAGGAGGTTGCAAAGAAAGCTCATGAATGGGACTTTTCCCAG
+                  ****    **  * **  *   * *     *   *  *   *  ** *   *   * *
+
+Sequence0       GCGCAGGCGGGAGCGTAG---CAGCCGCTCCAC-TCCGCACGCAGGCAGCATCGGGGCAG
+Sequence1       TCACCAATTATATCATTTACCCAAATGAGACAGATGCTGATCTGAAAGATGTCTAAGGGA
+                 * *       * * *     **   *   **  * *  *           **   *   
+
+Sequence0       CAGGAG-CAGGTGAAGCAGGCGCG-GCTCTGCCCCGCGCCTG-GTGCCCCCTGGGCACAG
+Sequence1       CAGAAGGTCTGTGATCCACTTTCCTACTCTCCCGGGTTCCTTCGTCATCCCTTGCCCTAA
+                *** **    ****  **    *   **** **  *  ***  **   **** * *  * 
+
+Sequence0       GAGTGCGGCCGGGGGCGGGGCCGAGTGGGCCCCGGTACGAACCCTCC-----------GG
+Sequence1       GTCTGAGCCCGACGGCCCCTCAGCACATTGCCACTCACTGTCTCTCCCTTATATTGCCGA
+                *  ** * ***  ***    * *       **    **   * ****           * 
+
+Sequence0       GAAGCCGGGCGCGCTGCCTGCCCT--TGGCCCGGGGCGCAGAGCGTCACACTGGATCTGG
+Sequence1       GGAACCTGGGGCTTAGACAATCTTAGTGACTCTCAAAGCTGCTGGGCTGCTTGGTGATGG
+                * * ** ** **   * *   * *  ** * *     ** *   * *    ***   ***
+
+Sequence0       GGAGCA----TCCTACCCCCACT--------GTGGACCTCAGTCTCCTCACC----TGAG
+Sequence1       GTGGCAGAGCCGTTATTTAAACCCAGGACAAGTGAATAAGAATAGCCTGGCCGGCTTAGG
+                *  ***       **     **         *** *    * *  ***  **    *  *
+
+Sequence0       ACATGGGCGGCCCCATCCGCAC-CCTGTAAGCCGCAAGCCAAGGAGGTAAGGGGTGCATC
+Sequence1       ATCCTGGCATGGCACTCTGCTCACTTCTTACATACATGTCAAGGTTTCATGTGGCAGGGC
+                *    ***    *  ** ** * * * * *    ** * *****    * * **     *
+
+Sequence0       TGAGGTGTC-TGGGCGCTATGGGCATTAGGATA--TAGTAGCTTTTGCTGAGATTTCAGG
+Sequence1       -ACCCTGTCATTGACCCCAGAAGCTCTCAGATGACCTGGGGACTAAGCATAGGCTCTTGA
+                     **** * * * * *   **  *  ***     *  *  *  **  **  *   * 
+
+Sequence0       AGACAAAGCAAAGGGCCTTCCCTATTCTAACCCCACTGGGAGATTAGCATTTTGTGTATG
+Sequence1       ATGGAACCTAGGCTCCTGGCAACCTGCTCCCTTCAACCTCCTGCTCTCTCTCTGGTCATT
+                *   **   *     *   *    * **  *  **         *  *  * **   ** 
+
+Sequence0       ATTCATT-AATTTTCCTCTGATTGACTGGGAAGGCAGGCTGCAGGGGGTCCCTGTTGGGG
+Sequence1       CTTAACCCAAGTCTCTTTAGTCCCAACTGACGGCTGAGCCACACAGCGTCTCCTCAGGCT
+                 ** *   ** * ** *  *    *   *   *    **  **  * *** *    **  
+
+Sequence0       CT--TGCAGCTGGTTCTAGTTTTTGTATCTGGAGAGCTGCCTGGGGACAAAATGCAGAGA
+Sequence1       TTGGTGGAACTACTCCTTCCTTCCTCACCTGACTCTATTCAGATGCACCCCTCAAGGATA
+                 *  ** * **  * **   **    * ***      * *    * **        ** *
+
+Sequence0       CACCATTTT--------ATTGACCTTGCGTAATAATCT---ACCCTCCCCCTCATACACT
+Sequence1       CTCCGCCTCCAGTAAGGAGTCAGCTCTCCCGATGACCTGGGACTCAGGGTTTAAGTGACT
+                * **   *         * * * **  *   ** * **   ** *      * *   ***
+
+Sequence0       CGCCACCCCCTTGGGTGTGCCTGAG---GGACTTGAGG----TCCCCTG---GTCCTCAC
+Sequence1       GGTCAGCAGTGCTGGTCTGTGGTGCCCTGGTTCTGAGGCAACTACCCTGCGAGTCAGCTT
+                 * ** *      *** **         **   *****    * *****   ***  *  
+
+Sequence0       TGG-TCAGTGTACCCCAAGCCCAGCAGC-----CCCAGGCAGATGCCCAACACCACCTTT
+Sequence1       TACCTTAGTTTTTCTGAGGAAAAAGGACATGAGCCAAGGAAAACTCTGCGTGATGCCCCT
+                *   * *** *  *  * *   *    *     ** *** * *  *         **  *
+
+Sequence0       TCAGTGCTCCTCCTCCTCCTGTCTTGGCCCTCTCTG-----CCAATCCATTTTCTATATC
+Sequence1       TTAAATGTCCCTTTCCTTCTGTCTTGGCTTTTTTCAGAGTCTCGACCTACCCTCTACACT
+                * *    ***   **** **********  * *         * * * *   **** *  
+
+Sequence0       CAAGTGATCTTACTGGAATGGACCTGACC-TTGCTGGTCTGGCCCACCACTCCAGCTTCA
+Sequence1       GAAGTGATCTTTCTGGAACACACATGCTTGCTGTCAGCCTT-TTGATGGCTCGCCCATCA
+                 ********** ******   ** **     **   * **     *   ***   * ***
+
+Sequence0       TCATCTGCCACCCTGGAACCTCTTATTCTGCTTACTTTTCCCAGCAGGCTCTGCTCCTTC
+Sequence1       TTCTCGGTCGGCCTC--ACCTCTCCAGCCTCATCATTTCTCCTTCCTTCTCC-CTCCTTG
+                *  ** * *  ***   ******    *  * *  ***  **  *   ***  ****** 
+
+Sequence0       CTGCCTCTGTGCCTTTGCACATGCTGTTCCTTGCACTTCGAGTTCCCTCCTCTCCCTGTC
+Sequence1       CTTCAGCTGT-TCTGACTGCTGGCTGGTCCTAGGAGGCTGCCATCCTTCCTGCCTCTATG
+                ** *  ****  **     *  **** **** * *    *   *** ****  * ** * 
+
+Sequence0       CCTTTGGCTGGTTGACTCCTCTTCAGCCTTTGAGCCCTGTACCATTGC-CACCTCTTCTC
+Sequence1       CCTTTGTGTGC---GCTACTCTCCATACCTTGAACTCTGTCCTCTCCTTCATCCATTGGT
+                ******  **     ** **** **  * **** * **** *  *    ** *  **   
+
+Sequence0       TCACCTCCCTGCTCCCTGCTCCTTCTCTGATCTC--TCAACTCACAGGCCTCTCTTTCAT
+Sequence1       CTCCTTCTGTGAGCTCTAGATTCTATACCATCTCCTTTTTCTCCCTGCCCTTAGCTCCAT
+                   * **  **  * **      * *   *****  *   *** * * ***    * ***
+
+Sequence0       ATTGGTGTTGGCAATGGCAATGAGTTCCATCTGCATTCGTGCTGGTCAGCCCCTCTGCTC
+Sequence1       GTCTGATCCCCCAGGTACCCACAGTATGGACTGTAGCAGTAGCACTGTGGCCTTGAGGTC
+                 *  *      **    *    ***     *** *   **     *  * ** *  * **
+
+Sequence0       TG---GGAGGGCCA-TGACTGTATAAGTCATCTTTGCAG-CCCTTGTTTCTAGCCCAGGG
+Sequence1       TGTCTGCATGCCCAGTGATCAGCTTCTCCATCTTAGAGGTCCCCTGTCTTTACTCTAGAG
+                **   * * * *** ***     *    ****** *  * *** *** * **  * ** *
+
+Sequence0       CTTGACACACACTTATTGAGTGGGTGAATGAAGCAGTGAGCATTTTCTGGAGCCCTCCCA
+Sequence1       CTCTGTCCACATTGGTCAAGTAGATACATGATGC------------TTGGAACCATCCTT
+                **     **** *  *  *** * *  **** **             **** ** ***  
+
+Sequence0       GCCCAGTCCTTCCACTCTGATCCTGCTTTAGGTGGTTGGTTTGGGATGAATGGTGTTTCT
+Sequence1       GTCTCCTGACTCTCCTCTGGCCATGCT------------------------GGTATTATC
+                * *   *   **  *****  * ****                        *** **   
+
+Sequence0       CCACACCACTGGCCAAGCCTTG-CTGATGGTCACCCAGAGCCTTGGGTTCTGGCCCATTT
+Sequence1       CTACACTGATGTCCTCTTCTTGGCTGATG-CCAGACAAGGTCTGCACTTCTTTTCCTTTT
+                * ****   ** **    **** ******  **  **  * **    ****   ** ***
+
+Sequence0       GCTGCTTCTGAGTGCAGTGCCTCTGCCACAGGTTCATGCAGCTGGGACTGCTCTTTATCT
+Sequence1       GCTACCTCTGGG-GTGCTNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+                *** * **** * *   *                                          
+
+Sequence0       TATATTGGGCCCTGTGTTTGGCTCTGGAATAGTTTATTTTGCCATGTTCAGCCCCAAATG
+Sequence1       NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+                                                                            
+
+Sequence0       GCCCTTTTTGCCAGAAGACCATAGTGCTGGAGAAATCTTCCTGCCTTCGAGATCTGGTTC
+Sequence1       NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+                                                                            
+
+Sequence0       CTAAATAACCAGACTGTAAACTATCAGGTGAATTCACAGCTTGATCTTTTAAATGACCAA
+Sequence1       NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+                                                                            
+
+Sequence0       ATGAGACTCTTTTTTTTTTTTTTTTTTGAGACA-GAGTCTCGCTCTGTTGCCCAGGCTGG
+Sequence1       NNNNNNNNNNNNNNNNNNTCTGGCATAGATTCACGTAGCTGTGGCTTCTGTTTCCTCTCA
+                                  * *    * **  ** *   **    **  **      **  
+
+Sequence0       AGTGCAGTGGTGCACTCTCTGCTGACTGCAACCTCCGCCTCCCAGGTTCAAGTGATTCTC
+Sequence1       AATCCTAGTCCATGTGTTTGGCTGGGTATA--TTTCATCTT----GTTATATTTGGCCAA
+                * * *            *  ****  *  *   * *  **     ***  * *    *  
+
+Sequence0       CTGCTTCAGCCTCCCATGTAGCTGGGACTACAGGCATGCACCACCACACTTGGCTAATTT
+Sequence1       ATGCTTTTGAGTCC-AGAAAACAGTGGTGCCAGACA-ACCCTTCTTCCCCTGGGGAGTTG
+                 *****  *  *** *   * * * *    *** **  * *  *  * * ***  * ** 
+
+Sequence0       TTGTATTTTCAGCGGAGACGGGGTTTCACCATGTTGACCAGGCAGGTGTTGAAGTCCTGA
+Sequence1       GCAGCCCATATAACTAGACTATAAACTATCTGTCAGATTCATTGGCTCTATAAATGGCCA
+                        *      ****        * *     **       * * *  ** *    *
+
+Sequence0       CCTCAGAAACTCATCTTTATAAGT-AGATCAGATGCACAGCGAGTGACATTCATGACAGC
+Sequence1       GGT--GAGTCTCACATCCATGGGTCAGGCCAAGTGACCAGTGAGTGACATTTGTGACAAC
+                  *  **  ****  *  **  ** **  **  **  *** **********  ***** *
+
+Sequence0       CGACAAATAGAGTTTACTGAGCTCTGGTTGATTTTGGCCTTGTGCT----CTGCA-----
+Sequence1       TAG-AAACCAATTTTACTGATCTCTGGCTAATTTGGCCTTTCTGCCAAAATTATATTTGA
+                    ***   * ******** ****** * **** * * ** ***      *  *     
+
+Sequence0       ----AAAACTGCCTTAACATAGCAATTGAT---CATGT-AAAAAATACATATGGCCA--T
+Sequence1       TCATGAAGATGAGTGCATATTGAAAGTGAGATGTATATTAAAAAACAGGCCTGGCTAATT
+                     **  **  *  * ** * ** ***     ** * ****** *    **** *  *
+
+Sequence0       GATATGAGAC-TTAAAGAAT-ATCTCGAATAGGGTTTTCTGCTA----TAGTGTTTTACA
+Sequence1       AATACCTGGCATCAAAGAATGATCTCAAAGAGACAATTCTGATAGGAATACCATTTTTCA
+                 ***   * * * ******* ***** ** **    ***** **    **   **** **
+
+Sequence0       AGATGGGGTCCAAGGGCCATGTGCATCAGAATCACATAGTCTACTTGTTAAA-TACAGAT
+Sequence1       AAATTGAGCCCCTAAACCAGGTTCAGCAAAACCCTACAGGGTATTTGTTAAAATACAGAT
+                * ** * * **     *** ** ** ** ** *  * **  ** ******** *******
+
+Sequence0       TCCTGGCCCCCATCCTGGATTCACTTAACTACATCTCCTGGTGGAAGGGCCCTGGGATCT
+Sequence1       TCCTTGGTTCCATCTCCTGCTCACTTCTCTGCTTCTTCTGGTG-AGGGGCTCTGGAAAGT
+                **** *   *****      ******  ** * *** ****** * **** **** *  *
+
+Sequence0       GCACTTTCAACATGCTTCTAGAATGATTCTGATGTTTACTGAAGGTTGAGAACTGCAACC
+Sequence1       TCACTTTGAACATG-----------ATCTCGATGTCTAGTGATGGTTGAGAATGGCAAAC
+                 ****** ******           **   ***** ** *** *********  **** *
+
+Sequence0       CTGTGGGATTAATAATGACTAGAGAATCTGAGAGGTGAGTCACAATGATGTATGTAGTGG
+Sequence1       TTGTGGGATTAATAATGCCTGGAAACTTCGTGTGCTGATCTTTAAGAGGATGTGCACCAG
+                 **************** ** ** * *  * * * ***     **     * ** *   *
+
+Sequence0       TATGGTG-CTTCCCATGCAAAACA--TCCATCATTGGCACTAACACGGGGGAACTCTGGA
+Sequence1       TATGCTGGCTGACCCTCCATGTCAGGCCCATCAATGGCATCACTGATTGAAGGATTTGGA
+                **** ** **  ** * **   **   ****** *****  *      *     * ****
+
+Sequence0       GTCTAAATTCCA---ACTCAGTCTTGGCAGGGGGTCCGTTGTGCTGAGGAGGTCCTCGGA
+Sequence1       ACCCAGGGTCTGGAGAGTCAGTGTTGTTCAAGGATCCATT-TGTTCAG-AGAGCCCGAGT
+                  * *   **     * ***** ***     ** *** ** ** * ** **  **   * 
+
+Sequence0       GAAGGGACAGCCTGTACCAGGGCATAGAGATGTGGAAGAGTCTGGTGTGCTTGTGAGCTG
+Sequence1       GGAGAGGTAGCCAGTGGCAGGGGCTGGAGGTATG--------------------------
+                * ** *  **** **  *****  * *** * **                          
+
+Sequence0       CACACTGCATCAAGTGACTTGAACATAGTCATGGAGTAGGTTCTGTGGAGGGCACTGGGC
+Sequence1       ---------TCAGGTGACTTGAGCGTGGGTCTGTTGAACAGTGGGTGATGTGCAAT----
+                         *** ********* * * *   **  * *   *  ***  * *** *    
+
+Sequence0       ACCTGTGACTTTGGCCAGGTATGTCTGTGCACATGGTGGGTAGTAGGAAGAAGCTGGTGT
+Sequence1       -CACGTGTCGGTGGC-AGATGTGTGTGTGAGTATTATAGGCAGCATGGAGAAGAGAGTGT
+                 *  *** *  **** ** * *** ****   **  * ** ** * * *****   ****
+
+Sequence0       GCTGATGAGCCAGGCTTTGCATACTGGGCAGTCTTCAGTTTTGCCAGGTATCACCTAAAA
+Sequence1       ACTGATGA-------TCTTCATCCCTGGATGTCCTCACTTTTGCCATGTGTCACCTCAGA
+                 *******       * * *** *  **  *** *** ******** ** ****** * *
+
+Sequence0       AACAAGGCTACCAGGG---CAGGGAGGGGCTGAGACCAGGAGGGTGCACTGATTGTGGAT
+Sequence1       AACAAGGCAGGCAGGGACACTACTAGGGTCTGAAGCCAGGAGGGTGCACTGTATGCCAAT
+                ********   *****   *    **** ****  ****************  **   **
+
+Sequence0       CCCCGAGGCTTTAGCTCTATCTTGAAGGGAATGGGGTGCCGTGGAAGGACACAAGCAATC
+Sequence1       CCCCAAAGTCCAGGTTCCAT-------------GGATGTCATGGAAG-ACTTAGAGGGTC
+                **** * *     * ** **             ** ** * ****** **  *     **
+
+Sequence0       CTGTGCAGAGTGGCATTTATTGCTGTCTCCATTCAGATAAAATGTGACAAGGGGCATTCT
+Sequence1       ATCT-TAGAGG---ATCTATTGCTGTCTTTGTTGGGATGAAGTGATACCAGGG-CTTTCT
+                 * *  ****    ** ***********   **  *** ** **  ** **** * ****
+
+Sequence0       ACCCATGTTCCCTGAACAATTCCGTCACTAAAGTCTGCATACAGCACTCCAACTTTTTTA
+Sequence1       -------------------------------------------GTACTCCAACTTCTTTC
+                                                           * ********** *** 
+
+Sequence0       TCATCAGAACAGCCTCA--TCCTGAGGCCGGAGGGAATTAGTAGAACAAGTTCTGGCATT
+Sequence1       TCATTAGAACAGCCTCAAATCCTGAGGTTAGAGGGAGCTTGTTGGGGAAGTTGTGGCACC
+                **** ************  ********   ******  * ** *   ***** *****  
+
+Sequence0       AGATGACCTGAGTTTGTAACTGGGCCCTGTTACTAATTAGCTGTGTGACTATGGGCAAGT
+Sequence1       ------TCTGAG---ACAGCCGGA---TGT--CTCAGTAGCTGTGTGAGAATGGGCAAAT
+                       *****     * * **    ***  ** * ***********  ******** *
+
+Sequence0       TGCTTTCCATCTCAGGGTCTTAGATTCCTCATCTATGAAACGGATTGATAATATCTACCT
+Sequence1       GGCTTCCCGAGT--GGCTTTTAGGTTCTTCACCCATAAACAAGGTTAATGATACTTGC--
+                 **** **   *  ** * **** *** *** * ** **   * ** ** ***  * *  
+
+Sequence0       CTAGGAATAAACTAGCTAATAGACGAAAGTGCTGAGCACAGTACCCAGCATGCAACAAGT
+Sequence1       ---AGAATAAAGTAGCTTGTATGCCAAA-CACTGAGCACAGTCTCTGACACGCAGCAAGT
+                    ******* *****  **  * ***   ***********  *   ** *** *****
+
+Sequence0       GCTTCTAACAAGGTAGCAATCATTGGATGCCAATGTCTCACCATGAGCCTTAGGTAATAG
+Sequence1       GCTGCCTATAAGGGAGTGAGGATTGGATGCCTGCCTCTTACCTTAAGCCTTGTATGATAG
+                *** *  * **** **  *  **********    *** *** * ******   * ****
+
+Sequence0       CCCCTCCAGATACCAGCCTTGGGTTGGAAGCAGCTGAGAGCCTTTCTACCCGGCCCTGCT
+Sequence1       CCTCC---AATGCCA----TGAGATATAAGCAGCCAAGAACCTT-CTCCCTTGCCCTTAT
+                ** *     ** ***    ** * *  *******  *** **** ** **  *****  *
+
+Sequence0       CCTCTCTGGATTCTACCCTGG--GCATGATCCCTGAGTATTGTTTGTCTGTTTGCCTTGT
+Sequence1       CGTTACCTGGTTCCATTGTAGATGCATGGTCCTTGAGTTCCATTTGTTTGTT----TTGC
+                * *  *  * *** *   * *  ***** *** *****    ***** ****    *** 
+
+Sequence0       AGGCGTCATCCCTCAAGTGTATCACTTAGTTCAAGAGTCCTGGAATCTTTTCACATCCAC
+Sequence1       AGGCTGCATCTCTGAAGTAGGCCCTTTACTCCTGGAGTTCCTGGATCTTCTCACACCTAC
+                ****  **** ** ****    *  *** * *  **** *  * ***** ***** * **
+
+Sequence0       TATGAACACCTCTCACCTCCTGGCCTTGCTGCTCCCAAAATCTCCACAAGGTGAAAACAG
+Sequence1       CATGAATACCTCTCATTTCTTGGCCCCTCTCTTCCCAGGATCCCTACAGGGTAAGAATGG
+                 ***** ********  ** *****   **  *****  *** * *** *** * **  *
+
+Sequence0       AAGCAAACCCCTGGGCACCCCATACAACTTCTCTGAACATTGCCAGGATTCCGTGGACGT
+Sequence1       GACCAATCCATTGGATTCCCCCTATAATTTCTCTGATGGCTGCCAGGATTCGGCAGAGCT
+                 * *** **  ***   **** ** ** ********    *********** *  **  *
+
+Sequence0       GATGGTCTTCATCGTCACTTCCTACAGCATTGAGACTGTCGTGGGGGTCCTGGGTAACCT
+Sequence1       GTTGGCCTTCATCATCACCACCTACAGCATTGAGACCATCTTGGGGGTCCTGGGAAACCT
+                * *** ******* ****  ****************  ** ************* *****
+
+Sequence0       CTGCCTGATGTGTGTGACTGTGAGGCAGAAGGAGAAAGCCAACGTGACCAACCTGCTTAT
+Sequence1       CTGCTTGATATTTGTGACCACAAGACAAAAGGAAAAGTCCAATGTGACCAACCTACTCAT
+                **** **** * ******    ** ** ***** **  **** *********** ** **
+
+Sequence0       CGCCAACCTGGCCTTCTCTGACTTCCTCATGTGCCTCCTCTGCCAGCCGCTGACCGCCGT
+Sequence1       TGCCAACCTGGCCTTCTCTGACTTCCTCATGTGCCTCATCTGCCAACCACTCACAGTCAC
+                 ************************************ ******* ** ** ** * *  
+
+Sequence0       CTACACCATCATGGACTACTGGATCTTTGGAGAGACCCTCTGCAAGATGTCGGCCTTCAT
+Sequence1       CTACACCATCATGGATTACTGGATCTTTGGTGAAGTCCTTTGCAAGATGTTAACTTTCAT
+                *************** ************** **   *** **********   * *****
+
+Sequence0       CCAGTGCATGTCGGTGACGGTCTCCATCCTCTCGCTCGTCCTCGTGGCCCTGGAGAGGCA
+Sequence1       CCAGTGTATGTCAGTGACAGTCTCCATCCTCTCACTGGTCCTTGTGGCCCTGGAGAGGCA
+                ****** ***** ***** ************** ** ***** *****************
+
+Sequence0       TCAGCTCATCATCAACCCAACAGGCTGGAAGCCCAGCATCTCACAGGCCTACCTGGGGAT
+Sequence1       CCAGCTCATTATCAATCCAACAGGCTGGAAACCCAGTATTTTCCAGGCCTACCTGGGGAT
+                 ******** ***** ************** ***** ** *  *****************
+
+Sequence0       TGTGCTCATCTGGGTCATTGCCTGTGTCCTCTCCCTGCCCTTCCTGGCCAACAGCATCCT
+Sequence1       TGTGGTCATCTGGTTCGTCTCTTGTTTCCTTTCCTTGCCGTTCCTGGCCAACAGCACCCT
+                **** ******** ** *  * *** **** *** **** **************** ***
+
+Sequence0       GGAGAATGTCTTCCACAAGAACCACTCCAAGGCTCTGGAGTTCCTGGCGGATAAGGTGGT
+Sequence1       GAATGACCTCTTCCACTACAACCACTCTAAGGTTGTAGAGTTTCTGGAAGACAAGGTCGT
+                * *  *  ******** * ******** **** * * ***** ****  ** ***** **
+
+Sequence0       CTGTACCGAGTCCTGGCCACTGGCTCACCACCGCACCATCTACACCACCTTCCTGCTCCT
+Sequence1       CTGCTTTGTGTCCTGGTCTTCAGATCACCACCGTCTCATCTATACCACTTTTCTGCTGCT
+                ***    * ******* *    * *********   ****** ***** ** ***** **
+
+Sequence0       CTTCCAGTACTGCCTCCCACTGGGCTTCATCCTGGTCTGTTATGCACGCATCTACCGGCG
+Sequence1       CTTTCAGTACTGCATCCCTCTAGCCTTCATCCTGGTCTGCTACATACGCATCTACCAGCG
+                *** ********* **** ** * *************** **   *********** ***
+
+Sequence0       CCTGCAGAGGCAGGGGCGCGTGTTTCACAAGGGCACCTACAGCTTGCGAGCTGGGCACAT
+Sequence1       CCTGCAGAGGCAGAAGCATGTGTTCCATGCGCACGCTTGCAGCTCACGAGCGGGACAGAT
+                *************  **  ***** **   *  * * * *****  ***** ** ** **
+
+Sequence0       GAAGCAGGTCAATGTGGTGCTGGTGGTGATGGTGGTGGCCTTTGCTGTGCTCTGGCTGCC
+Sequence1       GAAGCGGATCAACAGCATGCTCATGACAATGGTGACTGCCTTTGCAGTTCTCTGGCTACC
+                ***** * ****     ****  **   ******   ******** ** ******** **
+
+Sequence0       TCTGCATGTGTTCAACAGCCTGGAAGACTGGCACCATGAGGCCATCCCCATCTGCCACGG
+Sequence1       CCTGCATGTGTTCAACACTCTGGAGGACTGGTACCAGGAAGCCATCCCTGCTTGCCATGG
+                 ****************  ***** ****** **** ** ********    ***** **
+
+Sequence0       GAACCTCATCTTCTTAGTGTGCCACTTGCTTGCCATGGCCTCCACCTGCGTCAACCCATT
+Sequence1       CAACCTCATCTTCTTGATGTGCCACCTGTTGGCCATGGCTTCCACCTGTGTCAACCCTTT
+                 **************  ******** ** * ******** ******** ******** **
+
+Sequence0       CATCTATGGCTTTCTCAACACCAACTTCAAGAAGGAGATCAAGGCCCTGGTGCTGACTTG
+Sequence1       CATCTATGGCTTTCTCAACATCAACTTCAAGAAGGATATCAAGGCTCTGGTGCTGACCTG
+                ******************** *************** ******** *********** **
+
+Sequence0       CCAGCAGAGCGCCCCCCTGGAGGAGTCGGAGCATCTGCCCCTGTCCACAGTACATACGGA
+Sequence1       CCATTGCAGGTCACCTCGAGGGGAGTCTGAGCATCTGCCCCTGTCCACTGTTCACACGGA
+                ***    **  * ** *  * ****** ******************** ** ** *****
+
+Sequence0       AGTCTCCAAAGGGTCCCTGAGGCTAAGTGGCAGGTCCAATCCCATTTAACCAGGTCTAGG
+Sequence1       CCTATCCAAGGGATCGATGAGGATGGGTAGCAAGTCTAACTTCATATAGTCGTGTCTGGG
+                  * ***** ** **  ***** *  ** *** *** **   *** **  *  **** **
+
+Sequence0       TCTTCTCCCTGCCATGTCCCTTGCCAGGCTCTTCCACTTAGCTAAGTGGGCACACTGCAA
+Sequence1       -CTTTTCCCTACCATTT--TTTGACACATCCTTTCACTTAGTTAAGAAGACACATTGCAG
+                 *** ***** **** *   *** **    *** ******* ****  * **** **** 
+
+Sequence0       GCTGGGGTGGCACCCCAGCATTCCTGGCTTTCTGGGGTCCAGATAGGCTGGCAAGAGCTG
+Sequence1       GCTGTGATAGCATCCTGTCATTTCTGGCTTT-TGGGGCCCAGATAGGTTGGCAAGAGA--
+                **** * * *** **   **** ******** ***** ********* *********   
+
+Sequence0       TTTTTGCATCCATTTGCATCGTGAAGACTGGCATTTTGATACTTCAGCTGTTTGTTCCTG
+Sequence1       -------------------CTTGAAGCTTGGCATTCAGATGGTTTAGCCCTTTGCTTCTG
+                                   * *****  *******  ***  ** ***  **** * ***
+
+Sequence0       GGAGAATTCTGAGCACAGATTCCAGAGGTCACAGTAAG--CCTTGCAGCTTGAGCTG-AA
+Sequence1       AGAGATCTCTGAGTCAGGATTCTGCAGATCACAGAGGGAACTTTGTGGCTTGAGCTGCAA
+                 ****  ******    *****   ** ******   *  * ***  ********** **
+
+Sequence0       AGATGCCAGAGCCGGAGATGTCTG-------CTGGCAGC-AGGCAGGGTTCATTCTGGTG
+Sequence1       GGGTATTAGAGTCAGAAGTGGCTGGCTGACTCTCACAGCCACTCAGTACAGATGCCTGGC
+                 * *   **** * **  ** ***       **  **** *  ***     ** *  *  
+
+Sequence0       ACACAGCAACAGATGCCTGGCCTGGGAACCCAGGGATTTCACCTCCACCAGTGAGACCAC
+Sequence1       CCAAAAGTCTTCATCTATGTCCTGACCATTCAGCTAACCTGCCTTTGGTGATGTGCTTAT
+                 ** *       **   ** ****   *  ***  *     ***       ** *   * 
+
+Sequence0       GGGGCCACTGTGGGGTGAGGGAAGGAGCGCTTGGAGTCAGA-GCTC-TAGA---------
+Sequence1       GTT-CTTTCAAGGGATGTTGGGTGTTTCAGTATGGGTTGGGTGCTGGTAGAAGCAGGTGC
+                *   *      *** **  **  *   *  *  * **  *  ***  ****         
+
+Sequence0       ------------------------------------------------------------
+Sequence1       TGGGAGTTGGGAGTCTGCTTAATAAAGTGCTTGCTGAAAAGAACAGGGACAATACGAACG
+                                                                            
+
+Sequence0       ------------------------------------------------------------
+Sequence1       GGCTATGATAAATGTGGCTGCCTTACCTATGGTGGTCAAAGTTCAGTGTCCCTCCTGGCT
+                                                                            
+
+Sequence0       ------------------------------------------------------------
+Sequence1       GCTGAATGGGGCCCAAGGCATCCTCAGTGTGTGTCCTTAGAAAGAAGGATATGCCAAGAT
+                                                                            
+
+Sequence0       ------------------------------------------------------------
+Sequence1       TGCTCTTGGTCCACATAAGATAGGATGTTGCAGTCCAGTTCTGACTGAATAGAGCAATCT
+                                                                            
+
+Sequence0       ------------------------------------------------------------
+Sequence1       TCAATACAGTAAACACAGTAGTCTCAGGGGAGACTTACCCCACACTGAACAGGTCTGATG
+                                                                            
+
+Sequence0       ------------------------------------------------------------
+Sequence1       GACTTTCTGGTTCTGGTCCCTTACCGAGCATGTGTGCGACTGATGTCCTGGACAGTTGCC
+                                                                            
+
+Sequence0       ------------------------------------------------------------
+Sequence1       CTGGAGCCACCACTTCTTTCTACCTGTCTCAGCTTTTTGGCTGCATCTCCAGCTTAGTGT
+                                                                            
+
+Sequence0       ------------------------------------------------------------
+Sequence1       TTTTGTTCCTGGATTTGAGACAATTTCTTTTCTTTTGAAGTAGGATCTTACCGTATAGGC
+                                                                            
+
+Sequence0       ------------------------------------------------------------
+Sequence1       AGGCTTGTCTAGCACGCCTGCCAGGCTTCCTTTCTGAGCACCGATTAAGGCATACGCCAT
+                                                                            
+
+Sequence0       ------------------------------------------------------------
+Sequence1       CACATATGATGAAAGATGAGCTTTTAAACCACTCTTGTTATCTGATATAGTCTTTTGCTG
+                                                                            
+
+Sequence0       ------------------------------------------------------------
+Sequence1       ACTACTTCATATCATCTACTTTGAGCAAAACCCAGACTCTCAGGCCCACCCTGGCAAGAT
+                                                                            
+
+Sequence0       ------------------------------------------------------------
+Sequence1       GACATTGTCTGAACTTACTGACCTGGGGCCACAGACTTCTCCTCGTCTCAGAAGCTCCAG
+                                                                            
+
+Sequence0       ------------------------------------------------------------
+Sequence1       AATGTAAGCTTTTATTAATTAGGCTCAATGAGACCAGGTTGCCAGTGGTCCAGATGAGAT
+                                                                            
+
+Sequence0       ------------------------------------------------------------
+Sequence1       ATTTAGTGAAGGTGTTAGGAGTCAGGGTGGGATGTAGAGGCTCCACCTGACATCTTCTGT
+                                                                            
+
+Sequence0       ------------------------------------------------------------
+Sequence1       TTTCCTTCCCACTTAGTTAGGGTGACATTAGCCTACCCGGATGGTTGTTTCCTGATCCTG
+                                                                            
+
+Sequence0       ------------------------------------------------------------
+Sequence1       GTGTCCTGGTGTCTAATGGCCCTTGAGATTTCTTGGTTGCCAGCTCCTTCGATGTTTACT
+                                                                            
+
+Sequence0       ------------------------------------------------------------
+Sequence1       ATCCTAAGTATGGTCTGAAGACCAGCAGCCCTCGAAACTGGAGGCTGTTAGATATACCGA
+                                                                            
+
+Sequence0       ------------------------------------------------------------
+Sequence1       GTCTTTGTCGTCACCGCAGATACGCTGAGTGCAAATCTGCATCTGGTCAAAATATGCAGG
+                                                                            
+
+Sequence0       ------------------------------------------------------------
+Sequence1       TTAATTGTAGGCACACTGAAAGCAGGAAGCTTTGCTTTAGGAAACAAACTCTGGGACTTG
+                                                                            
+
+Sequence0       ------------------------------------------------------------
+Sequence1       GGGTATGGGGTGAGAGTGTGCAAACACGCACTCTGGGGTCTGGCGTGGATCCCTGTTCTG
+                                                                            
+
+Sequence0       ------------------------------------------------------------
+Sequence1       AGCATCTTTAAACTTTGGAGTGCTGCAAAGGTATGCTGTTTTGGCTGTCATTTCTCTGCC
+                                                                            
+
+Sequence0       ------------------------------------------------------------
+Sequence1       TGCATGTGGACATAGTTCTCATGAGCTTTTTCATCATTTCAATAAATACTTGCCAAATCA
+                                                                            
+
+Sequence0       ------------------------------------------------------------
+Sequence1       GTAGCTTATAAAATTCCACCTACAGGGAGCCCGCCCTTTGCATTCTGCTGCGTTTCACTT
+                                                                            
+
+Sequence0       ------------------------------------------------------------
+Sequence1       AAAACTGTACTGTGAACAGTTTTCCCATCAGTTTCCACGGCTGCGTACCAGAAACTGCCC
+                                                                            
+
+Sequence0       ------------------------------------------------------------
+Sequence1       CAGTAAAAGCTGGGATCTCGCAGTATTTCTATGTAACTCCTCACAGGCCTGCTGGGGAGA
+                                                                            
+
+Sequence0       ------------------------------------------------------------
+Sequence1       GCTCCTATGGGGAGGTTGGTAGCTGCTTCCTCTGTAGGAGTGGTAGGGTTAGAGCTGGAG
+                                                                            
+
+Sequence0       ------------------------------------------------------------
+Sequence1       ACATATTCCTGTACGAAGGCCTGGGATTTCTGAGATTATGTGAAGTCGTATCAAACCCTG
+                                                                            
+
+Sequence0       ------------------------------------------------------------
+Sequence1       GCAGCAAGAGCTCAGCTGTTTAACTCTGGCCTTTTCCTCTCGACTTGCTTTTCCATTGTA
+                                                                            
+
+Sequence0       ------------------------------------------------------------
+Sequence1       AAAGTAATCATATGGTAAAATAAACTGAAAACAAAGGTAATTGTTGTTTTTGGGACTCAT
+                                                                            
+
+Sequence0       ------------------------------------------------------------
+Sequence1       TTTTAGTTATTATATGCATATGTCTGTTTTGAAAATGTGATTAAAACTGAACAGTGTATG
+                                                                            
+
+Sequence0       -----
+Sequence1       TATTT
+                     

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="US-ASCII" standalone="yes"?>
+<runnerConfig>
+ <runnerClassName>compbio.runner.probcons.Probcons</runnerClassName>
+ <!-- 
+    <options>
+        <name>Reestimate EP</name>
+        <description>Reestimate emission probabilities</description>
+        <optionNames>-e</optionNames>
+        <furtherDetails>http://www.compbio.dundee.ac.uk/users/pvtroshin/ws/Index.html</furtherDetails>
+    </options>
+     -->
+    <options>
+        <name>Output aligned</name>
+        <description>Output sequences in alignment order rather than input order</description>
+        <optionNames>-a</optionNames>
+        <furtherDetails>http://www.compbio.dundee.ac.uk/users/pvtroshin/ws/Index.html</furtherDetails>
+    </options>
+    <prmSeparator> </prmSeparator>
+	<!-- TODO This needs matrix file accessible to the program 
+	<parameters>
+        <name>MATRIX</name>
+        <description>Protein weight matrix. Specifies the emission probabilities that are to be used for scoring alignments.</description>
+        <optionNames>-m</optionNames>
+        <furtherDetails>http://www.compbio.dundee.ac.uk/users/pvtroshin/ws/Index.html</furtherDetails>
+        <defaultValue>BLOSUM62</defaultValue>
+        <possibleValues>BLOSUM62</possibleValues>
+        <possibleValues>PAM</possibleValues>
+        <possibleValues>ID</possibleValues>
+        <possibleValues>GONNET</possibleValues>
+    </parameters>
+     -->
+    <parameters>
+        <name>Rounds of pre-training before aligning the sequences</name>
+        <description>This specifies the number of rounds of EM to be applied on the set of sequences being
+aligned. This option is used in case the default parameters are not appropriate for the
+particular sequences being aligned; in general, this option is not recommended as it may
+lead to unstable alignment parameters.</description>
+        <optionNames>-pre</optionNames>
+        <furtherDetails>http://www.compbio.dundee.ac.uk/users/pvtroshin/ws/Index.html</furtherDetails>
+        <defaultValue>0</defaultValue>
+         <validValue>
+        	<type>Integer</type>
+            <min>0</min>
+            <max>20</max>
+        </validValue>
+    </parameters>
+    <parameters>
+        <name>Passes of iterative refinement</name>
+        <description>This specifies the number of iterations of iterative refinement to be performed. In each
+stage of iterative refinement, the set of sequences in the alignment is randomly
+partitioned into two groups. After projecting the alignments to these groups, the two
+groups are realigned, resulting in an alignment whose objective score is guaranteed to be
+at least that of the original alignment</description>
+        <optionNames>-ir</optionNames>
+        <furtherDetails>http://www.compbio.dundee.ac.uk/users/pvtroshin/ws/Index.html</furtherDetails>
+         <defaultValue>100</defaultValue>
+         <validValue>
+        	<type>Integer</type>
+            <min>0</min>
+            <max>1000</max>
+        </validValue>
+    </parameters>
+    <parameters>
+        <name>Passes of consistency transformation</name>
+        <description>Each pass applies one round of the consistency transformation on the set of sequences.
+	The consistency transformation is described in detail in the mentioned papers. In each
+	round, the aligner computes the consistency transformation for each pair of sequences
+	using all other sequences. The aligner then updates the posterior probability matrices of
+	the pairwise alignments.</description>
+        <optionNames>-c</optionNames>
+        <furtherDetails>http://www.compbio.dundee.ac.uk/users/pvtroshin/ws/Index.html</furtherDetails>
+        <defaultValue>2</defaultValue>
+         <validValue>
+        	<type>Integer</type>
+            <min>0</min>
+            <max>5</max>
+        </validValue>
+    </parameters>
+</runnerConfig>

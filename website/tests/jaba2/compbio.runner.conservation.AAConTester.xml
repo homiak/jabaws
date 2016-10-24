@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="compbio.runner.conservation.AAConTester" failures="0" tests="8" time="16.124" errors="0">
+  <properties/>
+  <testcase name="readStatistics" time="1.971" classname="compbio.runner.conservation.AAConTester"/>
+  <testcase name="testConfigurationLoading" time="0.169" classname="compbio.runner.conservation.AAConTester"/>
+  <testcase name="testPersistance" time="0.813" classname="compbio.runner.conservation.AAConTester"/>
+  <testcase name="testRunLocally" time="0.837" classname="compbio.runner.conservation.AAConTester"/>
+  <testcase name="testRunLocallyOnTwoCpu" time="0.285" classname="compbio.runner.conservation.AAConTester"/>
+  <testcase name="testRunLocallyWithPreset" time="0.651" classname="compbio.runner.conservation.AAConTester"/>
+  <testcase name="testRunOnCluster" time="6.245" classname="compbio.runner.conservation.AAConTester"/>
+  <testcase name="testRunOnClusterAsync" time="5.035" classname="compbio.runner.conservation.AAConTester"/>
+</testsuite>

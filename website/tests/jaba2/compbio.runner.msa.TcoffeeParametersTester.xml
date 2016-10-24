@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="compbio.runner.msa.TcoffeeParametersTester" failures="0" tests="9" time="28.067" errors="0">
+  <properties/>
+  <testcase name="testArguments" time="4.386" classname="compbio.runner.msa.TcoffeeParametersTester"/>
+  <testcase name="testConfiguration" time="0.0010" classname="compbio.runner.msa.TcoffeeParametersTester"/>
+  <testcase name="testConstrainedParametersMaxValues" time="4.278" classname="compbio.runner.msa.TcoffeeParametersTester"/>
+  <testcase name="testConstrainedParametersMinValues" time="2.768" classname="compbio.runner.msa.TcoffeeParametersTester"/>
+  <testcase name="testConstrainedParametersRandomValues" time="9.086" classname="compbio.runner.msa.TcoffeeParametersTester"/>
+  <testcase name="testDefaultParameters" time="3.171" classname="compbio.runner.msa.TcoffeeParametersTester"/>
+  <testcase name="testOptions" time="0.376" classname="compbio.runner.msa.TcoffeeParametersTester"/>
+  <testcase name="testParameters" time="3.774" classname="compbio.runner.msa.TcoffeeParametersTester"/>
+  <testcase name="testPresets" time="0.21" classname="compbio.runner.msa.TcoffeeParametersTester"/>
+</testsuite>

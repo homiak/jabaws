@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="US-ASCII" standalone="yes"?>
+<runnerConfig>
+	<runnerClassName>compbio.runner.msa.ClustalO</runnerClassName>
+	<options>
+		<name>Dealign</name>
+		<description>Dealign input sequences</description>
+		<optionNames>--dealign</optionNames>
+		<furtherDetails>prog_docs/clustalo.txt</furtherDetails>
+	</options>
+	<options>
+		<name>Full distance matrix</name>
+		<description>Use full distance matrix for guide-tree calculation (slow; mBed is default)</description>
+		<optionNames>--full</optionNames>
+		<furtherDetails>prog_docs/clustalo.txt</furtherDetails>
+	</options>
+	<options>
+		<name>Full distance matrix for each iteration</name>
+		<description>Use full distance matrix for guide-tree calculation during iteration (mBed is default)</description>
+		<optionNames>--full-iter</optionNames>
+		<furtherDetails>prog_docs/clustalo.txt</furtherDetails>
+	</options>
+	<prmSeparator>=</prmSeparator>
+	<parameters>
+		<name>Max Guide tree iterations</name>
+		<description>Maximum number of HMM iterations</description>
+		<optionNames>--max-hmm-iterations</optionNames>
+		<furtherDetails>prog_docs/clustalo.txt</furtherDetails>
+		<defaultValue>1</defaultValue>
+		<validValue>
+			<type>Integer</type>
+			<min>1</min>
+			<max>100</max>
+		</validValue>
+	</parameters>
+	<parameters>
+		<name>Number of iterations (combined)</name>
+		<description>Number of (combined guide tree/HMM) iterations</description>
+		<optionNames>--iter</optionNames>
+		<furtherDetails>prog_docs/clustalo.txt</furtherDetails>
+		<defaultValue>1</defaultValue>
+		<validValue>
+			<type>Integer</type>
+			<min>1</min>
+			<max>100</max>
+		</validValue>
+	</parameters>
+	<parameters>
+		<name>Max Guide tree iterations</name>
+		<description>Maximum guide tree iterations</description>
+		<optionNames>--max-guidetree-iterations</optionNames>
+		<furtherDetails>prog_docs/clustalo.txt</furtherDetails>
+		<defaultValue>1</defaultValue>
+		<validValue>
+			<type>Integer</type>
+			<min>1</min>
+			<max>100</max>
+		</validValue>
+	</parameters>
+</runnerConfig>

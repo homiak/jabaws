@@ -1,0 +1,268 @@
+
+PROGRAM: T-COFFEE (Version_8.14)
+-full_log      	S	[0] 
+-run_name      	S	[0] 
+-mem_mode      	S	[0] 	mem
+-extend        	D	[1] 	1 
+-extend_mode   	S	[0] 	very_fast_triplet
+-max_n_pair    	D	[0] 	10 
+-seq_name_for_quadruplet	S	[0] 	all
+-compact       	S	[0] 	default
+-clean         	S	[0] 	no
+-do_self       	FL	[0] 	0
+-do_normalise  	D	[0] 	1000 
+-template_file 	S	[0] 
+-template_mode 	S	[0] 
+-remove_template_file	D	[0] 	0 
+-profile_template_file	S	[0] 
+-in            	S	[0] 
+-seq           	S	[1] 	fasta.in
+-aln           	S	[0] 
+-method_limits 	S	[0] 
+-method        	S	[0] 
+-lib           	S	[0] 
+-profile       	S	[0] 
+-profile1      	S	[0] 
+-profile2      	S	[0] 
+-pdb           	S	[0] 
+-relax_lib     	D	[0] 	1 
+-filter_lib    	D	[0] 	0 
+-shrink_lib    	D	[0] 	0 
+-out_lib       	W_F	[0] 	no
+-out_lib_mode  	S	[0] 	primary
+-lib_only      	D	[0] 	0 
+-outseqweight  	W_F	[0] 	no
+-dpa           	FL	[0] 	0
+-seq_source    	S	[0] 	ANY
+-cosmetic_penalty	D	[0] 	0 
+-gapopen       	D	[0] 	0 
+-gapext        	D	[0] 	0 
+-fgapopen      	D	[0] 	0 
+-fgapext       	D	[0] 	0 
+-nomatch       	D	[0] 	0 
+-newtree       	W_F	[0] 	default
+-tree          	W_F	[0] 	NO
+-usetree       	R_F	[0] 
+-tree_mode     	S	[0] 	nj
+-distance_matrix_mode	S	[0] 	ktup
+-distance_matrix_sim_mode	S	[0] 	idmat_sim1
+-quicktree     	FL	[0] 	0
+-outfile       	W_F	[0] 	default
+-maximise      	FL	[1] 	1
+-output        	S	[1] 	clustalw
+-infile        	R_F	[0] 
+-matrix        	S	[0] 	default
+-tg_mode       	D	[0] 	1 
+-profile_mode  	S	[0] 	cw_profile_profile
+-profile_comparison	S	[0] 	profile
+-dp_mode       	S	[0] 	linked_pair_wise
+-ktuple        	D	[0] 	1 
+-ndiag         	D	[0] 	0 
+-diag_threshold	D	[0] 	0 
+-diag_mode     	D	[0] 	0 
+-sim_matrix    	S	[0] 	vasiliky
+-transform     	S	[0] 
+-outorder      	S	[0] 	input
+-inorder       	S	[0] 	aligned
+-seqnos        	S	[0] 	off
+-case          	S	[0] 	keep
+-cpu           	D	[0] 	0 
+-maxnseq       	D	[0] 	1000 
+-maxlen        	D	[0] 	-1 
+-weight        	S	[0] 	default
+-seq_weight    	S	[0] 	t_coffee
+-align         	FL	[1] 	1
+-mocca         	FL	[0] 	0
+-domain        	FL	[0] 	0
+-start         	D	[0] 	0 
+-len           	D	[0] 	0 
+-scale         	D	[0] 	0 
+-mocca_interactive	FL	[0] 	0
+-method_evaluate_mode	S	[0] 	default
+-evaluate_mode 	S	[0] 	t_coffee_fast
+-get_type      	FL	[0] 	0
+-clean_aln     	D	[0] 	0 
+-clean_threshold	D	[1] 	1 
+-clean_iteration	D	[1] 	1 
+-clean_evaluate_mode	S	[0] 	t_coffee_fast
+-extend_matrix 	FL	[0] 	0
+-prot_min_sim  	D	[0] 	0 
+-prot_max_sim  	D	[90] 	90 
+-prot_min_cov  	D	[0] 	0 
+-pdb_min_sim   	D	[35] 	35 
+-pdb_max_sim   	D	[100] 	100 
+-pdb_min_cov   	D	[50] 	50 
+-pdb_blast_server	W_F	[0] 	EBI
+-blast         	W_F	[0] 
+-blast_server  	W_F	[0] 	EBI
+-pdb_db        	W_F	[0] 	pdb
+-protein_db    	W_F	[0] 	uniprot
+-method_log    	W_F	[0] 	no
+-struc_to_use  	S	[0] 
+-cache         	W_F	[0] 	use
+-align_pdb_param_file	W_F	[0] 	no
+-align_pdb_hasch_mode	W_F	[0] 	hasch_ca_trace_bubble
+-external_aligner	S	[0] 	NO
+-msa_mode      	S	[0] 	tree
+-one2all       	S	[0] 
+-subset2all    	S	[0] 
+-lalign_n_top  	D	[0] 	10 
+-iterate       	D	[0] 	0 
+-trim          	D	[0] 	0 
+-split         	D	[0] 	0 
+-trimfile      	S	[0] 	default
+-split         	D	[0] 	0 
+-split_nseq_thres	D	[0] 	0 
+-split_score_thres	D	[0] 	0 
+-check_pdb_status	D	[0] 	0 
+-clean_seq_name	D	[0] 	0 
+-seq_to_keep   	S	[0] 
+-dpa_master_aln	S	[0] 
+-dpa_maxnseq   	D	[0] 	0 
+-dpa_min_score1	D	[0] 
+-dpa_min_score2	D	[0] 
+-dpa_keep_tmpfile	FL	[0] 	0
+-dpa_debug     	D	[0] 	0 
+-multi_core    	S	[0] 	templates_jobs_relax_msa
+-n_core        	D	[1] 	1 
+-lib_list      	S	[0] 
+-prune_lib_mode	S	[0] 	5
+-tip           	S	[0] 	one
+-rna_lib       	S	[0] 
+-no_warning    	D	[0] 	0 
+-run_local_script	D	[0] 	0 
+-plugins       	S	[0] 	default
+-proxy         	S	[0] 	unset
+-email         	S	[0] 
+-clean_overaln 	D	[0] 	0 
+-overaln_param 	S	[0] 
+-overaln_mode  	S	[0] 
+-overaln_model 	S	[0] 
+-overaln_threshold	D	[0] 	0 
+-overaln_target	D	[0] 	0 
+-overaln_P1    	D	[0] 	0 
+-overaln_P2    	D	[0] 	0 
+-overaln_P3    	D	[0] 	0 
+-overaln_P4    	D	[0] 	0 
+-exon_boundaries	S	[0] 
+
+INPUT FILES
+	Input File (S) fasta.in  Format fasta_seq
+	Input File (M) proba_pair 
+
+INPUT SEQUENCES: 9 SEQUENCES  [PROTEIN]
+  Input File fasta.in  Seq Sequence0 Length  113 type PROTEIN Struct Unchecked
+  Input File fasta.in  Seq Sequence1 Length   52 type PROTEIN Struct Unchecked
+  Input File fasta.in  Seq Sequence2 Length   53 type PROTEIN Struct Unchecked
+  Input File fasta.in  Seq Sequence3 Length   80 type PROTEIN Struct Unchecked
+  Input File fasta.in  Seq Sequence4 Length   45 type PROTEIN Struct Unchecked
+  Input File fasta.in  Seq Sequence5 Length   56 type PROTEIN Struct Unchecked
+  Input File fasta.in  Seq Sequence6 Length   62 type PROTEIN Struct Unchecked
+  Input File fasta.in  Seq Sequence7 Length   40 type PROTEIN Struct Unchecked
+  Input File fasta.in  Seq Sequence8 Length   61 type PROTEIN Struct Unchecked
+
+COMPUTE PAIRWISE SIMILARITY [dp_mode: ] [distance_matrix_mode: ktup][Similarity Measure: idmat_sim1] 
+
+	Seq: Sequence0
+	Seq: Sequence1
+	Seq: Sequence2
+	Seq: Sequence3
+	Seq: Sequence4
+	Seq: Sequence5
+	Seq: Sequence6
+	Seq: Sequence7
+	Seq: Sequence8
+
+READ/MAKE LIBRARIES:[2]
+
+	proba_pair [method]
+
+		[Submit   Job][TOT=   36][  0 %][ELAPSED TIME:    0 sec.]
+		[Submit   Job][TOT=   36][  5 %][ELAPSED TIME:    0 sec.]
+		[Submit   Job][TOT=   36][  8 %][ELAPSED TIME:    0 sec.]
+		[Submit   Job][TOT=   36][ 11 %][ELAPSED TIME:    0 sec.]
+		[Submit   Job][TOT=   36][ 13 %][ELAPSED TIME:    0 sec.]
+		[Submit   Job][TOT=   36][ 16 %][ELAPSED TIME:    0 sec.]
+		[Submit   Job][TOT=   36][ 19 %][ELAPSED TIME:    0 sec.]
+		[Submit   Job][TOT=   36][ 22 %][ELAPSED TIME:    0 sec.]
+		[Submit   Job][TOT=   36][ 25 %][ELAPSED TIME:    0 sec.]
+		[Submit   Job][TOT=   36][ 27 %][ELAPSED TIME:    0 sec.]
+		[Submit   Job][TOT=   36][ 30 %][ELAPSED TIME:    0 sec.]
+		[Submit   Job][TOT=   36][ 33 %][ELAPSED TIME:    0 sec.]
+		[Submit   Job][TOT=   36][ 36 %][ELAPSED TIME:    0 sec.]
+		[Submit   Job][TOT=   36][ 38 %][ELAPSED TIME:    0 sec.]
+		[Submit   Job][TOT=   36][ 41 %][ELAPSED TIME:    0 sec.]
+		[Submit   Job][TOT=   36][ 44 %][ELAPSED TIME:    0 sec.]
+		[Submit   Job][TOT=   36][ 47 %][ELAPSED TIME:    0 sec.]
+		[Submit   Job][TOT=   36][ 50 %][ELAPSED TIME:    0 sec.]
+		[Submit   Job][TOT=   36][ 52 %][ELAPSED TIME:    0 sec.]
+		[Submit   Job][TOT=   36][ 55 %][ELAPSED TIME:    0 sec.]
+		[Submit   Job][TOT=   36][ 58 %][ELAPSED TIME:    0 sec.]
+		[Submit   Job][TOT=   36][ 61 %][ELAPSED TIME:    0 sec.]
+		[Submit   Job][TOT=   36][ 63 %][ELAPSED TIME:    0 sec.]
+		[Submit   Job][TOT=   36][ 66 %][ELAPSED TIME:    0 sec.]
+		[Submit   Job][TOT=   36][ 69 %][ELAPSED TIME:    0 sec.]
+		[Submit   Job][TOT=   36][ 72 %][ELAPSED TIME:    0 sec.]
+		[Submit   Job][TOT=   36][ 75 %][ELAPSED TIME:    0 sec.]
+		[Submit   Job][TOT=   36][ 77 %][ELAPSED TIME:    0 sec.]
+		[Submit   Job][TOT=   36][ 80 %][ELAPSED TIME:    0 sec.]
+		[Submit   Job][TOT=   36][ 83 %][ELAPSED TIME:    0 sec.]
+		[Submit   Job][TOT=   36][ 86 %][ELAPSED TIME:    0 sec.]
+		[Submit   Job][TOT=   36][ 88 %][ELAPSED TIME:    0 sec.]
+		[Submit   Job][TOT=   36][ 91 %][ELAPSED TIME:    0 sec.]
+		[Submit   Job][TOT=   36][ 94 %][ELAPSED TIME:    0 sec.]
+		[Submit   Job][TOT=   36][ 97 %][ELAPSED TIME:    0 sec.]
+		[Submit   Job][TOT=   36][100 %][ELAPSED TIME:    0 sec.]
+
+MANUAL PENALTIES: gapopen=0 gapext=0
+
+	Library Total Size: [6542]
+
+Library Relaxation:[6542] --->[5767]
+
+	#### File Type=     WEIGHT Format=  tc_weight Name= no | NOT PRODUCED [WARNING:T-COFFEE:Version_8.14]
+
+
+WEIGHTED MODE:t_coffee
+
+	Sequence0 1.08
+	Sequence1 0.82
+	Sequence2 1.07
+	Sequence3 1.08
+	Sequence4 1.05
+	Sequence5 0.82
+	Sequence6 0.95
+	Sequence7 1.05
+	Sequence8 1.07
+
+
+MAKE GUIDE TREE 
+	[MODE=nj][DONE]
+
+PROGRESSIVE_ALIGNMENT [Tree Based]
+
+	Group   10: [Group    8 (   1 seq)] with [Group    5 (   1 seq)]-->[Score=  31][Len=   48][PID:23942]
+	Group   11: [Group   10 (   2 seq)] with [Group    3 (   1 seq)]-->[Score=  32][Len=   55][PID:23942]
+	Group   12: [Group    9 (   1 seq)] with [Group   11 (   3 seq)]-->[Score=  34][Len=   63][PID:23942]
+	Group   13: [Group   12 (   4 seq)] with [Group    4 (   1 seq)]-->[Score=  11][Len=   95][PID:23942]
+	Group   14: [Group    6 (   1 seq)] with [Group    2 (   1 seq)]-->[Score=  80][Len=   56][PID:23942]
+	Group   15: [Group    7 (   1 seq)] with [Group   14 (   2 seq)]-->[Score=  63][Len=   62][PID:23942]
+	Group   16: [Group   15 (   3 seq)] with [Group   13 (   5 seq)]-->[Score=  12][Len=  102][PID:23942]
+	Group   17: [Group    1 (   1 seq)] with [Group   16 (   8 seq)]-->[Score=  11][Len=  142][PID:23942]
+
+
+
+OUTPUT RESULTS
+	#### File Type= GUIDE_TREE Format=     newick Name= fasta.dnd
+	#### File Type=        MSA Format=   clustalw Name= fasta.clustalw
+
+
+# TIP :See The Full Documentation on www.tcoffee.org
+# TIP  1:  Get the most accurate protein alignments with: t_coffee <yourseq> -special_mode accurate [Slow]
+# TIP 10:  -usetree=<file> to use your own guide tree
+
+# Command Line: /homes/www-jws2/servers/tomcat-jaba/webapps/jabaws/binaries/src/tcoffee/t_coffee_source/t_coffee -output=clustalw -seq=fasta.in -n_core=1  [PROGRAM:T-COFFEE]
+# T-COFFEE Memory Usage: Current= 11.932 Mb, Max= 13.916 Mb
+# T-COFFEE CPU Usage: 250 millisec
+# Results Produced with T-COFFEE (Version_8.14)
+# T-COFFEE is available from http://www.tcoffee.org

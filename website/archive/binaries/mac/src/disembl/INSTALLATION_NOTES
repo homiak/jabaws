@@ -1,0 +1,23 @@
+DIsEMBL depends on BioPython and Tisean sav_gol executable
+both has to be installed
+DisEMBL.py script changes: 
+move import sys statement up to append Bio python libraries path
+change path to python interpreter
+Comment out file argument read data from stdin instead 
+was: 
+    file = str(sys.argv[7])
+    db = open(file,'r')
+become: 
+# file = str(sys.argv[7])
+  db = sys.stdin
+
+Header 
+    print ' ____  _     _____ __  __ ____  _       _  _  _'
+    print '|  _ \(_)___| ____|  \/  | __ )| |     / || || |'
+    print '| | | | / __|  _| | |\/| |  _ \| |     | || || |_'
+    print '| |_| | \__ \ |___| |  | | |_) | |___  | ||__   _|'
+    print '|____/|_|___/_____|_|  |_|____/|_____| |_(_) |_|'
+    print '# Copyright (C) 2004 - Rune Linding & Lars Juhl Jensen '
+    print '# EMBL Biocomputing Unit - Heidelberg - Germany        '
+    print ''
+removed to facilitate parsing 

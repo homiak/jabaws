@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="US-ASCII" standalone="yes"?>
+<runnerConfig>
+	<runnerClassName>compbio.runner.clustal.ClustalW</runnerClassName>
+	<options>
+		<name>NOPGAP</name>
+		<description>Residue-specific gaps off</description>
+		<optionNames>-NOPGAP</optionNames>
+		<furtherDetails>prog_docs/clustalw.txt</furtherDetails>
+	</options>
+	<options>
+		<name>No transition weighting</name>
+		<description>Disable sequence weighting</description>
+		<optionNames>-NOWEIGHTS</optionNames>
+		<furtherDetails>prog_docs/clustalw.txt</furtherDetails>
+	</options>
+	<options>
+		<name>NOHGAP</name>
+		<description>Hydrophilic gaps off</description>
+		<optionNames>-NOHGAP</optionNames>
+		<furtherDetails>prog_docs/clustalw.txt</furtherDetails>
+	</options>
+	<prmSeparator>=</prmSeparator>
+	<parameters>
+		<name>Transition weighting</name>
+		<description>Type of the sequence (PROTEIN or DNA)</description>
+		<optionNames>-TRANSWEIGHT</optionNames>
+		<furtherDetails>prog_docs/clustalw.txt</furtherDetails>
+		<defaultValue>0.5</defaultValue>
+		<validValue>
+			<type>Float</type>
+			<min>0</min>
+			<max>10</max>
+		</validValue>
+	</parameters>
+	<parameters>
+		<name>Type</name>
+		<description>Type of the sequence (PROTEIN or DNA)</description>
+		<optionNames>-TYPE</optionNames>
+		<furtherDetails>prog_docs/clustalw.txt</furtherDetails>
+		<defaultValue>PROTEIN</defaultValue>
+		<possibleValues>PROTEIN</possibleValues>
+		<possibleValues>DNA</possibleValues>
+	</parameters>
+	<parameters>
+		<name>OUTORDER</name>
+		<description>As per INPUT or ALIGNED</description>
+		<optionNames>-OUTORDER</optionNames>
+		<defaultValue>INPUT</defaultValue>
+		<possibleValues>INPUT</possibleValues>
+		<possibleValues>ALIGNED</possibleValues>
+	</parameters>
+	<parameters>
+		<name>MATRIX</name>
+		<description>Protein weight matrix</description>
+		<optionNames>-MATRIX</optionNames>
+		<furtherDetails>prog_docs/clustalw.txt</furtherDetails>
+		<defaultValue>BLOSUM62</defaultValue>
+		<!-- Clustal build in matrices
+		<possibleValues>BLOSUM</possibleValues>
+		<possibleValues>PAM</possibleValues>
+		<possibleValues>ID</possibleValues>
+		<possibleValues>GONNET</possibleValues>
+		 -->
+		<possibleValues>BLOSUM100</possibleValues>
+		<possibleValues>BLOSUM30</possibleValues>
+		<possibleValues>BLOSUM35</possibleValues>
+		<possibleValues>BLOSUM40</possibleValues>
+		<possibleValues>BLOSUM45</possibleValues>
+		<possibleValues>BLOSUM50</possibleValues>
+		<possibleValues>BLOSUM55</possibleValues>
+		<possibleValues>BLOSUM60</possibleValues>
+		<possibleValues>BLOSUM62</possibleValues>
+		<possibleValues>BLOSUM65</possibleValues>
+		<possibleValues>BLOSUM70</possibleValues>
+		<possibleValues>BLOSUM75</possibleValues>
+		<possibleValues>BLOSUM80</possibleValues>
+		<possibleValues>BLOSUM85</possibleValues>
+		<possibleValues>BLOSUM90</possibleValues>
+		<possibleValues>BLOSUMN</possibleValues>
+		<possibleValues>DAYHOFF</possibleValues>
+		<possibleValues>GONNET</possibleValues>
+		<possibleValues>IDENTITY</possibleValues>
+		<possibleValues>MATCH</possibleValues>
+		<possibleValues>NUC.4.2</possibleValues>
+		<possibleValues>NUC.4.4</possibleValues>
+		<possibleValues>PAM10</possibleValues>
+		<possibleValues>PAM100</possibleValues>
+		<possibleValues>PAM110</possibleValues>
+		<possibleValues>PAM120</possibleValues>
+		<possibleValues>PAM130</possibleValues>
+		<possibleValues>PAM140</possibleValues>
+		<possibleValues>PAM150</possibleValues>
+		<possibleValues>PAM160</possibleValues>
+		<possibleValues>PAM170</possibleValues>
+		<possibleValues>PAM180</possibleValues>
+		<possibleValues>PAM190</possibleValues>
+		<possibleValues>PAM20</possibleValues>
+		<possibleValues>PAM200</possibleValues>
+		<possibleValues>PAM210</possibleValues>
+		<possibleValues>PAM220</possibleValues>
+		<possibleValues>PAM230</possibleValues>
+		<possibleValues>PAM240</possibleValues>
+		<possibleValues>PAM250</possibleValues>
+		<possibleValues>PAM260</possibleValues>
+		<possibleValues>PAM270</possibleValues>
+		<possibleValues>PAM280</possibleValues>
+		<possibleValues>PAM290</possibleValues>
+		<possibleValues>PAM30</possibleValues>
+		<possibleValues>PAM300</possibleValues>
+		<possibleValues>PAM310</possibleValues>
+		<possibleValues>PAM320</possibleValues>
+		<possibleValues>PAM330</possibleValues>
+		<possibleValues>PAM340</possibleValues>
+		<possibleValues>PAM350</possibleValues>
+		<possibleValues>PAM360</possibleValues>
+		<possibleValues>PAM370</possibleValues>
+		<possibleValues>PAM380</possibleValues>
+		<possibleValues>PAM390</possibleValues>
+		<possibleValues>PAM40</possibleValues>
+		<possibleValues>PAM400</possibleValues>
+		<possibleValues>PAM410</possibleValues>
+		<possibleValues>PAM420</possibleValues>
+		<possibleValues>PAM430</possibleValues>
+		<possibleValues>PAM440</possibleValues>
+		<possibleValues>PAM450</possibleValues>
+		<possibleValues>PAM460</possibleValues>
+		<possibleValues>PAM470</possibleValues>
+		<possibleValues>PAM480</possibleValues>
+		<possibleValues>PAM490</possibleValues>
+		<possibleValues>PAM50</possibleValues>
+		<possibleValues>PAM500</possibleValues>
+		<possibleValues>PAM60</possibleValues>
+		<possibleValues>PAM70</possibleValues>
+		<possibleValues>PAM80</possibleValues>
+		<possibleValues>PAM90</possibleValues>
+	</parameters>
+	<parameters>
+		<name>GAPOPEN</name>
+		<description>Gap opening penalty</description>
+		<optionNames>-GAPOPEN</optionNames>
+		<furtherDetails>prog_docs/clustalw.txt</furtherDetails>
+		<defaultValue>10</defaultValue>
+		<validValue>
+			<type>Float</type>
+			<min>0</min>
+			<max>1000</max>
+		</validValue>
+	</parameters>
+	<parameters>
+		<name>-GAPEXT</name>
+		<description>Gap extension penalty</description>
+		<optionNames>-GAPEXT</optionNames>
+		<furtherDetails>prog_docs/clustalw.txt</furtherDetails>
+		<defaultValue>0.1</defaultValue>
+		<validValue>
+			<type>Float</type>
+			<min>0</min>
+			<max>10</max>
+		</validValue>
+	</parameters>
+	<parameters>
+		<name>ENDGAPS</name>
+		<description>End gap separation pen</description>
+		<optionNames>-ENDGAPS</optionNames>
+		<furtherDetails>prog_docs/clustalw.txt</furtherDetails>
+		<defaultValue>0.5</defaultValue>
+		<validValue>
+			<type>Float</type>
+			<min>0</min>
+			<max>10</max>
+		</validValue>
+	</parameters>
+	<parameters>
+		<name>GAPDIST</name>
+		<description>Gap separation pen. range</description>
+		<optionNames>-GAPDIST</optionNames>
+		<furtherDetails>prog_docs/clustalw.txt</furtherDetails>
+		<defaultValue>1</defaultValue>
+		<validValue>
+			<type>Integer</type>
+			<min>0</min>
+			<max>50</max>
+		</validValue>
+	</parameters>
+</runnerConfig>

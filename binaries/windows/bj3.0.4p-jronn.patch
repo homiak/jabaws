@@ -1,0 +1,23 @@
+Index: src/main/java/org/biojava3/ronn/ORonn.java
+===================================================================
+--- src/main/java/org/biojava3/ronn/ORonn.java	(revision 9674)
++++ src/main/java/org/biojava3/ronn/ORonn.java	(working copy)
+@@ -102,7 +102,9 @@
+ 		timer = new Timer(TimeUnit.MILLISECONDS);
+ 	}
+ 
+-	synchronized void writeResults(final float[] meanScores, final char[] seqs) {
++	void writeResults(final float[] meanScores, final char[] seqs) {
++		synchronized (out)
++		{
+ 		out.println(">" + sequence.getId());
+ 		if (layout == ResultLayout.VERTICAL) {
+ 			for (int i = 0; i < meanScores.length; i++) {
+@@ -124,6 +126,7 @@
+ 		}
+ 		out.println();
+ 		out.flush();
++		}
+ 	}
+ 
+ 	static boolean isValidSequence(final FastaSequence fsequence) {

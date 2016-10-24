@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="US-ASCII" standalone="yes"?>
+<presets>
+	<runnerClassName>compbio.runner.muscle.Muscle</runnerClassName>
+	<preset>
+		<name>Protein alignment(Fastest speed)</name>
+		<description>Fastest possible speed for protein sequences. Gives acceptable quality alignments for closely related sequences</description>
+		<optlist>
+			<option>-maxiters 1</option>
+			<option>-diags</option>
+			<option>-sv</option>
+			<option>-distance1 kbit20_3</option>
+		</optlist>
+	</preset>
+	<preset>
+		<name>Nucleotide alignment(Fastest speed)</name>
+		<description>Fastest possible speed for nucleotide sequences. Gives acceptable quality alignments for closely related sequences</description>
+		<optlist>
+			<option>-maxiters 1</option>
+			<option>-diags</option>
+		</optlist>
+	</preset>
+	<preset>
+		<name>Large alignments (balanced)</name>
+		<description>A large number of sequences (a few thousand), or very long sequences, 
+		then the default settings of may be too slow for practical use. 
+		A good compromise between speed and accuracy is to run just the first two iterations of 
+		the algorithm</description>
+		<optlist>
+			<option>-maxiters 2</option>
+		</optlist>
+	</preset>
+</presets>

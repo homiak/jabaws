@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="Last-modified" content="Mon, 4 Apr 2011 12:00:00 GMT"/>
+<title>Java Bioinformatics Analyses Web Services (JABAWS) main
+page</title>
+<link href="ws.css" rel="stylesheet" type="text/css" media=
+"screen, projection, handheld, tv" />
+<link rel="stylesheet" type="text/css" media="print" href=
+"print.css" />
+<script type="text/javascript" src="prototype-1.6.0.3.js">
+        
+</script>
+<style type="text/css">
+<!--
+.style1 {color: #000000}
+-->
+</style>
+</head>
+<body>
+<div id="page">
+<div id="banner">
+<table> 
+<tr><td style="width:158px;"><a href="http://www.dundee.ac.uk"><img src="images/uod_lt_long.gif"  alt="University of Dundee" width="158" height="90" class="logo"  title="University of Dundee" longdesc="http://www.dundee.ac.uk"/></a></td>
+<td class="bg"><img src="images/jabaws2.png" alt="JABAWS-2.0" width="265" height="67" title="Java Bioinformatics Analysis Web Services version 2.0"/></td>
+<td class="bg"><img src="images/banner_right.png" alt="Disorder" width="200" height="80"/></td>
+</tr>
+</table>
+</div>
+
+<!-- banner end-->
+<div id="wrapper">
+<div id="panel">
+ <a class="selected" href="index.html">Home</a> 
+ <a href="quick_start.html">Getting Started</a> 
+ <a href="man_about.html">Manual</a> 
+ <a href="http://www.compbio.dundee.ac.uk/download">Download</a> 
+ <a href="PublicAnnualStat" title="JABAWS server usage statistics">Usage Statistics</a>
+ <a href="ServiceStatus" title="JABAWS webservices status. Click to test all web services. Please be patient while the services are being checked">Services Status</a>
+ <a href="contacts.html">Contact Us</a>
+ <a href="http://www.compbio.dundee.ac.uk" title="University of Dundee, The Barton Group" >Barton Group</a></div>
+
+<!-- panel end-->
+<div id="content">
+<h2 id="headtitle">JABAWS 2</h2>
+<p style="color:black; font-weight:normal; text-align:left;"><span style="border-bottom:dotted 1px #666" title="JAva Bioinformatics Analysis Web Services">JABAWS</span> is  free software which provides web services for multiple sequence alignment, prediction of protein disorder,  and amino acid conservation conveniently packaged to run on your local computer, server or cluster. JABAWS v2.0 introduces protein disorder prediction services based on <a href="http://dis.embl.de/">DisEMBL</a>, <a href="http://iupred.enzim.hu">IUPred</a>, <a href="http://www.strubi.ox.ac.uk/RONN">Ronn</a>, <a href="http://globplot.embl.de/">GlobPlot</a> and protein sequence alignment conservation measures calculated by <a href="http://www.compbio.dundee.ac.uk/aacon">AACon</a>. A new multiple sequence alignment service for <a href="http://www.clustal.org/omega">Clustal Omega</a> is also provided, in addition to standard JABAWS:MSA services for <a href="http://www.clustal.org/clustal2">Clustal W</a>, <a href=
+"http://align.bmr.kyushu-u.ac.jp/mafft/software/">MAFFT</a>, <a href="http://www.drive5.com/muscle">MUSCLE</a>, <a href=
+"http://www.tcoffee.org/Projects_home_page/t_coffee_home_page.html"> TCOFFEE</a> and <a href="http://probcons.stanford.edu/">PROBCONS</a>. 
+<span style="color:black; font-weight:normal; text-align:left;">JABA Web Services can be accessed from the <a href="http://www.jalview.org">Jalview</a> desktop application and provide multiple alignment and sequence analysis calculations limited only by your own local computing resources.<br />
+<br />
+</span>Please note that JABAWS 2 is supported by Jalview 2.6.1 onwards, but the   disorder prediction, Clustal Omega and AACon services will only be accessible in   Jalview 2.8 (due for release in January 2012). In the meantime you can access   all JABAWS2 services through the JABAWS command-line client.</p>
+<div id="mainpagefeatures">
+<table>
+<tr><td>
+  <div class="brick">	
+  <div class="brick_header"><h2>For Users</h2></div>
+    <div class="brick_content">
+        <strong>The Server: </strong><a href="http://www.compbio.dundee.ac.uk/download/get?id=jabaws-vm.zip">JABAWS Virtual Appliance:</a> (520M)
+    	or <a href="man_awscloud.html">use JABAWS on Amazon Webservices Cloud</a><br/>
+    	<strong>The Client: </strong><a href="http://www.jalview.org/download.html">Jalview</a> (18M)
+		<p>To use JABA Web Services on most operating systems, just download and <a href="manual_qs_va.html#qsc">install</a> the JABAWS Virtual Appliance (VA) or even easier - just start JABAWS machine on the cloud and point Jalview at it!</p>
+     </div>
+  </div>
+  </td>
+  </tr>
+  <tr>
+    <td><div class="brick">
+	     <div class="brick_header"><h2>For System Administrators</h2></div>
+		 <div class="brick_content">
+		   <p><strong>The Server: </strong><a href=
+"http://www.compbio.dundee.ac.uk/download/get?id=jabaws.war">JABAWS Web Application aRchive</a> (55M)		   </p>
+		   <p>JABAWS requires a Servlet 2.4 compatible servlet container like Apache-Tomcat to run. Please check the quick start guide for <a href="manual_qs_war.html#qsc">installation instructions</a>.</p>
+		 </div>
+		</div></td>
+  </tr>
+  <tr>
+    <td><div class="brick">
+	     <div class="brick_header"><h2>For Bioinformaticians/Developers</h2></div>
+		 <div class="brick_content">
+<strong>The Server: </strong><a href=
+"http://www.compbio.dundee.ac.uk/download/get?id=jabaws.war">JABAWS Web Application aRchive</a>  (55M)
+  <br/>
+  <strong>The Client: </strong>
+      Command Line Client <a href="http://www.compbio.dundee.ac.uk/download/get?id=min-jaba-client-2.0.jar">binary</a> | <a href=
+"http://www.compbio.dundee.ac.uk/download/get?id=jaba-client-src-2.0.jar">source</a> 
+   	  <!-- <li><a href="http://www.jalview.org/download.html">Jalview</a> (18M)</li> -->
+  
+  
+<p>You can either use the JABAWS Virtual Appliance or the JABAWS Web Application aRchive (WAR) from your own computer or a lab server. The WAR version gives greater flexibility but requires a bit more configuration. Alternatively you can just script against our public server (see below) with the command line client or you own script. 
+Check out the <a href="manual_qs_client.html#qsc">quick start guide</a> for further details.</p>
+
+		 </div>
+		</div></td>
+  </tr>
+</table>
+</div>
+
+<h3 style="margin:0;">Public JABAWS Server</h3>
+<p> You can access our public JABA Web Services with our <a href="http://www.compbio.dundee.ac.uk/download/get?id=min-jaba-client-2.0.jar">command line client</a>, <a href="http://www.jalview.org/download.html">Jalview</a>, or with your own program. Jalview version 2.8 or later is fully compatible with JABAWS 2.  The latest versions of Jalview are configured to use public JABAWS server by default.</p>
+<ul>
+  <li>The JABAWS public web services address is <strong>http://www.compbio.dundee.ac.uk/jabaws</strong> </li>
+  <li>A detailed web services description is available from here: <a href="http://www.compbio.dundee.ac.uk/jabaws/ClustalWS?"
+title="http://www.compbio.dundee.ac.uk/jabaws/ClustalWS?" rel=
+"nofollow">WSDL List</a></li>
+</ul>
+<p>These web services accept submissions of less than one thousand sequences.  Should you find this to be insufficient for your needs, or if you are concerned about privacy or on an unreliable network connection, then you can <a href="http://www.compbio.dundee.ac.uk/download">download</a> and run the JABAWS Server on your own hardware.</p>
+<h3>Previous versions of JABAWS </h3>
+<p>JABAWS 1 is available from here <strong><a href="http://www.compbio.dundee.ac.uk/jabaws1">http://www.compbio.dundee.ac.uk/jabaws1</a></strong>. We advise you to update to the JABAWS 2 as this version is fully backward compatible with JABAWS 1 and contain numerous improvements. Please consult the <a href="man_about.html#jalviewsup">manual</a> for more information on versions compatibility. </p>
+<h3>Reference</h3>
+<p><span class="hightlight"></span> Peter V. Troshin, James B. Procter and Geoffrey J. Barton - &quot;Java Bioinformatics Analysis Web Services for Multiple Sequence Alignment - JABAWS:MSA&quot; <span class="i">Bioinformatics</span> 2011; <a href="http://bioinformatics.oxfordjournals.org/content/early/2011/05/18/bioinformatics.btr304.abstract?keytype=ref&amp;ijkey=gd0DwuYBzFRhe4T">doi: 10.1093/bioinformatics/btr304</a>.</p>
+</div>
+
+<!-- content end-->
+<div id="copyright">Last update: 10 December 2011<br />
+ This site is best viewed in Firefox 3.6, Google Chrome 10, Internet Explorer 8 or above </div>
+</div>
+
+<!-- wrapper end-->
+</div>
+<!-- Google analitics -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try{
+var pageTracker = _gat._getTracker("UA-5356328-1");
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+<!-- page end-->
+</body>
+</html>
+

@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project default="minimal-jaba-client-jar" name="Build minimal client for Java Bioinformatics Analysis Web Services" basedir=".">
+
+	<property name="basedir" location="${basedir}/log" />
+	<property name="LD_LIBRARY_PATH" value="/gridware/sge/lib/lx24-amd64"/>
+
+	<!-- Distributive file names-->
+	<property name="distdir" value="website/archive"/>
+	<mkdir dir="${distdir}" />
+	
+	<!-- projects details -->
+	<property name="project.url" value="http://www.compbio.dundee.ac.uk/jabaws"/>
+	<property name="product" value="Java Bioinformatics Analyses Web Services"/>
+	<property name="author" value="Peter Troshin"/>
+	
+	<!-- dependencies on other compbio projects  -->
+	<property name="compbio-annotation" value="compbio-annotations-1.0.jar"/>
+	<property name="compbio-util" value="compbio-util-1.4.jar"/>
+	<property name="compbio-ga" value="compbio-ga-1.0.jar"/>
+	
+	<!-- products -->
+	<property name="jaba_version" value="2.0"/>
+	<property name="datamodel" value="${distdir}/datamodel-${jaba_version}.jar"/>
+	<property name="datamodel-src" value="${distdir}/datamodel-src-${jaba_version}.jar"/>
+	<property name="min-jaba-client" value="${distdir}/min-jaba-client-${jaba_version}.jar"/>
+	<property name="jaba-client-src" value="${distdir}/jaba-client-src-${jaba_version}.jar"/>
+	
+	<property name="aacon-ws-client" value="${distdir}/aacon-ws-client.jar"/>
+	<property name="full-jaba-client" value="${distdir}/full-jaba-client-${jaba_version}.jar"/>
+	<property name="jaba-source-jar" value="${distdir}/jabaws-src-${jaba_version}.jar"/>
+	<property name="full-jaba-client-pack" value="${distdir}/full-jaba-client-pack.zip"/>
+	<property name="jaba" value="${distdir}/jaba.war"/>
+	<!-- TODO  
+	<property name="jaba-dundee" value="${distdir}/jaba-dundee.war"/>
+	 -->
+	<property name="jaba-no-binaries" value="${distdir}/jaba-no-binaries.war"/>
+	<property name="binaries" value="${distdir}/binaries.zip"/>
+	<property name="jaba-devel-web" value="${distdir}/jaba-devel-website.zip"/>
+
+	<!--Whole project archive -->
+	<property name="jaba-project" value="${distdir}/jaba-project.zip"/>
+
+
+	<!-- java -->
+	<property name="test.src" location="${basedir}/testsrc" />
+	<property name="classes" location="${basedir}/WEB-INF/classes" />
+	<property name="lib.path" location="${basedir}/lib" />
+	<property name="web.lib.path" location="${basedir}/WEB-INF/lib" />
+	<property name="test.lib.path" location="${basedir}/testsrc/lib" />
+	<property name="activity.log" location="${basedir}/activity.log" />
+
+	<!-- add libraries -->
+	<path id="project.classpath">
+		<fileset dir="${lib.path}">
+			<include name="*.jar" />
+		</fileset>
+		<fileset dir="${web.lib.path}">
+			<include name="*.jar" />
+		</fileset>
+	</path>
+
+
+	<!-- add test classes -->
+	<path id="test.classpath">
+		<fileset dir="${test.lib.path}">
+			<include name="*.jar" />
+		</fileset>
+		<pathelement location="${classes}" />
+	</path>
+
+
+	<!-- The compilation order is 
+	1. datamodel 
+	2. engine
+	3. runner
+	4. testscr
+	5. webservices
+	Packages of the lower order could not have dependencies on the packages on the next layer. 
+	So runners (layer 3) depends on the engines and the datamodel but engines does not depend on 
+	anything in runners or any other layers above. Testscr is not allowed to test webservices. 
+	-->
+	<target name="compile_with_debug" depends="clean" description="Perform a multiple step compilation to ensure layered structure is preserved. Debug enabled.">
+		<!-- copy files to class path-->
+		<copy file="${basedir}/conf/log4j.properties" tofile="${classes}/log4j.properties" />
+		<!-- Complile the datamodel first -->
+		<javac srcdir="${basedir}/datamodel" destdir="${classes}" target="1.6"
+				source="1.6" debug="on" encoding="UTF-8" verbose="false" nowarn="true" >
+			<compilerarg value="-Xlint:unchecked"/>
+			<classpath refid="project.classpath" />
+		</javac>
+		<!-- Complile the engines -->
+		<javac srcdir="${basedir}/engine" destdir="${classes}" target="1.6"
+				source="1.6" debug="on" encoding="UTF-8" verbose="false" nowarn="true" >
+			<compilerarg value="-Xlint:unchecked"/>
+			<classpath refid="project.classpath" />
+		</javac>
+		<!-- Complile the runners -->
+		<javac srcdir="${basedir}/runner" destdir="${classes}" target="1.6"
+				source="1.6" debug="on" encoding="UTF-8" verbose="false" nowarn="true" >
+			<compilerarg value="-Xlint:unchecked"/>
+			<classpath refid="project.classpath" />
+		</javac>
+		<!-- Complile the webservices -->
+		<javac srcdir="${basedir}/webservices" destdir="${classes}" target="1.6"
+				source="1.6" debug="on" encoding="UTF-8" verbose="false" nowarn="true" >
+			<compilerarg value="-Xlint:unchecked"/>
+			<classpath refid="project.classpath" />
+		</javac>
+		<!-- Complile the tests -->
+		<javac srcdir="${basedir}/testsrc" destdir="${classes}" target="1.6"
+				source="1.6" debug="on" encoding="UTF-8" verbose="false" nowarn="true" >
+			<compilerarg value="-Xlint:unchecked"/>
+			<classpath refid="project.classpath" />
+			<classpath refid="test.classpath" />
+		</javac>
+	</target>
+
+	<!-- Clean temp directories -->
+	<target name="clean">
+		<delete dir="${classes}" />
+		<mkdir dir="${classes}" />
+	</target>
+
+	<!--
+	Compile with optimisation. Do not compile testsrc 
+	The compilation order is 
+	1. datamodel 
+	2. engine
+	3. runner
+	4. webservices
+	Packages of the lower order could not have dependencies on the packages on the next layer. 
+	So runners (layer 3) depends on the engines and the datamodel but engines does not depend on 
+	anything in runners or any other layers above.  
+	-->
+	<target name="compile" depends="clean" description="Perform a multiple step compilation to ensure layered structure is preserved. Debug disabled, optimisation enabled. Tests are not compiled.">
+		<!-- copy files to class path-->
+		<copy file="${basedir}/conf/log4j.properties" tofile="${classes}/log4j.properties" />
+		<!-- Complile the datamodel first -->
+		<javac srcdir="${basedir}/datamodel" destdir="${classes}" target="1.6" source="1.6" debug="off" optimize="on" encoding="UTF-8" verbose="false" nowarn="true">
+			<compilerarg value="-Xlint:-unchecked" />
+			<classpath refid="project.classpath" />
+		</javac>
+		<!-- Complile the engines -->
+		<javac srcdir="${basedir}/engine" destdir="${classes}" target="1.6" source="1.6" debug="off" optimize="on" encoding="UTF-8" verbose="false" nowarn="true">
+			<compilerarg value="-Xlint:-all" />
+			<compilerarg value="-Xlint:-unchecked" />
+			<classpath refid="project.classpath" />
+		</javac>
+		<!-- Complile the runners -->
+		<javac srcdir="${basedir}/runner" destdir="${classes}" target="1.6" source="1.6" debug="off" optimize="on" encoding="UTF-8" verbose="false" nowarn="true">
+			<compilerarg value="-Xlint:-unchecked" />
+			<classpath refid="project.classpath" />
+		</javac>
+		<!-- Complile the webservices -->
+		<javac srcdir="${basedir}/webservices" destdir="${classes}" target="1.6" source="1.6" debug="off" optimize="on" encoding="UTF-8" verbose="false" nowarn="true">
+			<compilerarg value="-Xlint:-unchecked" />
+			<classpath refid="project.classpath" />
+		</javac>
+
+	</target>
+
+
+	<target name="datamodel-jar" description="Pack data model classes" depends="compile">
+		<echo>Jar file: Minimal WS client jar</echo>
+		<delete file="${basedir}/${datamodel}">
+		</delete>
+		<jar jarfile="${basedir}/${datamodel}">
+			<zipgroupfileset excludes="META-INF/*.SF" dir="${web.lib.path}" >
+				<include name="${compbio-util}"/>
+				<include name="${compbio-annotation}"/>
+			</zipgroupfileset>
+			<fileset dir="${basedir}/WEB-INF/classes/">
+				<include name="compbio/data/sequence/*.class"/>
+				<include name="compbio/metadata/*.class"/>
+			</fileset>
+			<manifest>
+				<attribute name="Built-By" value="${author}" />
+				<attribute name="Class-Path" value="." />
+				<attribute name="Implementation-Title" value="Datamodel for ${product} " />
+				<attribute name="Implementation-Vendor" value="${author}" />
+				<attribute name="Implementation-URL" value="${project.url}" />
+			</manifest>
+		</jar>
+	</target>
+
+	<target name="jaba-client-src-jar" description="Pack metadata, data model, WS interfaces, a simple ws client class" depends="datamodel-source-jar">
+		<echo>Jar file: JABAWS client source</echo>
+		<delete file="${jaba-client-src}">
+		</delete>
+		<jar jarfile="${jaba-client-src}">
+			<zipgroupfileset  excludes="META-INF/*.MF" file="${datamodel-src}"/>
+				<fileset dir="${basedir}/webservices">
+					<!-- This will include JAXWS artifacts. Alternatively they can be generated on the fly. -->
+					<include name="compbio/data/msa/**"/>
+					<exclude name="compbio/ws/client/ServicesUtil**"/>
+					<exclude name="compbio/ws/client/AAConClient**"/>
+					<include name="compbio/ws/client/**"/>
+				</fileset>
+				<manifest>
+					<attribute name="Built-By" value="${author}" />
+					<attribute name="Implementation-Title" value="${product} Client Source Code" />
+					<attribute name="Implementation-Vendor" value="${author}" />
+					<attribute name="Implementation-URL" value="${project.url}" />
+				</manifest>
+			</jar>
+	</target>
+	
+	<target name="minimal-jaba-client-jar" description="Pack metadata, data model, WS interfaces, a simple ws client class" depends="compile, datamodel-jar">
+		<echo>Jar file: Minimal WS client jar</echo>
+		<delete file="${basedir}/${min-jaba-client}">
+		</delete>
+		<jar jarfile="${basedir}/${min-jaba-client}">
+			<zipgroupfileset excludes="META-INF/*.SF" dir="" includes="${datamodel}" />
+			<fileset dir="${basedir}/WEB-INF/classes/">
+				<!-- This will include JAXWS artifacts. Alternatively they can be generated on the fly. -->
+				<include name="compbio/data/msa/**"/>
+				<include name="compbio/ws/client/**"/>
+			</fileset>
+			<zipgroupfileset  excludes="META-INF/*" dir="" includes="WEB-INF/lib/log4j-1.2.15.jar" />
+			<manifest>
+				<attribute name="Built-By" value="${author}" />
+				<attribute name="Main-Class" value="compbio.ws.client.Jws2Client" />
+				<attribute name="Class-Path" value="." />
+				<attribute name="Implementation-Title" value="Minimal ${product} Client" />
+				<attribute name="Implementation-Vendor" value="${author}" />
+				<attribute name="Implementation-URL" value="${project.url}" />
+			</manifest>
+		</jar>
+	</target>
+
+	<target name="aacon-ws-client-jar" description="Pack metadata, data model, WS interfaces, a simple ws client class" depends="compile, datamodel-jar">
+		<echo>Jar file: AAConWS client jar</echo>
+		<delete file="${basedir}/${aacon-ws-client}">
+		</delete>
+		<jar jarfile="${basedir}/${aacon-ws-client}">
+			<zipgroupfileset excludes="META-INF/*.SF" dir="" includes="${datamodel}" />
+			<fileset dir="${basedir}/WEB-INF/classes/">
+				<!-- This will include JAXWS artifacts. Alternatively they can be generated on the fly. -->
+				<include name="compbio/data/msa/**"/>
+				<include name="compbio/ws/client/**"/>
+			</fileset>
+			<manifest>
+				<attribute name="Built-By" value="${author}" />
+				<attribute name="Main-Class" value="compbio.ws.client.AAConClient" />
+				<attribute name="Class-Path" value="." />
+				<attribute name="Implementation-Title" value="AACon Client" />
+				<attribute name="Implementation-Vendor" value="${author}" />
+				<attribute name="Implementation-URL" value="http://www.compbio.dundee.ac.uk/aacon" />
+			</manifest>
+		</jar>
+	</target>
+
+	<target name="source-jar" description="Pack java sources" depends="datamodel-source-jar">
+		<delete file="${basedir}/${jaba-source-jar}">
+		</delete>
+		<jar jarfile="${basedir}/${jaba-source-jar}">
+			<zipgroupfileset  excludes="META-INF/*.MF" file="${datamodel-src}"/>
+			<fileset dir="${basedir}/runner">
+				<include name="**"/>
+			</fileset>
+			<fileset dir="${basedir}/engine">
+				<include name="**"/>
+			</fileset>
+			<fileset dir="${basedir}/webservices/">
+				<include name="**"/>
+			</fileset>
+			<manifest>
+				<attribute name="Built-By" value="${author}" />
+				<attribute name="Class-Path" value="." />
+				<attribute name="Implementation-Title" value="${product} Source Code Archive" />
+				<attribute name="Implementation-Vendor" value="${author}" />
+				<attribute name="Implementation-URL" value="${project.url}" />
+			</manifest>
+		</jar>
+	</target>
+	
+	<target name="datamodel-source-jar" description="Pack java sources" depends="compile">
+			<delete file="${datamodel-src}">
+			</delete>
+			<jar jarfile="${datamodel-src}">
+				<fileset dir="${basedir}/datamodel">
+					<include name="**"/>
+				</fileset>
+				<zipgroupfileset excludes="META-INF/*.MF" dir="${lib.path}/src">
+					<include name="**"/>
+				</zipgroupfileset>
+				<manifest>
+					<attribute name="Built-By" value="${author}" />
+					<attribute name="Implementation-Title" value="${product} Datamodel Source Code Archive" />
+					<attribute name="Implementation-Vendor" value="${author}" />
+					<attribute name="Implementation-URL" value="${project.url}" />
+				</manifest>
+			</jar>
+		</target>
+
+	<fileset dir="${basedir}/WEB-INF/classes/" id="fullclient">
+		<!-- Datamodel -->
+		<include name="compbio/data/**"/>
+		<include name="compbio/metadata/**"/>
+		<!-- Engines -->
+		<include name="compbio/engine/**"/>
+		<!-- Runners -->
+		<include name="compbio/runner/**"/>
+	</fileset>
+
+	<target name="full-jaba-client-jar" description="Pack datamodel, engine and runners" depends="compile">
+		<echo>Jar file: Full WS client jar</echo>
+		<delete file="${full-jaba-client}">
+		</delete>
+		<jar jarfile="${full-jaba-client}">
+			<zipgroupfileset excludes="META-INF/*.SF" dir="${web.lib.path}" >
+				<include name="log4j-1.2.15.jar"/>
+				<include name="${compbio-util}"/>
+				<include name="${compbio-annotation}"/>
+				<include name="drmaa.jar"/>
+			</zipgroupfileset>
+			<fileset refid="fullclient"/>
+			<manifest>
+				<attribute name="Built-By" value="${author}" />
+				<attribute name="Class-Path" value="." />
+				<attribute name="Implementation-Title" value="Full ${product} Client" />
+				<attribute name="Implementation-Vendor" value="${author}" />
+				<attribute name="Implementation-URL" value="${project.url}" />
+			</manifest>
+		</jar>
+	</target>
+
+	<target name="full-jaba-client" description="Pack binaries with sources and configuration files" 
+			depends="full-jaba-client-jar, pack-binaries">
+		<echo>Packing binaries, and configuration files</echo>
+		<zip destfile="${full-jaba-client-pack}" >
+			<zipgroupfileset file="${binaries}" />
+			<zipfileset dir="conf" prefix="conf" >
+				<exclude name="**/temp/**"/>
+			</zipfileset>
+			<fileset file="${full-jaba-client}" />
+		</zip>
+	</target>
+
+	
+	<target name="full-jaba-jar" description="Pack datamodel, engine, runners, configuration, binaries and webservices" depends="compile">
+		<echo>Jar file: Full WS client jar</echo>
+		<delete file="${full-jaba-client}">
+		</delete>
+		<jar jarfile="${full-jaba-client}">
+			<zipgroupfileset excludes="META-INF/*.SF" dir="${web.lib.path}" >
+				<include name="log4j-1.2.15.jar"/>
+				<include name="${compbio-util}"/>
+				<include name="${compbio-annotation}"/>
+				<include name="drmaa.jar"/>
+			</zipgroupfileset>
+			<fileset refid="fullclient">
+			</fileset>
+			<fileset dir="${basedir}/WEB-INF/classes/">
+				<!-- Statistics web application -->
+				<include name="compbio/stat/**"/>
+				<!-- Web services-->
+				<include name="compbio/ws/**"/>
+			</fileset>
+			<!-- Set WSTester as main to help user to test their deployments -->
+			<manifest>
+				<attribute name="Built-By" value="${author}" />
+				<attribute name="Class-Path" value="." />
+				<attribute name="Main-Class" value="compbio.ws.client.WSTester" />
+				<attribute name="Implementation-Title" value="${product}" />
+				<attribute name="Implementation-Vendor" value="${author}" />
+				<attribute name="Implementation-URL" value="${project.url}" />
+			</manifest>
+		</jar>
+	</target>
+
+	<target name="clearStatDB" description="Remove all records from statistics database">
+		 <echo>Cleaning Statistics database</echo>
+		 <java classname="compbio.stat.collector.StatDB" fork="false" failonerror="true" classpath="${classes}">
+	            <classpath refid="project.classpath" />
+	     </java>
+	</target>
+	
+	<target name="pack-binaries" description="Zip all binary files">
+		<delete file="${binaries}" failonerror="false"/>
+		<zip destfile="${binaries}" >
+			<zipfileset dir="${basedir}/binaries" prefix="binaries" excludes="**/linux*/**"/>
+		</zip>
+	</target>
+
+<!-- DEPRICATED 
+	<target name="pack-windows-binaries" description="Zip only windows binary files">
+		<delete file="${win-binaries}" failonerror="false" />
+		<zip destfile="${win-binaries}">
+			<zipfileset dir="${basedir}/binaries" prefix="binaries" >
+				<include name="matrices/*" />
+				<include name="windows/*" />
+			</zipfileset>
+		</zip>
+	</target>
+-->
+
+	<target name="jaba-no-binaries" description="Prepare JABAWS war file without native binaries" depends="full-jaba-jar,  clearStatDB">
+		<echo>Preparing a war file without binaries</echo>
+		<delete file="${jaba-no-binaries}">
+		</delete>
+		<zip destfile="${jaba-no-binaries}" whenempty="create">
+			<zipfileset dir="${basedir}/WEB-INF" prefix="WEB-INF">
+				<exclude name="classes"/>
+				<!-- These are included into JABA client so exclude the jars -->
+				<exclude name="lib/drmaa.jar"/>
+				<exclude name="lib/log4j-1.2.15.jar"/>
+				<exclude name="lib/${compbio-annotation}"/>
+				<exclude name="lib/${compbio-util}"/>
+				
+				<include name="web.xml"/>
+				<include name="sun-jaxws.xml"/>
+				<include name="lib/*"/>
+			</zipfileset>
+			<zipfileset dir="${basedir}/ExecutionStatistic" prefix="ExecutionStatistic" />
+			<zipfileset dir="${basedir}/statpages" prefix="statpages" />
+			<zipfileset dir="${basedir}/jobsout" prefix="jobsout" excludes="**/*"/>
+			<zipfileset dir="conf" prefix="conf" >
+				<exclude name="**/temp/**"/>
+				<exclude name="**/log4j.properties*"/>
+			</zipfileset>
+			<!-- Add JABAWS web site apart from the binary archive -->
+			<zipfileset dir="${basedir}/website" excludes="archive/**, devel*.html, tests/**, template.html"/>
+			<zipfileset dir="." includes="${full-jaba-client}" fullpath="WEB-INF/lib/jaba-client.jar"/>
+			<!-- Put a copy of log4j configuration file where it can be used  -->
+			<zipfileset dir="conf" includes="log4j.properties" prefix="WEB-INF/classes"/>
+		</zip>
+	</target>
+
+	<target name="build-devel-website" description="Pack developement related pages, tests, javadoc" >
+		<echo>Packing data for internal web site</echo>
+		<delete file="${jaba-devel-web}">
+		</delete>
+		<zip destfile="${jaba-devel-web}" whenempty="create">
+			<!-- Add JABAWS web site apart from the binary archive -->
+			<zipfileset dir="${basedir}/website" excludes="template.html, download.html, index.html, manual.html, howto.html, archive/**, prog_docs/**"/>
+		</zip>
+	</target>
+
+	<target name="jaba-complete" description="Prepare JABAWS war file without runtime dependency - JAXWS jars" depends="jaba-no-binaries, pack-binaries">
+		<echo>Preparing a complete war file</echo>
+		<delete file="${jaba}">
+		</delete>
+		<copy tofile="${jaba}" file="${jaba-no-binaries}"/>
+		<zip destfile="${jaba}" update="true" >
+			<zipgroupfileset file="${binaries}" />
+		</zip>
+	</target>
+
+<!-- DEPRICATED - STANDARD JABA WAR WILL WORK FOR WINDOWS JUST FINE, DOWNLOAD SPACE SAVING IS NOT WORTH THE 
+  ADDITIONAL COMPLEXITY 
+	<target name="jaba-complete-windows" description="Prepare JABAWS war file for windows" depends="jaba-no-binaries">
+		<echo>Preparing a complete war file</echo>
+		<copy tofile="${jaba-windows}" file="${jaba-no-binaries}"/>
+		<zip destfile="${jaba-windows}" update="true" >
+			<zipgroupfileset file="${win-binaries}" />
+		</zip>
+	</target>
+-->
+ 
+	<target name="build-all" description="Build-all the distributives"
+		depends="full-jaba-client, minimal-jaba-client-jar, jaba-no-binaries,
+		 jaba-complete, datamodel-jar, datamodel-source-jar, source-jar, jaba-client-src-jar"/>
+
+	<!-- This task does not really depends on compile, but it is better to make sure that the code is sound -->
+	<target name="archive-project" description="Pack everything in the project for those who do not have access to SVN" depends="compile">
+		<delete file="${jaba-project}">
+		</delete>
+		<zip destfile="${jaba-project}" whenempty="create" >
+			<fileset dir="." excludes="${distdir}/**, jobsout/**, test-output/**, **.svn, dundee-conf/**, TODO.txt, IDEAS.txt, ${activity.log}, **/*.zip, **/*.war"/>
+			<!-- Add jobsout directory but no content -->
+			<zipfileset dir="${basedir}/jobsout" prefix="jobsout" excludes="*/**"/>
+		</zip>
+	</target>
+
+
+	<taskdef name="testNG" classname="org.testng.TestNGAntTask">
+		<classpath refid="test.classpath">
+		</classpath>
+	</taskdef>
+
+	<target name="CustomTest" depends="compile_with_debug">
+		<delete file="${activity.log}"/>
+		<testNG haltonfailure="true" enableassert="true" >
+			<jvmarg value="-server" />
+			<jvmarg value="-enableassertions" />
+			<jvmarg value="-Xms1024m" />
+			<jvmarg value="-Xmx1024m" />
+			<env key="LD_LIBRARY_PATH" value="${LD_LIBRARY_PATH}"/>
+			<classpath refid="test.classpath" />
+			<classpath refid="project.classpath" />
+			<xmlfileset dir="." includes="temp-testng-customsuite.xml"/>
+			<sysproperty key="TestingDataPath" value="${data.src}"/>
+		</testNG>
+	</target>
+
+	<target name="Run_cluster_dependent_test" depends="compile_with_debug">
+		<delete file="${activity.log}"/>
+		<testNG groups="cluster" haltonfailure="true" enableassert="true" parallel="false" verbose="3">
+			<jvmarg value="-server" />
+			<jvmarg value="-enableassertions" />
+			<jvmarg value="-Xms1024m" />
+			<jvmarg value="-Xmx1024m" />
+			<classfileset dir="${classes}" includes="**/*.class" />
+			<env key="LD_LIBRARY_PATH" value="${LD_LIBRARY_PATH}"/>
+			<classpath refid="test.classpath" />
+			<classpath refid="project.classpath" />
+			<sysproperty key="TestingDataPath" value="${data.src}"/>
+		</testNG>
+	</target>
+
+	<target name="Test" depends="compile_with_debug">
+		<delete file="${activity.log}"/>
+		<testNG haltonfailure="true" enableassert="true" verbose="3" excludedgroups="performance, webservices" >
+			<jvmarg value="-server" />
+			<jvmarg value="-enableassertions" />
+			<jvmarg value="-Xms1024m" />
+			<jvmarg value="-Xmx1024m" />
+			<classfileset dir="${classes}" includes="**/*.class" />
+			<env key="LD_LIBRARY_PATH" value="${LD_LIBRARY_PATH}"/>
+			<classpath refid="test.classpath" />
+			<classpath refid="project.classpath" />
+			<sysproperty key="TestingDataPath" value="${data.src}"/>
+		</testNG>
+	</target>
+
+	<target name="Performance_tests" depends="compile_with_debug">
+		<delete file="${activity.log}"/>
+		<testNG haltonfailure="true" enableassert="true" verbose="3" groups="performance" >
+			<jvmarg value="-server" />
+			<jvmarg value="-enableassertions" />
+			<jvmarg value="-Xms1024m" />
+			<jvmarg value="-Xmx1024m" />
+			<classfileset dir="${classes}" includes="**/*.class" />
+			<env key="LD_LIBRARY_PATH" value="${LD_LIBRARY_PATH}"/>
+			<classpath refid="test.classpath" />
+			<classpath refid="project.classpath" />
+			<sysproperty key="TestingDataPath" value="${data.src}"/>
+		</testNG>
+	</target>
+
+	<target name="Test_runners" depends="compile_with_debug">
+		<delete file="${activity.log}"/>
+		<testNG groups="runner" haltonfailure="true" verbose="3" enableassert="true" >
+			<jvmarg value="-server" />
+			<jvmarg value="-enableassertions" />
+			<jvmarg value="-Xms1024m" />
+			<jvmarg value="-Xmx1024m" />
+			<classfileset dir="${classes}" includes="**/*.class" />
+			<env key="LD_LIBRARY_PATH" value="${LD_LIBRARY_PATH}"/>
+			<classpath refid="test.classpath" />
+			<classpath refid="project.classpath" />
+			<sysproperty key="TestingDataPath" value="${data.src}"/>
+		</testNG>
+	</target>
+
+	<target name="Test_engines" depends="compile_with_debug">
+		<delete file="${activity.log}"/>
+		<testNG groups="engine" haltonfailure="true" verbose="3" enableassert="true" >
+			<jvmarg value="-server" />
+			<jvmarg value="-enableassertions" />
+			<jvmarg value="-Xms1024m" />
+			<jvmarg value="-Xmx1024m" />
+			<classfileset dir="${classes}" includes="**/*.class" />
+			<env key="LD_LIBRARY_PATH" value="${LD_LIBRARY_PATH}"/>
+			<classpath refid="test.classpath" />
+			<classpath refid="project.classpath" />
+			<sysproperty key="TestingDataPath" value="${data.src}"/>
+		</testNG>
+	</target>
+
+	<target name="All_cluster_independent_windows_only_tests" depends="compile_with_debug">
+		<delete file="${activity.log}" failonerror="false"/>
+		<testNG excludedgroups="cluster, non_windows" haltonfailure="true" verbose="3" enableassert="true"  >
+			<jvmarg value="-server" />
+			<jvmarg value="-enableassertions" />
+			<jvmarg value="-Xms1024m" />
+			<jvmarg value="-Xmx1024m" />
+			<classfileset dir="${classes}" includes="**/*.class" />
+			<classpath refid="test.classpath" />
+			<classpath refid="project.classpath" />
+			<sysproperty key="TestingDataPath" value="${data.src}"/>
+		</testNG>
+	</target>
+
+	<target name="All_cluster_independent_tests" depends="compile_with_debug">
+		<delete file="${activity.log}" failonerror="false"/>
+		<testNG excludedgroups="cluster, performance" haltonfailure="true" verbose="3" enableassert="true"  >
+			<jvmarg value="-server" />
+			<jvmarg value="-enableassertions" />
+			<jvmarg value="-Xms1024m" />
+			<jvmarg value="-Xmx1024m" />
+			<classfileset dir="${classes}" includes="**/*.class" />
+			<classpath refid="test.classpath" />
+			<classpath refid="project.classpath" />
+			<sysproperty key="TestingDataPath" value="${data.src}"/>
+		</testNG>
+	</target>
+
+	<target name="Rerun_failed_tests" depends="compile_with_debug">
+		<delete file="${activity.log}" failonerror="false"/>
+		<testNG haltonfailure="true" enableassert="true" verbose="9" >
+			<jvmarg value="-server" />
+			<jvmarg value="-enableassertions" />
+			<jvmarg value="-Xms1024m" />
+			<jvmarg value="-Xmx1024m" />
+			<env key="LD_LIBRARY_PATH" value="${LD_LIBRARY_PATH}"/>
+			<classpath refid="test.classpath" />
+			<classpath refid="project.classpath" />
+			<xmlfileset dir="." includes="test-output/testng-failed.xml"/>
+			<sysproperty key="TestingDataPath" value="${data.src}"/>
+		</testNG>
+	</target>
+
+
+</project>

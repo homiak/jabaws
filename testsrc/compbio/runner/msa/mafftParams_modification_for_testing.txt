@@ -1,0 +1,3 @@
+
+ -nuc option is removed as with protein sequence execution will fail
+ 

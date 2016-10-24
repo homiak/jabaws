@@ -1,0 +1,3 @@
+
+-nuc - works with nucleotide sequences only
+-fasta - requires fasta to be installed 

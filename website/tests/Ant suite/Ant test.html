@@ -1,0 +1,1876 @@
+<html>
+<head>
+<title>TestNG:  Ant test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Ant test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>216/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Thu Jun 23 10:34:54 BST 2011</td>
+</tr>
+<tr><td>Total time:</td><td>453 seconds (453928 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td>webservices performance </td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Instance</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td width="30%"><b>Exception</b></td>
+</tr>
+<tr>
+<td title='compbio.data.sequence.SequenceUtilTester.loadJronnFile()'><b>loadJronnFile</b><br>Test class:Ant test</td>
+<td>compbio.data.sequence.SequenceUtilTester@235f4a7f</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.metadata.PresetTester.marshallPreset()'><b>marshallPreset</b><br>Test class:Ant test</td>
+<td>compbio.metadata.PresetTester@7a4fe91e</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.conservation.AAConTester.readStatistics()'><b>readStatistics</b><br>Test class:Ant test</td>
+<td>compbio.runner.conservation.AAConTester@1959e6e8</td><td>1</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.disorder.DisemblTester.readStatistics()'><b>readStatistics</b><br>Test class:Ant test</td>
+<td>compbio.runner.disorder.DisemblTester@5d469658</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.disorder.GlobPlotTester.readStatistics()'><b>readStatistics</b><br>Test class:Ant test</td>
+<td>compbio.runner.disorder.GlobPlotTester@45389b3f</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.disorder.JronnTester.readStatistics()'><b>readStatistics</b><br>Test class:Ant test</td>
+<td>compbio.runner.disorder.JronnTester@3d3b5a3a</td><td>18</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.msa.ClustalWTester.readStatistics()'><b>readStatistics</b><br>Test class:Ant test</td>
+<td>compbio.runner.msa.ClustalWTester@3a0b53e</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.msa.MafftTester.readStatistics()'><b>readStatistics</b><br>Test class:Ant test</td>
+<td>compbio.runner.msa.MafftTester@5f0f0625</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.msa.MuscleTester.readStatistics()'><b>readStatistics</b><br>Test class:Ant test</td>
+<td>compbio.runner.msa.MuscleTester@63f8247d</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.msa.ProbconsTester.readStatistics()'><b>readStatistics</b><br>Test class:Ant test</td>
+<td>compbio.runner.msa.ProbconsTester@32830122</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.msa.TcoffeeTester.readStatistics()'><b>readStatistics</b><br>Test class:Ant test</td>
+<td>compbio.runner.msa.TcoffeeTester@54a6af6e</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.msa.ClustalWTester.readStatisticsClusterExecution()'><b>readStatisticsClusterExecution</b><br>Test class:Ant test</td>
+<td>compbio.runner.msa.ClustalWTester@3a0b53e</td><td>1</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.data.sequence.FastaReaderTester.test()'><b>test</b><br>Test class:Ant test</td>
+<td>compbio.data.sequence.FastaReaderTester@2dc0435</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.engine.PulledFileCacheTester.test()'><b>test</b><br>Test class:Ant test</td>
+<td>compbio.engine.PulledFileCacheTester@472462b3</td><td>5</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.msa.ClustalWParametersTester.testArguments()'><b>testArguments</b><br>Test class:Ant test</td>
+<td>compbio.runner.msa.ClustalWParametersTester@74e2ad16</td><td>1</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.msa.MafftParametersTester.testArguments()'><b>testArguments</b><br>Test class:Ant test</td>
+<td>compbio.runner.msa.MafftParametersTester@35a8d460</td><td>3</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.msa.MuscleParametersTester.testArguments()'><b>testArguments</b><br>Test class:Ant test</td>
+<td>compbio.runner.msa.MuscleParametersTester@535c97e4</td><td>4</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.msa.ProbconsParametersTester.testArguments()'><b>testArguments</b><br>Test class:Ant test</td>
+<td>compbio.runner.msa.ProbconsParametersTester@3823bdd1</td><td>1</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.msa.TcoffeeParametersTester.testArguments()'><b>testArguments</b><br>Test class:Ant test</td>
+<td>compbio.runner.msa.TcoffeeParametersTester@36bf7916</td><td>4</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.engine.local.AsyncLocalRunnerTester.testAsyncCancelOperation()'><b>testAsyncCancelOperation</b><br>Test class:Ant test</td>
+<td>compbio.engine.local.AsyncLocalRunnerTester@31df5f21</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.engine.local.AsyncLocalRunnerTester.testAsyncRetrievOperation()'><b>testAsyncRetrievOperation</b><br>Test class:Ant test</td>
+<td>compbio.engine.local.AsyncLocalRunnerTester@31df5f21</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.engine.FilePullerTester.testCache()'><b>testCache</b><br>Test class:Ant test</td>
+<td>compbio.engine.FilePullerTester@1e670479</td><td>6</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.engine.cluster.drmaa.DrmaaAsyncClusterEngineTester.testCancel()'><b>testCancel</b><br>Test class:Ant test</td>
+<td>compbio.engine.cluster.drmaa.DrmaaAsyncClusterEngineTester@57c8b24d</td><td>1</td>
+<td><div><pre>compbio.metadata.ResultNotAvailableException: java.io.FileNotFoundException: Result for the jobId /homes/pvtroshin/workspace/jaba2/local_jobsout/ClustalW#6405924652151282 with file name TO1381.clustal.cluster.out is not found!
+	at compbio.runner.msa.ClustalW.getResults(ClustalW.java:73)
+	at compbio.runner.msa.ClustalW.getResults(ClustalW.java:34)
+	at compbio.engine.client.ConfExecutable.getResults(ConfExecutable.java:207)
+	at compbio.engine.cluster.drmaa.DrmaaAsyncClusterEngineTester.testCancel(DrmaaAsyncClusterEngineTester.java:109)
+Caused by: java.io.FileNotFoundException: Result for the jobId /homes/pvtroshin/workspace/jaba2/local_jobsout/ClustalW#6405924652151282 with file name TO1381.clustal.cluster.out is not found!
+	at compbio.runner.Util.readClustalFile(Util.java:93)
+	at compbio.runner.msa.ClustalW.getResults(ClustalW.java:70)
+	... 25 more
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace566947760", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace566947760'><pre>compbio.metadata.ResultNotAvailableException: java.io.FileNotFoundException: Result for the jobId /homes/pvtroshin/workspace/jaba2/local_jobsout/ClustalW#6405924652151282 with file name TO1381.clustal.cluster.out is not found!
+	at compbio.runner.msa.ClustalW.getResults(ClustalW.java:73)
+	at compbio.runner.msa.ClustalW.getResults(ClustalW.java:34)
+	at compbio.engine.client.ConfExecutable.getResults(ConfExecutable.java:207)
+	at compbio.engine.cluster.drmaa.DrmaaAsyncClusterEngineTester.testCancel(DrmaaAsyncClusterEngineTester.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodHelper.invokeMethod(MethodHelper.java:609)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:532)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:686)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1018)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:128)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:759)
+	at org.testng.TestRunner.privateRun(TestRunner.java:592)
+	at org.testng.TestRunner.run(TestRunner.java:486)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:327)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:299)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:204)
+	at org.testng.TestNG.createAndRunSuiteRunners(TestNG.java:912)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:876)
+	at org.testng.TestNG.run(TestNG.java:784)
+	at org.testng.TestNG.privateMain(TestNG.java:949)
+	at org.testng.TestNG.main(TestNG.java:922)
+Caused by: java.io.FileNotFoundException: Result for the jobId /homes/pvtroshin/workspace/jaba2/local_jobsout/ClustalW#6405924652151282 with file name TO1381.clustal.cluster.out is not found!
+	at compbio.runner.Util.readClustalFile(Util.java:93)
+	at compbio.runner.msa.ClustalW.getResults(ClustalW.java:70)
+	... 25 more
+</pre></div></td>
+</tr>
+<tr>
+<td title='compbio.engine.cluster.drmaa.DrmaaClusterEngineTester.testCancel()'><b>testCancel</b><br>Test class:Ant test</td>
+<td>compbio.engine.cluster.drmaa.DrmaaClusterEngineTester@39320a41</td><td>1</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.engine.local.AsyncLocalRunnerTester.testCancelCompletedTaskLocally()'><b>testCancelCompletedTaskLocally</b><br>Test class:Ant test</td>
+<td>compbio.engine.local.AsyncLocalRunnerTester@31df5f21</td><td>3</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.engine.local.LocalRunnerTester.testCancelCompletedTaskLocally()'><b>testCancelCompletedTaskLocally</b><br>Test class:Ant test</td>
+<td>compbio.engine.local.LocalRunnerTester@3fde891b</td><td>0</td>
+<td><div><pre>java.util.concurrent.CancellationException
+	at java.util.concurrent.FutureTask$Sync.innerGet(FutureTask.java:220)
+	at java.util.concurrent.FutureTask.get(FutureTask.java:83)
+	at compbio.engine.local.LocalEngineUtil.getResults(LocalEngineUtil.java:108)
+	at compbio.engine.local.LocalRunner.waitForResult(LocalRunner.java:99)
+	at compbio.engine.local.LocalRunnerTester.testCancelCompletedTaskLocally(LocalRunnerTester.java:139)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace101429742", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace101429742'><pre>java.util.concurrent.CancellationException
+	at java.util.concurrent.FutureTask$Sync.innerGet(FutureTask.java:220)
+	at java.util.concurrent.FutureTask.get(FutureTask.java:83)
+	at compbio.engine.local.LocalEngineUtil.getResults(LocalEngineUtil.java:108)
+	at compbio.engine.local.LocalRunner.waitForResult(LocalRunner.java:99)
+	at compbio.engine.local.LocalRunnerTester.testCancelCompletedTaskLocally(LocalRunnerTester.java:139)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodHelper.invokeMethod(MethodHelper.java:609)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:532)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:686)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1018)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:128)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:759)
+	at org.testng.TestRunner.privateRun(TestRunner.java:592)
+	at org.testng.TestRunner.run(TestRunner.java:486)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:327)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:299)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:204)
+	at org.testng.TestNG.createAndRunSuiteRunners(TestNG.java:912)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:876)
+	at org.testng.TestNG.run(TestNG.java:784)
+	at org.testng.TestNG.privateMain(TestNG.java:949)
+	at org.testng.TestNG.main(TestNG.java:922)
+</pre></div></td>
+</tr>
+<tr>
+<td title='compbio.engine.local.AsyncLocalRunnerTester.testCancelLocally()'><b>testCancelLocally</b><br>Test class:Ant test</td>
+<td>compbio.engine.local.AsyncLocalRunnerTester@31df5f21</td><td>0</td>
+<td><div><pre>java.util.concurrent.CancellationException
+	at java.util.concurrent.FutureTask$Sync.innerGet(FutureTask.java:220)
+	at java.util.concurrent.FutureTask.get(FutureTask.java:83)
+	at compbio.engine.local.LocalEngineUtil.getResults(LocalEngineUtil.java:108)
+	at compbio.engine.local.AsyncLocalRunner.getResults(AsyncLocalRunner.java:130)
+	at compbio.engine.local.AsyncLocalRunnerTester.testCancelLocally(AsyncLocalRunnerTester.java:105)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1986875184", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1986875184'><pre>java.util.concurrent.CancellationException
+	at java.util.concurrent.FutureTask$Sync.innerGet(FutureTask.java:220)
+	at java.util.concurrent.FutureTask.get(FutureTask.java:83)
+	at compbio.engine.local.LocalEngineUtil.getResults(LocalEngineUtil.java:108)
+	at compbio.engine.local.AsyncLocalRunner.getResults(AsyncLocalRunner.java:130)
+	at compbio.engine.local.AsyncLocalRunnerTester.testCancelLocally(AsyncLocalRunnerTester.java:105)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodHelper.invokeMethod(MethodHelper.java:609)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:532)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:686)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1018)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:128)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:759)
+	at org.testng.TestRunner.privateRun(TestRunner.java:592)
+	at org.testng.TestRunner.run(TestRunner.java:486)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:327)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:299)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:204)
+	at org.testng.TestNG.createAndRunSuiteRunners(TestNG.java:912)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:876)
+	at org.testng.TestNG.run(TestNG.java:784)
+	at org.testng.TestNG.privateMain(TestNG.java:949)
+	at org.testng.TestNG.main(TestNG.java:922)
+</pre></div></td>
+</tr>
+<tr>
+<td title='compbio.engine.local.LocalRunnerTester.testCancelLocally()'><b>testCancelLocally</b><br>Test class:Ant test</td>
+<td>compbio.engine.local.LocalRunnerTester@3fde891b</td><td>0</td>
+<td><div><pre>java.util.concurrent.CancellationException
+	at java.util.concurrent.FutureTask$Sync.innerGet(FutureTask.java:220)
+	at java.util.concurrent.FutureTask.get(FutureTask.java:83)
+	at compbio.engine.local.LocalEngineUtil.getResults(LocalEngineUtil.java:108)
+	at compbio.engine.local.LocalRunner.waitForResult(LocalRunner.java:99)
+	at compbio.engine.local.LocalRunnerTester.testCancelLocally(LocalRunnerTester.java:66)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace58766585", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace58766585'><pre>java.util.concurrent.CancellationException
+	at java.util.concurrent.FutureTask$Sync.innerGet(FutureTask.java:220)
+	at java.util.concurrent.FutureTask.get(FutureTask.java:83)
+	at compbio.engine.local.LocalEngineUtil.getResults(LocalEngineUtil.java:108)
+	at compbio.engine.local.LocalRunner.waitForResult(LocalRunner.java:99)
+	at compbio.engine.local.LocalRunnerTester.testCancelLocally(LocalRunnerTester.java:66)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodHelper.invokeMethod(MethodHelper.java:609)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:532)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:686)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1018)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:128)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:759)
+	at org.testng.TestRunner.privateRun(TestRunner.java:592)
+	at org.testng.TestRunner.run(TestRunner.java:486)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:327)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:299)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:204)
+	at org.testng.TestNG.createAndRunSuiteRunners(TestNG.java:912)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:876)
+	at org.testng.TestNG.run(TestNG.java:784)
+	at org.testng.TestNG.privateMain(TestNG.java:949)
+	at org.testng.TestNG.main(TestNG.java:922)
+</pre></div></td>
+</tr>
+<tr>
+<td title='compbio.data.sequence.SequenceUtilTester.testCleanProteinSequence()'><b>testCleanProteinSequence</b><br>Test class:Ant test</td>
+<td>compbio.data.sequence.SequenceUtilTester@235f4a7f</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.data.sequence.SequenceUtilTester.testCleanSequence()'><b>testCleanSequence</b><br>Test class:Ant test</td>
+<td>compbio.data.sequence.SequenceUtilTester@235f4a7f</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.engine.conf.PropertyHelperManagerTester.testClusterEngineConf()'><b>testClusterEngineConf</b><br>Test class:Ant test</td>
+<td>compbio.engine.conf.PropertyHelperManagerTester@4ee14d81</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.msa.MafftTester.testClusterExecute()'><b>testClusterExecute</b><br>Test class:Ant test</td>
+<td>compbio.runner.msa.MafftTester@5f0f0625</td><td>1</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.msa.ProbconsTester.testClusterExecute()'><b>testClusterExecute</b><br>Test class:Ant test</td>
+<td>compbio.runner.msa.ProbconsTester@32830122</td><td>2</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.msa.TcoffeeTester.testClusterExecute()'><b>testClusterExecute</b><br>Test class:Ant test</td>
+<td>compbio.runner.msa.TcoffeeTester@54a6af6e</td><td>5</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.stat.collector.ExecutionStatCollectorTester.testCollectStat()'><b>testCollectStat</b><br>Test class:Ant test</td>
+<td>compbio.stat.collector.ExecutionStatCollectorTester@b478a2d</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.engine.client.CommandBuilderTester.testCommandBuilding()'><b>testCommandBuilding</b><br>Test class:Ant test</td>
+<td>compbio.engine.client.CommandBuilderTester@25cbfa42</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.msa.ClustalWParametersTester.testConfiguration()'><b>testConfiguration</b><br>Test class:Ant test</td>
+<td>compbio.runner.msa.ClustalWParametersTester@74e2ad16</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.msa.MafftParametersTester.testConfiguration()'><b>testConfiguration</b><br>Test class:Ant test</td>
+<td>compbio.runner.msa.MafftParametersTester@35a8d460</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.msa.MuscleParametersTester.testConfiguration()'><b>testConfiguration</b><br>Test class:Ant test</td>
+<td>compbio.runner.msa.MuscleParametersTester@535c97e4</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.msa.ProbconsParametersTester.testConfiguration()'><b>testConfiguration</b><br>Test class:Ant test</td>
+<td>compbio.runner.msa.ProbconsParametersTester@3823bdd1</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.msa.TcoffeeParametersTester.testConfiguration()'><b>testConfiguration</b><br>Test class:Ant test</td>
+<td>compbio.runner.msa.TcoffeeParametersTester@36bf7916</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.conservation.AAConTester.testConfigurationLoading()'><b>testConfigurationLoading</b><br>Test class:Ant test</td>
+<td>compbio.runner.conservation.AAConTester@1959e6e8</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.disorder.DisemblTester.testConfigurationLoading()'><b>testConfigurationLoading</b><br>Test class:Ant test</td>
+<td>compbio.runner.disorder.DisemblTester@5d469658</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.disorder.GlobPlotTester.testConfigurationLoading()'><b>testConfigurationLoading</b><br>Test class:Ant test</td>
+<td>compbio.runner.disorder.GlobPlotTester@45389b3f</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.disorder.IUPredTester.testConfigurationLoading()'><b>testConfigurationLoading</b><br>Test class:Ant test</td>
+<td>compbio.runner.disorder.IUPredTester@758689a</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.disorder.JronnTester.testConfigurationLoading()'><b>testConfigurationLoading</b><br>Test class:Ant test</td>
+<td>compbio.runner.disorder.JronnTester@3d3b5a3a</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.msa.ClustalWTester.testConfigurationLoading()'><b>testConfigurationLoading</b><br>Test class:Ant test</td>
+<td>compbio.runner.msa.ClustalWTester@3a0b53e</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.msa.MafftTester.testConfigurationLoading()'><b>testConfigurationLoading</b><br>Test class:Ant test</td>
+<td>compbio.runner.msa.MafftTester@5f0f0625</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.msa.MuscleTester.testConfigurationLoading()'><b>testConfigurationLoading</b><br>Test class:Ant test</td>
+<td>compbio.runner.msa.MuscleTester@63f8247d</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.msa.ProbconsTester.testConfigurationLoading()'><b>testConfigurationLoading</b><br>Test class:Ant test</td>
+<td>compbio.runner.msa.ProbconsTester@32830122</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.msa.TcoffeeTester.testConfigurationLoading()'><b>testConfigurationLoading</b><br>Test class:Ant test</td>
+<td>compbio.runner.msa.TcoffeeTester@54a6af6e</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.msa.ClustalWParametersTester.testConstrainedParametersMaxValues()'><b>testConstrainedParametersMaxValues</b><br>Test class:Ant test</td>
+<td>compbio.runner.msa.ClustalWParametersTester@74e2ad16</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.msa.MafftParametersTester.testConstrainedParametersMaxValues()'><b>testConstrainedParametersMaxValues</b><br>Test class:Ant test</td>
+<td>compbio.runner.msa.MafftParametersTester@35a8d460</td><td>1</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.msa.MuscleParametersTester.testConstrainedParametersMaxValues()'><b>testConstrainedParametersMaxValues</b><br>Test class:Ant test</td>
+<td>compbio.runner.msa.MuscleParametersTester@535c97e4</td><td>1</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.msa.ProbconsParametersTester.testConstrainedParametersMaxValues()'><b>testConstrainedParametersMaxValues</b><br>Test class:Ant test</td>
+<td>compbio.runner.msa.ProbconsParametersTester@3823bdd1</td><td>37</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.msa.TcoffeeParametersTester.testConstrainedParametersMaxValues()'><b>testConstrainedParametersMaxValues</b><br>Test class:Ant test</td>
+<td>compbio.runner.msa.TcoffeeParametersTester@36bf7916</td><td>4</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.msa.ClustalWParametersTester.testConstrainedParametersMinValues()'><b>testConstrainedParametersMinValues</b><br>Test class:Ant test</td>
+<td>compbio.runner.msa.ClustalWParametersTester@74e2ad16</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.msa.MafftParametersTester.testConstrainedParametersMinValues()'><b>testConstrainedParametersMinValues</b><br>Test class:Ant test</td>
+<td>compbio.runner.msa.MafftParametersTester@35a8d460</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.msa.MuscleParametersTester.testConstrainedParametersMinValues()'><b>testConstrainedParametersMinValues</b><br>Test class:Ant test</td>
+<td>compbio.runner.msa.MuscleParametersTester@535c97e4</td><td>1</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.msa.ProbconsParametersTester.testConstrainedParametersMinValues()'><b>testConstrainedParametersMinValues</b><br>Test class:Ant test</td>
+<td>compbio.runner.msa.ProbconsParametersTester@3823bdd1</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.msa.TcoffeeParametersTester.testConstrainedParametersMinValues()'><b>testConstrainedParametersMinValues</b><br>Test class:Ant test</td>
+<td>compbio.runner.msa.TcoffeeParametersTester@36bf7916</td><td>2</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.msa.ClustalWParametersTester.testConstrainedParametersRandomValues()'><b>testConstrainedParametersRandomValues</b><br>Test class:Ant test</td>
+<td>compbio.runner.msa.ClustalWParametersTester@74e2ad16</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.msa.MafftParametersTester.testConstrainedParametersRandomValues()'><b>testConstrainedParametersRandomValues</b><br>Test class:Ant test</td>
+<td>compbio.runner.msa.MafftParametersTester@35a8d460</td><td>3</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.msa.MuscleParametersTester.testConstrainedParametersRandomValues()'><b>testConstrainedParametersRandomValues</b><br>Test class:Ant test</td>
+<td>compbio.runner.msa.MuscleParametersTester@535c97e4</td><td>2</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.msa.ProbconsParametersTester.testConstrainedParametersRandomValues()'><b>testConstrainedParametersRandomValues</b><br>Test class:Ant test</td>
+<td>compbio.runner.msa.ProbconsParametersTester@3823bdd1</td><td>70</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.msa.TcoffeeParametersTester.testConstrainedParametersRandomValues()'><b>testConstrainedParametersRandomValues</b><br>Test class:Ant test</td>
+<td>compbio.runner.msa.TcoffeeParametersTester@36bf7916</td><td>8</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.metadata.RunnerConfigTester.testCreateNumParameterWithoutValidValue()'><b>testCreateNumParameterWithoutValidValue</b><br>Test class:Ant test</td>
+<td>compbio.metadata.RunnerConfigTester@1451ef4e</td><td>0</td>
+<td><div><pre>java.lang.IllegalStateException: Attempting to set default value for parameter: Option name: Matrix
+Description: DNA weight matrix
+URL: null
+Is required: false
+
+ Without possible values! Please define possible value first!
+	at compbio.metadata.Parameter.setDefaultValue(Parameter.java:234)
+	at compbio.metadata.RunnerConfigTester.testCreateNumParameterWithoutValidValue(RunnerConfigTester.java:222)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace42185103", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace42185103'><pre>java.lang.IllegalStateException: Attempting to set default value for parameter: Option name: Matrix
+Description: DNA weight matrix
+URL: null
+Is required: false
+
+ Without possible values! Please define possible value first!
+	at compbio.metadata.Parameter.setDefaultValue(Parameter.java:234)
+	at compbio.metadata.RunnerConfigTester.testCreateNumParameterWithoutValidValue(RunnerConfigTester.java:222)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodHelper.invokeMethod(MethodHelper.java:609)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:532)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:686)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1018)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:128)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:759)
+	at org.testng.TestRunner.privateRun(TestRunner.java:592)
+	at org.testng.TestRunner.run(TestRunner.java:486)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:327)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:299)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:204)
+	at org.testng.TestNG.createAndRunSuiteRunners(TestNG.java:912)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:876)
+	at org.testng.TestNG.run(TestNG.java:784)
+	at org.testng.TestNG.privateMain(TestNG.java:949)
+	at org.testng.TestNG.main(TestNG.java:922)
+</pre></div></td>
+</tr>
+<tr>
+<td title='compbio.metadata.RunnerConfigTester.testCreateParameter()'><b>testCreateParameter</b><br>Test class:Ant test</td>
+<td>compbio.metadata.RunnerConfigTester@1451ef4e</td><td>0</td>
+<td><div><pre>compbio.metadata.WrongParameterException: Attempting to set illegal value 'pam22' for the parameter: Option name: Matrix1
+Description: Protein weight matrix
+URL: http://www.compbio.dundee.ac.uk/users/pvtroshin/ws/Index.html
+Is required: true
+Option Names: 
+--AAMATRIX
+POSSIBLE VALUES:
+BLOSUM
+GONNET
+ID
+PAM
+
+
+	at compbio.metadata.Parameter.setDefaultValue(Parameter.java:240)
+	at compbio.metadata.RunnerConfigTester.testCreateParameter(RunnerConfigTester.java:93)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1373581442", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1373581442'><pre>compbio.metadata.WrongParameterException: Attempting to set illegal value 'pam22' for the parameter: Option name: Matrix1
+Description: Protein weight matrix
+URL: http://www.compbio.dundee.ac.uk/users/pvtroshin/ws/Index.html
+Is required: true
+Option Names: 
+--AAMATRIX
+POSSIBLE VALUES:
+BLOSUM
+GONNET
+ID
+PAM
+
+
+	at compbio.metadata.Parameter.setDefaultValue(Parameter.java:240)
+	at compbio.metadata.RunnerConfigTester.testCreateParameter(RunnerConfigTester.java:93)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodHelper.invokeMethod(MethodHelper.java:609)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:532)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:686)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1018)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:128)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:759)
+	at org.testng.TestRunner.privateRun(TestRunner.java:592)
+	at org.testng.TestRunner.run(TestRunner.java:486)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:327)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:299)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:204)
+	at org.testng.TestNG.createAndRunSuiteRunners(TestNG.java:912)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:876)
+	at org.testng.TestNG.run(TestNG.java:784)
+	at org.testng.TestNG.privateMain(TestNG.java:949)
+	at org.testng.TestNG.main(TestNG.java:922)
+</pre></div></td>
+</tr>
+<tr>
+<td title='compbio.metadata.RunnerConfigTester.testCreateParameterWithValidValueConstrain()'><b>testCreateParameterWithValidValueConstrain</b><br>Test class:Ant test</td>
+<td>compbio.metadata.RunnerConfigTester@1451ef4e</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.data.sequence.SequenceUtilTester.testDeepCleanSequence()'><b>testDeepCleanSequence</b><br>Test class:Ant test</td>
+<td>compbio.data.sequence.SequenceUtilTester@235f4a7f</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.msa.ClustalWParametersTester.testDefaultParameters()'><b>testDefaultParameters</b><br>Test class:Ant test</td>
+<td>compbio.runner.msa.ClustalWParametersTester@74e2ad16</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.msa.MafftParametersTester.testDefaultParameters()'><b>testDefaultParameters</b><br>Test class:Ant test</td>
+<td>compbio.runner.msa.MafftParametersTester@35a8d460</td><td>4</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.msa.MuscleParametersTester.testDefaultParameters()'><b>testDefaultParameters</b><br>Test class:Ant test</td>
+<td>compbio.runner.msa.MuscleParametersTester@535c97e4</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.msa.ProbconsParametersTester.testDefaultParameters()'><b>testDefaultParameters</b><br>Test class:Ant test</td>
+<td>compbio.runner.msa.ProbconsParametersTester@3823bdd1</td><td>4</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.msa.TcoffeeParametersTester.testDefaultParameters()'><b>testDefaultParameters</b><br>Test class:Ant test</td>
+<td>compbio.runner.msa.TcoffeeParametersTester@36bf7916</td><td>3</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.msa.MafftTester.testExecute()'><b>testExecute</b><br>Test class:Ant test</td>
+<td>compbio.runner.msa.MafftTester@5f0f0625</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.msa.ProbconsTester.testExecute()'><b>testExecute</b><br>Test class:Ant test</td>
+<td>compbio.runner.msa.ProbconsTester@32830122</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.msa.TcoffeeTester.testExecute()'><b>testExecute</b><br>Test class:Ant test</td>
+<td>compbio.runner.msa.TcoffeeTester@54a6af6e</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.engine.FilePullerTester.testGet()'><b>testGet</b><br>Test class:Ant test</td>
+<td>compbio.engine.FilePullerTester@1e670479</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.engine.EngineConfiguratorTester.testGetAsyncEngine()'><b>testGetAsyncEngine</b><br>Test class:Ant test</td>
+<td>compbio.engine.EngineConfiguratorTester@4513e9fd</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.engine.client.PathValidatorTester.testGetClassPath()'><b>testGetClassPath</b><br>Test class:Ant test</td>
+<td>compbio.engine.client.PathValidatorTester@729b1670</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.engine.FilePullerTester.testGetDelay()'><b>testGetDelay</b><br>Test class:Ant test</td>
+<td>compbio.engine.FilePullerTester@1e670479</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.engine.conf.DirectoryManagerTester.testGetDirectory()'><b>testGetDirectory</b></td>
+<td>compbio.engine.conf.DirectoryManagerTester@79fcf790</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.engine.conf.DirectoryManagerTester.testGetDirectory()'><b>testGetDirectory</b></td>
+<td>compbio.engine.conf.DirectoryManagerTester@79fcf790</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.engine.conf.DirectoryManagerTester.testGetDirectory()'><b>testGetDirectory</b></td>
+<td>compbio.engine.conf.DirectoryManagerTester@79fcf790</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.engine.conf.DirectoryManagerTester.testGetDirectory()'><b>testGetDirectory</b></td>
+<td>compbio.engine.conf.DirectoryManagerTester@79fcf790</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.data.sequence.FastaSequenceTester.testGetFormattedFasta()'><b>testGetFormattedFasta</b><br>Test class:Ant test</td>
+<td>compbio.data.sequence.FastaSequenceTester@5ec24193</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.engine.cluster.drmaa.DrmaaAsyncClusterEngineTester.testGetJobStatus()'><b>testGetJobStatus</b><br>Test class:Ant test</td>
+<td>compbio.engine.cluster.drmaa.DrmaaAsyncClusterEngineTester@57c8b24d</td><td>4</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.stat.servlet.util.StatCollectionTester.testGetStats()'><b>testGetStats</b><br>Test class:Ant test</td>
+<td>compbio.stat.servlet.util.StatCollectionTester@26c1186f</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.engine.local.AsyncLocalRunnerTester.testGetStatus()'><b>testGetStatus</b></td>
+<td>compbio.engine.local.AsyncLocalRunnerTester@31df5f21</td><td>19</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.engine.local.AsyncLocalRunnerTester.testGetStatus()'><b>testGetStatus</b></td>
+<td>compbio.engine.local.AsyncLocalRunnerTester@31df5f21</td><td>19</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.engine.local.AsyncLocalRunnerTester.testGetStatus()'><b>testGetStatus</b></td>
+<td>compbio.engine.local.AsyncLocalRunnerTester@31df5f21</td><td>19</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.engine.local.AsyncLocalRunnerTester.testGetStatus()'><b>testGetStatus</b></td>
+<td>compbio.engine.local.AsyncLocalRunnerTester@31df5f21</td><td>19</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.engine.local.AsyncLocalRunnerTester.testGetStatus()'><b>testGetStatus</b></td>
+<td>compbio.engine.local.AsyncLocalRunnerTester@31df5f21</td><td>19</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.engine.EngineConfiguratorTester.testGetSyncEngine()'><b>testGetSyncEngine</b><br>Test class:Ant test</td>
+<td>compbio.engine.EngineConfiguratorTester@4513e9fd</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner._impl.OBTester.testGetTestArgsCommand()'><b>testGetTestArgsCommand</b><br>Test class:Ant test</td>
+<td>compbio.runner._impl.OBTester@2658dd2d</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner._impl.RPSBlastTester.testGetTestArgsCommand()'><b>testGetTestArgsCommand</b><br>Test class:Ant test</td>
+<td>compbio.runner._impl.RPSBlastTester@1420c906</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner._impl.MclTester.testGetTestCommand()'><b>testGetTestCommand</b><br>Test class:Ant test</td>
+<td>compbio.runner._impl.MclTester@f35f44e</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner._impl.NetNglycTester.testGetTestCommand()'><b>testGetTestCommand</b><br>Test class:Ant test</td>
+<td>compbio.runner._impl.NetNglycTester@1f3a34af</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner._impl.OBTester.testGetTestCommand()'><b>testGetTestCommand</b><br>Test class:Ant test</td>
+<td>compbio.runner._impl.OBTester@2658dd2d</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner._impl.RPSBlastTester.testGetTestCommand()'><b>testGetTestCommand</b><br>Test class:Ant test</td>
+<td>compbio.runner._impl.RPSBlastTester@1420c906</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner._impl.RonnTester.testGetTestCommand()'><b>testGetTestCommand</b><br>Test class:Ant test</td>
+<td>compbio.runner._impl.RonnTester@746db33c</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner._impl.Tmhmm2Tester.testGetTestCommand()'><b>testGetTestCommand</b><br>Test class:Ant test</td>
+<td>compbio.runner._impl.Tmhmm2Tester@4e1263db</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.stat.collector.ExecutionStatCollectorTester.testHasCompleted()'><b>testHasCompleted</b><br>Test class:Ant test</td>
+<td>compbio.stat.collector.ExecutionStatCollectorTester@b478a2d</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.engine.client.PathValidatorTester.testIsAbsolutePath()'><b>testIsAbsolutePath</b><br>Test class:Ant test</td>
+<td>compbio.engine.client.PathValidatorTester@729b1670</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.msa.LimitTester.testLimitExceeded()'><b>testLimitExceeded</b><br>Test class:Ant test</td>
+<td>compbio.runner.msa.LimitTester@2bdafb4e</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.engine.LoadBalancerTester.testLoadBalance()'><b>testLoadBalance</b><br>Test class:Ant test</td>
+<td>compbio.engine.LoadBalancerTester@7d56b386</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.msa.LimitTester.testLoadLimits()'><b>testLoadLimits</b><br>Test class:Ant test</td>
+<td>compbio.runner.msa.LimitTester@2bdafb4e</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.engine.conf.RunnerConfigMarshallerTester.testMarshalling()'><b>testMarshalling</b><br>Test class:Ant test</td>
+<td>compbio.engine.conf.RunnerConfigMarshallerTester@29a7789c</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.metadata.OptionMarshallerTester.testMarshalling()'><b>testMarshalling</b><br>Test class:Ant test</td>
+<td>compbio.metadata.OptionMarshallerTester@6087e704</td><td>0</td>
+<td><div><pre>javax.xml.bind.MarshalException
+ - with linked exception:
+[org.xml.sax.SAXParseException: cvc-complex-type.2.4.a: Invalid content was found starting with element 'options'. One of '{runnerClassName}' is expected.]
+	at com.sun.xml.bind.v2.runtime.MarshallerImpl.write(MarshallerImpl.java:323)
+	at com.sun.xml.bind.v2.runtime.MarshallerImpl.marshal(MarshallerImpl.java:249)
+	at javax.xml.bind.helpers.AbstractMarshallerImpl.marshal(AbstractMarshallerImpl.java:75)
+	at compbio.engine.conf.RunnerConfigMarshaller.writeAndValidate(RunnerConfigMarshaller.java:88)
+	at compbio.metadata.OptionMarshallerTester.testMarshalling(OptionMarshallerTester.java:140)
+Caused by: org.xml.sax.SAXParseException: cvc-complex-type.2.4.a: Invalid content was found starting with element 'options'. One of '{runnerClassName}' is expected.
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:195)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.error(ErrorHandlerWrapper.java:131)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:384)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:318)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator$XSIErrorReporter.reportError(XMLSchemaValidator.java:410)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.reportSchemaError(XMLSchemaValidator.java:3165)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.handleStartElement(XMLSchemaValidator.java:1777)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.startElement(XMLSchemaValidator.java:685)
+	at com.sun.org.apache.xerces.internal.jaxp.validation.ValidatorHandlerImpl.startElement(ValidatorHandlerImpl.java:549)
+	at org.xml.sax.helpers.XMLFilterImpl.startElement(XMLFilterImpl.java:527)
+	at com.sun.xml.bind.v2.runtime.output.SAXOutput.endStartTag(SAXOutput.java:128)
+	at com.sun.xml.bind.v2.runtime.output.ForkXmlOutput.endStartTag(ForkXmlOutput.java:106)
+	at com.sun.xml.bind.v2.runtime.XMLSerializer.endAttributes(XMLSerializer.java:310)
+	at com.sun.xml.bind.v2.runtime.XMLSerializer.childAsXsiType(XMLSerializer.java:699)
+	at com.sun.xml.bind.v2.runtime.property.ArrayElementNodeProperty.serializeItem(ArrayElementNodeProperty.java:69)
+	at com.sun.xml.bind.v2.runtime.property.ArrayElementProperty.serializeListBody(ArrayElementProperty.java:172)
+	at com.sun.xml.bind.v2.runtime.property.ArrayERProperty.serializeBody(ArrayERProperty.java:159)
+	at com.sun.xml.bind.v2.runtime.ClassBeanInfoImpl.serializeBody(ClassBeanInfoImpl.java:344)
+	at com.sun.xml.bind.v2.runtime.XMLSerializer.childAsSoleContent(XMLSerializer.java:597)
+	at com.sun.xml.bind.v2.runtime.ClassBeanInfoImpl.serializeRoot(ClassBeanInfoImpl.java:328)
+	at com.sun.xml.bind.v2.runtime.XMLSerializer.childAsRoot(XMLSerializer.java:498)
+	at com.sun.xml.bind.v2.runtime.MarshallerImpl.write(MarshallerImpl.java:320)
+	... 26 more
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace180466017", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace180466017'><pre>javax.xml.bind.MarshalException
+ - with linked exception:
+[org.xml.sax.SAXParseException: cvc-complex-type.2.4.a: Invalid content was found starting with element 'options'. One of '{runnerClassName}' is expected.]
+	at com.sun.xml.bind.v2.runtime.MarshallerImpl.write(MarshallerImpl.java:323)
+	at com.sun.xml.bind.v2.runtime.MarshallerImpl.marshal(MarshallerImpl.java:249)
+	at javax.xml.bind.helpers.AbstractMarshallerImpl.marshal(AbstractMarshallerImpl.java:75)
+	at compbio.engine.conf.RunnerConfigMarshaller.writeAndValidate(RunnerConfigMarshaller.java:88)
+	at compbio.metadata.OptionMarshallerTester.testMarshalling(OptionMarshallerTester.java:140)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodHelper.invokeMethod(MethodHelper.java:609)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:532)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:686)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1018)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:128)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:759)
+	at org.testng.TestRunner.privateRun(TestRunner.java:592)
+	at org.testng.TestRunner.run(TestRunner.java:486)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:327)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:299)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:204)
+	at org.testng.TestNG.createAndRunSuiteRunners(TestNG.java:912)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:876)
+	at org.testng.TestNG.run(TestNG.java:784)
+	at org.testng.TestNG.privateMain(TestNG.java:949)
+	at org.testng.TestNG.main(TestNG.java:922)
+Caused by: org.xml.sax.SAXParseException: cvc-complex-type.2.4.a: Invalid content was found starting with element 'options'. One of '{runnerClassName}' is expected.
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:195)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.error(ErrorHandlerWrapper.java:131)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:384)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:318)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator$XSIErrorReporter.reportError(XMLSchemaValidator.java:410)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.reportSchemaError(XMLSchemaValidator.java:3165)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.handleStartElement(XMLSchemaValidator.java:1777)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.startElement(XMLSchemaValidator.java:685)
+	at com.sun.org.apache.xerces.internal.jaxp.validation.ValidatorHandlerImpl.startElement(ValidatorHandlerImpl.java:549)
+	at org.xml.sax.helpers.XMLFilterImpl.startElement(XMLFilterImpl.java:527)
+	at com.sun.xml.bind.v2.runtime.output.SAXOutput.endStartTag(SAXOutput.java:128)
+	at com.sun.xml.bind.v2.runtime.output.ForkXmlOutput.endStartTag(ForkXmlOutput.java:106)
+	at com.sun.xml.bind.v2.runtime.XMLSerializer.endAttributes(XMLSerializer.java:310)
+	at com.sun.xml.bind.v2.runtime.XMLSerializer.childAsXsiType(XMLSerializer.java:699)
+	at com.sun.xml.bind.v2.runtime.property.ArrayElementNodeProperty.serializeItem(ArrayElementNodeProperty.java:69)
+	at com.sun.xml.bind.v2.runtime.property.ArrayElementProperty.serializeListBody(ArrayElementProperty.java:172)
+	at com.sun.xml.bind.v2.runtime.property.ArrayERProperty.serializeBody(ArrayERProperty.java:159)
+	at com.sun.xml.bind.v2.runtime.ClassBeanInfoImpl.serializeBody(ClassBeanInfoImpl.java:344)
+	at com.sun.xml.bind.v2.runtime.XMLSerializer.childAsSoleContent(XMLSerializer.java:597)
+	at com.sun.xml.bind.v2.runtime.ClassBeanInfoImpl.serializeRoot(ClassBeanInfoImpl.java:328)
+	at com.sun.xml.bind.v2.runtime.XMLSerializer.childAsRoot(XMLSerializer.java:498)
+	at com.sun.xml.bind.v2.runtime.MarshallerImpl.write(MarshallerImpl.java:320)
+	... 26 more
+</pre></div></td>
+</tr>
+<tr>
+<td title='compbio.engine.local.AsyncLocalRunnerTester.testMultipleCancelLocally()'><b>testMultipleCancelLocally</b><br>Test class:Ant test</td>
+<td>compbio.engine.local.AsyncLocalRunnerTester@31df5f21</td><td>0</td>
+<td><div><pre>java.util.concurrent.CancellationException
+	at java.util.concurrent.FutureTask$Sync.innerGet(FutureTask.java:220)
+	at java.util.concurrent.FutureTask.get(FutureTask.java:83)
+	at compbio.engine.local.LocalEngineUtil.getResults(LocalEngineUtil.java:108)
+	at compbio.engine.local.AsyncLocalRunner.getResults(AsyncLocalRunner.java:130)
+	at compbio.engine.local.AsyncLocalRunnerTester.testMultipleCancelLocally(AsyncLocalRunnerTester.java:239)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1121006800", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1121006800'><pre>java.util.concurrent.CancellationException
+	at java.util.concurrent.FutureTask$Sync.innerGet(FutureTask.java:220)
+	at java.util.concurrent.FutureTask.get(FutureTask.java:83)
+	at compbio.engine.local.LocalEngineUtil.getResults(LocalEngineUtil.java:108)
+	at compbio.engine.local.AsyncLocalRunner.getResults(AsyncLocalRunner.java:130)
+	at compbio.engine.local.AsyncLocalRunnerTester.testMultipleCancelLocally(AsyncLocalRunnerTester.java:239)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodHelper.invokeMethod(MethodHelper.java:609)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:532)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:686)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1018)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:128)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:759)
+	at org.testng.TestRunner.privateRun(TestRunner.java:592)
+	at org.testng.TestRunner.run(TestRunner.java:486)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:327)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:299)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:204)
+	at org.testng.TestNG.createAndRunSuiteRunners(TestNG.java:912)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:876)
+	at org.testng.TestNG.run(TestNG.java:784)
+	at org.testng.TestNG.privateMain(TestNG.java:949)
+	at org.testng.TestNG.main(TestNG.java:922)
+</pre></div></td>
+</tr>
+<tr>
+<td title='compbio.engine.local.LocalRunnerTester.testMultipleCancelLocally()'><b>testMultipleCancelLocally</b><br>Test class:Ant test</td>
+<td>compbio.engine.local.LocalRunnerTester@3fde891b</td><td>0</td>
+<td><div><pre>java.util.concurrent.CancellationException
+	at java.util.concurrent.FutureTask$Sync.innerGet(FutureTask.java:220)
+	at java.util.concurrent.FutureTask.get(FutureTask.java:83)
+	at compbio.engine.local.LocalEngineUtil.getResults(LocalEngineUtil.java:108)
+	at compbio.engine.local.LocalRunner.waitForResult(LocalRunner.java:99)
+	at compbio.engine.local.LocalRunnerTester.testMultipleCancelLocally(LocalRunnerTester.java:114)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace752158675", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace752158675'><pre>java.util.concurrent.CancellationException
+	at java.util.concurrent.FutureTask$Sync.innerGet(FutureTask.java:220)
+	at java.util.concurrent.FutureTask.get(FutureTask.java:83)
+	at compbio.engine.local.LocalEngineUtil.getResults(LocalEngineUtil.java:108)
+	at compbio.engine.local.LocalRunner.waitForResult(LocalRunner.java:99)
+	at compbio.engine.local.LocalRunnerTester.testMultipleCancelLocally(LocalRunnerTester.java:114)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodHelper.invokeMethod(MethodHelper.java:609)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:532)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:686)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1018)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:128)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:759)
+	at org.testng.TestRunner.privateRun(TestRunner.java:592)
+	at org.testng.TestRunner.run(TestRunner.java:486)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:327)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:299)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:204)
+	at org.testng.TestNG.createAndRunSuiteRunners(TestNG.java:912)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:876)
+	at org.testng.TestNG.run(TestNG.java:784)
+	at org.testng.TestNG.privateMain(TestNG.java:949)
+	at org.testng.TestNG.main(TestNG.java:922)
+</pre></div></td>
+</tr>
+<tr>
+<td title='compbio.runner.msa.TcoffeeTester.testNcore()'><b>testNcore</b><br>Test class:Ant test</td>
+<td>compbio.runner.msa.TcoffeeTester@54a6af6e</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.metadata.RunnerConfigTester.testOptionNoDefaultValidate()'><b>testOptionNoDefaultValidate</b><br>Test class:Ant test</td>
+<td>compbio.metadata.RunnerConfigTester@1451ef4e</td><td>0</td>
+<td><div><pre>javax.xml.bind.ValidationException: Default value is required as multiple optionNames are defined for option: Option name: Matrix1
+Description: Protein weight matrix
+URL: http://www.compbio.dundee.ac.uk/users/pvtroshin/ws/Index.html
+Is required: true
+Option Names: 
+--AAMATRIX
+--ABMAT
+--BBBB
+
+	at compbio.metadata.Option.validate(Option.java:317)
+	at compbio.metadata.RunnerConfigTester.testOptionNoDefaultValidate(RunnerConfigTester.java:149)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace858139636", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace858139636'><pre>javax.xml.bind.ValidationException: Default value is required as multiple optionNames are defined for option: Option name: Matrix1
+Description: Protein weight matrix
+URL: http://www.compbio.dundee.ac.uk/users/pvtroshin/ws/Index.html
+Is required: true
+Option Names: 
+--AAMATRIX
+--ABMAT
+--BBBB
+
+	at compbio.metadata.Option.validate(Option.java:317)
+	at compbio.metadata.RunnerConfigTester.testOptionNoDefaultValidate(RunnerConfigTester.java:149)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodHelper.invokeMethod(MethodHelper.java:609)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:532)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:686)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1018)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:128)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:759)
+	at org.testng.TestRunner.privateRun(TestRunner.java:592)
+	at org.testng.TestRunner.run(TestRunner.java:486)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:327)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:299)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:204)
+	at org.testng.TestNG.createAndRunSuiteRunners(TestNG.java:912)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:876)
+	at org.testng.TestNG.run(TestNG.java:784)
+	at org.testng.TestNG.privateMain(TestNG.java:949)
+	at org.testng.TestNG.main(TestNG.java:922)
+</pre></div></td>
+</tr>
+<tr>
+<td title='compbio.metadata.RunnerConfigTester.testOptionSetInvalidValue()'><b>testOptionSetInvalidValue</b><br>Test class:Ant test</td>
+<td>compbio.metadata.RunnerConfigTester@1451ef4e</td><td>0</td>
+<td><div><pre>compbio.metadata.WrongParameterException: Attempting to set illegal defaultValue 'AAA' which is not defined optionNames for option: Option name: Matrix1
+Description: Protein weight matrix
+URL: http://www.compbio.dundee.ac.uk/users/pvtroshin/ws/Index.html
+Is required: true
+Option Names: 
+--AAMATRIX
+--ABMAT
+--BBBB
+
+	at compbio.metadata.Option.setDefaultValue(Option.java:130)
+	at compbio.metadata.RunnerConfigTester.testOptionSetInvalidValue(RunnerConfigTester.java:172)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace391683389", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace391683389'><pre>compbio.metadata.WrongParameterException: Attempting to set illegal defaultValue 'AAA' which is not defined optionNames for option: Option name: Matrix1
+Description: Protein weight matrix
+URL: http://www.compbio.dundee.ac.uk/users/pvtroshin/ws/Index.html
+Is required: true
+Option Names: 
+--AAMATRIX
+--ABMAT
+--BBBB
+
+	at compbio.metadata.Option.setDefaultValue(Option.java:130)
+	at compbio.metadata.RunnerConfigTester.testOptionSetInvalidValue(RunnerConfigTester.java:172)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodHelper.invokeMethod(MethodHelper.java:609)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:532)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:686)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1018)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:128)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:759)
+	at org.testng.TestRunner.privateRun(TestRunner.java:592)
+	at org.testng.TestRunner.run(TestRunner.java:486)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:327)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:299)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:204)
+	at org.testng.TestNG.createAndRunSuiteRunners(TestNG.java:912)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:876)
+	at org.testng.TestNG.run(TestNG.java:784)
+	at org.testng.TestNG.privateMain(TestNG.java:949)
+	at org.testng.TestNG.main(TestNG.java:922)
+</pre></div></td>
+</tr>
+<tr>
+<td title='compbio.metadata.RunnerConfigTester.testOptionToCommand()'><b>testOptionToCommand</b><br>Test class:Ant test</td>
+<td>compbio.metadata.RunnerConfigTester@1451ef4e</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.msa.ClustalWParametersTester.testOptions()'><b>testOptions</b><br>Test class:Ant test</td>
+<td>compbio.runner.msa.ClustalWParametersTester@74e2ad16</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.msa.MafftParametersTester.testOptions()'><b>testOptions</b><br>Test class:Ant test</td>
+<td>compbio.runner.msa.MafftParametersTester@35a8d460</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.msa.MuscleParametersTester.testOptions()'><b>testOptions</b><br>Test class:Ant test</td>
+<td>compbio.runner.msa.MuscleParametersTester@535c97e4</td><td>1</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.msa.ProbconsParametersTester.testOptions()'><b>testOptions</b><br>Test class:Ant test</td>
+<td>compbio.runner.msa.ProbconsParametersTester@3823bdd1</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.msa.TcoffeeParametersTester.testOptions()'><b>testOptions</b><br>Test class:Ant test</td>
+<td>compbio.runner.msa.TcoffeeParametersTester@36bf7916</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.msa.ClustalWTester.testOptionsLocally()'><b>testOptionsLocally</b><br>Test class:Ant test</td>
+<td>compbio.runner.msa.ClustalWTester@3a0b53e</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.engine.client.CommandBuilderTester.testOptionsToCommand()'><b>testOptionsToCommand</b><br>Test class:Ant test</td>
+<td>compbio.engine.client.CommandBuilderTester@25cbfa42</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.metadata.RunnerConfigTester.testParameterToCommand()'><b>testParameterToCommand</b><br>Test class:Ant test</td>
+<td>compbio.metadata.RunnerConfigTester@1451ef4e</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.msa.ClustalWParametersTester.testParameters()'><b>testParameters</b><br>Test class:Ant test</td>
+<td>compbio.runner.msa.ClustalWParametersTester@74e2ad16</td><td>1</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.msa.MafftParametersTester.testParameters()'><b>testParameters</b><br>Test class:Ant test</td>
+<td>compbio.runner.msa.MafftParametersTester@35a8d460</td><td>1</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.msa.MuscleParametersTester.testParameters()'><b>testParameters</b><br>Test class:Ant test</td>
+<td>compbio.runner.msa.MuscleParametersTester@535c97e4</td><td>1</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.msa.ProbconsParametersTester.testParameters()'><b>testParameters</b><br>Test class:Ant test</td>
+<td>compbio.runner.msa.ProbconsParametersTester@3823bdd1</td><td>1</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.msa.TcoffeeParametersTester.testParameters()'><b>testParameters</b><br>Test class:Ant test</td>
+<td>compbio.runner.msa.TcoffeeParametersTester@36bf7916</td><td>3</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.engine.cluster.drmaa.UtilTester.testParser()'><b>testParser</b><br>Test class:Ant test</td>
+<td>compbio.engine.cluster.drmaa.UtilTester@43f4ebd</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.conservation.AAConTester.testPersistance()'><b>testPersistance</b><br>Test class:Ant test</td>
+<td>compbio.runner.conservation.AAConTester@1959e6e8</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.disorder.DisemblTester.testPersistance()'><b>testPersistance</b><br>Test class:Ant test</td>
+<td>compbio.runner.disorder.DisemblTester@5d469658</td><td>1</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.disorder.GlobPlotTester.testPersistance()'><b>testPersistance</b><br>Test class:Ant test</td>
+<td>compbio.runner.disorder.GlobPlotTester@45389b3f</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.disorder.IUPredTester.testPersistance()'><b>testPersistance</b><br>Test class:Ant test</td>
+<td>compbio.runner.disorder.IUPredTester@758689a</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.disorder.JronnTester.testPersistance()'><b>testPersistance</b><br>Test class:Ant test</td>
+<td>compbio.runner.disorder.JronnTester@3d3b5a3a</td><td>18</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.msa.ClustalWTester.testPersistance()'><b>testPersistance</b><br>Test class:Ant test</td>
+<td>compbio.runner.msa.ClustalWTester@3a0b53e</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.msa.MafftTester.testPersistance()'><b>testPersistance</b><br>Test class:Ant test</td>
+<td>compbio.runner.msa.MafftTester@5f0f0625</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.msa.MuscleTester.testPersistance()'><b>testPersistance</b><br>Test class:Ant test</td>
+<td>compbio.runner.msa.MuscleTester@63f8247d</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.msa.ProbconsTester.testPersistance()'><b>testPersistance</b><br>Test class:Ant test</td>
+<td>compbio.runner.msa.ProbconsTester@32830122</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.msa.TcoffeeTester.testPersistance()'><b>testPersistance</b><br>Test class:Ant test</td>
+<td>compbio.runner.msa.TcoffeeTester@54a6af6e</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.metadata.PresetTester.testPresetWithMuptiOptions()'><b>testPresetWithMuptiOptions</b><br>Test class:Ant test</td>
+<td>compbio.metadata.PresetTester@7a4fe91e</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.msa.ClustalWParametersTester.testPresets()'><b>testPresets</b><br>Test class:Ant test</td>
+<td>compbio.runner.msa.ClustalWParametersTester@74e2ad16</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.msa.MafftParametersTester.testPresets()'><b>testPresets</b><br>Test class:Ant test</td>
+<td>compbio.runner.msa.MafftParametersTester@35a8d460</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.msa.MuscleParametersTester.testPresets()'><b>testPresets</b><br>Test class:Ant test</td>
+<td>compbio.runner.msa.MuscleParametersTester@535c97e4</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.msa.TcoffeeParametersTester.testPresets()'><b>testPresets</b><br>Test class:Ant test</td>
+<td>compbio.runner.msa.TcoffeeParametersTester@36bf7916</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.data.sequence.FastaSequenceGeneratorTester.testProteinSequenceGeneration()'><b>testProteinSequenceGeneration</b><br>Test class:Ant test</td>
+<td>compbio.data.sequence.FastaSequenceGeneratorTester@3a98350a</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.engine.FilePullerTester.testPull()'><b>testPull</b><br>Test class:Ant test</td>
+<td>compbio.engine.FilePullerTester@1e670479</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.engine.cluster.dundee._QueueTester.testQueue()'><b>testQueue</b><br>Test class:Ant test</td>
+<td>compbio.engine.cluster.dundee._QueueTester@584a5c78</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.data.sequence.SequenceUtilTester.testReadAAConResults()'><b>testReadAAConResults</b><br>Test class:Ant test</td>
+<td>compbio.data.sequence.SequenceUtilTester@235f4a7f</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.data.sequence.ClustalAlignmentUtilTester.testReadClustalFile()'><b>testReadClustalFile</b><br>Test class:Ant test</td>
+<td>compbio.data.sequence.ClustalAlignmentUtilTester@44739f3f</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.data.sequence.ClustalAlignmentUtilTester.testReadClustalFileLongNames()'><b>testReadClustalFileLongNames</b><br>Test class:Ant test</td>
+<td>compbio.data.sequence.ClustalAlignmentUtilTester@44739f3f</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.data.sequence.ClustalAlignmentUtilTester.testReadClustalFileShortNames()'><b>testReadClustalFileShortNames</b><br>Test class:Ant test</td>
+<td>compbio.data.sequence.ClustalAlignmentUtilTester@44739f3f</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.data.sequence.SequenceUtilTester.testReadDisemblResults()'><b>testReadDisemblResults</b><br>Test class:Ant test</td>
+<td>compbio.data.sequence.SequenceUtilTester@235f4a7f</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.data.sequence.SequenceUtilTester.testReadGlobPlotResults()'><b>testReadGlobPlotResults</b><br>Test class:Ant test</td>
+<td>compbio.data.sequence.SequenceUtilTester@235f4a7f</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.data.sequence.SequenceUtilTester.testReadIUPredForGlobDomain()'><b>testReadIUPredForGlobDomain</b><br>Test class:Ant test</td>
+<td>compbio.data.sequence.SequenceUtilTester@235f4a7f</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.data.sequence.SequenceUtilTester.testReadIUPredForShortAndLongDisorder()'><b>testReadIUPredForShortAndLongDisorder</b><br>Test class:Ant test</td>
+<td>compbio.data.sequence.SequenceUtilTester@235f4a7f</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.disorder.IUPredTester.testReadResults()'><b>testReadResults</b><br>Test class:Ant test</td>
+<td>compbio.runner.disorder.IUPredTester@758689a</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.data.sequence.SequenceUtilTester.testReadWriteFasta()'><b>testReadWriteFasta</b><br>Test class:Ant test</td>
+<td>compbio.data.sequence.SequenceUtilTester@235f4a7f</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.conservation.AAConTester.testRunLocally()'><b>testRunLocally</b><br>Test class:Ant test</td>
+<td>compbio.runner.conservation.AAConTester@1959e6e8</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.disorder.DisemblTester.testRunLocally()'><b>testRunLocally</b><br>Test class:Ant test</td>
+<td>compbio.runner.disorder.DisemblTester@5d469658</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.disorder.GlobPlotTester.testRunLocally()'><b>testRunLocally</b><br>Test class:Ant test</td>
+<td>compbio.runner.disorder.GlobPlotTester@45389b3f</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.disorder.IUPredTester.testRunLocally()'><b>testRunLocally</b><br>Test class:Ant test</td>
+<td>compbio.runner.disorder.IUPredTester@758689a</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.disorder.JronnTester.testRunLocally()'><b>testRunLocally</b><br>Test class:Ant test</td>
+<td>compbio.runner.disorder.JronnTester@3d3b5a3a</td><td>18</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.msa.ClustalWTester.testRunLocally()'><b>testRunLocally</b><br>Test class:Ant test</td>
+<td>compbio.runner.msa.ClustalWTester@3a0b53e</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.msa.MuscleTester.testRunLocally()'><b>testRunLocally</b><br>Test class:Ant test</td>
+<td>compbio.runner.msa.MuscleTester@63f8247d</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.conservation.AAConTester.testRunLocallyOnTwoCpu()'><b>testRunLocallyOnTwoCpu</b><br>Test class:Ant test</td>
+<td>compbio.runner.conservation.AAConTester@1959e6e8</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.disorder.JronnTester.testRunLocallyOnTwoCpu()'><b>testRunLocallyOnTwoCpu</b><br>Test class:Ant test</td>
+<td>compbio.runner.disorder.JronnTester@3d3b5a3a</td><td>7</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.disorder.IUPredTester.testRunLocallyWithParams()'><b>testRunLocallyWithParams</b><br>Test class:Ant test</td>
+<td>compbio.runner.disorder.IUPredTester@758689a</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.conservation.AAConTester.testRunLocallyWithPreset()'><b>testRunLocallyWithPreset</b><br>Test class:Ant test</td>
+<td>compbio.runner.conservation.AAConTester@1959e6e8</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.conservation.AAConTester.testRunOnCluster()'><b>testRunOnCluster</b><br>Test class:Ant test</td>
+<td>compbio.runner.conservation.AAConTester@1959e6e8</td><td>3</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.disorder.DisemblTester.testRunOnCluster()'><b>testRunOnCluster</b><br>Test class:Ant test</td>
+<td>compbio.runner.disorder.DisemblTester@5d469658</td><td>2</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.disorder.GlobPlotTester.testRunOnCluster()'><b>testRunOnCluster</b><br>Test class:Ant test</td>
+<td>compbio.runner.disorder.GlobPlotTester@45389b3f</td><td>2</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.disorder.IUPredTester.testRunOnCluster()'><b>testRunOnCluster</b><br>Test class:Ant test</td>
+<td>compbio.runner.disorder.IUPredTester@758689a</td><td>3</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.disorder.JronnTester.testRunOnCluster()'><b>testRunOnCluster</b><br>Test class:Ant test</td>
+<td>compbio.runner.disorder.JronnTester@3d3b5a3a</td><td>13</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.msa.ClustalWTester.testRunOnCluster()'><b>testRunOnCluster</b><br>Test class:Ant test</td>
+<td>compbio.runner.msa.ClustalWTester@3a0b53e</td><td>5</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.msa.MuscleTester.testRunOnCluster()'><b>testRunOnCluster</b><br>Test class:Ant test</td>
+<td>compbio.runner.msa.MuscleTester@63f8247d</td><td>3</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.conservation.AAConTester.testRunOnClusterAsync()'><b>testRunOnClusterAsync</b><br>Test class:Ant test</td>
+<td>compbio.runner.conservation.AAConTester@1959e6e8</td><td>5</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.disorder.DisemblTester.testRunOnClusterAsync()'><b>testRunOnClusterAsync</b><br>Test class:Ant test</td>
+<td>compbio.runner.disorder.DisemblTester@5d469658</td><td>6</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.disorder.GlobPlotTester.testRunOnClusterAsync()'><b>testRunOnClusterAsync</b><br>Test class:Ant test</td>
+<td>compbio.runner.disorder.GlobPlotTester@45389b3f</td><td>6</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.disorder.IUPredTester.testRunOnClusterAsync()'><b>testRunOnClusterAsync</b><br>Test class:Ant test</td>
+<td>compbio.runner.disorder.IUPredTester@758689a</td><td>6</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.disorder.JronnTester.testRunOnClusterAsync()'><b>testRunOnClusterAsync</b><br>Test class:Ant test</td>
+<td>compbio.runner.disorder.JronnTester@3d3b5a3a</td><td>11</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.msa.MafftTester.testRunOnClusterAsyncCheckStatusLongPoolingTime()'><b>testRunOnClusterAsyncCheckStatusLongPoolingTime</b><br>Test class:Ant test</td>
+<td>compbio.runner.msa.MafftTester@5f0f0625</td><td>5</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.msa.ClustalWTester.testRunWithMatrix()'><b>testRunWithMatrix</b><br>Test class:Ant test</td>
+<td>compbio.runner.msa.ClustalWTester@3a0b53e</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.engine.conf.RunnerConfigMarshallerTester.testSchemaFromCodeGeneration()'><b>testSchemaFromCodeGeneration</b><br>Test class:Ant test</td>
+<td>compbio.engine.conf.RunnerConfigMarshallerTester@29a7789c</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.msa.MafftTester.testSetInputTester()'><b>testSetInputTester</b><br>Test class:Ant test</td>
+<td>compbio.runner.msa.MafftTester@5f0f0625</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.msa.ProbconsTester.testSetInputTester()'><b>testSetInputTester</b><br>Test class:Ant test</td>
+<td>compbio.runner.msa.ProbconsTester@32830122</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.runner.disorder.IUPredTester.testSetParameter()'><b>testSetParameter</b><br>Test class:Ant test</td>
+<td>compbio.runner.disorder.IUPredTester@758689a</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.engine.client.CommandBuilderTester.testSpaceDelimiterExecutable()'><b>testSpaceDelimiterExecutable</b><br>Test class:Ant test</td>
+<td>compbio.engine.client.CommandBuilderTester@25cbfa42</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.engine.cluster.drmaa.DrmaaAsyncClusterEngineTester.testSubmit()'><b>testSubmit</b><br>Test class:Ant test</td>
+<td>compbio.engine.cluster.drmaa.DrmaaAsyncClusterEngineTester@57c8b24d</td><td>3</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.engine.cluster.drmaa.DrmaaClusterEngineTester.testSubmit()'><b>testSubmit</b><br>Test class:Ant test</td>
+<td>compbio.engine.cluster.drmaa.DrmaaClusterEngineTester@39320a41</td><td>3</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.engine.local.AsyncLocalRunnerTester.testSubmitLocally()'><b>testSubmitLocally</b></td>
+<td>compbio.engine.local.AsyncLocalRunnerTester@31df5f21</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.engine.local.AsyncLocalRunnerTester.testSubmitLocally()'><b>testSubmitLocally</b></td>
+<td>compbio.engine.local.AsyncLocalRunnerTester@31df5f21</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.engine.local.AsyncLocalRunnerTester.testSubmitLocally()'><b>testSubmitLocally</b></td>
+<td>compbio.engine.local.AsyncLocalRunnerTester@31df5f21</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.engine.local.AsyncLocalRunnerTester.testSubmitLocally()'><b>testSubmitLocally</b></td>
+<td>compbio.engine.local.AsyncLocalRunnerTester@31df5f21</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.engine.local.AsyncLocalRunnerTester.testSubmitLocally()'><b>testSubmitLocally</b></td>
+<td>compbio.engine.local.AsyncLocalRunnerTester@31df5f21</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.engine.cluster.drmaa.ClusterSessionTester.testTaskList()'><b>testTaskList</b><br>Test class:Ant test</td>
+<td>compbio.engine.cluster.drmaa.ClusterSessionTester@23de4dd8</td><td>3</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.engine.conf.RunnerConfigMarshallerTester.testUnMarshalling()'><b>testUnMarshalling</b><br>Test class:Ant test</td>
+<td>compbio.engine.conf.RunnerConfigMarshallerTester@29a7789c</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.metadata.OptionMarshallerTester.testUnMarshalling()'><b>testUnMarshalling</b><br>Test class:Ant test</td>
+<td>compbio.metadata.OptionMarshallerTester@6087e704</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.stat.collector.ExecutionStatCollectorTester.testUpdateStatTester()'><b>testUpdateStatTester</b><br>Test class:Ant test</td>
+<td>compbio.stat.collector.ExecutionStatCollectorTester@b478a2d</td><td>35</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.metadata.RunnerConfigTester.testValidate()'><b>testValidate</b><br>Test class:Ant test</td>
+<td>compbio.metadata.RunnerConfigTester@1451ef4e</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.metadata.RunnerConfigTester.testValidateBoundaryConstrainCheck()'><b>testValidateBoundaryConstrainCheck</b><br>Test class:Ant test</td>
+<td>compbio.metadata.RunnerConfigTester@1451ef4e</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.metadata.RunnerConfigTester.testValidateLowerBoundaryConstrainCheck()'><b>testValidateLowerBoundaryConstrainCheck</b><br>Test class:Ant test</td>
+<td>compbio.metadata.RunnerConfigTester@1451ef4e</td><td>0</td>
+<td><div><pre>compbio.metadata.WrongParameterException: Attempting to set default value outside boundaries defined by the constraint: Type: Float
+Min: -10.12
+Max: 0
+
+ For parameter: Option name: Matrix1
+Description: Protein weight matrix
+URL: http://www.compbio.dundee.ac.uk/users/pvtroshin/ws/Index.html
+Is required: true
+Option Names: 
+--AAMATRIX
+Type: Float
+Min: -10.12
+Max: 0
+
+
+	at compbio.metadata.Parameter.setDefaultValue(Parameter.java:248)
+	at compbio.metadata.RunnerConfigTester.testValidateLowerBoundaryConstrainCheck(RunnerConfigTester.java:268)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1382320624", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1382320624'><pre>compbio.metadata.WrongParameterException: Attempting to set default value outside boundaries defined by the constraint: Type: Float
+Min: -10.12
+Max: 0
+
+ For parameter: Option name: Matrix1
+Description: Protein weight matrix
+URL: http://www.compbio.dundee.ac.uk/users/pvtroshin/ws/Index.html
+Is required: true
+Option Names: 
+--AAMATRIX
+Type: Float
+Min: -10.12
+Max: 0
+
+
+	at compbio.metadata.Parameter.setDefaultValue(Parameter.java:248)
+	at compbio.metadata.RunnerConfigTester.testValidateLowerBoundaryConstrainCheck(RunnerConfigTester.java:268)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodHelper.invokeMethod(MethodHelper.java:609)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:532)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:686)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1018)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:128)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:759)
+	at org.testng.TestRunner.privateRun(TestRunner.java:592)
+	at org.testng.TestRunner.run(TestRunner.java:486)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:327)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:299)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:204)
+	at org.testng.TestNG.createAndRunSuiteRunners(TestNG.java:912)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:876)
+	at org.testng.TestNG.run(TestNG.java:784)
+	at org.testng.TestNG.privateMain(TestNG.java:949)
+	at org.testng.TestNG.main(TestNG.java:922)
+</pre></div></td>
+</tr>
+<tr>
+<td title='compbio.metadata.RunnerConfigTester.testValidateUpperBoundaryConstrainCheck()'><b>testValidateUpperBoundaryConstrainCheck</b><br>Test class:Ant test</td>
+<td>compbio.metadata.RunnerConfigTester@1451ef4e</td><td>0</td>
+<td><div><pre>compbio.metadata.WrongParameterException: Attempting to set default value outside boundaries defined by the constraint: Type: Float
+Min: -10.12
+Max: 0
+
+ For parameter: Option name: Matrix1
+Description: Protein weight matrix
+URL: http://www.compbio.dundee.ac.uk/users/pvtroshin/ws/Index.html
+Is required: true
+Option Names: 
+--AAMATRIX
+Type: Float
+Min: -10.12
+Max: 0
+
+
+	at compbio.metadata.Parameter.setDefaultValue(Parameter.java:248)
+	at compbio.metadata.RunnerConfigTester.testValidateUpperBoundaryConstrainCheck(RunnerConfigTester.java:296)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace853232781", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace853232781'><pre>compbio.metadata.WrongParameterException: Attempting to set default value outside boundaries defined by the constraint: Type: Float
+Min: -10.12
+Max: 0
+
+ For parameter: Option name: Matrix1
+Description: Protein weight matrix
+URL: http://www.compbio.dundee.ac.uk/users/pvtroshin/ws/Index.html
+Is required: true
+Option Names: 
+--AAMATRIX
+Type: Float
+Min: -10.12
+Max: 0
+
+
+	at compbio.metadata.Parameter.setDefaultValue(Parameter.java:248)
+	at compbio.metadata.RunnerConfigTester.testValidateUpperBoundaryConstrainCheck(RunnerConfigTester.java:296)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodHelper.invokeMethod(MethodHelper.java:609)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:532)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:686)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1018)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:128)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:759)
+	at org.testng.TestRunner.privateRun(TestRunner.java:592)
+	at org.testng.TestRunner.run(TestRunner.java:486)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:327)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:299)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:204)
+	at org.testng.TestNG.createAndRunSuiteRunners(TestNG.java:912)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:876)
+	at org.testng.TestNG.run(TestNG.java:784)
+	at org.testng.TestNG.privateMain(TestNG.java:949)
+	at org.testng.TestNG.main(TestNG.java:922)
+</pre></div></td>
+</tr>
+<tr>
+<td title='compbio.metadata.RunnerConfigTester.testValidateValueConstrain()'><b>testValidateValueConstrain</b><br>Test class:Ant test</td>
+<td>compbio.metadata.RunnerConfigTester@1451ef4e</td><td>0</td>
+<td><div><pre>javax.xml.bind.ValidationException: Both boundaries (min and max) is undefined for ValueConstrain: Type: Float
+
+	at compbio.metadata.ValueConstrain.validate(ValueConstrain.java:208)
+	at compbio.metadata.RunnerConfigTester.testValidateValueConstrain(RunnerConfigTester.java:341)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace206051672", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace206051672'><pre>javax.xml.bind.ValidationException: Both boundaries (min and max) is undefined for ValueConstrain: Type: Float
+
+	at compbio.metadata.ValueConstrain.validate(ValueConstrain.java:208)
+	at compbio.metadata.RunnerConfigTester.testValidateValueConstrain(RunnerConfigTester.java:341)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodHelper.invokeMethod(MethodHelper.java:609)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:532)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:686)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1018)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:128)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:759)
+	at org.testng.TestRunner.privateRun(TestRunner.java:592)
+	at org.testng.TestRunner.run(TestRunner.java:486)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:327)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:299)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:204)
+	at org.testng.TestNG.createAndRunSuiteRunners(TestNG.java:912)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:876)
+	at org.testng.TestNG.run(TestNG.java:784)
+	at org.testng.TestNG.privateMain(TestNG.java:949)
+	at org.testng.TestNG.main(TestNG.java:922)
+</pre></div></td>
+</tr>
+<tr>
+<td title='compbio.engine.conf.RunnerConfigMarshallerTester.testValidation()'><b>testValidation</b><br>Test class:Ant test</td>
+<td>compbio.engine.conf.RunnerConfigMarshallerTester@29a7789c</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.engine.conf.RunnerConfigMarshallerTester.testValidationOnMarshalling()'><b>testValidationOnMarshalling</b><br>Test class:Ant test</td>
+<td>compbio.engine.conf.RunnerConfigMarshallerTester@29a7789c</td><td>0</td>
+<td><div><pre>javax.xml.bind.MarshalException
+ - with linked exception:
+[org.xml.sax.SAXParseException: cvc-complex-type.2.4.a: Invalid content was found starting with element 'options'. One of '{runnerClassName}' is expected.]
+	at com.sun.xml.bind.v2.runtime.MarshallerImpl.write(MarshallerImpl.java:323)
+	at com.sun.xml.bind.v2.runtime.MarshallerImpl.marshal(MarshallerImpl.java:249)
+	at javax.xml.bind.helpers.AbstractMarshallerImpl.marshal(AbstractMarshallerImpl.java:75)
+	at compbio.engine.conf.RunnerConfigMarshaller.writeAndValidate(RunnerConfigMarshaller.java:88)
+	at compbio.engine.conf.RunnerConfigMarshallerTester.testValidationOnMarshalling(RunnerConfigMarshallerTester.java:259)
+Caused by: org.xml.sax.SAXParseException: cvc-complex-type.2.4.a: Invalid content was found starting with element 'options'. One of '{runnerClassName}' is expected.
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:195)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.error(ErrorHandlerWrapper.java:131)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:384)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:318)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator$XSIErrorReporter.reportError(XMLSchemaValidator.java:410)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.reportSchemaError(XMLSchemaValidator.java:3165)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.handleStartElement(XMLSchemaValidator.java:1777)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.startElement(XMLSchemaValidator.java:685)
+	at com.sun.org.apache.xerces.internal.jaxp.validation.ValidatorHandlerImpl.startElement(ValidatorHandlerImpl.java:549)
+	at org.xml.sax.helpers.XMLFilterImpl.startElement(XMLFilterImpl.java:527)
+	at com.sun.xml.bind.v2.runtime.output.SAXOutput.endStartTag(SAXOutput.java:128)
+	at com.sun.xml.bind.v2.runtime.output.ForkXmlOutput.endStartTag(ForkXmlOutput.java:106)
+	at com.sun.xml.bind.v2.runtime.XMLSerializer.endAttributes(XMLSerializer.java:310)
+	at com.sun.xml.bind.v2.runtime.XMLSerializer.childAsXsiType(XMLSerializer.java:699)
+	at com.sun.xml.bind.v2.runtime.property.ArrayElementNodeProperty.serializeItem(ArrayElementNodeProperty.java:69)
+	at com.sun.xml.bind.v2.runtime.property.ArrayElementProperty.serializeListBody(ArrayElementProperty.java:172)
+	at com.sun.xml.bind.v2.runtime.property.ArrayERProperty.serializeBody(ArrayERProperty.java:159)
+	at com.sun.xml.bind.v2.runtime.ClassBeanInfoImpl.serializeBody(ClassBeanInfoImpl.java:344)
+	at com.sun.xml.bind.v2.runtime.XMLSerializer.childAsSoleContent(XMLSerializer.java:597)
+	at com.sun.xml.bind.v2.runtime.ClassBeanInfoImpl.serializeRoot(ClassBeanInfoImpl.java:328)
+	at com.sun.xml.bind.v2.runtime.XMLSerializer.childAsRoot(XMLSerializer.java:498)
+	at com.sun.xml.bind.v2.runtime.MarshallerImpl.write(MarshallerImpl.java:320)
+	... 26 more
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1252050054", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1252050054'><pre>javax.xml.bind.MarshalException
+ - with linked exception:
+[org.xml.sax.SAXParseException: cvc-complex-type.2.4.a: Invalid content was found starting with element 'options'. One of '{runnerClassName}' is expected.]
+	at com.sun.xml.bind.v2.runtime.MarshallerImpl.write(MarshallerImpl.java:323)
+	at com.sun.xml.bind.v2.runtime.MarshallerImpl.marshal(MarshallerImpl.java:249)
+	at javax.xml.bind.helpers.AbstractMarshallerImpl.marshal(AbstractMarshallerImpl.java:75)
+	at compbio.engine.conf.RunnerConfigMarshaller.writeAndValidate(RunnerConfigMarshaller.java:88)
+	at compbio.engine.conf.RunnerConfigMarshallerTester.testValidationOnMarshalling(RunnerConfigMarshallerTester.java:259)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodHelper.invokeMethod(MethodHelper.java:609)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:532)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:686)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1018)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:128)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:759)
+	at org.testng.TestRunner.privateRun(TestRunner.java:592)
+	at org.testng.TestRunner.run(TestRunner.java:486)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:327)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:299)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:204)
+	at org.testng.TestNG.createAndRunSuiteRunners(TestNG.java:912)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:876)
+	at org.testng.TestNG.run(TestNG.java:784)
+	at org.testng.TestNG.privateMain(TestNG.java:949)
+	at org.testng.TestNG.main(TestNG.java:922)
+Caused by: org.xml.sax.SAXParseException: cvc-complex-type.2.4.a: Invalid content was found starting with element 'options'. One of '{runnerClassName}' is expected.
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:195)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.error(ErrorHandlerWrapper.java:131)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:384)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:318)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator$XSIErrorReporter.reportError(XMLSchemaValidator.java:410)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.reportSchemaError(XMLSchemaValidator.java:3165)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.handleStartElement(XMLSchemaValidator.java:1777)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.startElement(XMLSchemaValidator.java:685)
+	at com.sun.org.apache.xerces.internal.jaxp.validation.ValidatorHandlerImpl.startElement(ValidatorHandlerImpl.java:549)
+	at org.xml.sax.helpers.XMLFilterImpl.startElement(XMLFilterImpl.java:527)
+	at com.sun.xml.bind.v2.runtime.output.SAXOutput.endStartTag(SAXOutput.java:128)
+	at com.sun.xml.bind.v2.runtime.output.ForkXmlOutput.endStartTag(ForkXmlOutput.java:106)
+	at com.sun.xml.bind.v2.runtime.XMLSerializer.endAttributes(XMLSerializer.java:310)
+	at com.sun.xml.bind.v2.runtime.XMLSerializer.childAsXsiType(XMLSerializer.java:699)
+	at com.sun.xml.bind.v2.runtime.property.ArrayElementNodeProperty.serializeItem(ArrayElementNodeProperty.java:69)
+	at com.sun.xml.bind.v2.runtime.property.ArrayElementProperty.serializeListBody(ArrayElementProperty.java:172)
+	at com.sun.xml.bind.v2.runtime.property.ArrayERProperty.serializeBody(ArrayERProperty.java:159)
+	at com.sun.xml.bind.v2.runtime.ClassBeanInfoImpl.serializeBody(ClassBeanInfoImpl.java:344)
+	at com.sun.xml.bind.v2.runtime.XMLSerializer.childAsSoleContent(XMLSerializer.java:597)
+	at com.sun.xml.bind.v2.runtime.ClassBeanInfoImpl.serializeRoot(ClassBeanInfoImpl.java:328)
+	at com.sun.xml.bind.v2.runtime.XMLSerializer.childAsRoot(XMLSerializer.java:498)
+	at com.sun.xml.bind.v2.runtime.MarshallerImpl.write(MarshallerImpl.java:320)
+	... 26 more
+</pre></div></td>
+</tr>
+<tr>
+<td title='compbio.stat.collector.StatDBTester.testVerifyJobsCount()'><b>testVerifyJobsCount</b><br>Test class:Ant test</td>
+<td>compbio.stat.collector.StatDBTester@5c09624</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.metadata.OptionCombinatorTester.testgetAllOptions()'><b>testgetAllOptions</b><br>Test class:Ant test</td>
+<td>compbio.metadata.OptionCombinatorTester@2afb6c5f</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.metadata.OptionCombinatorTester.testgetAllParameters()'><b>testgetAllParameters</b><br>Test class:Ant test</td>
+<td>compbio.metadata.OptionCombinatorTester@2afb6c5f</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.data.sequence.SequenceUtilTester.testisNonAmbNucleotideSequence()'><b>testisNonAmbNucleotideSequence</b><br>Test class:Ant test</td>
+<td>compbio.data.sequence.SequenceUtilTester@235f4a7f</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.data.sequence.SequenceUtilTester.testisProteinSequence()'><b>testisProteinSequence</b><br>Test class:Ant test</td>
+<td>compbio.data.sequence.SequenceUtilTester@235f4a7f</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.engine.conf.PropertyHelperManagerTester.validateClustalConfiguration()'><b>validateClustalConfiguration</b><br>Test class:Ant test</td>
+<td>compbio.engine.conf.PropertyHelperManagerTester@4ee14d81</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.engine.conf.PropertyHelperManagerTester.validateMafftConfiguration()'><b>validateMafftConfiguration</b><br>Test class:Ant test</td>
+<td>compbio.engine.conf.PropertyHelperManagerTester@4ee14d81</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.engine.conf.PropertyHelperManagerTester.validateMuscleConfiguration()'><b>validateMuscleConfiguration</b><br>Test class:Ant test</td>
+<td>compbio.engine.conf.PropertyHelperManagerTester@4ee14d81</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.metadata.PresetTester.validatePresets()'><b>validatePresets</b><br>Test class:Ant test</td>
+<td>compbio.metadata.PresetTester@7a4fe91e</td><td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='compbio.engine.conf.PropertyHelperManagerTester.validateTcoffeeConfiguration()'><b>validateTcoffeeConfiguration</b><br>Test class:Ant test</td>
+<td>compbio.engine.conf.PropertyHelperManagerTester@4ee14d81</td><td>0</td>
+<td></td>
+</tr>
+</table><p>
+</body>
+</html>

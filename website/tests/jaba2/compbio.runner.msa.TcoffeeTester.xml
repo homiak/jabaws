@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="compbio.runner.msa.TcoffeeTester" failures="0" tests="6" time="4.098" errors="0">
+  <properties/>
+  <testcase name="readStatistics" time="0.619" classname="compbio.runner.msa.TcoffeeTester"/>
+  <testcase name="testClusterExecute" time="1.588" classname="compbio.runner.msa.TcoffeeTester"/>
+  <testcase name="testConfigurationLoading" time="0.045" classname="compbio.runner.msa.TcoffeeTester"/>
+  <testcase name="testExecute" time="0.348" classname="compbio.runner.msa.TcoffeeTester"/>
+  <testcase name="testNcore" time="0.0010" classname="compbio.runner.msa.TcoffeeTester"/>
+  <testcase name="testPersistance" time="0.761" classname="compbio.runner.msa.TcoffeeTester"/>
+</testsuite>

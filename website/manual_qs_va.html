@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "XHTML 1.0 Strict" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="Last-modified" content="Mon, 4 Apr 2011 12:00:00 GMT"/>
+<title>Java Bioinformatics Analyses Web Services (JABAWS) manual - getting started</title>
+<link href="ws.css" rel="stylesheet" type="text/css" media="screen,  projection, handheld, tv" />
+<link rel="stylesheet" type="text/css" media="print" href="print.css"/>
+
+<script type="text/javascript" src="prototype-1.6.0.3.js"></script>
+</head>
+<body>
+<div id="page">
+<div id="banner">
+<table> 
+<tr><td style="width:158px;"><a href="http://www.dundee.ac.uk"><img src="images/uod_lt_long.gif"  alt="University of Dundee" width="158" height="90" class="logo"  title="University of Dundee" longdesc="http://www.dundee.ac.uk"/></a></td>
+<td class="bg"><img src="images/jabaws2.png" alt="JABAWS-2.0" title="Java Bioinformatics Analysis Web Services version 2.0"/></td>
+<td class="bg"><img src="images/banner_right.png" alt="Disorder" width="200" height="80"/></td>
+</tr>
+</table>
+</div><!-- banner end-->
+<div id="wrapper">
+<div id="panel">
+<a href="index.html">Home</a>
+    <a class="selected" href="quick_start.html">Getting Started</a> 
+    <a href="man_about.html">Manual</a> 
+	<a href="http://www.compbio.dundee.ac.uk/download">Download</a>
+    <a href="PublicAnnualStat" title="JABAWS server usage statistics">Usage Statistics</a>
+	 <a href="ServiceStatus" title="JABAWS webservices status. Click to test all web services. Please be patient while the services are being checked">Services Status</a>
+	<a href="contacts.html">Contact Us</a>
+    <a href="http://www.compbio.dundee.ac.uk" title="University of Dundee, The Barton Group" >Barton Group</a></div>
+<!-- panel end-->
+<div id="content">
+
+<h2 id="headtitle">Getting Started</h2>
+
+<h3><a name="whichjaba" id="whichjaba"></a>Choose a JABAWS distribution</h3>
+
+<table id="choicematrix">
+<tr>
+  <th>I want to use JABAWS for...</th>
+  <th>Quick Guide</th>
+</tr>
+<tr>
+	<td>Running Muptiple Sequence Alignments through Jalview on my <strong>own</strong> computer</td>
+    <td><a href="manual_qs_va.html#qsc">JABAWS Virtual Appliance (VA)</a></td>
+</tr>
+<tr>
+  <td>Running JABAWS  on the <strong>cloud</strong>, for one or many users</td>
+  <td><a href="man_awscloud.html">JABAWS on the Amazon cloud </a></td>
+</tr>
+<tr>
+	<td>Running JABAWS for my group, lab, or organization on the <strong>local</strong> infrastructure </td>
+    <td><a href="manual_qs_war.html#qsc">JABAWS Web Application aRchive (WAR)</a></td>
+</tr>
+<tr>
+	<td>Accessing a JABAWS server from my own code</td>
+    <td><a href="manual_qs_client.html#qsc">JABAWS Java Client</a></td>
+</tr>
+</table>
+
+<a name="qsc"/>
+<h3>Running JABAWS on your local machine</h3>
+<ul>  <li>Download <a href="http://www.compbio.dundee.ac.uk/download/get?id=jabaws-vm.zip">JABAWS Virtual Appliance</a> (520M) </li>
+</ul>
+<p>The Virtual Appliance (VA) package allows you to run a JABAWS server installed on TurnKey Linux as a virtual machine on your laptop or desktop computer. A <a href="man_servervm.html#whenvm">complete guide to the JABAWS VA</a> is given in the manual, but for the impatient, a brief instructions are given below:
+
+<p>If you work on Windows, Linux or Unix </p>
+<ol>
+  <li>download and install <a href="http://www.vmware.com/products/player">VMWare Player</a>.</li>
+  <li>Unpack the JABAWS virtual appliance and open it with VMware Player.</li>
+  </ol>
+<p>If you work on Mac do the same using <a href="http://www.vmware.com/products/fusion/overview.html">VMware Fusion</a>, or for free alternative use a WAR JABAWS package. </p>
+<div id="testing_jabaws">
+<h3>Testing</h3>
+<p>To check that your JABAWS virtual appliance is working visit the Services Status page available from the main JABAWS menu. For this enter the JABAWS URL for your new server into a web browser. This is shown once the appliance is booted up. </p>
+<p>Alternatively you can use Jalview to complete the testing. </p>
+<ol><li>Launch the desktop version of <a href="http://www.jalview.org/download.html">Jalview</a></li>
+  <li>Open the Jalview desktop's preferences panel (from the Tools-&gt;Preferences menu option), select the <span class="hightlight">Webservices</span> panel and press the <span class="hightlight">New Service URL</span> button.</li>
+  <li>Enter the JABAWS URL for your new server. This is shown once the appliance is booted up.</li>
+</ol>
+</div> 
+</div>
+<!-- about end-->
+</div>
+<!-- content end--> 
+<div id="copyright">Last update: 16 September 2011<br/>
+Peter Troshin, Jim Procter and Geoff Barton, The Barton Group, University of Dundee, UK</div>
+</div><!-- wrapper end-->
+</div> <!-- page end-->
+
+<!-- Google analitics -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try{
+var pageTracker = _gat._getTracker("UA-5356328-1");
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+</body>
+</html>
+

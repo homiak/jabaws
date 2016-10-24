@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "XHTML 1.0 Strict" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="Last-modified" content="Mon, 4 Apr 2011 12:00:00 GMT"/>
+<title>Java Bioinformatics Analyses Web Services (JABAWS) manual - getting started</title>
+<link href="ws.css" rel="stylesheet" type="text/css" media="screen,  projection, handheld, tv" />
+<link rel="stylesheet" type="text/css" media="print" href="print.css"/>
+
+<script type="text/javascript" src="prototype-1.6.0.3.js"></script>
+</head>
+<body>
+<div id="page">
+<div id="banner">
+<table> 
+<tr><td style="width:158px;"><a href="http://www.dundee.ac.uk"><img src="images/uod_lt_long.gif"  alt="University of Dundee" width="158" height="90" class="logo"  title="University of Dundee" longdesc="http://www.dundee.ac.uk"/></a></td>
+<td class="bg"><img src="images/jabaws2.png" alt="JABAWS-2.0" title="Java Bioinformatics Analysis Web Services version 2.0"/></td>
+<td class="bg"><img src="images/banner_right.png" alt="Disorder" width="200" height="80"/></td>
+</tr>
+</table>
+</div><!-- banner end-->
+
+<div id="wrapper">
+<div id="panel">
+<a href="index.html">Home</a>
+    <a class="selected" href="quick_start.html">Getting Started</a> 
+    <a href="man_about.html">Manual</a> 
+	<a href="http://www.compbio.dundee.ac.uk/download">Download</a>
+    <a href="PublicAnnualStat" title="JABAWS server usage statistics">Usage Statistics</a>
+	 <a href="ServiceStatus" title="JABAWS webservices status. Click to test all web services. Please be patient while the services are being checked">Services Status</a>
+	<a href="contacts.html">Contact Us</a>
+    <a href="http://www.compbio.dundee.ac.uk" title="University of Dundee, The Barton Group" >Barton Group</a>
+
+</div><!-- panel end-->
+
+<div id="content">
+
+<h2 id="headtitle">Getting Started</h2>
+
+<h3><a name="whichjaba" id="whichjaba"></a>Choose a JABAWS distribution</h3>
+
+<table id="choicematrix">
+<tr>
+  <th>I want to use JABAWS for...</th>
+  <th>Quick Guide</th>
+</tr>
+<tr>
+	<td>Running Muptiple Sequence Alignments through Jalview on my <strong>own</strong> computer</td>
+    <td><a href="manual_qs_va.html#qsc">JABAWS Virtual Appliance (VA)</a></td>
+</tr>
+<tr>
+  <td>Running JABAWS  on the <strong>cloud</strong>, for one or many users</td>
+  <td><a href="man_awscloud.html">JABAWS on the Amazon cloud </a></td>
+</tr>
+<tr>
+	<td>Running JABAWS for my group, lab, or organization on the <strong>local</strong> infrastructure </td>
+    <td><a href="manual_qs_war.html#qsc">JABAWS Web Application aRchive (WAR)</a></td>
+</tr>
+<tr>
+	<td>Accessing a JABAWS server from my own code</td>
+    <td><a href="manual_qs_client.html#qsc">JABAWS Java Client</a></td>
+</tr>
+</table>
+
+<a name="qsc"/>
+
+<h3>Installing A JABAWS Server Web Application Archive (WAR) package</h3>
+
+<p>This is for anyone who wants to run JABAWS for their group, lab or organization, or wants to enable their local JABA server to use the cluster or perform very large tasks.</p>
+
+<ol>
+<li>Download the <a href="http://www.compbio.dundee.ac.uk/download">JABAWS WAR for your platform </a></li>
+  <li>Download and install <a href="http://tomcat.apache.org/download-70.cgi">Apache-Tomcat</a>.<br/>
+   <span class="hightlight">You will need at least version 5.5 of Tomcat (we would recommend version 7.0) and at least version 1.6 (i.e. JAVA 6) of Java.</span></li>
+  <li>Drop the JABAWS WAR file into <span class="hightlight">tomcat/webapps</span> directory.</li>
+  <li>(Re)start the Tomcat.</li>
+  <li>Once the tomcat has started, it should automatically unpack the WAR into the webapps directory (if it doesn't, then you'll need to do this manually, it's just a zip archive in the end).</li>
+  <li> If you are on Mac or other unix-like architecture with GNU compilers available or you'd like to get a maximum performance </li>
+   <ul><li> <span class="hightlight">cd</span> to <span class="hightlight">webapps/jabaws/binaries/src/</span> and execute <span class="hightlight">./compilebin.sh  </span> script to compile all binaries JABAWS depends on. </li>
+     </ul>
+</ol> 
+
+<h3>Testing</h3>
+<p>You can test that your JABAWS server is working in several ways.</p>
+<ol>
+<li>Visit Services Status page available from the JABAWS main page using your web browser.</li>
+
+<li>If you are working on the command line, then use the command line client shipped with the JABAWS war to test it by running:
+  <span class="code">java -jar &lt;Path to tomcat WebApp directory&gt;/jabaws/WEB-INF/lib/jaba-client.jar -h=http://localhost:8080/jabaws</span>
+  In this example we assumed that your JABAWS server URL is <span class="hightlight">http://localhost:8080</span> and JABAWS context path is <span class="hightlight">jabaws</span>
+</li>
+<li>Alternately, you can point Jalview at your new server:
+<ul>
+  <li>Launch the desktop version of <a href="http://www.jalview.org/download.html">Jalview</a></li>
+  <li>Open the Jalview desktop's preferences panel (from the Tools-&gt;Preferences menu option), select the <span class="hightlight">Webservices</span> panel and press the <span class="hightlight">New Service URL</span> button.</li>
+  <li>Enter the URL for the tomcat server, including the context path for the JABAWS web app (e.g. http://localhost:8080/jabaws).</li>
+</ul>
+</li></ol>
+
+<!--  TODO put JABAWS CMD test instructions here -->
+</div> <!-- content end-->
+<!-- about end-->
+<div id="copyright">Last update: 16 September 2011<br/>
+Peter Troshin, Jim Procter and Geoff Barton, The Barton Group, University of Dundee, UK</div>
+
+</div><!-- wrapper end -->
+
+<!-- Google analitics -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try{
+var pageTracker = _gat._getTracker("UA-5356328-1");
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+</div> <!-- page end -->
+</body>
+</html>
+

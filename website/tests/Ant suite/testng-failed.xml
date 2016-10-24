@@ -1,0 +1,131 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="5" skipfailedinvocationCounts="false" verbose="3" name="Failed suite [Ant suite]" junit="false" annotations="JDK" data-provider-thread-count="10">
+  <test name="Ant test(failed)" junit="false" annotations="JDK">
+    <groups>
+      <run>
+        <exclude name="performance"/>
+        <exclude name="webservices"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="compbio.runner.msa.MafftParametersTester">
+        <methods>
+          <include name="setup"/>
+        </methods>
+      </class>
+      <class name="compbio.metadata.OptionMarshallerTester">
+        <methods>
+          <include name="setup"/>
+        </methods>
+      </class>
+      <class name="compbio.metadata.OptionCombinatorTester">
+        <methods>
+          <include name="setup"/>
+        </methods>
+      </class>
+      <class name="compbio.runner.disorder.IUPredTester">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class>
+      <class name="compbio.runner.msa.MafftTester">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class>
+      <class name="compbio.runner.disorder.GlobPlotTester">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class>
+      <class name="compbio.engine.FilePullerTester">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class>
+      <class name="compbio.runner.msa.MuscleTester">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class>
+      <class name="compbio.runner.msa.MuscleParametersTester">
+        <methods>
+          <include name="setup"/>
+        </methods>
+      </class>
+      <class name="compbio.runner.msa.LimitTester">
+        <methods>
+          <include name="setup"/>
+        </methods>
+      </class>
+      <class name="compbio.runner.disorder.JronnTester">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class>
+      <class name="compbio.runner.msa.ProbconsParametersTester">
+        <methods>
+          <include name="setup"/>
+        </methods>
+      </class>
+      <class name="compbio.engine.conf.RunnerConfigMarshallerTester">
+        <methods>
+          <include name="setup"/>
+        </methods>
+      </class>
+      <class name="compbio.metadata.RunnerConfigTester">
+        <methods>
+          <include name="setup"/>
+        </methods>
+      </class>
+      <class name="compbio.runner.conservation.AAConTester">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class>
+      <class name="compbio.runner.disorder.DisemblTester">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class>
+      <class name="compbio.runner.msa.TcoffeeTester">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class>
+      <class name="compbio.runner.msa.ClustalWParametersTester">
+        <methods>
+          <include name="setup"/>
+        </methods>
+      </class>
+      <class name="compbio.metadata.PresetTester">
+        <methods>
+          <include name="loadPresets"/>
+        </methods>
+      </class>
+      <class name="compbio.engine.conf.PropertyHelperManagerTester">
+        <methods>
+          <include name="testLoadResources"/>
+        </methods>
+      </class>
+      <class name="compbio.runner.msa.TcoffeeParametersTester">
+        <methods>
+          <include name="setup"/>
+        </methods>
+      </class>
+      <class name="compbio.runner.msa.ProbconsTester">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class>
+      <class name="compbio.stat.collector.StatDBTester">
+        <methods>
+          <include name="testReadYearData"/>
+          <include name="init"/>
+          <include name="testGetEarliestRecord"/>
+          <include name="testReadOneMonthData"/>
+        </methods>
+      </class>
+    </classes>
+  </test>
+</suite>

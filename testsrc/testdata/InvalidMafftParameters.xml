@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="US-ASCII" standalone="yes" ?>
+<runnerConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="D:/workspace/clusterengine/testsrc/testdata/RunnerConfigSchema.xsd">
+ <runnerClassName>compbio.runner.mafft.Mafft</runnerClassName>
+    <options isRequired="false">
+        <name>Shared 6mers distance calculation</name>
+        <description>Distance is calculated based on the number of shared 6mers. Default: on</description>
+        <!-- no optionName here! -->
+        <furtherDetails>http://www.compbio.dundee.ac.uk/users/pvtroshin/ws/Index.html</furtherDetails>
+        <defaultValue>--6merpair</defaultValue>
+    </options>
+    <options isRequired="true">
+        <name>Output sequences order</name>
+        <description>--inputorder - Output order: same as input. 
+        --reorder - Output order: aligned. Default: same as input</description>
+        <optionNames>--inputorder</optionNames>
+        <optionNames>--reorder</optionNames>
+        <furtherDetails>http://www.compbio.dundee.ac.uk/users/pvtroshin/ws/Index.html</furtherDetails>
+        <defaultValue>--inputorder</defaultValue>
+    </options>
+	<options isRequired="false">
+        <name>Sequence type</name>
+        <description>
+        --nuc - Assume the sequences are nucleotide.
+        --amino - Assume the sequences are amino acid. </description>
+        <optionNames>--amino</optionNames>
+        <optionNames>--nuc</optionNames>
+        <optionNames>--auto</optionNames>
+        <furtherDetails>http://www.compbio.dundee.ac.uk/users/pvtroshin/ws/Index.html</furtherDetails>
+        <defaultValue>--auto</defaultValue>
+    </options>
+    <options isRequired="false">
+        <name>Pairwise alignment computation method</name>
+        <description>
+        --globalpair
+		All pairwise alignments are computed with the Needleman-Wunsch algorithm. More accurate but slower than --6merpair. Suitable for a set of globally alignable sequences. Applicable to up to ~200 sequences. A combination with --maxiterate 1000 is recommended (G-INS-i). Default: off (6mer distance is used)
+        --genafpair 
+        All pairwise alignments are computed with a local algorithm with the generalized affine gap cost (Altschul 1998). More accurate but slower than --6merpair. Suitable when large internal gaps are expected. Applicable to up to ~200 sequences. A combination with --maxiterate 1000 is recommended (E-INS-i). Default: off (6mer distance is used)
+        --fastapair
+        All pairwise alignments are computed with FASTA (Pearson and Lipman 1988). FASTA is required. Default: off (6mer distance is used)
+        --localpair
+        All pairwise alignments are computed with the Smith-Waterman algorithm. More accurate but slower than --6merpair. Suitable for a set of locally alignable sequences. Applicable to up to ~200 sequences. A combination with --maxiterate 1000 is recommended (L-INS-i). Default: off (6mer distance is used)
+        </description>
+        <optionNames>--fastapair</optionNames>
+        <optionNames>--genafpair</optionNames>
+        <optionNames>--localpair</optionNames>
+        <optionNames>--globalpair</optionNames>
+        <furtherDetails>http://www.compbio.dundee.ac.uk/users/pvtroshin/ws/Index.html</furtherDetails>
+    </options>
+    <options isRequired="false">
+        <name>FFT approximation</name>
+        <description>Use / Do not use FFT approximation in group-to-group alignment. Default: off</description>
+        <optionNames>--nofft</optionNames>
+        <optionNames>--fft</optionNames>
+        <furtherDetails>http://www.compbio.dundee.ac.uk/users/pvtroshin/ws/Index.html</furtherDetails>
+    </options>
+    <options isRequired="false">
+        <name>No score</name>
+        <description>Alignment score is not checked in the iterative refinement stage. Default: off (score is checked)</description>
+        <optionNames>--noscore</optionNames>
+        <furtherDetails>http://www.compbio.dundee.ac.uk/users/pvtroshin/ws/Index.html</furtherDetails>
+    </options>
+	<options isRequired="false">
+        <name>Part tree</name>
+		<description>
+        --parttree - Use a fast tree-building method (PartTree, Katoh and Toh 2007) with the 6mer distance. 
+		--dpparttree - the PartTree algorithm is used with distances based on DP. 
+		Slightly more accurate and slower than --parttree. 
+        --fastaparttree - The PartTree algorithm is used with distances based on FASTA. 
+        Slightly more accurate and slower than --parttree. 
+        All methods recommended for a large number (> ~10,000) of sequences are input.
+        </description> 
+        <optionNames>--dpparttree</optionNames>
+        <optionNames>--parttree</optionNames>
+        <optionNames>--fastaparttree</optionNames>
+        <furtherDetails>http://www.compbio.dundee.ac.uk/users/pvtroshin/ws/Index.html</furtherDetails>
+    </options>
+    <prmSeparator> </prmSeparator>
+        <parameters isRequired="false">
+        <name>Max iteration number</name>
+        <description>number cycles of iterative refinement are performed. Default: 0</description>
+        <optionNames>--maxiterate</optionNames>
+        <furtherDetails>http://www.compbio.dundee.ac.uk/users/pvtroshin/ws/Index.html</furtherDetails>
+        <defaultValue>0</defaultValue>
+        <validValue>
+        	<type>Integer</type>
+            <min>0</min>
+            <max>1000</max>
+        </validValue>
+    </parameters>
+    <parameters isRequired="false">
+        <name>Partsize</name>
+        <description>The number of partitions in the PartTree algorithm. Default: 50</description>
+        <optionNames>--partsize</optionNames>
+        <furtherDetails>http://www.compbio.dundee.ac.uk/users/pvtroshin/ws/Index.html</furtherDetails>
+        <defaultValue>50</defaultValue>
+        <validValue>
+        	<type>Integer</type>
+        	<min>1</min>
+        </validValue>
+     </parameters>
+	<parameters isRequired="false">
+        <name>Group size</name>
+        <description>Do not make alignment larger than number sequences. Valid only with the --*parttree options. Default: the number of input sequences</description>
+        <optionNames>--groupsize</optionNames>
+        <furtherDetails>http://www.compbio.dundee.ac.uk/users/pvtroshin/ws/Index.html</furtherDetails>
+        <defaultValue>20</defaultValue>
+        <validValue>
+        	<type>Integer</type>
+        	<min>0</min>
+        </validValue>
+      </parameters>
+    <parameters isRequired="false">
+        <name>Guide tree rebuild</name>
+        <description>Guide tree is built number times in the progressive stage. Valid with 6mer distance. Default: 2</description>
+        <optionNames>--retree</optionNames>
+        <furtherDetails>http://www.compbio.dundee.ac.uk/users/pvtroshin/ws/Index.html</furtherDetails>
+       	<defaultValue>2</defaultValue>
+        <validValue>
+        	<type>Integer</type>
+        	<min>1</min>
+        	<max>100</max>
+        </validValue>
+     </parameters>
+    <parameters isRequired="false">
+        <name>Gap opening penalty</name>
+        <description>Gap opening penalty at group-to-group alignment. Default: 1.53</description>
+        <optionNames>--op</optionNames>
+        <furtherDetails>http://www.compbio.dundee.ac.uk/users/pvtroshin/ws/Index.html</furtherDetails>
+        <defaultValue>1.53</defaultValue>
+         <validValue>
+        	<type>Float</type>
+        	<min>0</min>
+        </validValue>
+     </parameters> 
+    <parameters isRequired="false">
+        <name>Group-to-group gap extension penalty</name>
+        <description>Offset value, which works like gap extension penalty, for group-to-group alignment. Deafult: 0.123</description>
+        <optionNames>--ep</optionNames>
+        <furtherDetails>http://www.compbio.dundee.ac.uk/users/pvtroshin/ws/Index.html</furtherDetails>
+        <defaultValue>0.123</defaultValue>
+         <validValue>
+        	<type>Float</type>
+        	<min>0</min>
+        </validValue>
+     </parameters> 
+   <parameters isRequired="false">
+        <name>Gap opening penalty at local pairwise alignment</name>
+        <description>Gap opening penalty at local pairwise alignment. Valid when the --localpair or --genafpair option is selected. Default: -2.00</description>
+        <optionNames>--lop</optionNames>
+        <furtherDetails>http://www.compbio.dundee.ac.uk/users/pvtroshin/ws/Index.html</furtherDetails>
+   		<defaultValue>-2.00</defaultValue>
+        <validValue>
+        	<type>Float</type>
+        	<max>0</max>
+        </validValue>
+   </parameters>  
+</runnerConfig>

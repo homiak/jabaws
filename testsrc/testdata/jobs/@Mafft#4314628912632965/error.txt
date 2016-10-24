@@ -1,0 +1,59 @@
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+Gap Penalty = -2.00, -0.10, +0.10
+    0 / 9    1 / 9    2 / 9    3 / 9    4 / 9    5 / 9    6 / 9    7 / 9##### writing hat3
+freeing localhom
+pairlocalalign (nuc) Version 6.713b alg=A, model=DNA200 (2),  2.000 ( 6.000), -0.099 (-0.297)
+blosum 62 / kimura 200
+Loading 'hat3' ... 
+done.
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+Gap Penalty = -1.53, +0.00, +0.00
+Loading 'hat2' ... done.
+Constructing a UPGMA tree ... 
+    0 / 9
+done.
+
+Progressive alignment ... 
+STEP     1 /8 cSTEP     2 /8 cSTEP     3 /8 cSTEP     4 /8 cSTEP     5 /8 cSTEP     6 /8 cSTEP     7 /8 cSTEP     8 /8 c
+done.
+freeing localhom
+tbfast (nuc) Version 6.713b alg=A, model=DNA200 (2),  1.530 ( 4.590), -0.000 (-0.000)
+blosum 62 / kimura 200
+poffset = 0
+niter = 16
+Loading 'hat3' ... done.
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+
+0 / 9
+Segment   1/  1    1-6269
+STEP 001-001-0  identical.STEP 001-001-1  identical.STEP 001-002-0  identical.STEP 001-002-1  identical.STEP 001-003-0  identical.STEP 001-003-1  identical.STEP 001-004-0  identical.STEP 001-004-1  identical.STEP 001-005-0  identical.STEP 001-005-1  identical.STEP 001-006-0  identical.STEP 001-006-1  identical.STEP 001-007-0  accepted.STEP 001-007-1  accepted.STEP 001-008-1  rejected.STEP 002-008-1  rejected.STEP 002-007-0  identical.STEP 002-007-1  identical.STEP 002-006-0  identical.STEP 002-006-1  identical.STEP 002-005-0  identical.STEP 002-005-1  identical.STEP 002-004-0  identical.STEP 002-004-1  identical.STEP 002-003-0  identical.STEP 002-003-1  identical.STEP 002-002-0  identical.STEP 002-002-1  identical.STEP 002-001-0  identical.STEP 002-001-1  identical.STEP 003-001-0  identical.STEP 003-001-1  identical.
+Converged.
+
+constraint = 2
+freeing localhom
+done
+dvtditr (nuc) Version 6.713b alg=A, model=DNA200 (2),  1.530 ( 4.590), -0.000 (-0.000)
+comment = G-INS-i
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+
+
+Strategy:
+ G-INS-i (Suitable for sequences of similar lengths, very slow)
+ Iterative refinement method (<16) with GLOBAL pairwise alignment information
+
+If unsure which option to use, try 'mafft --auto input > output'.
+If the possibility of long gaps can be excluded, add '--ep 0.123'.
+For more information, see 'mafft --help', 'mafft --man' and the mafft page.
+

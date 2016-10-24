@@ -1,0 +1,52 @@
+CLUSTAL 2.0.12 multiple sequence alignment
+
+
+Foobar_dundeefriends      MTADGPRELLQLRAAVRHRPQDFVAWLMLADAELGMGDTTAGEMAVQRGLALHPGHPEAV
+Foobar                    -----------------------------------MGDTTAGEMAVQRGLALH-------
+dundeefriends             -MTADGPRELLQLRAAVRHRPQDVAWLMLADAELGMGDTTAGEMAVQRGLALHPGHPEAV
+                                                             ******************       
+
+Foobar_dundeefriends      ARLGRVRWTQQRHAEAAVLLQQASDAAPEHPGIALWLGHALEDAGQAEAAAAAYTRAHQL
+Foobar                    ---------QQRHAEAAVLLQQASDAAPEHPGIALWL-HALEDAGQAEAAAA-YTRAHQL
+dundeefriends             ARLGRVRWTQQRHAEAAVLLQQASDAAPEHPGIALWLGHALED--------------HQL
+                                   **************************** *****              ***
+
+Foobar_dundeefriends      LPEEPYITAQLLNWRRRLCDWRALDVLSAQVRAAVAQGVGAVEPFAFLSEDASAAEQLAC
+Foobar                    LPEEPYITAQLLN--------------------AVAQGVGAVEPFAFLSEDASAAE----
+dundeefriends             LPEEPYITAQLDVLSAQVR-------------AAVAQGVGAVEPFAFLSEDASAAEQLAC
+                          ***********                      ***********************    
+
+Foobar_dundeefriends      ARTRAQAIAASVRPLAPTRVRSKGPLRVGFVSNGFGAHPTGLLTVALFEALQRRQPDLQM
+Foobar                    ----------SVRPLAPTRVRSKGPLRVGFVSNGFGAHPTGLLTVALFEALQRRQPDLQM
+dundeefriends             ARTRAQAIAASVRPLAPTRVRSKGPLRVGFVSNGFGAHPTGLLTVALFEALQRRQPDLQM
+                                    **************************************************
+
+Foobar_dundeefriends      HLFATSGDDGSTLRTRLAQASTLHDVTALGHLATAKHIRHHGIDLLFDLRGWGGGGRPEV
+Foobar                    HLFATSGDDGSTLRTRLAQASTLHDVTALGHLATAKHIRHHGIDLLFDLRGWGGGGRPEV
+dundeefriends             HLFATSGDDGSTLRTRLAQASTLHDVTALGHLATAKHIRHHGIDLLFDLRGWGGGGRPEV
+                          ************************************************************
+
+Foobar_dundeefriends      FALRPAPVQVNWLAYPGTSGAPWMDYVLGDAFALPPALEPFYSEHVLRLQGAFQPSDTSR
+Foobar                    FALRPAPVQVNWLAYPGTSGAPWMDYVLGDAFALPPALEPFYSEHVLRLQGAFQPSDTSR
+dundeefriends             FALRPAPVQVNWLAYPGTSGAPWMDYVLGDAFALPPALEPFYSEHVLRLQGAFQPSDTSR
+                          ************************************************************
+
+Foobar_dundeefriends      VVAEPPSRTQCGLPEQGVVLCCFNNSYKLNPQSMARMLAVLREVPDSVLWLLSGPGEADA
+Foobar                    VVAEPPSRTQCGLPEQGVVLCCFNNSYKLNPQSMARMLAVLREVPDSVLWLLSGPGEADA
+dundeefriends             VVAEPPSRTQCGLPEQGVVLCCFNNSYKLNPQSMARMLAVLREVPDSVLWLLSGPGEADA
+                          ************************************************************
+
+Foobar_dundeefriends      RLRAFAHAQGVDAQRLVFMPKLPHPQYLARYRHADLFLDTHPYNAHTTASDALWTGCPVL
+Foobar                    RLRAFAHAQGVDAQRLVFMPKLPHPQYLARYRHADLFLDTHPYNAHTTASDALWTGCPVL
+dundeefriends             RLRAFAHAQGVDAQRLVFMPKLPHPQYLARYRHADLFLDTHPYNAHTTASDALWTGCPVL
+                          ************************************************************
+
+Foobar_dundeefriends      TTPGETFAARVAGSLNHHLGLDEMNVADDAAFVAKAVALASDPAALTALHARVDVLRRES
+Foobar                    TTPGETFAARVAGSLNHHLGLDEMNVADDAAFVAKAVALASDPAALTALHARVDVLRRES
+dundeefriends             TTPGETFAARVAGSLNHHLGLDEMNVADDAAFVAKAVALASDPAALTALHARVDVLRRES
+                          ************************************************************
+
+Foobar_dundeefriends      GVFEMDGFADDFGALLQALARRHGWLGI
+Foobar                    GVFEMDGFADDFGALLQALARRHGWLGI
+dundeefriends             I---------------------------
+                                                      

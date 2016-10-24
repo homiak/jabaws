@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="US-ASCII" standalone="yes"?>
+<runnerConfig>
+	<runnerClassName>compbio.runner.disorder.IUPred</runnerClassName>
+	<options isRequired="true">
+        <name>Disorder type</name>
+        <description> "Long" - for prediction of long disordered regions, "short" - for 
+        prediction of short disordered regions ( e.g. missing residues in
+  X-ray structures) and "glob" for predicting globular domains. "All" for all methods</description>
+        <optionNames>short</optionNames>
+        <optionNames>long</optionNames>
+        <optionNames>glob</optionNames>
+        <optionNames>all</optionNames>
+        <furtherDetails>prog_docs/iupred.txt</furtherDetails>
+        <defaultValue>long</defaultValue>
+    </options>
+</runnerConfig>

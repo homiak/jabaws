@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://msa.data.compbio/01/12/2010/" xmlns:tns="http://msa.data.compbio/01/12/2010/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="JobSubmissionException" type="tns:JobSubmissionException"/>
+
+  <xs:element name="LimitExceededException" type="tns:LimitExceededException"/>
+
+  <xs:element name="ResultNotAvailableException" type="tns:ResultNotAvailableException"/>
+
+  <xs:element name="UnsupportedRuntimeException" type="tns:UnsupportedRuntimeException"/>
+
+  <xs:element name="WrongParameterException" type="tns:WrongParameterException"/>
+
+  <xs:element name="analize" type="tns:analize"/>
+
+  <xs:element name="analizeResponse" type="tns:analizeResponse"/>
+
+  <xs:element name="cancelJob" type="tns:cancelJob"/>
+
+  <xs:element name="cancelJobResponse" type="tns:cancelJobResponse"/>
+
+  <xs:element name="customAnalize" type="tns:customAnalize"/>
+
+  <xs:element name="customAnalizeResponse" type="tns:customAnalizeResponse"/>
+
+  <xs:element name="getAnnotation" type="tns:getAnnotation"/>
+
+  <xs:element name="getAnnotationResponse" type="tns:getAnnotationResponse"/>
+
+  <xs:element name="getJobStatus" type="tns:getJobStatus"/>
+
+  <xs:element name="getJobStatusResponse" type="tns:getJobStatusResponse"/>
+
+  <xs:element name="getLimit" type="tns:getLimit"/>
+
+  <xs:element name="getLimitResponse" type="tns:getLimitResponse"/>
+
+  <xs:element name="getLimits" type="tns:getLimits"/>
+
+  <xs:element name="getLimitsResponse" type="tns:getLimitsResponse"/>
+
+  <xs:element name="getPresets" type="tns:getPresets"/>
+
+  <xs:element name="getPresetsResponse" type="tns:getPresetsResponse"/>
+
+  <xs:element name="getRunnerOptions" type="tns:getRunnerOptions"/>
+
+  <xs:element name="getRunnerOptionsResponse" type="tns:getRunnerOptionsResponse"/>
+
+  <xs:element name="limits" type="tns:limitsManager"/>
+
+  <xs:element name="presetAnalize" type="tns:presetAnalize"/>
+
+  <xs:element name="presetAnalizeResponse" type="tns:presetAnalizeResponse"/>
+
+  <xs:element name="presets" type="tns:presetManager"/>
+
+  <xs:element name="pullExecStatistics" type="tns:pullExecStatistics"/>
+
+  <xs:element name="pullExecStatisticsResponse" type="tns:pullExecStatisticsResponse"/>
+
+  <xs:element name="runnerConfig" type="tns:runnerConfig"/>
+
+  <xs:complexType name="presetAnalize">
+    <xs:sequence>
+      <xs:element name="fastaSequences" type="tns:fastaSequence" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="preset" type="tns:preset" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="fastaSequence">
+    <xs:sequence>
+      <xs:element name="id" type="xs:string" minOccurs="0"/>
+      <xs:element name="sequence" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="preset">
+    <xs:sequence>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element name="description" type="xs:string" minOccurs="0"/>
+      <xs:element name="optlist" minOccurs="0">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="option" type="xs:string" maxOccurs="unbounded"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="presetAnalizeResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="UnsupportedRuntimeException">
+    <xs:sequence>
+      <xs:element name="message" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="LimitExceededException">
+    <xs:sequence>
+      <xs:element name="actualNumberofSequences" type="xs:int"/>
+      <xs:element name="message" type="xs:string" minOccurs="0"/>
+      <xs:element name="numberOfSequencesAllowed" type="xs:int"/>
+      <xs:element name="sequenceLenghtActual" type="xs:int"/>
+      <xs:element name="sequenceLenghtAllowed" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="JobSubmissionException">
+    <xs:sequence>
+      <xs:element name="message" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WrongParameterException">
+    <xs:sequence>
+      <xs:element name="message" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getRunnerOptions">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="getRunnerOptionsResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:runnerConfig" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="runnerConfig">
+    <xs:sequence>
+      <xs:element name="options" type="tns:option" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="parameters" type="tns:parameter" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="prmSeparator" type="xs:string" minOccurs="0"/>
+      <xs:element name="runnerClassName" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="option">
+    <xs:sequence>
+      <xs:element name="description" type="xs:string"/>
+      <xs:element name="optionNames" type="xs:string" maxOccurs="unbounded"/>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element name="furtherDetails" type="xs:anyURI" minOccurs="0"/>
+      <xs:element name="defaultValue" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="isRequired" type="xs:boolean" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="parameter">
+    <xs:complexContent>
+      <xs:extension base="tns:option">
+        <xs:sequence>
+          <xs:element name="possibleValues" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="validValue" type="tns:valueConstrain" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="valueConstrain">
+    <xs:sequence>
+      <xs:element name="type" type="tns:type"/>
+      <xs:element name="max" type="xs:string" minOccurs="0"/>
+      <xs:element name="min" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="analize">
+    <xs:sequence>
+      <xs:element name="fastaSequences" type="tns:fastaSequence" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="analizeResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getJobStatus">
+    <xs:sequence>
+      <xs:element name="jobId" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getJobStatusResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:jobStatus" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="customAnalize">
+    <xs:sequence>
+      <xs:element name="fastaSequences" type="tns:fastaSequence" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="options" type="tns:option" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="customAnalizeResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getAnnotation">
+    <xs:sequence>
+      <xs:element name="jobId" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getAnnotationResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:scoreManager" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="scoreManager">
+    <xs:sequence>
+      <xs:element name="seqScores" type="tns:scoreHolder" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="scoreHolder">
+    <xs:sequence>
+      <xs:element name="id" type="xs:string" minOccurs="0"/>
+      <xs:element name="scores" type="tns:score" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="score">
+    <xs:sequence>
+      <xs:element name="method" type="xs:string" minOccurs="0"/>
+      <xs:element name="ranges" type="tns:range" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="scores" type="xs:float" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="range">
+    <xs:sequence>
+      <xs:element name="from" type="xs:int"/>
+      <xs:element name="to" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ResultNotAvailableException">
+    <xs:sequence>
+      <xs:element name="message" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="pullExecStatistics">
+    <xs:sequence>
+      <xs:element name="jobId" type="xs:string" minOccurs="0"/>
+      <xs:element name="position" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="pullExecStatisticsResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:chunkHolder" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="chunkHolder">
+    <xs:sequence>
+      <xs:element name="chunk" type="xs:string" minOccurs="0"/>
+      <xs:element name="position" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getPresets">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="getPresetsResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:presetManager" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="presetManager">
+    <xs:sequence>
+      <xs:element name="runnerClassName" type="xs:string"/>
+      <xs:element name="preset" type="tns:preset" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getLimits">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="getLimitsResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:limitsManager" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="limitsManager">
+    <xs:sequence>
+      <xs:element name="runnerClassName" type="xs:string" minOccurs="0"/>
+      <xs:element name="limit" type="tns:limit" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="limit">
+    <xs:sequence>
+      <xs:element name="preset" type="xs:string" minOccurs="0"/>
+      <xs:element name="seqNumber" type="xs:int"/>
+      <xs:element name="seqLength" type="xs:int"/>
+    </xs:sequence>
+    <xs:attribute name="isDefault" type="xs:boolean" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="getLimit">
+    <xs:sequence>
+      <xs:element name="presetName" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getLimitResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:limit" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="cancelJob">
+    <xs:sequence>
+      <xs:element name="jobId" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="cancelJobResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="type">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Integer"/>
+      <xs:enumeration value="Float"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="jobStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="PENDING"/>
+      <xs:enumeration value="RUNNING"/>
+      <xs:enumeration value="CANCELLED"/>
+      <xs:enumeration value="FINISHED"/>
+      <xs:enumeration value="FAILED"/>
+      <xs:enumeration value="UNDEFINED"/>
+      <xs:enumeration value="STARTED"/>
+      <xs:enumeration value="SUBMITTED"/>
+      <xs:enumeration value="COLLECTED"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>
+

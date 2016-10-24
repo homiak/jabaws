@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="compbio.runner.disorder.JronnTester" failures="0" tests="7" time="87.343" errors="0">
+  <properties/>
+  <testcase name="readStatistics" time="18.723" classname="compbio.runner.disorder.JronnTester"/>
+  <testcase name="testConfigurationLoading" time="0.028" classname="compbio.runner.disorder.JronnTester"/>
+  <testcase name="testPersistance" time="18.531" classname="compbio.runner.disorder.JronnTester"/>
+  <testcase name="testRunLocally" time="18.531" classname="compbio.runner.disorder.JronnTester"/>
+  <testcase name="testRunLocallyOnTwoCpu" time="7.172" classname="compbio.runner.disorder.JronnTester"/>
+  <testcase name="testRunOnCluster" time="12.83" classname="compbio.runner.disorder.JronnTester"/>
+  <testcase name="testRunOnClusterAsync" time="11.04" classname="compbio.runner.disorder.JronnTester"/>
+</testsuite>

@@ -1,0 +1,721 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1"><title>Manpage of MAFFT</title>
+<link rel="stylesheet" type="text/css" href="mafft_manual_files/tt.css">
+</head><body>
+<h1>MAFFT</h1>
+Section: Mafft Manual (1)<br>Updated: 2007-06-09<br><a href="#index">Index</a>
+<a href="http://align.bmr.kyushu-u.ac.jp/mafft/software/">Return to Main Contents</a><hr>
+
+
+
+
+
+<a name="lbAB">&nbsp;</a>
+<h2>NAME</h2>
+
+<dl compact="compact"><dt></dt><dd>
+mafft - Multiple alignment program for amino acid or nucleotide sequences
+</dd></dl>
+
+<a name="lbAC">&nbsp;</a>
+<h2>SYNOPSIS</h2>
+
+<dl compact="compact"><dt></dt><dd>
+<dl compact="compact">
+<dt>
+<b>mafft</b> [<b>options</b>] <i>input</i> [&gt;&nbsp;<i>output</i>]
+</dt><dt>
+<b>linsi</b> <i>input</i> [&gt;&nbsp;<i>output</i>]
+</dt><dt>
+<b>ginsi</b> <i>input</i> [&gt;&nbsp;<i>output</i>]
+</dt><dt>
+<b>einsi</b> <i>input</i> [&gt;&nbsp;<i>output</i>]
+</dt><dt>
+<b>fftnsi</b> <i>input</i> [&gt;&nbsp;<i>output</i>]
+</dt><dt>
+<b>fftns</b> <i>input</i> [&gt;&nbsp;<i>output</i>]
+</dt><dt>
+<b>nwns</b> <i>input</i> [&gt;&nbsp;<i>output</i>]
+</dt><dt>
+<b>nwnsi</b> <i>input</i> [&gt;&nbsp;<i>output</i>]
+</dt><dt>
+<b>mafft-profile</b> <i>group1</i> <i>group2</i> [&gt;&nbsp;<i>output</i>]
+</dt><dt>
+<p>
+<i>input</i>, <i>group1</i> and <i>group2</i> must be in FASTA format.
+</p></dt></dl>
+</dd></dl>
+
+<a name="lbAD">&nbsp;</a>
+<h2>DESCRIPTION</h2>
+
+<dl compact="compact"><dt></dt><dd>
+<b>MAFFT</b> is a multiple sequence alignment program for unix-like operating systems. It offers a range of multiple alignment methods.
+</dd></dl>
+<a name="lbAE">&nbsp;</a>
+<h3>Accuracy-oriented methods:</h3>
+
+<p>
+</p><dl compact="compact"><dt></dt><dd>
+*L-INS-i (probably most accurate; recommended for &lt;200 sequences;
+iterative refinement method incorporating local pairwise alignment
+information):
+<dl compact="compact">
+<dt>
+<b>mafft</b> <b>--localpair</b> <b>--maxiterate</b>&nbsp;<i>1000</i> <i>input</i> [&gt;&nbsp;<i>output</i>]
+</dt><dt>
+<b>linsi</b> <i>input</i> [&gt;&nbsp;<i>output</i>]
+</dt></dl>
+</dd></dl>
+
+<p>
+</p><dl compact="compact"><dt></dt><dd>*G-INS-i (suitable for sequences
+of similar lengths; recommended for &lt;200 sequences; iterative
+refinement method incorporating global pairwise alignment information):
+<dl compact="compact">
+<dt>
+<b>mafft</b> <b>--globalpair</b> <b>--maxiterate</b>&nbsp;<i>1000</i> <i>input</i> [&gt;&nbsp;<i>output</i>]
+</dt><dt>
+<b>ginsi</b> <i>input</i> [&gt;&nbsp;<i>output</i>]
+</dt></dl>
+</dd></dl>
+
+<p>
+</p><dl compact="compact"><dt></dt><dd>
+*E-INS-i (suitable for sequences containing large unalignable regions; recommended for &lt;200 sequences):
+<dl compact="compact">
+<dt>
+<b>mafft</b> <b>--ep</b>&nbsp;<i>0</i> <b>--genafpair</b> <b>--maxiterate</b>&nbsp;<i>1000</i> <i>input</i> [&gt;&nbsp;<i>output</i>]
+</dt><dt>
+<b>einsi</b> <i>input</i> [&gt;&nbsp;<i>output</i>]
+</dt><dd>
+<p>
+</p></dd><dd>For E-INS-i, the
+<b>--ep</b>
+<i>0</i>
+option is recommended to allow large gaps.
+</dd></dl>
+</dd></dl>
+
+<a name="lbAF">&nbsp;</a>
+<h3>Speed-oriented methods:</h3>
+
+<p>
+</p><dl compact="compact"><dt></dt><dd>
+*FFT-NS-i (iterative refinement method; two cycles only):
+<dl compact="compact">
+<dt>
+<b>mafft</b> <b>--retree</b>&nbsp;<i>2</i> <b>--maxiterate</b>&nbsp;<i>2</i> <i>input</i> [&gt;&nbsp;<i>output</i>]
+</dt><dt>
+<b>fftnsi</b> <i>input</i> [&gt;&nbsp;<i>output</i>]
+</dt></dl>
+</dd></dl>
+
+<p>
+</p><dl compact="compact"><dt></dt><dd>
+*FFT-NS-i (iterative refinement method; max. 1000 iterations):
+<dl compact="compact">
+<dt>
+<b>mafft</b> <b>--retree</b>&nbsp;<i>2</i> <b>--maxiterate</b>&nbsp;<i>1000</i> <i>input</i> [&gt;&nbsp;<i>output</i>]
+</dt></dl>
+</dd></dl>
+
+<p>
+</p><dl compact="compact"><dt></dt><dd>
+*FFT-NS-2 (fast; progressive method):
+<dl compact="compact">
+<dt>
+<b>mafft</b> <b>--retree</b>&nbsp;<i>2</i> <b>--maxiterate</b>&nbsp;<i>0</i> <i>input</i> [&gt;&nbsp;<i>output</i>]
+</dt><dt>
+<b>fftns</b> <i>input</i> [&gt;&nbsp;<i>output</i>]
+</dt></dl>
+</dd></dl>
+
+<p>
+</p><dl compact="compact"><dt></dt><dd>
+*FFT-NS-1 (very fast; recommended for &gt;2000 sequences; progressive method with a rough guide tree):
+<dl compact="compact">
+<dt>
+<b>mafft</b> <b>--retree</b>&nbsp;<i>1</i> <b>--maxiterate</b>&nbsp;<i>0</i> <i>input</i> [&gt;&nbsp;<i>output</i>]
+</dt></dl>
+</dd></dl>
+
+<p>
+</p><dl compact="compact"><dt></dt><dd>
+*NW-NS-i (iterative refinement method without FFT approximation; two cycles only):
+<dl compact="compact">
+<dt>
+<b>mafft</b> <b>--retree</b>&nbsp;<i>2</i> <b>--maxiterate</b>&nbsp;<i>2</i> <b>--nofft</b>&nbsp;<i>input</i> [&gt;&nbsp;<i>output</i>]
+</dt><dt>
+<b>nwnsi</b> <i>input</i> [&gt;&nbsp;<i>output</i>]
+</dt></dl>
+</dd></dl>
+
+<p>
+</p><dl compact="compact"><dt></dt><dd>
+*NW-NS-2 (fast; progressive method without the FFT approximation):
+<dl compact="compact">
+<dt>
+<b>mafft</b> <b>--retree</b>&nbsp;<i>2</i> <b>--maxiterate</b>&nbsp;<i>0</i> <b>--nofft</b>&nbsp;<i>input</i> [&gt;&nbsp;<i>output</i>]
+</dt><dt>
+<b>nwns</b> <i>input</i> [&gt;&nbsp;<i>output</i>]
+</dt></dl>
+</dd></dl>
+
+<p>
+</p><dl compact="compact"><dt></dt><dd>
+*NW-NS-PartTree-1 (recommended for ~10,000 to ~50,000 sequences; progressive method with the PartTree algorithm):
+<dl compact="compact">
+<dt>
+<b>mafft</b> <b>--retree</b>&nbsp;<i>1</i> <b>--maxiterate</b>&nbsp;<i>0</i> <b>--nofft</b>&nbsp;<b>--parttree</b> <i>input</i> [&gt;&nbsp;<i>output</i>]
+</dt></dl>
+</dd></dl>
+
+<a name="lbAG">&nbsp;</a>
+<h3>Group-to-group alignments</h3>
+
+<dl compact="compact">
+<dt>
+</dt><dl compact="compact"><dt></dt><dd>
+<b>mafft-profile</b> <i>group1</i> <i>group2</i> [&gt;&nbsp;<i>output</i>]
+<p>
+</p></dd><dd>or:
+<p>
+<b>mafft</b> <b>--maxiterate</b>&nbsp;<i>1000</i> <b>--seed</b>&nbsp;<i>group1</i> <b>--seed</b>&nbsp;<i>group2</i> /dev/null [&gt;&nbsp;<i>output</i>]
+</p></dd></dl>
+
+
+
+</dl>
+<a name="lbAH">&nbsp;</a>
+<h2>OPTIONS</h2>
+
+<a name="lbAI">&nbsp;</a>
+<h3>Algorithm</h3>
+
+<dl compact="compact"><dt></dt><dd>
+<p>
+
+<b>--auto</b>
+</p><dl compact="compact"><dt></dt><dd>
+Automatically selects an appropriate strategy from L-INS-i, FFT-NS-i and FFT-NS-2, according to data 
+size.  Default: off (always FFT-NS-2)
+</dd></dl>
+
+<p>
+
+<b>--6merpair</b>
+</p><dl compact="compact"><dt></dt><dd>
+Distance is calculated based on the number of shared 6mers.  Default: on
+</dd></dl>
+
+<p>
+
+<b>--globalpair</b>
+</p><dl compact="compact"><dt></dt><dd>
+All pairwise alignments are computed with the Needleman-Wunsch
+algorithm.  More accurate but slower 
+than --6merpair.  Suitable for a set of
+globally alignable sequences.  Applicable to 
+up to ~200 sequences.  A combination with --maxiterate 1000 is recommended (G-INS-i).  Default: off (6mer distance is used)
+</dd></dl>
+
+<p>
+
+<b>--localpair</b>
+</p><dl compact="compact"><dt></dt><dd>
+All pairwise alignments are computed with the Smith-Waterman
+algorithm.  More accurate but slower
+than --6merpair.  Suitable for a set of 
+locally alignable sequences.  Applicable to 
+up to ~200 sequences.  A combination with --maxiterate 1000 is recommended (L-INS-i).  Default: off (6mer distance is used)
+</dd></dl>
+
+<p>
+
+<b>--genafpair</b>
+</p><dl compact="compact"><dt></dt><dd>
+All pairwise alignments are computed with a local
+algorithm with the generalized affine gap cost
+(Altschul 1998).  More accurate but slower
+than --6merpair.  Suitable when large internal gaps
+are expected.  Applicable to 
+up to ~200 sequences.  A combination with --maxiterate 1000 is recommended (E-INS-i).  Default: off (6mer distance is used)
+</dd></dl>
+
+
+
+
+
+
+
+<p>
+
+<b>--fastapair</b>
+</p><dl compact="compact"><dt></dt><dd>
+All pairwise alignments are computed with FASTA (Pearson and Lipman 1988).
+FASTA is required.  Default: off (6mer distance is used)
+</dd></dl>
+
+
+
+
+
+
+
+<p>
+
+<b>--weighti</b> <i>number</i>
+</p><dl compact="compact"><dt></dt><dd>
+Weighting factor for the consistency term calculated from pairwise alignments.  Valid when 
+either of --blobalpair, --localpair,  --genafpair, --fastapair or 
+--blastpair is selected.  Default: 2.7
+</dd></dl>
+
+<p>
+
+<b>--retree</b> <i>number</i>
+</p><dl compact="compact"><dt></dt><dd>
+Guide tree is built <i>number</i> times in the 
+progressive stage.  Valid with 6mer distance.  Default: 2
+</dd></dl>
+
+<p>
+
+<b>--maxiterate</b> <i>number</i>
+</p><dl compact="compact"><dt></dt><dd>
+<i>number</i> cycles of iterative refinement are performed.  Default: 0
+</dd></dl>
+
+<p>
+
+<b>--fft</b>
+</p><dl compact="compact"><dt></dt><dd>
+Use FFT approximation in group-to-group alignment.  Default: on
+</dd></dl>
+
+<p>
+
+<b>--nofft</b>
+</p><dl compact="compact"><dt></dt><dd>
+Do not use FFT approximation in group-to-group alignment.  Default: off
+</dd></dl>
+
+<p>
+
+<b>--noscore</b>
+</p><dl compact="compact"><dt></dt><dd>
+Alignment score is not checked in the iterative refinement stage.  Default: off (score is checked)
+</dd></dl>
+
+<p>
+
+<b>--memsave</b>
+</p><dl compact="compact"><dt></dt><dd>
+Use the Myers-Miller (1988) algorithm.  Default: automatically turned on when the alignment length exceeds 10,000 (aa/nt).
+</dd></dl>
+
+<p>
+
+<b>--parttree</b>
+</p><dl compact="compact"><dt></dt><dd>
+Use a fast tree-building method (PartTree, Katoh and Toh 2007) with
+the 6mer distance.  Recommended for a large number (&gt; ~10,000) 
+of sequences are input.  Default: off
+</dd></dl>
+
+<p>
+
+<b>--dpparttree</b>
+</p><dl compact="compact"><dt></dt><dd>
+The PartTree algorithm is used with distances based on DP.  Slightly
+more accurate and slower than --parttree.  Recommended for a large
+number (&gt; ~10,000) of sequences are input.   Default: off
+</dd></dl>
+
+<p>
+
+<b>--fastaparttree</b>
+</p><dl compact="compact"><dt></dt><dd>The PartTree algorithm is used
+with distances based on FASTA. Slightly more accurate and slower than
+--parttree. Recommended for a large number (&gt; ~10,000) of sequences
+are input. FASTA is required. Default: off
+</dd></dl>
+
+<p>
+
+<b>--partsize</b> <i>number</i>
+</p><dl compact="compact"><dt></dt><dd>
+The number of partitions in the PartTree algorithm.  Default: 50
+</dd></dl>
+
+<p>
+
+<b>--groupsize</b> <i>number</i>
+</p><dl compact="compact"><dt></dt><dd>
+Do not make alignment larger than <i>number</i> sequences. Valid only with the --*parttree options.  Default: the number of input sequences
+</dd></dl>
+
+</dd></dl>
+
+<a name="lbAJ">&nbsp;</a>
+<h3>Parameter</h3>
+
+<dl compact="compact"><dt></dt><dd>
+<p>
+
+<b>--op</b> <i>number</i>
+</p><dl compact="compact"><dt></dt><dd>
+Gap opening penalty at group-to-group alignment.  Default: 1.53
+</dd></dl>
+
+<p>
+
+<b>--ep</b> <i>number</i>
+</p><dl compact="compact"><dt></dt><dd>
+Offset value, which works like gap extension penalty, for
+group-to-group alignment.  Deafult: 0.123
+</dd></dl>
+
+<p>
+
+<b>--lop</b> <i>number</i>
+</p><dl compact="compact"><dt></dt><dd>
+Gap opening penalty at local pairwise 
+alignment.  Valid when
+the --localpair or --genafpair option is selected.  Default: -2.00
+</dd></dl>
+
+<p>
+
+<b>--lep</b> <i>number</i>
+</p><dl compact="compact"><dt></dt><dd>
+Offset value at local pairwise alignment.  Valid when
+the --localpair or --genafpair option is selected.  Default: 0.1
+</dd></dl>
+
+<p>
+
+<b>--lexp</b> <i>number</i>
+</p><dl compact="compact"><dt></dt><dd>
+Gap extension penalty at local pairwise alignment.  Valid when
+the --localpair or --genafpair option is selected.  Default: -0.1
+</dd></dl>
+
+<p>
+
+<b>--LOP</b> <i>number</i>
+</p><dl compact="compact"><dt></dt><dd>
+Gap opening penalty to skip the alignment.  Valid when the
+--genafpair option is selected.   Default: -6.00
+</dd></dl>
+
+<p>
+
+<b>--LEXP</b> <i>number</i>
+</p><dl compact="compact"><dt></dt><dd>
+Gap extension penalty to skip the alignment.  Valid when the
+--genafpair option is selected.   Default: 0.00
+</dd></dl>
+
+<p>
+
+<b>--bl</b> <i>number</i>
+</p><dl compact="compact"><dt></dt><dd>
+BLOSUM <i>number</i> matrix (Henikoff and Henikoff 1992) is used.  <i>number</i>=30, 45, 62 or 80.  Default: 62
+</dd></dl>
+
+<p>
+
+<b>--jtt</b> <i>number</i>
+</p><dl compact="compact"><dt></dt><dd>
+JTT PAM <i>number</i> (Jones et al. 1992) matrix is used.  <i>number</i>&gt;0.  Default: BLOSUM62
+</dd></dl>
+
+<p>
+
+<b>--tm</b> <i>number</i>
+</p><dl compact="compact"><dt></dt><dd>
+Transmembrane PAM <i>number</i> (Jones et al. 1994) matrix is used.  <i>number</i>&gt;0.  Default: BLOSUM62
+</dd></dl>
+
+<p>
+
+<b>--aamatrix</b> <i>matrixfile</i>
+</p><dl compact="compact"><dt></dt><dd>
+Use a user-defined AA scoring matrix.  The format of <i>matrixfile</i> is
+the same to that of BLAST.  Ignored when nucleotide sequences are input.   Default: BLOSUM62
+</dd></dl>
+
+<p>
+
+<b>--fmodel</b>
+</p><dl compact="compact"><dt></dt><dd>
+Incorporate the AA/nuc composition information into
+the scoring matrix.  Deafult: off
+</dd></dl>
+
+</dd></dl>
+
+<a name="lbAK">&nbsp;</a>
+<h3>Output</h3>
+
+<dl compact="compact"><dt></dt><dd>
+<p>
+
+<b>--clustalout</b>
+</p><dl compact="compact"><dt></dt><dd>
+Output format: clustal format.  Default: off (fasta format)
+</dd></dl>
+
+<p>
+
+<b>--inputorder</b>
+</p><dl compact="compact"><dt></dt><dd>
+Output order: same as input.  Default: on
+</dd></dl>
+
+<p>
+
+<b>--reorder</b>
+</p><dl compact="compact"><dt></dt><dd>
+Output order: aligned.  Default: off (inputorder)
+</dd></dl>
+
+<p>
+
+<b>--treeout</b>
+</p><dl compact="compact"><dt></dt><dd>
+Guide tree is output to the <i>input</i>.tree file.  Default: off
+</dd></dl>
+
+<p>
+
+<b>--quiet</b>
+</p><dl compact="compact"><dt></dt><dd>
+Do not report progress.  Default: off
+</dd></dl>
+
+</dd></dl>
+
+<a name="lbAL">&nbsp;</a>
+<h3>Input</h3>
+
+<dl compact="compact"><dt></dt><dd>
+<p>
+
+<b>--nuc</b>
+</p><dl compact="compact"><dt></dt><dd>
+Assume the sequences are nucleotide.  Deafult: auto
+</dd></dl>
+
+<p>
+
+<b>--amino</b>
+</p><dl compact="compact"><dt></dt><dd>
+Assume the sequences are amino acid.  Deafult: auto
+</dd></dl>
+
+<p>
+
+<b>--seed</b> <i>alignment1</i> [<b>--seed</b> <i>alignment2</i> <b>--seed</b> <i>alignment3</i> ...]
+</p><dl compact="compact"><dt></dt><dd>
+Seed alignments given in <i>alignment_n</i> (fasta format) are aligned with 
+sequences in <i>input</i>.  The alignment within every seed is preserved.  
+</dd></dl>
+
+</dd></dl>
+
+<a name="lbAM">&nbsp;</a>
+<h2>FILES</h2>
+
+<dl compact="compact"><dt></dt><dd>
+<p>
+
+Mafft stores the input sequences and other files in a temporary directory, which by default is located in
+<i>/tmp</i>.
+</p></dd></dl>
+
+<a name="lbAN">&nbsp;</a>
+<h2>ENVIONMENT</h2>
+
+<dl compact="compact"><dt></dt><dd>
+<p>
+
+<b>MAFFT_BINARIES</b>
+</p><dl compact="compact"><dt></dt><dd>
+Indicates the location of the binary files used by mafft. By default, they are searched in
+<i>/usr/local/lib/mafft</i>, but on Debian systems, they are searched in
+<i>/usr/lib/mafft</i>.
+</dd></dl>
+
+<p>
+
+<b>FASTA_4_MAFFT</b>
+</p><dl compact="compact"><dt></dt><dd>
+This variable can be set to indicate to mafft the location to the fasta34 program if it is not in the PATH.
+</dd></dl>
+
+</dd></dl>
+
+<a name="lbAO">&nbsp;</a>
+<h2>SEE ALSO</h2>
+
+<dl compact="compact"><dt></dt><dd>
+<p>
+
+</p><p>
+<b><a href="http://align.bmr.kyushu-u.ac.jp/mafft/software/manual/mafft-homologs2.1.html">mafft-homologs</a></b>(1)
+</p></dd></dl>
+
+<a name="lbAP">&nbsp;</a>
+<h2>REFERENCES</h2>
+
+<dl compact="compact"><dt></dt><dd>
+</dd></dl>
+<a name="lbAQ">&nbsp;</a>
+<h3>In English</h3>
+
+<p>
+</p><dl compact="compact"><dt></dt><dd>*Katoh and Toh (Bioinformatics
+23:372-374, 2007) PartTree: an algorithm to build an approximate tree
+from a large number of unaligned sequences (describes the PartTree
+algorithm).
+</dd></dl>
+
+<p>
+</p><dl compact="compact"><dt></dt><dd>*Katoh, Kuma, Toh and Miyata
+(Nucleic Acids Res. 33:511-518, 2005) MAFFT version 5: improvement in
+accuracy of multiple sequence alignment (describes [ancestral versions
+of] the G-INS-i, L-INS-i and E-INS-i strategies)
+</dd></dl>
+
+<p>
+</p><dl compact="compact"><dt></dt><dd>*Katoh, Misawa, Kuma and Miyata
+(Nucleic Acids Res. 30:3059-3066, 2002) MAFFT: a novel method for rapid
+multiple sequence alignment based on fast Fourier transform (describes
+the FFT-NS-1, FFT-NS-2 and FFT-NS-i strategies)
+</dd></dl>
+
+<a name="lbAR">&nbsp;</a>
+<h3>In Japanese</h3>
+
+<p>
+</p><dl compact="compact"><dt></dt><dd>
+*Katoh and Misawa (Seibutsubutsuri 46:312-317, 2006) Multiple Sequence Alignments: the Next Generation
+</dd></dl>
+
+<p>
+</p><dl compact="compact"><dt></dt><dd>
+*Katoh and Kuma (Kagaku to Seibutsu 44:102-108, 2006) Jissen-teki Multiple Alignment
+</dd></dl>
+
+
+<a name="lbAS">&nbsp;</a>
+<h2>AUTHORS</h2>
+
+<dl compact="compact"><dt></dt><dd>
+<p>
+
+<b>Kazutaka Katoh</b> &lt;katoh_at_bioreg.kyushu-u.ac.jp&gt;
+</p><p>
+</p><dl compact="compact">
+<dt></dt><dd>
+Wrote Mafft.
+</dd></dl>
+<p>
+
+<b>Charles Plessy</b> &lt;charles-debian-nospam_at_plessy.org&gt;
+</p><p>
+</p><dl compact="compact">
+<dt></dt><dd>
+Wrote this manpage in DocBook XML for the Debian distribution, using Mafft's homepage as a template.
+</dd></dl>
+</dd></dl>
+
+<a name="lbAT">&nbsp;</a>
+<h2>COPYRIGHT</h2>
+
+<dl compact="compact"><dt></dt><dd>
+Copyright © 2002-2007 Kazutaka Katoh (mafft)
+<br>
+
+Copyright © 2007 Charles Plessy (this manpage)
+<br>
+
+<p>
+
+Mafft and its manpage are offered under the following conditions:
+</p><p>Redistribution and use in source and binary forms, with or
+without modification, are permitted provided that the following
+conditions are met:
+</p><p>
+</p><dl compact="compact"><dt></dt><dd>
+ 1.Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+</dd></dl>
+
+<p>
+</p><dl compact="compact"><dt></dt><dd> 2.Redistributions in binary
+form must reproduce the above copyright notice, this list of conditions
+and the following disclaimer in the documentation and/or other
+materials provided with the distribution.
+</dd></dl>
+
+<p>
+</p><dl compact="compact"><dt></dt><dd> 3.The name of the author may
+not be used to endorse or promote products derived from this software
+without specific prior written permission.
+</dd></dl>
+
+<p>THIS SOFTWARE IS PROVIDED BY THE AUTHOR "AS IS" AND ANY EXPRESS OR
+IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT,
+INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,
+STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING
+IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+<br>
+
+</p></dd></dl>
+
+<p>
+
+</p><hr>
+<a name="index">&nbsp;</a><h2>Index</h2>
+<dl>
+<dt><a href="#lbAB">NAME</a></dt><dd>
+</dd><dt><a href="#lbAC">SYNOPSIS</a></dt><dd>
+</dd><dt><a href="#lbAD">DESCRIPTION</a></dt><dd>
+<dl>
+<dt><a href="#lbAE">Accuracy-oriented methods:</a></dt><dd>
+</dd><dt><a href="#lbAF">Speed-oriented methods:</a></dt><dd>
+</dd><dt><a href="#lbAG">Group-to-group alignments</a></dt><dd>
+</dd></dl>
+</dd><dt><a href="#lbAH">OPTIONS</a></dt><dd>
+<dl>
+<dt><a href="#lbAI">Algorithm</a></dt><dd>
+</dd><dt><a href="#lbAJ">Parameter</a></dt><dd>
+</dd><dt><a href="#lbAK">Output</a></dt><dd>
+</dd><dt><a href="#lbAL">Input</a></dt><dd>
+</dd></dl>
+</dd><dt><a href="#lbAM">FILES</a></dt><dd>
+</dd><dt><a href="#lbAN">ENVIONMENT</a></dt><dd>
+</dd><dt><a href="#lbAO">SEE ALSO</a></dt><dd>
+</dd><dt><a href="#lbAP">REFERENCES</a></dt><dd>
+<dl>
+<dt><a href="#lbAQ">In English</a></dt><dd>
+</dd><dt><a href="#lbAR">In Japanese</a></dt><dd>
+</dd></dl>
+</dd><dt><a href="#lbAS">AUTHORS</a></dt><dd>
+</dd><dt><a href="#lbAT">COPYRIGHT</a></dt><dd>
+</dd></dl>
+<hr>
+This document was created by
+man2html,
+using the manual pages.<br>
+Time: 02:26:04 GMT, August 14, 2007
+</body></html>

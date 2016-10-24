@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="compbio.runner.msa.MafftParametersTester" failures="0" tests="9" time="13.899" errors="0">
+  <properties/>
+  <testcase name="testArguments" time="2.353" classname="compbio.runner.msa.MafftParametersTester"/>
+  <testcase name="testConfiguration" time="0.0010" classname="compbio.runner.msa.MafftParametersTester"/>
+  <testcase name="testConstrainedParametersMaxValues" time="0.948" classname="compbio.runner.msa.MafftParametersTester"/>
+  <testcase name="testConstrainedParametersMinValues" time="0.711" classname="compbio.runner.msa.MafftParametersTester"/>
+  <testcase name="testConstrainedParametersRandomValues" time="2.296" classname="compbio.runner.msa.MafftParametersTester"/>
+  <testcase name="testDefaultParameters" time="4.32" classname="compbio.runner.msa.MafftParametersTester"/>
+  <testcase name="testOptions" time="1.062" classname="compbio.runner.msa.MafftParametersTester"/>
+  <testcase name="testParameters" time="0.943" classname="compbio.runner.msa.MafftParametersTester"/>
+  <testcase name="testPresets" time="0.817" classname="compbio.runner.msa.MafftParametersTester"/>
+</testsuite>

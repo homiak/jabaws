@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="compbio.data.sequence.SequenceUtilTester" failures="0" tests="12" time="1.469" errors="0">
+  <properties/>
+  <testcase name="loadJronnFile" time="1.047" classname="compbio.data.sequence.SequenceUtilTester"/>
+  <testcase name="testCleanProteinSequence" time="0.0" classname="compbio.data.sequence.SequenceUtilTester"/>
+  <testcase name="testCleanSequence" time="0.0" classname="compbio.data.sequence.SequenceUtilTester"/>
+  <testcase name="testDeepCleanSequence" time="0.016" classname="compbio.data.sequence.SequenceUtilTester"/>
+  <testcase name="testReadAAConResults" time="0.14" classname="compbio.data.sequence.SequenceUtilTester"/>
+  <testcase name="testReadDisemblResults" time="0.094" classname="compbio.data.sequence.SequenceUtilTester"/>
+  <testcase name="testReadGlobPlotResults" time="0.109" classname="compbio.data.sequence.SequenceUtilTester"/>
+  <testcase name="testReadIUPredForGlobDomain" time="0.0" classname="compbio.data.sequence.SequenceUtilTester"/>
+  <testcase name="testReadIUPredForShortAndLongDisorder" time="0.016" classname="compbio.data.sequence.SequenceUtilTester"/>
+  <testcase name="testReadWriteFasta" time="0.016" classname="compbio.data.sequence.SequenceUtilTester"/>
+  <testcase name="testisNonAmbNucleotideSequence" time="0.0" classname="compbio.data.sequence.SequenceUtilTester"/>
+  <testcase name="testisProteinSequence" time="0.0" classname="compbio.data.sequence.SequenceUtilTester"/>
+</testsuite>
